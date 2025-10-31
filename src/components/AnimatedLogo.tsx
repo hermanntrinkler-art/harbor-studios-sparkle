@@ -26,12 +26,15 @@ const AnimatedLogo = ({ className = "", size = "md" }: AnimatedLogoProps) => {
           background: `conic-gradient(
             from 0deg at 50% 50%,
             transparent 0deg,
-            rgba(59, 207, 239, 0.3) 20deg,
-            rgba(59, 207, 239, 0.6) 40deg,
-            rgba(59, 207, 239, 0.3) 60deg,
-            transparent 80deg,
+            rgba(59, 207, 239, 0.05) 10deg,
+            rgba(59, 207, 239, 0.15) 20deg,
+            rgba(59, 207, 239, 0.25) 25deg,
+            rgba(59, 207, 239, 0.15) 30deg,
+            rgba(59, 207, 239, 0.05) 40deg,
+            transparent 50deg,
             transparent 360deg
           )`,
+          filter: "blur(8px)",
           willChange: "transform",
         }}
       />

@@ -103,7 +103,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
-        "lighthouse-beam": "lighthouse-beam 5s linear infinite",
+        "lighthouse-beam": "lighthouse-beam 8s linear infinite",
       },
     },
   },
