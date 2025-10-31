@@ -13,6 +13,9 @@
   "projects": {
     "title": "Nos Projets",
     "subtitle": "Explorez nos dernières créations en développement web et gaming",
+    "captainsLog": {
+      "description": "Journal de bord numérique avec suivi GPS, configuration des voiles, enregistrement météo et export PDF – parfait pour les marins"
+    },
     "recipePixie": {
       "description": "Application de découverte de recettes et de planification de repas avec IA. Transformez votre façon de cuisiner avec des suggestions intelligentes et des plans personnalisés.",
       "learnMore": "En Savoir Plus",
@@ -136,6 +139,70 @@
       "title": "Prêt à révolutionner votre expérience culinaire ?",
       "button": "Essayer Recipe Pixie Maintenant",
       "free": "Commencez gratuitement – aucune carte de crédit requise"
+    }
+  },
+  "captainsLogDetails": {
+    "backHome": "Retour à l'Accueil",
+    "status": "🚧 En Développement – Version Bêta",
+    "hero": {
+      "title": "Captain's Log",
+      "subtitle": "Votre journal de bord numérique moderne pour une navigation sereine. Enregistrez les routes, les voiles, la météo et le vent, suivez votre parcours par GPS et exportez des rapports PDF professionnels – tout fonctionne hors ligne et en plusieurs langues."
+    },
+    "whatIs": {
+      "title": "Qu'est-ce que Captain's Log ?",
+      "description": "Captain's Log est la solution moderne pour votre journal de bord maritime. L'application web combine la tenue de journal traditionnelle avec la technologie numérique et rend la documentation de vos sorties en mer plus facile que jamais."
+    },
+    "features": {
+      "title": "Fonctionnalités Principales",
+      "subtitle": "Tout ce dont vous avez besoin pour une tenue de journal professionnelle",
+      "voyageManagement": {
+        "title": "⚓️ Gestion des Voyages",
+        "description": "Créez, modifiez et suivez tous vos voyages avec port de départ/destination, date et statut"
+      },
+      "gpsTracking": {
+        "title": "🧭 Suivi GPS en Direct",
+        "description": "Enregistrez automatiquement votre route – avec vitesse, cap et calcul précis de la distance"
+      },
+      "timeline": {
+        "title": "📍 Chronologie Détaillée",
+        "description": "Capturez tous les événements importants – changements de cap, configuration des voiles, changements météo, notes"
+      },
+      "sailConfig": {
+        "title": "⛵ Configuration des Voiles",
+        "description": "Documentez grand-voile, niveaux de ris, voile d'avant (foc/génois) et déploiement du spinnaker"
+      },
+      "weather": {
+        "title": "🌊 Météo et Navigation",
+        "description": "Enregistrez le vent (direction et force), la météo, l'état de la mer et la visibilité"
+      },
+      "pdfExport": {
+        "title": "📄 Export PDF",
+        "description": "Générez des rapports de voyage professionnels avec carte, chronologie et tous les détails – parfait pour le livre de bord"
+      },
+      "anchorWatch": {
+        "title": "🔔 Surveillance d'Ancre GPS",
+        "description": "Surveillez votre position d'ancrage avec rayon réglable et alarme automatique"
+      },
+      "offline": {
+        "title": "🌍 Hors Ligne et Multilingue",
+        "description": "Fonctionne sans connexion internet (PWA). Disponible en allemand, anglais, espagnol et français"
+      }
+    },
+    "perfectFor": {
+      "title": "Parfait pour",
+      "hobbySkippers": "🧭 Plaisanciers et skippers qui apprécient la documentation professionnelle",
+      "sailingSchools": "⛵ Écoles de voile pour les voyages de formation et l'éducation",
+      "charterCrews": "📋 Équipages de charter pour les protocoles de remise",
+      "documentation": "📝 Tous ceux qui souhaitent enregistrer leurs expériences de navigation de manière structurée"
+    },
+    "techStack": {
+      "title": "Détails Techniques",
+      "description": "Application Web Progressive (PWA) fullstack construite avec React, TypeScript, Leaflet Maps et Lovable Cloud (Supabase). Fonctionnalités : Suivi GPS en temps réel avec API de géolocalisation, génération PDF (pdf-lib), mises à jour en temps réel, base de données sécurisée RLS, support i18n multilingue, design responsive avec Tailwind CSS."
+    },
+    "cta": {
+      "title": "Bientôt Disponible !",
+      "button": "Recevoir une Notification",
+      "inDevelopment": "Cette application est actuellement en développement. Restez informé du lancement !"
     }
   }
 }

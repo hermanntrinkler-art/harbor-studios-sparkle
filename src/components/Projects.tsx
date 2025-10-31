@@ -5,6 +5,14 @@ const Projects = () => {
   const { t } = useTranslation();
   const projects = [
     {
+      title: "Captain's Log",
+      description: t('projects.captainsLog.description'),
+      link: "#",
+      detailPage: "/projects/captains-log",
+      tags: ["Maritime", "GPS", "PWA", "Offline"],
+      image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
       title: "Recipe Pixie",
       description: t('projects.recipePixie.description'),
       link: "https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor",

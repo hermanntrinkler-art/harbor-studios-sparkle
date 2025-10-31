@@ -13,6 +13,9 @@
   "projects": {
     "title": "Unsere Projekte",
     "subtitle": "Entdecken Sie unsere neuesten Kreationen im Bereich Webentwicklung und Gaming",
+    "captainsLog": {
+      "description": "Digitales Fahrtenbuch mit GPS-Tracking, Segelkonfiguration, Wetter-Erfassung und PDF-Export – perfekt für Segler"
+    },
     "recipePixie": {
       "description": "KI-gestützte Rezeptentdeckung und Essensplanung. Verwandeln Sie Ihre Kochweise mit intelligenten Rezeptvorschlägen und personalisierten Menüplänen.",
       "learnMore": "Mehr erfahren",
@@ -136,6 +139,70 @@
       "title": "Bereit, Ihr Kocherlebnis zu revolutionieren?",
       "button": "Jetzt Recipe Pixie ausprobieren",
       "free": "Kostenlos starten – keine Kreditkarte erforderlich"
+    }
+  },
+  "captainsLogDetails": {
+    "backHome": "Zurück zur Startseite",
+    "status": "🚧 In Entwicklung – Beta Version",
+    "hero": {
+      "title": "Captain's Log",
+      "subtitle": "Dein modernes digitales Logbuch für entspanntes Segeln. Erfasse Kurse, Segel, Wetter und Wind, verfolge deine Route per GPS-Tracking und exportiere professionelle PDF-Berichte – alles offline-fähig und mehrsprachig."
+    },
+    "whatIs": {
+      "title": "Was ist Captain's Log?",
+      "description": "Captain's Log ist die moderne Lösung für dein maritimes Logbuch. Die Web-App kombiniert traditionelle Fahrtenbuchführung mit digitaler Technologie und macht die Dokumentation deiner Segeltörns so einfach wie nie zuvor."
+    },
+    "features": {
+      "title": "Hauptfunktionen",
+      "subtitle": "Alles, was du für professionelle Fahrtenbuch-Führung brauchst",
+      "voyageManagement": {
+        "title": "⚓️ Fahrten verwalten",
+        "description": "Erstelle, bearbeite und verfolge alle deine Törns mit Start-/Zielhafen, Datum und Status"
+      },
+      "gpsTracking": {
+        "title": "🧭 Live GPS-Tracking",
+        "description": "Zeichne automatisch deine Route auf – mit Geschwindigkeit, Kurs und präziser Distanzberechnung"
+      },
+      "timeline": {
+        "title": "📍 Detaillierte Timeline",
+        "description": "Erfasse alle wichtigen Ereignisse – Kurswechsel, Segelkonfiguration, Wetterwechsel, Notizen"
+      },
+      "sailConfig": {
+        "title": "⛵ Segelkonfiguration",
+        "description": "Dokumentiere Großsegel, Reff-Stufen, Vorsegel (Fock/Genua) und Spinnaker-Einsatz"
+      },
+      "weather": {
+        "title": "🌊 Wetter & Navigation",
+        "description": "Halte Wind (Richtung & Stärke), Wetter, Seegang und Sichtweite fest"
+      },
+      "pdfExport": {
+        "title": "📄 PDF-Export",
+        "description": "Generiere professionelle Fahrtberichte mit Karte, Timeline und allen Details – perfekt fürs Schiffslogbuch"
+      },
+      "anchorWatch": {
+        "title": "🔔 GPS-Ankerwache",
+        "description": "Überwache deine Ankerposition mit einstellbarem Radius und automatischem Alarm"
+      },
+      "offline": {
+        "title": "🌍 Offline-Ready & Mehrsprachig",
+        "description": "Funktioniert auch ohne Internetverbindung (PWA-fähig). Verfügbar in Deutsch, Englisch, Spanisch und Französisch"
+      }
+    },
+    "perfectFor": {
+      "title": "Perfekt für",
+      "hobbySkippers": "🧭 Hobbysegler und Skipper, die professionelle Dokumentation schätzen",
+      "sailingSchools": "⛵ Segelschulen für Ausbildungstörns und Training",
+      "charterCrews": "📋 Charter-Crews für Übergabeprotokolle",
+      "documentation": "📝 Alle, die ihre Segelerlebnisse strukturiert festhalten möchten"
+    },
+    "techStack": {
+      "title": "Technische Details",
+      "description": "Fullstack Progressive Web App (PWA) entwickelt mit React, TypeScript, Leaflet Maps und Lovable Cloud (Supabase). Features: Echtzeit-GPS-Tracking mit Geolocation API, PDF-Generierung (pdf-lib), Realtime-Updates, RLS-gesicherte Datenbank, mehrsprachige i18n-Unterstützung, responsive Design mit Tailwind CSS."
+    },
+    "cta": {
+      "title": "Bald verfügbar!",
+      "button": "Benachrichtigung erhalten",
+      "inDevelopment": "Diese App befindet sich derzeit in Entwicklung. Bleibe informiert über den Launch!"
     }
   }
 }

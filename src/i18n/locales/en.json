@@ -13,6 +13,9 @@
   "projects": {
     "title": "Our Projects",
     "subtitle": "Explore our latest creations across web development and gaming",
+    "captainsLog": {
+      "description": "Digital logbook with GPS tracking, sail configuration, weather recording and PDF export – perfect for sailors"
+    },
     "recipePixie": {
       "description": "AI-powered recipe discovery and meal planning app. Transform the way you cook with intelligent recipe suggestions and personalized meal plans.",
       "learnMore": "Learn More",
@@ -136,6 +139,70 @@
       "title": "Ready to revolutionize your cooking experience?",
       "button": "Try Recipe Pixie Now",
       "free": "Start for free – no credit card required"
+    }
+  },
+  "captainsLogDetails": {
+    "backHome": "Back to Home",
+    "status": "🚧 In Development – Beta Version",
+    "hero": {
+      "title": "Captain's Log",
+      "subtitle": "Your modern digital logbook for relaxed sailing. Record courses, sails, weather and wind, track your route via GPS tracking and export professional PDF reports – all offline-capable and multilingual."
+    },
+    "whatIs": {
+      "title": "What is Captain's Log?",
+      "description": "Captain's Log is the modern solution for your maritime logbook. The web app combines traditional logbook keeping with digital technology and makes documenting your sailing trips easier than ever before."
+    },
+    "features": {
+      "title": "Key Features",
+      "subtitle": "Everything you need for professional logbook keeping",
+      "voyageManagement": {
+        "title": "⚓️ Voyage Management",
+        "description": "Create, edit and track all your trips with start/destination port, date and status"
+      },
+      "gpsTracking": {
+        "title": "🧭 Live GPS Tracking",
+        "description": "Automatically record your route – with speed, course and precise distance calculation"
+      },
+      "timeline": {
+        "title": "📍 Detailed Timeline",
+        "description": "Capture all important events – course changes, sail configuration, weather changes, notes"
+      },
+      "sailConfig": {
+        "title": "⛵ Sail Configuration",
+        "description": "Document mainsail, reef levels, headsail (jib/genoa) and spinnaker deployment"
+      },
+      "weather": {
+        "title": "🌊 Weather & Navigation",
+        "description": "Record wind (direction & strength), weather, sea state and visibility"
+      },
+      "pdfExport": {
+        "title": "📄 PDF Export",
+        "description": "Generate professional voyage reports with map, timeline and all details – perfect for ship's log"
+      },
+      "anchorWatch": {
+        "title": "🔔 GPS Anchor Watch",
+        "description": "Monitor your anchor position with adjustable radius and automatic alarm"
+      },
+      "offline": {
+        "title": "🌍 Offline-Ready & Multilingual",
+        "description": "Works without internet connection (PWA-capable). Available in German, English, Spanish and French"
+      }
+    },
+    "perfectFor": {
+      "title": "Perfect for",
+      "hobbySkippers": "🧭 Hobby sailors and skippers who appreciate professional documentation",
+      "sailingSchools": "⛵ Sailing schools for training voyages and education",
+      "charterCrews": "📋 Charter crews for handover protocols",
+      "documentation": "📝 Anyone who wants to record their sailing experiences in a structured way"
+    },
+    "techStack": {
+      "title": "Technical Details",
+      "description": "Fullstack Progressive Web App (PWA) built with React, TypeScript, Leaflet Maps and Lovable Cloud (Supabase). Features: Real-time GPS tracking with Geolocation API, PDF generation (pdf-lib), realtime updates, RLS-secured database, multilingual i18n support, responsive design with Tailwind CSS."
+    },
+    "cta": {
+      "title": "Coming Soon!",
+      "button": "Get Notified",
+      "inDevelopment": "This app is currently in development. Stay informed about the launch!"
     }
   }
 }

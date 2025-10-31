@@ -13,6 +13,9 @@
   "projects": {
     "title": "Nuestros Proyectos",
     "subtitle": "Explora nuestras últimas creaciones en desarrollo web y gaming",
+    "captainsLog": {
+      "description": "Cuaderno de bitácora digital con seguimiento GPS, configuración de velas, registro meteorológico y exportación PDF – perfecto para navegantes"
+    },
     "recipePixie": {
       "description": "Aplicación de descubrimiento de recetas y planificación de comidas con IA. Transforma tu forma de cocinar con sugerencias inteligentes y planes personalizados.",
       "learnMore": "Saber Más",
@@ -136,6 +139,70 @@
       "title": "¿Listo para revolucionar tu experiencia culinaria?",
       "button": "Prueba Recipe Pixie Ahora",
       "free": "Empieza gratis – sin tarjeta de crédito"
+    }
+  },
+  "captainsLogDetails": {
+    "backHome": "Volver al Inicio",
+    "status": "🚧 En Desarrollo – Versión Beta",
+    "hero": {
+      "title": "Captain's Log",
+      "subtitle": "Tu cuaderno de bitácora digital moderno para navegar relajado. Registra cursos, velas, clima y viento, rastrea tu ruta mediante seguimiento GPS y exporta informes PDF profesionales – todo con capacidad sin conexión y multilingüe."
+    },
+    "whatIs": {
+      "title": "¿Qué es Captain's Log?",
+      "description": "Captain's Log es la solución moderna para tu cuaderno de bitácora marítimo. La aplicación web combina el registro tradicional de bitácora con tecnología digital y hace que documentar tus travesías sea más fácil que nunca."
+    },
+    "features": {
+      "title": "Funciones Principales",
+      "subtitle": "Todo lo que necesitas para un registro profesional de bitácora",
+      "voyageManagement": {
+        "title": "⚓️ Gestión de Travesías",
+        "description": "Crea, edita y rastrea todos tus viajes con puerto de inicio/destino, fecha y estado"
+      },
+      "gpsTracking": {
+        "title": "🧭 Seguimiento GPS en Vivo",
+        "description": "Registra automáticamente tu ruta – con velocidad, rumbo y cálculo preciso de distancia"
+      },
+      "timeline": {
+        "title": "📍 Línea de Tiempo Detallada",
+        "description": "Captura todos los eventos importantes – cambios de rumbo, configuración de velas, cambios meteorológicos, notas"
+      },
+      "sailConfig": {
+        "title": "⛵ Configuración de Velas",
+        "description": "Documenta vela mayor, niveles de rizo, vela de proa (foque/génova) y despliegue de spinnaker"
+      },
+      "weather": {
+        "title": "🌊 Clima y Navegación",
+        "description": "Registra viento (dirección y fuerza), clima, estado del mar y visibilidad"
+      },
+      "pdfExport": {
+        "title": "📄 Exportación PDF",
+        "description": "Genera informes profesionales de travesía con mapa, línea de tiempo y todos los detalles – perfecto para el diario de a bordo"
+      },
+      "anchorWatch": {
+        "title": "🔔 Vigilancia de Ancla GPS",
+        "description": "Monitorea tu posición de anclaje con radio ajustable y alarma automática"
+      },
+      "offline": {
+        "title": "🌍 Sin Conexión y Multilingüe",
+        "description": "Funciona sin conexión a internet (PWA). Disponible en alemán, inglés, español y francés"
+      }
+    },
+    "perfectFor": {
+      "title": "Perfecto para",
+      "hobbySkippers": "🧭 Navegantes aficionados y patrones que aprecian la documentación profesional",
+      "sailingSchools": "⛵ Escuelas de vela para travesías de formación y educación",
+      "charterCrews": "📋 Tripulaciones de chárter para protocolos de entrega",
+      "documentation": "📝 Cualquiera que quiera registrar sus experiencias de navegación de manera estructurada"
+    },
+    "techStack": {
+      "title": "Detalles Técnicos",
+      "description": "Aplicación Web Progresiva (PWA) fullstack construida con React, TypeScript, Leaflet Maps y Lovable Cloud (Supabase). Funciones: Seguimiento GPS en tiempo real con API de geolocalización, generación de PDF (pdf-lib), actualizaciones en tiempo real, base de datos asegurada con RLS, soporte i18n multilingüe, diseño responsivo con Tailwind CSS."
+    },
+    "cta": {
+      "title": "¡Próximamente!",
+      "button": "Recibir Notificación",
+      "inDevelopment": "Esta aplicación está actualmente en desarrollo. ¡Mantente informado sobre el lanzamiento!"
     }
   }
 }
