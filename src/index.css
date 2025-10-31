@@ -82,3 +82,9 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-lighthouse-beam {
+    animation: none !important;
+  }
+}
