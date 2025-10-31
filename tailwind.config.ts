@@ -90,11 +90,20 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "lighthouse-beam": {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
+        "lighthouse-beam": "lighthouse-beam 5s linear infinite",
       },
     },
   },

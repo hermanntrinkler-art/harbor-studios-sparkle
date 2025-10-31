@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -13,6 +14,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[image:radial-gradient(circle_at_50%_50%,hsl(189_94%_58%_/_0.1),transparent_50%)]" />
       
       <div className="max-w-4xl mx-auto text-center relative z-10 animate-fade-in">
+        <AnimatedLogo className="mx-auto mb-6" size="md" />
+        
         <div className="inline-block mb-6 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
           <span className="text-sm font-medium text-primary">{t('hero.badge')}</span>
         </div>

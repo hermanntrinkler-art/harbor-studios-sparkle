@@ -4,6 +4,7 @@ import { ArrowLeft, ExternalLink, Sparkles, Check, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const RecipePixieDetails = () => {
   const { t } = useTranslation();
@@ -78,7 +79,8 @@ const RecipePixieDetails = () => {
       {/* Navigation */}
       <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 py-4">
-          <Link to="/" className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+          <Link to="/" className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors group">
+            <AnimatedLogo size="sm" className="transition-transform group-hover:scale-110" />
             <ArrowLeft className="h-4 w-4" />
             <span className="font-semibold">{t('recipePixieDetails.backHome')}</span>
           </Link>
