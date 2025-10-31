@@ -12,31 +12,10 @@ const AnimatedLogo = ({ className = "", size = "md" }: AnimatedLogoProps) => {
 
   return (
     <div className={`relative ${sizeClasses[size]} ${className}`}>
-      {/* Statisches Logo (transparent) */}
       <img
-        src="/images/harbor-logo-transp.png"
+        src="/images/harbor-logo-new.png"
         alt="Harbor Studios - Lighthouse Logo"
-        className="w-full h-full object-contain relative z-10"
-      />
-
-      {/* Rotierender Lichtstrahl als Overlay */}
-      <div
-        className="absolute inset-0 animate-lighthouse-beam pointer-events-none z-20"
-        style={{
-          background: `conic-gradient(
-            from 0deg at 50% 50%,
-            transparent 0deg,
-            rgba(59, 207, 239, 0.05) 10deg,
-            rgba(59, 207, 239, 0.15) 20deg,
-            rgba(59, 207, 239, 0.25) 25deg,
-            rgba(59, 207, 239, 0.15) 30deg,
-            rgba(59, 207, 239, 0.05) 40deg,
-            transparent 50deg,
-            transparent 360deg
-          )`,
-          filter: "blur(8px)",
-          willChange: "transform",
-        }}
+        className="w-full h-full object-contain"
       />
     </div>
   );
