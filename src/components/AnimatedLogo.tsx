@@ -1,6 +1,6 @@
 interface AnimatedLogoProps {
   className?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
 }
 
 const AnimatedLogo = ({ className = "", size = "md" }: AnimatedLogoProps) => {
@@ -8,6 +8,7 @@ const AnimatedLogo = ({ className = "", size = "md" }: AnimatedLogoProps) => {
     sm: "w-10 h-10",
     md: "w-24 h-24 md:w-32 md:h-32",
     lg: "w-32 h-32 md:w-40 md:h-40",
+    xl: "w-48 h-48 md:w-64 md:h-64",
   };
 
   return (

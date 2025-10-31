@@ -14,15 +14,11 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[image:radial-gradient(circle_at_50%_50%,hsl(189_94%_58%_/_0.1),transparent_50%)]" />
       
       <div className="max-w-4xl mx-auto text-center relative z-10 animate-fade-in">
-        <AnimatedLogo className="mx-auto mb-6" size="lg" />
+        <AnimatedLogo className="mx-auto mb-8" size="xl" />
         
         <div className="inline-block mb-6 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
           <span className="text-sm font-medium text-primary">{t('hero.badge')}</span>
         </div>
-        
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-          {t('hero.title')}
-        </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           {t('hero.subtitle')}
