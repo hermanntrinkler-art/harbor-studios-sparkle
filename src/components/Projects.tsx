@@ -5,7 +5,8 @@ const Projects = () => {
     {
       title: "Recipe Pixie",
       description: "AI-powered recipe discovery and meal planning app. Transform the way you cook with intelligent recipe suggestions and personalized meal plans.",
-      link: "https://recipepixie.app",
+      link: "https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor",
+      detailPage: "/projects/recipe-pixie",
       tags: ["AI", "Web App", "React"],
       image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop"
     },

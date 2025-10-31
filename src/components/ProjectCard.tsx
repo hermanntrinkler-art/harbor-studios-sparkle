@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Info } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
   title: string;
@@ -8,9 +9,10 @@ interface ProjectCardProps {
   link: string;
   tags: string[];
   image: string;
+  detailPage?: string;
 }
 
-const ProjectCard = ({ title, description, link, tags, image }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, link, tags, image, detailPage }: ProjectCardProps) => {
   return (
     <Card className="group overflow-hidden border-primary/20 bg-card hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_hsl(189_94%_58%_/_0.2)]">
       <div className="aspect-video overflow-hidden bg-muted">
@@ -44,6 +46,29 @@ const ProjectCard = ({ title, description, link, tags, image }: ProjectCardProps
           >
             Coming Soon
           </Button>
+        ) : detailPage ? (
+          <div className="flex gap-2">
+            <Button 
+              asChild
+              variant="default"
+              className="flex-1"
+            >
+              <Link to={detailPage}>
+                Learn More
+                <Info className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button 
+              asChild
+              variant="outline"
+              className="flex-1 group/btn"
+            >
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                Visit App
+                <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+          </div>
         ) : (
           <Button 
             asChild
