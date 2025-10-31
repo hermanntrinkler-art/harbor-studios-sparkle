@@ -36,16 +36,26 @@ const ProjectCard = ({ title, description, link, tags, image }: ProjectCardProps
         <h3 className="text-2xl font-bold mb-2 text-foreground">{title}</h3>
         <p className="text-muted-foreground mb-4">{description}</p>
         
-        <Button 
-          asChild
-          variant="ghost" 
-          className="group/btn hover:text-primary"
-        >
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            Visit Project 
-            <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-          </a>
-        </Button>
+        {link === "#" ? (
+          <Button 
+            variant="ghost" 
+            className="cursor-default opacity-60"
+            disabled
+          >
+            Coming Soon
+          </Button>
+        ) : (
+          <Button 
+            asChild
+            variant="ghost" 
+            className="group/btn hover:text-primary"
+          >
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              Visit Project 
+              <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+        )}
       </div>
     </Card>
   );
