@@ -1,10 +1,12 @@
 import ProjectCard from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
   const projects = [
     {
       title: "Recipe Pixie",
-      description: "AI-powered recipe discovery and meal planning app. Transform the way you cook with intelligent recipe suggestions and personalized meal plans.",
+      description: t('projects.recipePixie.description'),
       link: "https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor",
       detailPage: "/projects/recipe-pixie",
       tags: ["AI", "Web App", "React"],
@@ -12,14 +14,14 @@ const Projects = () => {
     },
     {
       title: "SnapQR Share",
-      description: "Event-Fotos sammeln ohne App, ohne Stress. QR-Code teilen → Gäste laden hoch → Du bekommst alle Fotos. Kostenlos starten, erst bei Download zahlen.",
+      description: t('projects.snapqr.description'),
       link: "#",
       tags: ["Event Tech", "QR Code", "Photo Sharing"],
       image: "/images/snapqr-event.jpg"
     },
     {
       title: "Roblox Games Portfolio",
-      description: "Collection of immersive Roblox games featuring creative gameplay mechanics and engaging multiplayer experiences.",
+      description: t('projects.roblox.description'),
       link: "https://www.roblox.com",
       tags: ["Gaming", "Roblox", "Lua"],
       image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
@@ -30,9 +32,9 @@ const Projects = () => {
     <section id="projects" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">{t('projects.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore our latest creations across web development and gaming
+            {t('projects.subtitle')}
           </p>
         </div>
         

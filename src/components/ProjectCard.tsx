@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Info } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   title: string;
@@ -13,6 +14,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, description, link, tags, image, detailPage }: ProjectCardProps) => {
+  const { t } = useTranslation();
+  
   return (
     <Card className="group overflow-hidden border-primary/20 bg-card hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_hsl(189_94%_58%_/_0.2)]">
       <div className="aspect-video overflow-hidden bg-muted">
@@ -44,7 +47,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
             className="cursor-default opacity-60"
             disabled
           >
-            Coming Soon
+            {t('projects.comingSoon')}
           </Button>
         ) : detailPage ? (
           <div className="flex gap-2">
@@ -54,7 +57,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
               className="flex-1"
             >
               <Link to={detailPage}>
-                Learn More
+                {t('projects.recipePixie.learnMore')}
                 <Info className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -64,7 +67,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
               className="flex-1 group/btn"
             >
               <a href={link} target="_blank" rel="noopener noreferrer">
-                Visit App
+                {t('projects.recipePixie.visitApp')}
                 <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -76,7 +79,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
             className="group/btn hover:text-primary"
           >
             <a href={link} target="_blank" rel="noopener noreferrer">
-              Visit Project 
+              {t('projects.visitProject')}
               <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
             </a>
           </Button>

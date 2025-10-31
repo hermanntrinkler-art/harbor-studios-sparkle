@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "home": "Home",
+    "backToHome": "Back to Home"
+  },
+  "hero": {
+    "badge": "Creative Studio",
+    "title": "Harbor Studios",
+    "subtitle": "Building innovative digital experiences - from AI-powered apps to immersive Roblox games",
+    "cta_projects": "View Projects",
+    "cta_about": "Learn More"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Explore our latest creations across web development and gaming",
+    "recipePixie": {
+      "description": "AI-powered recipe discovery and meal planning app. Transform the way you cook with intelligent recipe suggestions and personalized meal plans.",
+      "learnMore": "Learn More",
+      "visitApp": "Visit App"
+    },
+    "snapqr": {
+      "description": "Collect event photos without an app, no stress. Share QR code → guests upload → you get all photos. Start for free, pay only when downloading."
+    },
+    "roblox": {
+      "description": "Collection of immersive Roblox games featuring creative gameplay mechanics and engaging multiplayer experiences."
+    },
+    "visitProject": "Visit Project",
+    "comingSoon": "Coming Soon"
+  },
+  "about": {
+    "title": "About Harbor Studios",
+    "subtitle": "A creative studio focused on building innovative digital solutions",
+    "aiApps": {
+      "title": "AI-Powered Apps",
+      "description": "Intelligent applications leveraging AI to create unique user experiences"
+    },
+    "webDev": {
+      "title": "Modern Web Development",
+      "description": "Cutting-edge web technologies for fast, responsive, and beautiful applications"
+    },
+    "robloxDev": {
+      "title": "Roblox Game Development",
+      "description": "Immersive gaming experiences with innovative mechanics and engaging gameplay"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Harbor Studios. All rights reserved.",
+    "tagline": "Building the future, one project at a time"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "button": "Return to Home"
+  },
+  "recipePixieDetails": {
+    "backHome": "Harbor Studios",
+    "hero": {
+      "title": "Recipe Pixie",
+      "subtitle": "Your magical recipe collection – from anywhere, powered by AI",
+      "visitApp": "Visit App",
+      "learnMore": "Learn More"
+    },
+    "whatIs": {
+      "title": "What is Recipe Pixie?",
+      "description": "Recipe Pixie is your personal AI-powered recipe collection. Save recipes from any website with just one click, organize them intelligently, and let AI help you – whether shopping, meal planning, or cooking."
+    },
+    "features": {
+      "title": "Key Features",
+      "aiParser": {
+        "title": "1. 🧠 AI Parser – Every Recipe, Every Source",
+        "description": "Simply add a link – Recipe Pixie automatically detects all ingredients, steps, and cooking times. Works with virtually any recipe website worldwide."
+      },
+      "smartOrganization": {
+        "title": "2. 📂 Smart Organization",
+        "description": "Create folders, add tags, and find the right recipe instantly – by ingredient, cooking time, or occasion."
+      },
+      "shoppingList": {
+        "title": "3. 🛒 Shopping List in Seconds",
+        "description": "Select multiple recipes, and Recipe Pixie automatically generates a combined shopping list. Perfect for weekly planning."
+      },
+      "mealPlanning": {
+        "title": "4. 📅 Meal Planning & Calendar",
+        "description": "Plan your week ahead: Drag and drop recipes into your personal meal calendar."
+      },
+      "aiAssistant": {
+        "title": "5. 💬 AI Assistant",
+        "description": "Ask questions like 'What can I cook with tomatoes and mozzarella?' or 'How do I substitute eggs in this recipe?' – AI helps instantly."
+      },
+      "multiDevice": {
+        "title": "6. 📱 Available Everywhere",
+        "description": "Web app, mobile-optimized – your recipes are synced across all devices."
+      },
+      "communitySharing": {
+        "title": "7. 🌍 Community & Sharing",
+        "description": "Share your favorite recipes with friends or discover new recipes from the Recipe Pixie community."
+      }
+    },
+    "comparison": {
+      "title": "Comparison with Other Apps",
+      "feature": "Feature",
+      "recipePixie": "Recipe Pixie",
+      "others": "Other Apps",
+      "features": {
+        "aiParsing": "AI-powered parsing",
+        "anyWebsite": "Works with any website",
+        "shoppingList": "Smart shopping list",
+        "mealPlanning": "Meal planning with calendar",
+        "aiAssistant": "AI cooking assistant",
+        "noAds": "No ads",
+        "offline": "Offline access"
+      }
+    },
+    "perfectFor": {
+      "title": "Perfect for:",
+      "hobbyChefs": "🍳 Hobby chefs who want to organize their recipe collection",
+      "mealPreppers": "🥗 Meal preppers and weekly planners",
+      "families": "👨‍👩‍👧‍👦 Families cooking together",
+      "healthConscious": "🌱 People with specific dietary goals (vegan, gluten-free, low carb...)"
+    },
+    "testimonials": {
+      "title": "What Our Users Say",
+      "user1": {
+        "quote": "Finally, I have all my favorite recipes in one place! The AI parser works incredibly well.",
+        "author": "Sarah M."
+      },
+      "user2": {
+        "quote": "The shopping list feature saves me hours every week. Absolutely recommended!",
+        "author": "Tom K."
+      },
+      "user3": {
+        "quote": "As a vegan, it was often tedious to adapt recipes. The AI assistant makes it super easy!",
+        "author": "Lisa R."
+      }
+    },
+    "cta": {
+      "title": "Ready to revolutionize your cooking experience?",
+      "button": "Try Recipe Pixie Now",
+      "free": "Start for free – no credit card required"
+    }
+  }
+}

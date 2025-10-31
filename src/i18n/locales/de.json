@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "hero": {
+    "badge": "Creative Studio",
+    "title": "Harbor Studios",
+    "subtitle": "Innovative digitale Erlebnisse schaffen - von KI-gestützten Apps bis hin zu immersiven Roblox-Spielen",
+    "cta_projects": "Projekte ansehen",
+    "cta_about": "Mehr erfahren"
+  },
+  "projects": {
+    "title": "Unsere Projekte",
+    "subtitle": "Entdecken Sie unsere neuesten Kreationen im Bereich Webentwicklung und Gaming",
+    "recipePixie": {
+      "description": "KI-gestützte Rezeptentdeckung und Essensplanung. Verwandeln Sie Ihre Kochweise mit intelligenten Rezeptvorschlägen und personalisierten Menüplänen.",
+      "learnMore": "Mehr erfahren",
+      "visitApp": "App besuchen"
+    },
+    "snapqr": {
+      "description": "Event-Fotos sammeln ohne App, ohne Stress. QR-Code teilen → Gäste laden hoch → Du bekommst alle Fotos. Kostenlos starten, erst bei Download zahlen."
+    },
+    "roblox": {
+      "description": "Sammlung immersiver Roblox-Spiele mit kreativen Gameplay-Mechaniken und fesselnden Multiplayer-Erlebnissen."
+    },
+    "visitProject": "Projekt besuchen",
+    "comingSoon": "Demnächst"
+  },
+  "about": {
+    "title": "Über Harbor Studios",
+    "subtitle": "Ein kreatives Studio, das sich auf die Entwicklung innovativer digitaler Lösungen konzentriert",
+    "aiApps": {
+      "title": "KI-gestützte Apps",
+      "description": "Intelligente Anwendungen, die KI nutzen, um einzigartige Nutzererlebnisse zu schaffen"
+    },
+    "webDev": {
+      "title": "Moderne Webentwicklung",
+      "description": "Hochmoderne Web-Technologien für schnelle, responsive und schöne Anwendungen"
+    },
+    "robloxDev": {
+      "title": "Roblox Spieleentwicklung",
+      "description": "Immersive Gaming-Erlebnisse mit innovativen Mechaniken und fesselndem Gameplay"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Harbor Studios. Alle Rechte vorbehalten.",
+    "tagline": "Die Zukunft gestalten, ein Projekt nach dem anderen"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Ups! Seite nicht gefunden",
+    "button": "Zurück zur Startseite"
+  },
+  "recipePixieDetails": {
+    "backHome": "Harbor Studios",
+    "hero": {
+      "title": "Recipe Pixie",
+      "subtitle": "Ihre magische Rezeptsammlung – von überall, mit KI-Power",
+      "visitApp": "App besuchen",
+      "learnMore": "Mehr erfahren"
+    },
+    "whatIs": {
+      "title": "Was ist Recipe Pixie?",
+      "description": "Recipe Pixie ist Ihre persönliche, KI-gestützte Rezeptsammlung. Speichern Sie Rezepte von beliebigen Webseiten mit nur einem Klick, organisieren Sie sie intelligent und lassen Sie sich von KI helfen – egal ob beim Einkauf, bei der Menüplanung oder beim Kochen selbst."
+    },
+    "features": {
+      "title": "Hauptfunktionen",
+      "aiParser": {
+        "title": "1. 🧠 KI-Parser – Jedes Rezept, jede Quelle",
+        "description": "Fügen Sie einfach einen Link hinzu – Recipe Pixie erkennt automatisch alle Zutaten, Schritte und Kochzeiten. Funktioniert mit praktisch jeder Rezept-Website weltweit."
+      },
+      "smartOrganization": {
+        "title": "2. 📂 Smarte Organisation",
+        "description": "Erstellen Sie Ordner, fügen Sie Tags hinzu und finden Sie blitzschnell das richtige Rezept – nach Zutat, Kochzeit oder Anlass."
+      },
+      "shoppingList": {
+        "title": "3. 🛒 Einkaufsliste in Sekunden",
+        "description": "Wählen Sie mehrere Rezepte aus, und Recipe Pixie generiert automatisch eine kombinierte Einkaufsliste. Perfekt für die Wochenplanung."
+      },
+      "mealPlanning": {
+        "title": "4. 📅 Menüplanung & Kalender",
+        "description": "Planen Sie Ihre Woche im Voraus: Ziehen Sie Rezepte per Drag & Drop in Ihren persönlichen Essenskalender."
+      },
+      "aiAssistant": {
+        "title": "5. 💬 KI-Assistent",
+        "description": "Stellen Sie Fragen wie 'Was kann ich mit Tomaten und Mozzarella kochen?' oder 'Wie ersetze ich Eier in diesem Rezept?' – die KI hilft sofort."
+      },
+      "multiDevice": {
+        "title": "6. 📱 Überall verfügbar",
+        "description": "Web-App, mobil-optimiert – Ihre Rezepte sind auf allen Geräten synchronisiert."
+      },
+      "communitySharing": {
+        "title": "7. 🌍 Community & Teilen",
+        "description": "Teilen Sie Ihre Lieblingsrezepte mit Freunden oder entdecken Sie neue Rezepte aus der Recipe Pixie Community."
+      }
+    },
+    "comparison": {
+      "title": "Vergleich mit anderen Apps",
+      "feature": "Funktion",
+      "recipePixie": "Recipe Pixie",
+      "others": "Andere Apps",
+      "features": {
+        "aiParsing": "KI-gestütztes Parsen",
+        "anyWebsite": "Funktioniert mit jeder Website",
+        "shoppingList": "Intelligente Einkaufsliste",
+        "mealPlanning": "Menüplanung mit Kalender",
+        "aiAssistant": "KI-Koch-Assistent",
+        "noAds": "Keine Werbung",
+        "offline": "Offline-Zugriff"
+      }
+    },
+    "perfectFor": {
+      "title": "Perfekt für:",
+      "hobbyChefs": "🍳 Hobby-Köche, die Ordnung in ihre Rezeptsammlung bringen wollen",
+      "mealPreppers": "🥗 Meal-Prepper und Wochenplaner",
+      "families": "👨‍👩‍👧‍👦 Familien, die gemeinsam kochen",
+      "healthConscious": "🌱 Menschen mit speziellen Ernährungszielen (vegan, glutenfrei, Low Carb...)"
+    },
+    "testimonials": {
+      "title": "Das sagen unsere Nutzer",
+      "user1": {
+        "quote": "Endlich habe ich all meine Lieblingsrezepte an einem Ort! Der KI-Parser funktioniert unglaublich gut.",
+        "author": "Sarah M."
+      },
+      "user2": {
+        "quote": "Die Einkaufslisten-Funktion spart mir jede Woche Stunden. Absolute Empfehlung!",
+        "author": "Tom K."
+      },
+      "user3": {
+        "quote": "Als Veganerin war es oft mühsam, Rezepte anzupassen. Der KI-Assistent macht das super einfach!",
+        "author": "Lisa R."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr Kocherlebnis zu revolutionieren?",
+      "button": "Jetzt Recipe Pixie ausprobieren",
+      "free": "Kostenlos starten – keine Kreditkarte erforderlich"
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "backToHome": "Volver al Inicio"
+  },
+  "hero": {
+    "badge": "Creative Studio",
+    "title": "Harbor Studios",
+    "subtitle": "Creando experiencias digitales innovadoras - desde aplicaciones con IA hasta juegos inmersivos de Roblox",
+    "cta_projects": "Ver Proyectos",
+    "cta_about": "Saber Más"
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "subtitle": "Explora nuestras últimas creaciones en desarrollo web y gaming",
+    "recipePixie": {
+      "description": "Aplicación de descubrimiento de recetas y planificación de comidas con IA. Transforma tu forma de cocinar con sugerencias inteligentes y planes personalizados.",
+      "learnMore": "Saber Más",
+      "visitApp": "Visitar App"
+    },
+    "snapqr": {
+      "description": "Recopila fotos de eventos sin app, sin estrés. Comparte código QR → invitados suben fotos → obtienes todas las fotos. Empieza gratis, paga solo al descargar."
+    },
+    "roblox": {
+      "description": "Colección de juegos inmersivos de Roblox con mecánicas de juego creativas y experiencias multijugador cautivadoras."
+    },
+    "visitProject": "Visitar Proyecto",
+    "comingSoon": "Próximamente"
+  },
+  "about": {
+    "title": "Sobre Harbor Studios",
+    "subtitle": "Un estudio creativo enfocado en desarrollar soluciones digitales innovadoras",
+    "aiApps": {
+      "title": "Apps con IA",
+      "description": "Aplicaciones inteligentes que aprovechan la IA para crear experiencias únicas de usuario"
+    },
+    "webDev": {
+      "title": "Desarrollo Web Moderno",
+      "description": "Tecnologías web de vanguardia para aplicaciones rápidas, responsivas y hermosas"
+    },
+    "robloxDev": {
+      "title": "Desarrollo de Juegos Roblox",
+      "description": "Experiencias de juego inmersivas con mecánicas innovadoras y gameplay cautivador"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Harbor Studios. Todos los derechos reservados.",
+    "tagline": "Construyendo el futuro, un proyecto a la vez"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "¡Ups! Página no encontrada",
+    "button": "Volver al Inicio"
+  },
+  "recipePixieDetails": {
+    "backHome": "Harbor Studios",
+    "hero": {
+      "title": "Recipe Pixie",
+      "subtitle": "Tu colección mágica de recetas – desde cualquier lugar, con el poder de la IA",
+      "visitApp": "Visitar App",
+      "learnMore": "Saber Más"
+    },
+    "whatIs": {
+      "title": "¿Qué es Recipe Pixie?",
+      "description": "Recipe Pixie es tu colección personal de recetas con IA. Guarda recetas de cualquier sitio web con solo un clic, organízalas inteligentemente y deja que la IA te ayude, ya sea comprando, planificando comidas o cocinando."
+    },
+    "features": {
+      "title": "Características Principales",
+      "aiParser": {
+        "title": "1. 🧠 Analizador IA – Cada Receta, Cada Fuente",
+        "description": "Simplemente añade un enlace – Recipe Pixie detecta automáticamente todos los ingredientes, pasos y tiempos de cocción. Funciona con prácticamente cualquier sitio web de recetas en el mundo."
+      },
+      "smartOrganization": {
+        "title": "2. 📂 Organización Inteligente",
+        "description": "Crea carpetas, añade etiquetas y encuentra la receta correcta al instante – por ingrediente, tiempo de cocción u ocasión."
+      },
+      "shoppingList": {
+        "title": "3. 🛒 Lista de Compras en Segundos",
+        "description": "Selecciona múltiples recetas y Recipe Pixie genera automáticamente una lista de compras combinada. Perfecto para planificar la semana."
+      },
+      "mealPlanning": {
+        "title": "4. 📅 Planificación de Comidas y Calendario",
+        "description": "Planifica tu semana con anticipación: arrastra y suelta recetas en tu calendario personal de comidas."
+      },
+      "aiAssistant": {
+        "title": "5. 💬 Asistente IA",
+        "description": "Haz preguntas como '¿Qué puedo cocinar con tomates y mozzarella?' o '¿Cómo sustituyo los huevos en esta receta?' – la IA ayuda al instante."
+      },
+      "multiDevice": {
+        "title": "6. 📱 Disponible en Todas Partes",
+        "description": "Aplicación web, optimizada para móviles – tus recetas están sincronizadas en todos los dispositivos."
+      },
+      "communitySharing": {
+        "title": "7. 🌍 Comunidad y Compartir",
+        "description": "Comparte tus recetas favoritas con amigos o descubre nuevas recetas de la comunidad Recipe Pixie."
+      }
+    },
+    "comparison": {
+      "title": "Comparación con Otras Apps",
+      "feature": "Característica",
+      "recipePixie": "Recipe Pixie",
+      "others": "Otras Apps",
+      "features": {
+        "aiParsing": "Análisis con IA",
+        "anyWebsite": "Funciona con cualquier sitio",
+        "shoppingList": "Lista de compras inteligente",
+        "mealPlanning": "Planificación con calendario",
+        "aiAssistant": "Asistente de cocina IA",
+        "noAds": "Sin publicidad",
+        "offline": "Acceso sin conexión"
+      }
+    },
+    "perfectFor": {
+      "title": "Perfecto para:",
+      "hobbyChefs": "🍳 Cocineros aficionados que quieren organizar su colección de recetas",
+      "mealPreppers": "🥗 Planificadores de comidas semanales",
+      "families": "👨‍👩‍👧‍👦 Familias que cocinan juntas",
+      "healthConscious": "🌱 Personas con objetivos dietéticos específicos (vegano, sin gluten, bajo en carbohidratos...)"
+    },
+    "testimonials": {
+      "title": "Lo Que Dicen Nuestros Usuarios",
+      "user1": {
+        "quote": "¡Finalmente tengo todas mis recetas favoritas en un solo lugar! El analizador IA funciona increíblemente bien.",
+        "author": "Sarah M."
+      },
+      "user2": {
+        "quote": "La función de lista de compras me ahorra horas cada semana. ¡Totalmente recomendado!",
+        "author": "Tom K."
+      },
+      "user3": {
+        "quote": "Como vegana, era tedioso adaptar recetas. ¡El asistente IA lo hace súper fácil!",
+        "author": "Lisa R."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para revolucionar tu experiencia culinaria?",
+      "button": "Prueba Recipe Pixie Ahora",
+      "free": "Empieza gratis – sin tarjeta de crédito"
+    }
+  }
+}

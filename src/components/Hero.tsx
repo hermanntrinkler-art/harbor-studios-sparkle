@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -12,15 +14,15 @@ const Hero = () => {
       
       <div className="max-w-4xl mx-auto text-center relative z-10 animate-fade-in">
         <div className="inline-block mb-6 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
-          <span className="text-sm font-medium text-primary">Creative Studio</span>
+          <span className="text-sm font-medium text-primary">{t('hero.badge')}</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-          Harbor Studios
+          {t('hero.title')}
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Building innovative digital experiences - from AI-powered apps to immersive Roblox games
+          {t('hero.subtitle')}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -29,7 +31,7 @@ const Hero = () => {
             onClick={scrollToProjects}
             className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_hsl(189_94%_58%_/_0.3)] transition-all hover:shadow-[0_0_30px_hsl(189_94%_58%_/_0.5)]"
           >
-            View Projects <ArrowRight className="ml-2 h-4 w-4" />
+            {t('hero.cta_projects')} <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <Button 
             size="lg" 
@@ -37,7 +39,7 @@ const Hero = () => {
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             className="border-primary/30 hover:bg-primary/10"
           >
-            Learn More
+            {t('hero.cta_about')}
           </Button>
         </div>
       </div>

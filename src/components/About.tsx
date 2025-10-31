@@ -1,21 +1,24 @@
 import { Code, Gamepad2, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: <Sparkles className="h-6 w-6" />,
-      title: "AI-Powered Apps",
-      description: "Building intelligent applications that leverage cutting-edge AI technology"
+      title: t('about.aiApps.title'),
+      description: t('about.aiApps.description')
     },
     {
       icon: <Code className="h-6 w-6" />,
-      title: "Modern Web Development",
-      description: "Creating responsive, performant web applications with latest technologies"
+      title: t('about.webDev.title'),
+      description: t('about.webDev.description')
     },
     {
       icon: <Gamepad2 className="h-6 w-6" />,
-      title: "Roblox Game Development",
-      description: "Designing immersive gaming experiences on the Roblox platform"
+      title: t('about.robloxDev.title'),
+      description: t('about.robloxDev.description')
     }
   ];
 
@@ -23,9 +26,9 @@ const About = () => {
     <section id="about" className="py-24 px-4 bg-card/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">About Harbor Studios</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">{t('about.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A creative studio focused on building innovative digital experiences
+            {t('about.subtitle')}
           </p>
         </div>
         
