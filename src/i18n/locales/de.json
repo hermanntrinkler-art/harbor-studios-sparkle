@@ -44,7 +44,8 @@
     "robloxDev": {
       "title": "Roblox Spieleentwicklung",
       "description": "Immersive Gaming-Erlebnisse mit innovativen Mechaniken und fesselndem Gameplay"
-    }
+    },
+    "longDescription": "Harbor Studios ist ein Familienunternehmen mit Leidenschaft für digitale Innovation. Wir kombinieren technisches Know-how mit kreativer Vision, um außergewöhnliche digitale Produkte zu schaffen. Von KI-gestützten Web-Apps über maritime Lösungen bis hin zu Gaming-Projekten – wir entwickeln Lösungen, die wirklich einen Unterschied machen."
   },
   "footer": {
     "copyright": "© {{year}} Harbor Studios. Alle Rechte vorbehalten.",

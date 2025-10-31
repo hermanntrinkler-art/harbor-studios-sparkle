@@ -49,9 +49,7 @@ const About = () => {
         
         <div className="mt-16 text-center max-w-3xl mx-auto">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            At Harbor Studios, we combine technical expertise with creative vision to deliver 
-            exceptional digital products. From AI-powered web applications to engaging gaming 
-            experiences, we're passionate about creating solutions that make a difference.
+            {t('about.longDescription')}
           </p>
         </div>
       </div>
