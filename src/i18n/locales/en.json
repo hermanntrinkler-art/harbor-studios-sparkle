@@ -232,8 +232,8 @@
         "description": "Instagram & Facebook integration. Content calendar with automatic planning."
       },
       "recipeImport": {
-        "title": "⚡ Recipe Import",
-        "description": "Quick import of any recipes. Direct conversion to social media content."
+        "title": "⚡ Content Import",
+        "description": "Quick import of recipes, ideas or content. Direct conversion to social media posts."
       },
       "smartPlanning": {
         "title": "📲 Intelligent Planning",
@@ -243,7 +243,7 @@
     "howItWorks": {
       "title": "How does it work?",
       "step1": {
-        "title": "1. Import Recipe",
+        "title": "1. Import Content",
         "description": "Paste URL or enter manually"
       },
       "step2": {

@@ -26,7 +26,7 @@ const Projects = () => {
       link: "#",
       detailPage: "/projects/content-chef",
       tags: ["AI", "Social Media", "Food Content", "SaaS"],
-      image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=2074&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1556155092-8707de31f9c4?q=80&w=2070&auto=format&fit=crop"
     },
     {
       title: "SnapQR Share",
