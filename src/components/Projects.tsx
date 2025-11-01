@@ -21,6 +21,14 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop"
     },
     {
+      title: "ContentChef",
+      description: t('projects.contentChef.description'),
+      link: "#",
+      detailPage: "/projects/content-chef",
+      tags: ["AI", "Social Media", "Food Content", "SaaS"],
+      image: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
       title: "SnapQR Share",
       description: t('projects.snapqr.description'),
       link: "#",

@@ -24,6 +24,9 @@
     "snapqr": {
       "description": "Event-Fotos sammeln ohne App, ohne Stress. QR-Code teilen → Gäste laden hoch → Du bekommst alle Fotos. Kostenlos starten, erst bei Download zahlen."
     },
+    "contentChef": {
+      "description": "All-in-One Content-Management-Plattform für Food-Creator und Food-Blogger"
+    },
     "roblox": {
       "description": "Sammlung immersiver Roblox-Spiele mit kreativen Gameplay-Mechaniken und fesselnden Multiplayer-Erlebnissen."
     },
@@ -204,6 +207,82 @@
       "title": "Bald verfügbar!",
       "button": "Benachrichtigung erhalten",
       "inDevelopment": "Diese App befindet sich derzeit in Entwicklung. Bleibe informiert über den Launch!"
+    }
+  },
+  "contentChefDetails": {
+    "backHome": "Zurück zur Startseite",
+    "comingSoon": "Bald verfügbar",
+    "hero": {
+      "title": "ContentChef",
+      "subtitle": "Die ultimative Content-Management-Plattform für Food-Creator, Food-Blogger und Food-Marken"
+    },
+    "whatIs": {
+      "title": "Was ist ContentChef?",
+      "description": "ContentChef ist eine All-in-One Content-Management-Plattform für Food-Creator, Food-Blogger und Food-Marken, die Social-Media-Content rund um Rezepte erstellen möchten."
+    },
+    "features": {
+      "title": "Die 4 Hauptfunktionen",
+      "aiContent": {
+        "title": "🤖 KI-gestützte Content-Erstellung",
+        "description": "Automatische Generierung von Posts aus Rezepten. Texterstellung für Social Media in Sekunden."
+      },
+      "multiPlatform": {
+        "title": "📅 Multi-Plattform-Scheduling",
+        "description": "Instagram & Facebook Anbindung. Content-Kalender mit automatischer Planung."
+      },
+      "recipeImport": {
+        "title": "⚡ Rezept-Import",
+        "description": "Schneller Import von beliebigen Rezepten. Direkte Umwandlung in Social-Media-Content."
+      },
+      "smartPlanning": {
+        "title": "📲 Intelligente Planung",
+        "description": "Automatisches Scheduling. Optimierte Posting-Zeiten."
+      }
+    },
+    "howItWorks": {
+      "title": "Wie funktioniert es?",
+      "step1": {
+        "title": "1. Rezept importieren",
+        "description": "URL einfügen oder manuell eingeben"
+      },
+      "step2": {
+        "title": "2. KI generiert Content",
+        "description": "Automatische Texte & Optimierung"
+      },
+      "step3": {
+        "title": "3. Planen & Posten",
+        "description": "Direkt auf Instagram & Facebook teilen"
+      }
+    },
+    "pricing": {
+      "title": "Preisstufen",
+      "free": {
+        "title": "Free",
+        "price": "Kostenlos",
+        "features": ["5 Posts/Monat", "20 AI-Generierungen", "1 Account"]
+      },
+      "pro": {
+        "title": "Pro",
+        "price": "€19/Monat",
+        "features": ["100 Posts/Monat", "200 AI-Generierungen", "3 Accounts"]
+      },
+      "agency": {
+        "title": "Agency",
+        "price": "€49/Monat",
+        "features": ["Unlimited Posts", "Unlimited AI", "10 Accounts"]
+      }
+    },
+    "targetAudience": {
+      "title": "Perfekt für",
+      "blogger": "Food-Blogger & Influencer",
+      "restaurants": "Restaurants & Cafés",
+      "brands": "Food-Marken & Catering-Services",
+      "agencies": "Marketing-Agenturen im Food-Bereich"
+    },
+    "cta": {
+      "title": "Bereit für ContentChef?",
+      "subtitle": "Werde benachrichtigt, sobald ContentChef verfügbar ist",
+      "button": "Zur Warteliste"
     }
   }
 }
