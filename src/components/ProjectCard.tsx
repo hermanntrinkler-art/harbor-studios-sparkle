@@ -41,15 +41,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
         <h3 className="text-2xl font-bold mb-2 text-foreground">{title}</h3>
         <p className="text-muted-foreground mb-4">{description}</p>
         
-        {link === "#" ? (
-          <Button 
-            variant="ghost" 
-            className="cursor-default opacity-60"
-            disabled
-          >
-            {t('projects.comingSoon')}
-          </Button>
-        ) : detailPage ? (
+        {detailPage ? (
           <div className="flex gap-2">
             <Button 
               asChild
@@ -57,21 +49,31 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
               className="flex-1"
             >
               <Link to={detailPage}>
-                {t('projects.recipePixie.learnMore')}
+                {t('projects.learnMore')}
                 <Info className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button 
-              asChild
-              variant="outline"
-              className="flex-1 group/btn"
-            >
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                {t('projects.recipePixie.visitApp')}
-                <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-              </a>
-            </Button>
+            {link !== "#" && (
+              <Button 
+                asChild
+                variant="outline"
+                className="flex-1 group/btn"
+              >
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  {t('projects.visitProject')}
+                  <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+            )}
           </div>
+        ) : link === "#" ? (
+          <Button 
+            variant="ghost" 
+            className="cursor-default opacity-60"
+            disabled
+          >
+            {t('projects.comingSoon')}
+          </Button>
         ) : (
           <Button 
             asChild
