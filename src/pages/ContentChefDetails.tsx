@@ -9,65 +9,29 @@ import AnimatedLogo from "@/components/AnimatedLogo";
 const ContentChefDetails = () => {
   const { t } = useTranslation();
 
-  const features = [
-    {
-      title: t('contentChefDetails.features.aiContent.title'),
-      description: t('contentChefDetails.features.aiContent.description')
-    },
-    {
-      title: t('contentChefDetails.features.multiPlatform.title'),
-      description: t('contentChefDetails.features.multiPlatform.description')
-    },
-    {
-      title: t('contentChefDetails.features.recipeImport.title'),
-      description: t('contentChefDetails.features.recipeImport.description')
-    },
-    {
-      title: t('contentChefDetails.features.smartPlanning.title'),
-      description: t('contentChefDetails.features.smartPlanning.description')
-    }
-  ];
+  const features = t('contentChefDetails.features.items', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
 
-  const steps = [
-    {
-      title: t('contentChefDetails.howItWorks.step1.title'),
-      description: t('contentChefDetails.howItWorks.step1.description')
-    },
-    {
-      title: t('contentChefDetails.howItWorks.step2.title'),
-      description: t('contentChefDetails.howItWorks.step2.description')
-    },
-    {
-      title: t('contentChefDetails.howItWorks.step3.title'),
-      description: t('contentChefDetails.howItWorks.step3.description')
-    }
-  ];
+  const steps = t('contentChefDetails.howItWorks.steps', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
 
-  const pricingTiers = [
-    {
-      title: t('contentChefDetails.pricing.free.title'),
-      price: t('contentChefDetails.pricing.free.price'),
-      features: t('contentChefDetails.pricing.free.features', { returnObjects: true }) as string[]
-    },
-    {
-      title: t('contentChefDetails.pricing.pro.title'),
-      price: t('contentChefDetails.pricing.pro.price'),
-      features: t('contentChefDetails.pricing.pro.features', { returnObjects: true }) as string[],
-      highlighted: true
-    },
-    {
-      title: t('contentChefDetails.pricing.agency.title'),
-      price: t('contentChefDetails.pricing.agency.price'),
-      features: t('contentChefDetails.pricing.agency.features', { returnObjects: true }) as string[]
-    }
-  ];
+  const pricingTiers = t('contentChefDetails.pricing.tiers', { returnObjects: true }) as Array<{
+    name: string;
+    price: string;
+    features: string[];
+    highlighted?: boolean;
+  }>;
 
-  const targetAudience = [
-    t('contentChefDetails.targetAudience.blogger'),
-    t('contentChefDetails.targetAudience.restaurants'),
-    t('contentChefDetails.targetAudience.brands'),
-    t('contentChefDetails.targetAudience.agencies')
-  ];
+  const targetAudience = t('contentChefDetails.targetAudience.audiences', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+
+  const uspItems = t('contentChefDetails.usp.items', { returnObjects: true }) as string[];
 
   return (
     <div className="min-h-screen bg-background">
@@ -112,13 +76,29 @@ const ContentChefDetails = () => {
         </div>
       </section>
 
+      {/* USP Section */}
+      <section className="py-16 px-4 bg-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-8 text-center text-foreground">
+            {t('contentChefDetails.usp.title')}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {uspItems.map((item, index) => (
+              <Card key={index} className="p-4 border-primary/20 bg-card">
+                <p className="text-foreground font-medium">{item}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Grid */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
             {t('contentChefDetails.features.title')}
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <Card key={index} className="p-6 border-primary/20 bg-card hover:border-primary/40 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-3 text-foreground">
@@ -162,7 +142,7 @@ const ContentChefDetails = () => {
                 key={index} 
                 className={`p-8 ${tier.highlighted ? 'border-primary bg-primary/5' : 'border-primary/20 bg-card'}`}
               >
-                <h3 className="text-2xl font-bold mb-2 text-foreground">{tier.title}</h3>
+                <h3 className="text-2xl font-bold mb-2 text-foreground">{tier.name}</h3>
                 <p className="text-3xl font-bold mb-6 text-primary">{tier.price}</p>
                 <ul className="space-y-3">
                   {tier.features.map((feature, fIndex) => (
@@ -184,11 +164,14 @@ const ContentChefDetails = () => {
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
             {t('contentChefDetails.targetAudience.title')}
           </h2>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-6">
             {targetAudience.map((item, index) => (
               <Card key={index} className="p-6 border-primary/20 bg-card">
-                <p className="text-foreground leading-relaxed font-semibold">
-                  {item}
+                <h3 className="text-xl font-bold mb-2 text-foreground">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {item.description}
                 </p>
               </Card>
             ))}

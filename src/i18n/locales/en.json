@@ -240,75 +240,125 @@
     "comingSoon": "Coming Soon",
     "hero": {
       "title": "ContentChef",
-      "subtitle": "The ultimate content management platform for food creators, food bloggers and food brands"
+      "subtitle": "AI-powered social media content in minutes instead of hours. Automatic generation of posts, captions and hashtags for all industries."
     },
     "whatIs": {
       "title": "What is ContentChef?",
-      "description": "ContentChef is an all-in-one content management platform for food creators, food bloggers and food brands who want to create social media content around recipes."
+      "description": "ContentChef is the AI-powered content platform for professional social media posts. Whether food, lifestyle, business or e-commerce – our AI automatically creates engaging texts, hashtags and descriptions for Instagram, Facebook & Co."
+    },
+    "usp": {
+      "title": "Why ContentChef?",
+      "items": [
+        "⏱️ Saves 90% time on content creation",
+        "🌍 Cross-industry – not just for food!",
+        "🔄 Automatic repetition – set up once, benefit forever",
+        "📥 External sources – import recipes, blogs & more",
+        "📱 Multi-platform – one click, all channels",
+        "✨ Start for free – 5 posts free, no credit card required"
+      ]
     },
     "features": {
-      "title": "The 4 Main Features",
-      "aiContent": {
-        "title": "🤖 AI-powered Content Creation",
-        "description": "Automatic generation of posts from recipes. Social media text creation in seconds."
-      },
-      "multiPlatform": {
-        "title": "📅 Multi-Platform Scheduling",
-        "description": "Instagram & Facebook integration. Content calendar with automatic planning."
-      },
-      "recipeImport": {
-        "title": "⚡ Content Import",
-        "description": "Quick import of recipes, ideas or content. Direct conversion to social media posts."
-      },
-      "smartPlanning": {
-        "title": "📲 Intelligent Planning",
-        "description": "Automatic scheduling. Optimized posting times."
-      }
+      "title": "Key Features",
+      "items": [
+        {
+          "title": "🚀 AI Content Generation",
+          "description": "Let AI create engaging captions, hashtags and descriptions – perfectly tailored to your industry"
+        },
+        {
+          "title": "📱 Multi-Platform Posting",
+          "description": "Publish simultaneously to Instagram, Facebook and other platforms"
+        },
+        {
+          "title": "⚡ Recipe Import & External Data Sources",
+          "description": "Automatically import content from RecipePixie, your blog or other sources"
+        },
+        {
+          "title": "📅 Content Planning",
+          "description": "Plan posts in advance with our intuitive content calendar"
+        },
+        {
+          "title": "🔄 Automation",
+          "description": "Set up recurring posts (daily, weekly, monthly) – fully automatic!"
+        }
+      ]
     },
     "howItWorks": {
-      "title": "How does it work?",
-      "step1": {
-        "title": "1. Import Content",
-        "description": "Paste URL or enter manually"
-      },
-      "step2": {
-        "title": "2. AI Generates Content",
-        "description": "Automatic texts & optimization"
-      },
-      "step3": {
-        "title": "3. Schedule & Post",
-        "description": "Share directly on Instagram & Facebook"
-      }
+      "title": "How It Works",
+      "steps": [
+        {
+          "title": "Prepare Content",
+          "description": "Add product, service or content"
+        },
+        {
+          "title": "Let AI Generate",
+          "description": "Automatic captions & hashtags"
+        },
+        {
+          "title": "Publish & Share",
+          "description": "On all your channels"
+        }
+      ]
     },
     "pricing": {
-      "title": "Pricing Tiers",
-      "free": {
-        "title": "Free",
-        "price": "Free",
-        "features": ["5 Posts/Month", "20 AI Generations", "1 Account"]
-      },
-      "pro": {
-        "title": "Pro",
-        "price": "€19/Month",
-        "features": ["100 Posts/Month", "200 AI Generations", "3 Accounts"]
-      },
-      "agency": {
-        "title": "Agency",
-        "price": "€49/Month",
-        "features": ["Unlimited Posts", "Unlimited AI", "10 Accounts"]
-      }
+      "title": "Transparent Pricing for Everyone",
+      "tiers": [
+        {
+          "name": "Free",
+          "price": "$0",
+          "features": [
+            "5 posts/month",
+            "Basic AI features",
+            "1 social media channel"
+          ]
+        },
+        {
+          "name": "Pro",
+          "price": "$19/month",
+          "features": [
+            "50 posts/month",
+            "Advanced AI",
+            "Content calendar",
+            "Analytics"
+          ],
+          "highlighted": true
+        },
+        {
+          "name": "Agency",
+          "price": "$49/month",
+          "features": [
+            "Unlimited posts",
+            "Team collaboration",
+            "White-label",
+            "Priority support"
+          ]
+        }
+      ]
     },
     "targetAudience": {
-      "title": "Perfect for",
-      "blogger": "Food Bloggers & Influencers",
-      "restaurants": "Restaurants & Cafés",
-      "brands": "Food Brands & Catering Services",
-      "agencies": "Marketing Agencies in Food Industry"
+      "title": "Who is ContentChef for?",
+      "audiences": [
+        {
+          "title": "🍽️ Food Bloggers & Restaurants",
+          "description": "Create engaging content for your food channels"
+        },
+        {
+          "title": "🛍️ E-Commerce & Online Shops",
+          "description": "Promote your products professionally on social media"
+        },
+        {
+          "title": "🎨 Content Creators & Influencers",
+          "description": "Save time and create more high-quality content"
+        },
+        {
+          "title": "🏢 Marketing Agencies & Teams",
+          "description": "Scale your content marketing with AI power"
+        }
+      ]
     },
     "cta": {
-      "title": "Ready for ContentChef?",
-      "subtitle": "Get notified when ContentChef becomes available",
-      "button": "Join Waitlist"
+      "title": "Start for Free Now",
+      "subtitle": "No credit card required – 5 posts free to test",
+      "button": "Start for Free"
     }
   }
 }

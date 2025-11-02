@@ -240,75 +240,125 @@
     "comingSoon": "Bald verfügbar",
     "hero": {
       "title": "ContentChef",
-      "subtitle": "Die ultimative Content-Management-Plattform für Food-Creator, Food-Blogger und Food-Marken"
+      "subtitle": "KI-gestützte Social-Media-Inhalte in Minuten statt Stunden. Automatische Generierung von Posts, Captions und Hashtags für alle Branchen."
     },
     "whatIs": {
       "title": "Was ist ContentChef?",
-      "description": "ContentChef ist eine All-in-One Content-Management-Plattform für Food-Creator, Food-Blogger und Food-Marken, die Social-Media-Content rund um Rezepte erstellen möchten."
+      "description": "ContentChef ist die KI-gestützte Content-Plattform für professionelle Social-Media-Posts. Egal ob Food, Lifestyle, Business oder E-Commerce – unsere KI erstellt automatisch ansprechende Texte, Hashtags und Beschreibungen für Instagram, Facebook & Co."
+    },
+    "usp": {
+      "title": "Warum ContentChef?",
+      "items": [
+        "⏱️ Spart 90% Zeit bei der Content-Erstellung",
+        "🌍 Branchen-übergreifend – nicht nur für Food!",
+        "🔄 Automatische Wiederholung – einmal einrichten, immer profitieren",
+        "📥 Externe Quellen – Rezepte, Blogs & mehr importieren",
+        "📱 Multi-Platform – ein Klick, alle Kanäle",
+        "✨ Kostenlos starten – 5 Posts gratis, keine Kreditkarte nötig"
+      ]
     },
     "features": {
-      "title": "Die 4 Hauptfunktionen",
-      "aiContent": {
-        "title": "🤖 KI-gestützte Content-Erstellung",
-        "description": "Automatische Generierung von Posts aus Rezepten. Texterstellung für Social Media in Sekunden."
-      },
-      "multiPlatform": {
-        "title": "📅 Multi-Plattform-Scheduling",
-        "description": "Instagram & Facebook Anbindung. Content-Kalender mit automatischer Planung."
-      },
-      "recipeImport": {
-        "title": "⚡ Content-Import",
-        "description": "Schneller Import von Rezepten, Ideen oder Inhalten. Direkte Umwandlung in Social-Media-Posts."
-      },
-      "smartPlanning": {
-        "title": "📲 Intelligente Planung",
-        "description": "Automatisches Scheduling. Optimierte Posting-Zeiten."
-      }
+      "title": "Hauptfunktionen",
+      "items": [
+        {
+          "title": "🚀 KI Content-Generierung",
+          "description": "Lass die KI ansprechende Captions, Hashtags und Beschreibungen erstellen – perfekt abgestimmt auf deine Branche"
+        },
+        {
+          "title": "📱 Multi-Platform-Posting",
+          "description": "Veröffentliche gleichzeitig auf Instagram, Facebook und anderen Plattformen"
+        },
+        {
+          "title": "⚡ Rezept-Import & externe Datenquellen",
+          "description": "Importiere automatisch Inhalte aus RecipePixie, deinem Blog oder anderen Quellen"
+        },
+        {
+          "title": "📅 Content-Planung",
+          "description": "Plane Posts im Voraus mit unserem intuitiven Content-Kalender"
+        },
+        {
+          "title": "🔄 Automatisierung",
+          "description": "Richte wiederkehrende Posts ein (täglich, wöchentlich, monatlich) – vollautomatisch!"
+        }
+      ]
     },
     "howItWorks": {
-      "title": "Wie funktioniert es?",
-      "step1": {
-        "title": "1. Content importieren",
-        "description": "URL einfügen oder manuell eingeben"
-      },
-      "step2": {
-        "title": "2. KI generiert Content",
-        "description": "Automatische Texte & Optimierung"
-      },
-      "step3": {
-        "title": "3. Planen & Posten",
-        "description": "Direkt auf Instagram & Facebook teilen"
-      }
+      "title": "Wie es funktioniert",
+      "steps": [
+        {
+          "title": "Content vorbereiten",
+          "description": "Produkt, Dienstleistung oder Inhalt hinzufügen"
+        },
+        {
+          "title": "KI generieren lassen",
+          "description": "Automatische Captions & Hashtags"
+        },
+        {
+          "title": "Veröffentlichen & Teilen",
+          "description": "Auf all deinen Kanälen"
+        }
+      ]
     },
     "pricing": {
-      "title": "Preisstufen",
-      "free": {
-        "title": "Free",
-        "price": "Kostenlos",
-        "features": ["5 Posts/Monat", "20 AI-Generierungen", "1 Account"]
-      },
-      "pro": {
-        "title": "Pro",
-        "price": "€19/Monat",
-        "features": ["100 Posts/Monat", "200 AI-Generierungen", "3 Accounts"]
-      },
-      "agency": {
-        "title": "Agency",
-        "price": "€49/Monat",
-        "features": ["Unlimited Posts", "Unlimited AI", "10 Accounts"]
-      }
+      "title": "Transparente Preise für jeden",
+      "tiers": [
+        {
+          "name": "Kostenlos",
+          "price": "0€",
+          "features": [
+            "5 Posts/Monat",
+            "Basis-KI-Features",
+            "1 Social-Media-Kanal"
+          ]
+        },
+        {
+          "name": "Pro",
+          "price": "19€/Monat",
+          "features": [
+            "50 Posts/Monat",
+            "Erweiterte KI",
+            "Content-Kalender",
+            "Analytics"
+          ],
+          "highlighted": true
+        },
+        {
+          "name": "Agency",
+          "price": "49€/Monat",
+          "features": [
+            "Unbegrenzte Posts",
+            "Team-Kollaboration",
+            "White-Label",
+            "Priority Support"
+          ]
+        }
+      ]
     },
     "targetAudience": {
-      "title": "Perfekt für",
-      "blogger": "Food-Blogger & Influencer",
-      "restaurants": "Restaurants & Cafés",
-      "brands": "Food-Marken & Catering-Services",
-      "agencies": "Marketing-Agenturen im Food-Bereich"
+      "title": "Für wen ist ContentChef?",
+      "audiences": [
+        {
+          "title": "🍽️ Food Blogger & Restaurants",
+          "description": "Erstelle ansprechende Inhalte für deine Food-Kanäle"
+        },
+        {
+          "title": "🛍️ E-Commerce & Online-Shops",
+          "description": "Bewerbe deine Produkte professionell auf Social Media"
+        },
+        {
+          "title": "🎨 Content Creator & Influencer",
+          "description": "Spare Zeit und erstelle mehr hochwertigen Content"
+        },
+        {
+          "title": "🏢 Marketing-Agenturen & Teams",
+          "description": "Skaliere dein Content-Marketing mit KI-Power"
+        }
+      ]
     },
     "cta": {
-      "title": "Bereit für ContentChef?",
-      "subtitle": "Werde benachrichtigt, sobald ContentChef verfügbar ist",
-      "button": "Zur Warteliste"
+      "title": "Starte jetzt kostenlos",
+      "subtitle": "Keine Kreditkarte erforderlich – 5 Posts gratis zum Testen",
+      "button": "Kostenlos starten"
     }
   }
 }

@@ -240,75 +240,125 @@
     "comingSoon": "Próximamente",
     "hero": {
       "title": "ContentChef",
-      "subtitle": "La plataforma definitiva de gestión de contenido para creadores, bloggers y marcas de comida"
+      "subtitle": "Contenido de redes sociales impulsado por IA en minutos en lugar de horas. Generación automática de publicaciones, subtítulos y hashtags para todas las industrias."
     },
     "whatIs": {
       "title": "¿Qué es ContentChef?",
-      "description": "ContentChef es una plataforma todo-en-uno de gestión de contenido para creadores, bloggers y marcas de comida que desean crear contenido de redes sociales sobre recetas."
+      "description": "ContentChef es la plataforma de contenido impulsada por IA para publicaciones profesionales en redes sociales. Ya sea comida, estilo de vida, negocios o comercio electrónico: nuestra IA crea automáticamente textos, hashtags y descripciones atractivas para Instagram, Facebook y más."
+    },
+    "usp": {
+      "title": "¿Por qué ContentChef?",
+      "items": [
+        "⏱️ Ahorra 90% del tiempo en la creación de contenido",
+        "🌍 Multi-industria – ¡no solo para comida!",
+        "🔄 Repetición automática – configura una vez, benefíciate siempre",
+        "📥 Fuentes externas – importa recetas, blogs y más",
+        "📱 Multi-plataforma – un clic, todos los canales",
+        "✨ Comienza gratis – 5 publicaciones gratis, sin tarjeta de crédito"
+      ]
     },
     "features": {
-      "title": "Las 4 Funciones Principales",
-      "aiContent": {
-        "title": "🤖 Creación de Contenido con IA",
-        "description": "Generación automática de publicaciones a partir de recetas. Creación de textos para redes sociales en segundos."
-      },
-      "multiPlatform": {
-        "title": "📅 Programación Multi-Plataforma",
-        "description": "Integración con Instagram y Facebook. Calendario de contenido con planificación automática."
-      },
-      "recipeImport": {
-        "title": "⚡ Importación de Contenido",
-        "description": "Importación rápida de recetas, ideas o contenido. Conversión directa a publicaciones de redes sociales."
-      },
-      "smartPlanning": {
-        "title": "📲 Planificación Inteligente",
-        "description": "Programación automática. Horarios de publicación optimizados."
-      }
+      "title": "Características Principales",
+      "items": [
+        {
+          "title": "🚀 Generación de Contenido con IA",
+          "description": "Deja que la IA cree subtítulos, hashtags y descripciones atractivas, perfectamente adaptados a tu industria"
+        },
+        {
+          "title": "📱 Publicación Multi-Plataforma",
+          "description": "Publica simultáneamente en Instagram, Facebook y otras plataformas"
+        },
+        {
+          "title": "⚡ Importación de Recetas y Fuentes Externas",
+          "description": "Importa automáticamente contenido de RecipePixie, tu blog u otras fuentes"
+        },
+        {
+          "title": "📅 Planificación de Contenido",
+          "description": "Planifica publicaciones con antelación con nuestro calendario de contenido intuitivo"
+        },
+        {
+          "title": "🔄 Automatización",
+          "description": "Configura publicaciones recurrentes (diarias, semanales, mensuales) – ¡totalmente automáticas!"
+        }
+      ]
     },
     "howItWorks": {
-      "title": "¿Cómo funciona?",
-      "step1": {
-        "title": "1. Importar Contenido",
-        "description": "Pega URL o ingresa manualmente"
-      },
-      "step2": {
-        "title": "2. La IA Genera Contenido",
-        "description": "Textos automáticos y optimización"
-      },
-      "step3": {
-        "title": "3. Programar y Publicar",
-        "description": "Comparte directamente en Instagram y Facebook"
-      }
+      "title": "Cómo Funciona",
+      "steps": [
+        {
+          "title": "Preparar Contenido",
+          "description": "Añade producto, servicio o contenido"
+        },
+        {
+          "title": "Dejar que la IA Genere",
+          "description": "Subtítulos y hashtags automáticos"
+        },
+        {
+          "title": "Publicar y Compartir",
+          "description": "En todos tus canales"
+        }
+      ]
     },
     "pricing": {
-      "title": "Planes de Precios",
-      "free": {
-        "title": "Gratis",
-        "price": "Gratis",
-        "features": ["5 Posts/Mes", "20 Generaciones IA", "1 Cuenta"]
-      },
-      "pro": {
-        "title": "Pro",
-        "price": "€19/Mes",
-        "features": ["100 Posts/Mes", "200 Generaciones IA", "3 Cuentas"]
-      },
-      "agency": {
-        "title": "Agencia",
-        "price": "€49/Mes",
-        "features": ["Posts Ilimitados", "IA Ilimitada", "10 Cuentas"]
-      }
+      "title": "Precios Transparentes para Todos",
+      "tiers": [
+        {
+          "name": "Gratis",
+          "price": "0€",
+          "features": [
+            "5 publicaciones/mes",
+            "Funciones básicas de IA",
+            "1 canal de redes sociales"
+          ]
+        },
+        {
+          "name": "Pro",
+          "price": "19€/mes",
+          "features": [
+            "50 publicaciones/mes",
+            "IA avanzada",
+            "Calendario de contenido",
+            "Análisis"
+          ],
+          "highlighted": true
+        },
+        {
+          "name": "Agency",
+          "price": "49€/mes",
+          "features": [
+            "Publicaciones ilimitadas",
+            "Colaboración en equipo",
+            "Marca blanca",
+            "Soporte prioritario"
+          ]
+        }
+      ]
     },
     "targetAudience": {
-      "title": "Perfecto para",
-      "blogger": "Bloggers e Influencers de Comida",
-      "restaurants": "Restaurantes y Cafeterías",
-      "brands": "Marcas de Comida y Servicios de Catering",
-      "agencies": "Agencias de Marketing en Industria Alimentaria"
+      "title": "¿Para quién es ContentChef?",
+      "audiences": [
+        {
+          "title": "🍽️ Bloggers Gastronómicos y Restaurantes",
+          "description": "Crea contenido atractivo para tus canales gastronómicos"
+        },
+        {
+          "title": "🛍️ Comercio Electrónico y Tiendas Online",
+          "description": "Promociona tus productos profesionalmente en redes sociales"
+        },
+        {
+          "title": "🎨 Creadores de Contenido e Influencers",
+          "description": "Ahorra tiempo y crea más contenido de alta calidad"
+        },
+        {
+          "title": "🏢 Agencias de Marketing y Equipos",
+          "description": "Escala tu marketing de contenido con el poder de la IA"
+        }
+      ]
     },
     "cta": {
-      "title": "¿Listo para ContentChef?",
-      "subtitle": "Recibe notificación cuando ContentChef esté disponible",
-      "button": "Unirse a Lista de Espera"
+      "title": "Comienza Gratis Ahora",
+      "subtitle": "Sin tarjeta de crédito requerida – 5 publicaciones gratis para probar",
+      "button": "Comenzar Gratis"
     }
   }
 }
