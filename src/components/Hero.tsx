@@ -40,6 +40,14 @@ const Hero = () => {
           >
             {t('hero.cta_about')}
           </Button>
+          <Button 
+            size="lg"
+            variant="outline"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="border-primary/30 hover:bg-primary/10"
+          >
+            {t('hero.cta_contact')}
+          </Button>
         </div>
       </div>
     </section>
