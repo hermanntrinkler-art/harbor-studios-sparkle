@@ -21,11 +21,11 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "ContentChef",
-      description: t('projects.contentChef.description'),
+      title: "Social Post Pro",
+      description: t('projects.socialPostPro.description'),
       link: "#",
-      detailPage: "/projects/content-chef",
-      tags: ["AI", "Social Media", "Food Content", "SaaS"],
+      detailPage: "/projects/social-post-pro",
+      tags: ["AI", "Social Media", "Content Management", "SaaS"],
       image: "https://images.unsplash.com/photo-1556155092-8707de31f9c4?q=80&w=2070&auto=format&fit=crop"
     },
     {

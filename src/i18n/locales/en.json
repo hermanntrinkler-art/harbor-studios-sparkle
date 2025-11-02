@@ -25,7 +25,7 @@
     "snapqr": {
       "description": "Collect event photos without an app, no stress. Share QR code → guests upload → you get all photos. Start for free, pay only when downloading."
     },
-    "contentChef": {
+    "socialPostPro": {
       "description": "All-in-one content management platform for social media – AI-powered posts, captions and hashtags for all industries"
     },
     "roblox": {
@@ -235,19 +235,19 @@
     "success": "Message sent successfully! We'll get back to you soon.",
     "error": "Error sending message. Please try again."
   },
-  "contentChefDetails": {
+  "socialPostProDetails": {
     "backHome": "Back to Home",
     "comingSoon": "Coming Soon",
     "hero": {
-      "title": "ContentChef",
+      "title": "Social Post Pro",
       "subtitle": "AI-powered social media content in minutes instead of hours. Automatic generation of posts, captions and hashtags for all industries."
     },
     "whatIs": {
-      "title": "What is ContentChef?",
-      "description": "ContentChef is the AI-powered content platform for professional social media posts. Whether food, lifestyle, business or e-commerce – our AI automatically creates engaging texts, hashtags and descriptions for Instagram, Facebook & Co."
+      "title": "What is Social Post Pro?",
+      "description": "Social Post Pro is the AI-powered content platform for professional social media posts. Whether food, lifestyle, business or e-commerce – our AI automatically creates engaging texts, hashtags and descriptions for Instagram, Facebook & Co."
     },
     "usp": {
-      "title": "Why ContentChef?",
+      "title": "Why Social Post Pro?",
       "items": [
         "⏱️ Saves 90% time on content creation",
         "🌍 Cross-industry – not just for food!",
@@ -335,7 +335,7 @@
       ]
     },
     "targetAudience": {
-      "title": "Who is ContentChef for?",
+      "title": "Who is Social Post Pro for?",
       "audiences": [
         {
           "title": "🍽️ Food Bloggers & Restaurants",

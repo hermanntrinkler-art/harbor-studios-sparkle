@@ -6,32 +6,32 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import AnimatedLogo from "@/components/AnimatedLogo";
 
-const ContentChefDetails = () => {
+const SocialPostProDetails = () => {
   const { t } = useTranslation();
 
-  const features = t('contentChefDetails.features.items', { returnObjects: true }) as Array<{
+  const features = t('socialPostProDetails.features.items', { returnObjects: true }) as Array<{
     title: string;
     description: string;
   }>;
 
-  const steps = t('contentChefDetails.howItWorks.steps', { returnObjects: true }) as Array<{
+  const steps = t('socialPostProDetails.howItWorks.steps', { returnObjects: true }) as Array<{
     title: string;
     description: string;
   }>;
 
-  const pricingTiers = t('contentChefDetails.pricing.tiers', { returnObjects: true }) as Array<{
+  const pricingTiers = t('socialPostProDetails.pricing.tiers', { returnObjects: true }) as Array<{
     name: string;
     price: string;
     features: string[];
     highlighted?: boolean;
   }>;
 
-  const targetAudience = t('contentChefDetails.targetAudience.audiences', { returnObjects: true }) as Array<{
+  const targetAudience = t('socialPostProDetails.targetAudience.audiences', { returnObjects: true }) as Array<{
     title: string;
     description: string;
   }>;
 
-  const uspItems = t('contentChefDetails.usp.items', { returnObjects: true }) as string[];
+  const uspItems = t('socialPostProDetails.usp.items', { returnObjects: true }) as string[];
 
   return (
     <div className="min-h-screen bg-background">
@@ -43,7 +43,7 @@ const ContentChefDetails = () => {
           <Link to="/" className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors group">
             <AnimatedLogo size="sm" className="transition-transform group-hover:scale-110" />
             <ArrowLeft className="h-4 w-4" />
-            <span className="font-semibold">{t('contentChefDetails.backHome')}</span>
+            <span className="font-semibold">{t('socialPostProDetails.backHome')}</span>
           </Link>
         </div>
       </nav>
@@ -53,24 +53,24 @@ const ContentChefDetails = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20">
-            <span className="text-sm font-semibold text-yellow-600">🚧 {t('contentChefDetails.comingSoon')}</span>
+            <span className="text-sm font-semibold text-yellow-600">🚧 {t('socialPostProDetails.comingSoon')}</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            {t('contentChefDetails.hero.title')} 👨‍🍳
+            {t('socialPostProDetails.hero.title')} 👨‍🍳
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {t('contentChefDetails.hero.subtitle')}
+            {t('socialPostProDetails.hero.subtitle')}
           </p>
         </div>
       </section>
 
-      {/* What is ContentChef */}
+      {/* What is Social Post Pro */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <Card className="p-8 border-primary/20 bg-card">
-            <h2 className="text-3xl font-bold mb-4 text-foreground">{t('contentChefDetails.whatIs.title')}</h2>
+            <h2 className="text-3xl font-bold mb-4 text-foreground">{t('socialPostProDetails.whatIs.title')}</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              {t('contentChefDetails.whatIs.description')}
+              {t('socialPostProDetails.whatIs.description')}
             </p>
           </Card>
         </div>
@@ -80,7 +80,7 @@ const ContentChefDetails = () => {
       <section className="py-16 px-4 bg-muted/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 text-center text-foreground">
-            {t('contentChefDetails.usp.title')}
+            {t('socialPostProDetails.usp.title')}
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {uspItems.map((item, index) => (
@@ -96,7 +96,7 @@ const ContentChefDetails = () => {
       <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
-            {t('contentChefDetails.features.title')}
+            {t('socialPostProDetails.features.title')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
@@ -115,7 +115,7 @@ const ContentChefDetails = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
-            {t('contentChefDetails.howItWorks.title')}
+            {t('socialPostProDetails.howItWorks.title')}
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {steps.map((step, index) => (
@@ -134,7 +134,7 @@ const ContentChefDetails = () => {
       <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
-            {t('contentChefDetails.pricing.title')}
+            {t('socialPostProDetails.pricing.title')}
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {pricingTiers.map((tier, index) => (
@@ -162,7 +162,7 @@ const ContentChefDetails = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
-            {t('contentChefDetails.targetAudience.title')}
+            {t('socialPostProDetails.targetAudience.title')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {targetAudience.map((item, index) => (
@@ -183,13 +183,13 @@ const ContentChefDetails = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4 text-foreground">
-            {t('contentChefDetails.cta.title')}
+            {t('socialPostProDetails.cta.title')}
           </h2>
           <p className="text-muted-foreground mb-8">
-            {t('contentChefDetails.cta.subtitle')}
+            {t('socialPostProDetails.cta.subtitle')}
           </p>
           <Button disabled size="lg" className="text-lg opacity-60 cursor-not-allowed">
-            {t('contentChefDetails.cta.button')}
+            {t('socialPostProDetails.cta.button')}
           </Button>
         </div>
       </section>
@@ -197,4 +197,4 @@ const ContentChefDetails = () => {
   );
 };
 
-export default ContentChefDetails;
+export default SocialPostProDetails;

@@ -25,7 +25,7 @@
     "snapqr": {
       "description": "Event-Fotos sammeln ohne App, ohne Stress. QR-Code teilen → Gäste laden hoch → Du bekommst alle Fotos. Kostenlos starten, erst bei Download zahlen."
     },
-    "contentChef": {
+    "socialPostPro": {
       "description": "All-in-One Content-Management-Plattform für Social Media – KI-gestützte Posts, Captions und Hashtags für alle Branchen"
     },
     "roblox": {
@@ -235,19 +235,19 @@
     "success": "Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.",
     "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
   },
-  "contentChefDetails": {
+  "socialPostProDetails": {
     "backHome": "Zurück zur Startseite",
     "comingSoon": "Bald verfügbar",
     "hero": {
-      "title": "ContentChef",
+      "title": "Social Post Pro",
       "subtitle": "KI-gestützte Social-Media-Inhalte in Minuten statt Stunden. Automatische Generierung von Posts, Captions und Hashtags für alle Branchen."
     },
     "whatIs": {
-      "title": "Was ist ContentChef?",
-      "description": "ContentChef ist die KI-gestützte Content-Plattform für professionelle Social-Media-Posts. Egal ob Food, Lifestyle, Business oder E-Commerce – unsere KI erstellt automatisch ansprechende Texte, Hashtags und Beschreibungen für Instagram, Facebook & Co."
+      "title": "Was ist Social Post Pro?",
+      "description": "Social Post Pro ist die KI-gestützte Content-Plattform für professionelle Social-Media-Posts. Egal ob Food, Lifestyle, Business oder E-Commerce – unsere KI erstellt automatisch ansprechende Texte, Hashtags und Beschreibungen für Instagram, Facebook & Co."
     },
     "usp": {
-      "title": "Warum ContentChef?",
+      "title": "Warum Social Post Pro?",
       "items": [
         "⏱️ Spart 90% Zeit bei der Content-Erstellung",
         "🌍 Branchen-übergreifend – nicht nur für Food!",
@@ -335,7 +335,7 @@
       ]
     },
     "targetAudience": {
-      "title": "Für wen ist ContentChef?",
+      "title": "Für wen ist Social Post Pro?",
       "audiences": [
         {
           "title": "🍽️ Food Blogger & Restaurants",

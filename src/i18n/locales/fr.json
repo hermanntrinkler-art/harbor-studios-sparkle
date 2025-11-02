@@ -25,7 +25,7 @@
     "snapqr": {
       "description": "Collectez des photos d'événements sans app, sans stress. Partagez le code QR → les invités uploadent → vous obtenez toutes les photos. Commencez gratuitement, payez uniquement lors du téléchargement."
     },
-    "contentChef": {
+    "socialPostPro": {
       "description": "Plateforme de gestion de contenu tout-en-un pour les médias sociaux – Posts, légendes et hashtags alimentés par l'IA pour tous les secteurs"
     },
     "roblox": {
@@ -235,19 +235,19 @@
     "success": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
     "error": "Erreur lors de l'envoi du message. Veuillez réessayer."
   },
-  "contentChefDetails": {
+  "socialPostProDetails": {
     "backHome": "Retour à l'Accueil",
     "comingSoon": "Bientôt disponible",
     "hero": {
-      "title": "ContentChef",
+      "title": "Social Post Pro",
       "subtitle": "Contenu de médias sociaux alimenté par l'IA en quelques minutes au lieu d'heures. Génération automatique de posts, légendes et hashtags pour tous les secteurs."
     },
     "whatIs": {
-      "title": "Qu'est-ce que ContentChef ?",
-      "description": "ContentChef est la plateforme de contenu alimentée par l'IA pour des posts professionnels sur les médias sociaux. Que ce soit la cuisine, le lifestyle, le business ou le e-commerce – notre IA crée automatiquement des textes, hashtags et descriptions engageants pour Instagram, Facebook & Co."
+      "title": "Qu'est-ce que Social Post Pro ?",
+      "description": "Social Post Pro est la plateforme de contenu alimentée par l'IA pour des posts professionnels sur les médias sociaux. Que ce soit la cuisine, le lifestyle, le business ou le e-commerce – notre IA crée automatiquement des textes, hashtags et descriptions engageants pour Instagram, Facebook & Co."
     },
     "usp": {
-      "title": "Pourquoi ContentChef ?",
+      "title": "Pourquoi Social Post Pro ?",
       "items": [
         "⏱️ Économise 90% du temps de création de contenu",
         "🌍 Multi-secteurs – pas seulement pour la cuisine !",
@@ -335,7 +335,7 @@
       ]
     },
     "targetAudience": {
-      "title": "Pour qui est ContentChef ?",
+      "title": "Pour qui est Social Post Pro ?",
       "audiences": [
         {
           "title": "🍽️ Blogueurs Culinaires et Restaurants",
