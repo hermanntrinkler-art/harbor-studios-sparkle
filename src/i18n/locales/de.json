@@ -210,6 +210,30 @@
       "inDevelopment": "Diese App befindet sich derzeit in Entwicklung. Bleibe informiert über den Launch!"
     }
   },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Haben Sie eine Projektidee? Lassen Sie uns darüber sprechen!",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre.email@beispiel.de",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Worum geht es?",
+      "message": "Nachricht",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt...",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet..."
+    },
+    "errors": {
+      "nameMin": "Name muss mindestens 2 Zeichen lang sein",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "subjectMin": "Betreff muss mindestens 5 Zeichen lang sein",
+      "messageMin": "Nachricht muss mindestens 10 Zeichen lang sein"
+    },
+    "success": "Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.",
+    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+  },
   "contentChefDetails": {
     "backHome": "Zurück zur Startseite",
     "comingSoon": "Bald verfügbar",

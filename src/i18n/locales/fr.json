@@ -210,6 +210,30 @@
       "inDevelopment": "Cette application est actuellement en développement. Restez informé du lancement !"
     }
   },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Vous avez une idée de projet ? Parlons-en !",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "emailPlaceholder": "votre.email@exemple.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "De quoi s'agit-il ?",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre projet...",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours..."
+    },
+    "errors": {
+      "nameMin": "Le nom doit contenir au moins 2 caractères",
+      "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+      "subjectMin": "Le sujet doit contenir au moins 5 caractères",
+      "messageMin": "Le message doit contenir au moins 10 caractères"
+    },
+    "success": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
+    "error": "Erreur lors de l'envoi du message. Veuillez réessayer."
+  },
   "contentChefDetails": {
     "backHome": "Retour à l'Accueil",
     "comingSoon": "Bientôt Disponible",
