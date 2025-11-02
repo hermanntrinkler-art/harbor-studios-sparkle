@@ -9,6 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Mail, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -35,24 +36,18 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-          },
-          body: JSON.stringify(values),
-        }
-      );
+      console.log("Sending contact form:", values);
+      
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: values,
+      });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to send message");
+      if (error) {
+        console.error("Supabase function error:", error);
+        throw error;
       }
 
+      console.log("Email sent successfully:", data);
       toast.success(t('contact.success'));
       form.reset();
     } catch (error: any) {
