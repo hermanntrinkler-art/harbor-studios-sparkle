@@ -269,8 +269,8 @@
           "description": "Publish simultaneously to Instagram, Facebook and other platforms"
         },
         {
-          "title": "⚡ Recipe Import & External Data Sources",
-          "description": "Automatically import content from RecipePixie, your blog or other sources"
+          "title": "⚡ Database Import & External Data Sources",
+          "description": "Automatically import content from databases, your blog or other sources"
         },
         {
           "title": "📅 Content Planning",
