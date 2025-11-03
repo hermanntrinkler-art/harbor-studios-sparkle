@@ -17,7 +17,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
   const { t } = useTranslation();
   
   return (
-    <Card className="group overflow-hidden border-primary/20 bg-card hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_hsl(189_94%_58%_/_0.2)]">
+    <Card className="group overflow-hidden border-primary/20 bg-card hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_hsl(189_94%_58%_/_0.2)] flex flex-col h-full">
       <div className="aspect-video overflow-hidden bg-muted">
         <img 
           src={image} 
@@ -26,7 +26,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
         />
       </div>
       
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <div className="flex flex-wrap gap-2 mb-3">
           {tags.map((tag) => (
             <span 
@@ -42,7 +42,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
         <p className="text-muted-foreground mb-4">{description}</p>
         
         {detailPage ? (
-          <div className="flex gap-2">
+          <div className="flex gap-2 mt-auto">
             <Button 
               asChild
               variant="default"
@@ -69,7 +69,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
         ) : link === "#" ? (
           <Button 
             variant="ghost" 
-            className="cursor-default opacity-60"
+            className="cursor-default opacity-60 mt-auto"
             disabled
           >
             {t('projects.comingSoon')}
@@ -78,7 +78,7 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage }: Proj
           <Button 
             asChild
             variant="ghost" 
-            className="group/btn hover:text-primary"
+            className="group/btn hover:text-primary mt-auto"
           >
             <a href={link} target="_blank" rel="noopener noreferrer">
               {t('projects.visitProject')}
