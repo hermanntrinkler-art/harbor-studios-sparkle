@@ -13,6 +13,14 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?q=80&w=2070&auto=format&fit=crop"
     },
     {
+      title: "OceanMind",
+      description: t('projects.oceanMind.description'),
+      link: "#",
+      detailPage: "/projects/ocean-mind",
+      tags: ["Produktivität", "AI Coach", "Meditation", "PWA"],
+      image: "/images/ocean_mind.png"
+    },
+    {
       title: "Recipe Pixie",
       description: t('projects.recipePixie.description'),
       link: "https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor",

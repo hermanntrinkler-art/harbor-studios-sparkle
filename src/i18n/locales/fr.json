@@ -31,6 +31,9 @@
     "roblox": {
       "description": "Collection de jeux Roblox immersifs avec des mécaniques de gameplay créatives et des expériences multijoueurs engageantes."
     },
+    "oceanMind": {
+      "description": "Votre compagnon personnel de concentration avec coach IA, tâches intelligentes et paysages sonores apaisants pour plus de productivité et de sérénité"
+    },
     "learnMore": "En savoir plus",
     "visitProject": "Visiter le Projet",
     "comingSoon": "Bientôt Disponible"
@@ -359,6 +362,64 @@
       "title": "Commencez Gratuitement Maintenant",
       "subtitle": "Aucune carte bancaire requise – 5 posts gratuits pour tester",
       "button": "Commencer Gratuitement"
+    }
+  },
+  "oceanMindDetails": {
+    "backHome": "Retour à l'Accueil",
+    "status": "🚧 En Développement – Version Beta",
+    "hero": {
+      "title": "OceanMind",
+      "subtitle": "Votre Compagnon Personnel de Concentration – Restez concentré. Créez des habitudes. Libérez votre potentiel."
+    },
+    "whatIs": {
+      "title": "Qu'est-ce qu'OceanMind ?",
+      "description": "OceanMind est plus qu'une application de productivité – c'est votre oasis personnelle pour la clarté mentale et le succès durable. Avec une gestion intelligente des tâches, un coach IA et des paysages sonores apaisants, vous vous accompagnez sur le chemin vers plus de concentration et de bien-être."
+    },
+    "features": {
+      "title": "Fonctionnalités Principales",
+      "items": [
+        {
+          "title": "📋 Gestion Intelligente des Tâches",
+          "description": "Gérez vos tâches quotidiennes avec un système élégant et intuitif. Gagnez des OceanCoins pour chaque tâche accomplie et suivez vos progrès avec des séries quotidiennes."
+        },
+        {
+          "title": "🤖 Coach Personnel IA",
+          "description": "Votre propre coach IA est disponible 24h/24 et 7j/7. Obtenez une motivation personnalisée par voix ou texte dans 4 langues avec synthèse vocale automatique."
+        },
+        {
+          "title": "🎵 Paysages Sonores de Concentration",
+          "description": "Plongez dans des paysages sonores apaisants : vagues de l'océan, pluie, sons de forêt, musique de concentration profonde et sons de méditation pour une concentration maximale et la paix intérieure."
+        },
+        {
+          "title": "🌍 Multilingue et Accessible",
+          "description": "Prend en charge l'allemand, l'anglais, l'espagnol et le français avec reconnaissance vocale pour une utilisation mains libres et synthèse vocale pour toutes les réponses du coach."
+        }
+      ]
+    },
+    "perfectFor": {
+      "title": "Parfait Pour",
+      "items": [
+        "🎓 Les étudiants qui veulent apprendre de manière plus concentrée",
+        "💼 Les professionnels cherchant à augmenter leur productivité",
+        "🎨 Les créatifs qui veulent améliorer leurs habitudes",
+        "🧘 Tous ceux qui recherchent plus d'équilibre et de concentration au quotidien"
+      ]
+    },
+    "premium": {
+      "title": "💎 Fonctionnalités Premium",
+      "description": "Passez à Premium pour :",
+      "features": [
+        "Sessions de coach IA illimitées",
+        "Accès à tous les paysages sonores exclusifs",
+        "Statistiques et informations avancées",
+        "Support prioritaire"
+      ]
+    },
+    "cta": {
+      "title": "Bientôt disponible !",
+      "subtitle": "OceanMind – Où la productivité rencontre la sérénité. 🌊✨",
+      "button": "Être Notifié",
+      "inDevelopment": "Cette application est actuellement en développement. Restez informé du lancement !"
     }
   }
 }

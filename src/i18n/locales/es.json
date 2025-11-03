@@ -31,6 +31,9 @@
     "roblox": {
       "description": "Colección de juegos inmersivos de Roblox con mecánicas de juego creativas y experiencias multijugador cautivadoras."
     },
+    "oceanMind": {
+      "description": "Tu compañero personal de enfoque con coach de IA, tareas inteligentes y paisajes sonoros relajantes para más productividad y paz interior"
+    },
     "learnMore": "Más información",
     "visitProject": "Visitar Proyecto",
     "comingSoon": "Próximamente"
@@ -359,6 +362,64 @@
       "title": "Comienza Gratis Ahora",
       "subtitle": "Sin tarjeta de crédito requerida – 5 publicaciones gratis para probar",
       "button": "Comenzar Gratis"
+    }
+  },
+  "oceanMindDetails": {
+    "backHome": "Volver al inicio",
+    "status": "🚧 En Desarrollo – Versión Beta",
+    "hero": {
+      "title": "OceanMind",
+      "subtitle": "Tu Compañero Personal de Enfoque – Mantente enfocado. Construye hábitos. Libera tu potencial."
+    },
+    "whatIs": {
+      "title": "¿Qué es OceanMind?",
+      "description": "OceanMind es más que una app de productividad: es tu oasis personal para la claridad mental y el éxito sostenible. Con gestión inteligente de tareas, un coach de IA y paisajes sonoros relajantes, te acompañas en el camino hacia más enfoque y bienestar."
+    },
+    "features": {
+      "title": "Funciones Principales",
+      "items": [
+        {
+          "title": "📋 Gestión Inteligente de Tareas",
+          "description": "Gestiona tus tareas diarias con un sistema elegante e intuitivo. Gana OceanCoins por cada tarea completada y rastrea tu progreso con rachas diarias."
+        },
+        {
+          "title": "🤖 Coach Personal con IA",
+          "description": "Tu propio coach de IA está disponible las 24 horas. Obtén motivación personalizada por voz o texto en 4 idiomas con texto a voz automático."
+        },
+        {
+          "title": "🎵 Paisajes Sonoros de Enfoque",
+          "description": "Sumérgete en paisajes sonoros relajantes: olas del océano, lluvia, sonidos del bosque, música de enfoque profundo y sonidos de meditación para máxima concentración y paz interior."
+        },
+        {
+          "title": "🌍 Multilingüe y Accesible",
+          "description": "Compatible con alemán, inglés, español y francés con reconocimiento de voz para uso manos libres y texto a voz para todas las respuestas del coach."
+        }
+      ]
+    },
+    "perfectFor": {
+      "title": "Perfecto Para",
+      "items": [
+        "🎓 Estudiantes que quieren aprender más enfocados",
+        "💼 Profesionales que buscan aumentar su productividad",
+        "🎨 Creativos que quieren mejorar sus hábitos",
+        "🧘 Cualquiera que busque más equilibrio y enfoque en la vida diaria"
+      ]
+    },
+    "premium": {
+      "title": "💎 Funciones Premium",
+      "description": "Actualiza a Premium para:",
+      "features": [
+        "Sesiones ilimitadas de coach de IA",
+        "Acceso a todos los paisajes sonoros exclusivos",
+        "Estadísticas e información avanzadas",
+        "Soporte prioritario"
+      ]
+    },
+    "cta": {
+      "title": "¡Próximamente!",
+      "subtitle": "OceanMind – Donde la productividad se encuentra con la serenidad. 🌊✨",
+      "button": "Recibir Notificación",
+      "inDevelopment": "Esta app está actualmente en desarrollo. ¡Mantente informado sobre el lanzamiento!"
     }
   }
 }
