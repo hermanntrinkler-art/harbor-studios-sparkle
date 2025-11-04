@@ -601,6 +601,276 @@
       "title": "Des questions sur la protection des données ?",
       "description": "En savoir plus sur nos politiques de confidentialité",
       "button": "Voir la Politique de Confidentialité"
+    },
+    "contactEmail": "Pour toute question concernant ces conditions, veuillez nous contacter à"
+  },
+  "support": {
+    "title": "Support et Documentation",
+    "subtitle": "Trouvez des guides, des réponses et de l'aide pour tous nos produits",
+    "searchPlaceholder": "Rechercher dans la documentation...",
+    "backToOverview": "Retour à l'aperçu",
+    "badges": {
+      "complete": "Complet",
+      "comingSoon": "Bientôt disponible"
+    },
+    "projects": {
+      "recipePixie": {
+        "title": "Recipe Pixie",
+        "description": "Gestionnaire Intelligent de Recettes",
+        "fullDescription": "Votre compagnon intelligent de recettes"
+      },
+      "captainsLog": {
+        "title": "Captain's Log",
+        "description": "Journal de Navigation",
+        "fullDescription": "Journal professionnel pour marins"
+      },
+      "oceanMind": {
+        "title": "OceanMind",
+        "description": "Méditation et Pleine Conscience Océanique",
+        "fullDescription": "Trouvez le calme avec les sons de l'océan"
+      },
+      "socialPostPro": {
+        "title": "Social Post Pro",
+        "description": "Gestion des Réseaux Sociaux",
+        "fullDescription": "Outil professionnel pour réseaux sociaux"
+      }
+    },
+    "documentation": "Documentation",
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "general": {
+        "title": "Général",
+        "account": {
+          "question": "Comment créer un compte ?",
+          "answer": "Vous pouvez créer un compte directement dans l'application via le formulaire d'inscription. Il suffit d'entrer votre adresse e-mail et de choisir un mot de passe sécurisé."
+        },
+        "multipleApps": {
+          "question": "Puis-je utiliser plusieurs applications avec un seul compte ?",
+          "answer": "Oui, vous pouvez utiliser la même adresse e-mail et le même mot de passe pour toutes nos applications."
+        },
+        "platforms": {
+          "question": "Sur quelles plateformes les applications sont-elles disponibles ?",
+          "answer": "Nos applications sont actuellement disponibles pour les appareils iOS et Android."
+        }
+      },
+      "technical": {
+        "title": "Technique",
+        "sync": {
+          "question": "Comment fonctionne la synchronisation des données ?",
+          "answer": "Vos données sont automatiquement synchronisées sur tous vos appareils lorsque vous êtes connecté avec votre compte."
+        },
+        "offline": {
+          "question": "Puis-je utiliser les applications hors ligne ?",
+          "answer": "Oui, la plupart des fonctionnalités sont disponibles hors ligne. Vos données se synchroniseront automatiquement lorsque vous serez de nouveau en ligne."
+        }
+      },
+      "privacy": {
+        "title": "Confidentialité et Sécurité",
+        "dataStorage": {
+          "question": "Où sont stockées mes données ?",
+          "answer": "Vos données sont stockées en toute sécurité sur nos serveurs et cryptées. Nous respectons les directives du RGPD."
+        },
+        "dataSharing": {
+          "question": "Mes données seront-elles partagées ?",
+          "answer": "Non, vos données personnelles ne seront jamais vendues ni partagées avec des tiers. Consultez notre politique de confidentialité pour plus de détails."
+        }
+      }
+    },
+    "stillHaveQuestions": "Vous avez encore des questions ?",
+    "contactSupport": "Contactez notre équipe de support",
+    "recipePixieGuide": {
+      "title": "Recipe Pixie - Guide Complet de l'Utilisateur",
+      "welcome": {
+        "title": "Bienvenue sur Recipe Pixie",
+        "description": "Votre compagnon intelligent de recettes qui rend la cuisine plus facile, plus organisée et plus amusante."
+      },
+      "gettingStarted": {
+        "title": "Premiers Pas",
+        "download": {
+          "title": "1. Téléchargement et Installation",
+          "steps": [
+            "Téléchargez Recipe Pixie depuis l'App Store",
+            "Installez l'application sur votre appareil",
+            "Ouvrez Recipe Pixie"
+          ]
+        },
+        "account": {
+          "title": "2. Créer un Compte",
+          "steps": [
+            "Appuyez sur 'S'inscrire' sur l'écran de démarrage",
+            "Entrez votre adresse e-mail",
+            "Choisissez un mot de passe sécurisé",
+            "Confirmez votre adresse e-mail"
+          ],
+          "note": "Avec un compte, vos recettes se synchronisent sur tous vos appareils."
+        }
+      },
+      "mainFeatures": {
+        "title": "Fonctionnalités Principales",
+        "addRecipes": {
+          "title": "Ajouter des Recettes",
+          "manual": {
+            "title": "Saisie Manuelle",
+            "steps": [
+              "Appuyez sur le bouton '+'",
+              "Sélectionnez 'Nouvelle Recette'",
+              "Entrez le nom de la recette",
+              "Ajoutez les ingrédients",
+              "Décrivez les étapes de préparation",
+              "Ajoutez une photo (facultatif)",
+              "Enregistrer"
+            ]
+          },
+          "import": {
+            "title": "Importer depuis le Web",
+            "steps": [
+              "Copiez le lien d'un site web de recettes",
+              "Appuyez sur le bouton '+'",
+              "Sélectionnez 'Importer depuis un Lien'",
+              "Collez le lien",
+              "Recipe Pixie extrait automatiquement la recette",
+              "Vérifiez et modifiez si nécessaire",
+              "Enregistrer"
+            ]
+          }
+        },
+        "organize": {
+          "title": "Organiser les Recettes",
+          "collections": {
+            "title": "Collections",
+            "description": "Créez des collections personnalisées pour organiser vos recettes :",
+            "examples": [
+              "Végétarien",
+              "Recettes Rapides",
+              "Desserts",
+              "Favoris de la Famille"
+            ],
+            "howTo": "Pour créer une collection : Appuyez sur 'Collections' → '+' → Entrez le nom"
+          },
+          "tags": {
+            "title": "Étiquettes",
+            "description": "Utilisez des étiquettes pour une meilleure organisation :",
+            "examples": [
+              "#sain",
+              "#rapide",
+              "#sansgluten"
+            ]
+          }
+        },
+        "mealPlanning": {
+          "title": "Planification des Repas",
+          "steps": [
+            "Ouvrez l'onglet 'Plan de Repas'",
+            "Sélectionnez un jour",
+            "Appuyez sur '+' pour ajouter un repas",
+            "Choisissez une recette de votre collection",
+            "Répétez pour toute la semaine"
+          ],
+          "benefits": [
+            "Meilleure vue d'ensemble",
+            "Courses plus faciles",
+            "Moins de gaspillage alimentaire"
+          ]
+        },
+        "shoppingList": {
+          "title": "Liste de Courses",
+          "auto": {
+            "title": "Génération Automatique",
+            "description": "Recipe Pixie crée automatiquement une liste de courses à partir de votre plan de repas :",
+            "steps": [
+              "Allez dans 'Liste de Courses'",
+              "Appuyez sur 'Générer depuis le Plan de Repas'",
+              "Tous les ingrédients sont automatiquement ajoutés",
+              "Les quantités sont additionnées"
+            ]
+          },
+          "manual": {
+            "title": "Ajouts Manuels",
+            "description": "Ajoutez des articles supplémentaires :",
+            "steps": [
+              "Appuyez sur '+' dans la liste de courses",
+              "Entrez l'article",
+              "Ajoutez la quantité (facultatif)"
+            ]
+          },
+          "shopping": {
+            "title": "Pendant les Courses",
+            "description": "Cochez les articles pendant vos courses - ils restent visibles mais barrés."
+          }
+        }
+      },
+      "advanced": {
+        "title": "Fonctionnalités Avancées",
+        "scaling": {
+          "title": "Mise à l'Échelle des Recettes",
+          "description": "Ajustez les portions :",
+          "steps": [
+            "Ouvrez une recette",
+            "Appuyez sur le nombre de portions",
+            "Entrez le nombre souhaité de portions",
+            "Toutes les quantités s'ajustent automatiquement"
+          ]
+        },
+        "timer": {
+          "title": "Minuteur Intégré",
+          "steps": [
+            "Pendant la cuisson, appuyez sur un temps dans la recette",
+            "Le minuteur démarre automatiquement",
+            "Vous recevez une notification quand le temps est écoulé"
+          ]
+        },
+        "sharing": {
+          "title": "Partager des Recettes",
+          "steps": [
+            "Ouvrez une recette",
+            "Appuyez sur l'icône de partage",
+            "Choisissez comment partager (message, e-mail, etc.)"
+          ]
+        },
+        "notes": {
+          "title": "Notes et Variations",
+          "description": "Ajoutez des notes personnelles à chaque recette :",
+          "examples": [
+            "\"Ajouter plus d'ail la prochaine fois\"",
+            "\"Les enfants ont adoré !\"",
+            "\"Va bien avec du vin blanc\""
+          ]
+        }
+      },
+      "tips": {
+        "title": "Conseils et Astuces",
+        "list": [
+          "Utilisez la fonction de recherche pour trouver rapidement des recettes",
+          "Ajoutez des photos pour reconnaître les recettes plus rapidement",
+          "Notez vos recettes (1-5 étoiles)",
+          "Utilisez la fonction favoris pour vos meilleures recettes",
+          "Synchronisez régulièrement pour garder vos données en sécurité",
+          "Essayez le mode sombre pour cuisiner confortablement le soir"
+        ]
+      },
+      "troubleshooting": {
+        "title": "Dépannage",
+        "problems": [
+          {
+            "issue": "La recette ne s'importe pas",
+            "solution": "Assurez-vous d'avoir une connexion Internet stable. Tous les sites web ne prennent pas en charge l'importation automatique - dans ce cas, entrez la recette manuellement."
+          },
+          {
+            "issue": "La synchronisation ne fonctionne pas",
+            "solution": "Vérifiez votre connexion Internet et assurez-vous d'être connecté. Appuyez sur 'Paramètres' → 'Synchroniser maintenant'."
+          },
+          {
+            "issue": "L'application est lente",
+            "solution": "Fermez et rouvrez l'application. Si les problèmes persistent, essayez de vider le cache dans les paramètres."
+          }
+        ]
+      },
+      "support": {
+        "title": "Support",
+        "description": "Besoin de plus d'aide ?",
+        "contact": "Envoyez-nous un e-mail à : support@harborstudios.com",
+        "response": "Nous répondons généralement dans les 24 heures."
+      }
     }
   }
 }
