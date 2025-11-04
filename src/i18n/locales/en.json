@@ -78,7 +78,8 @@
       "title": "Recipe Pixie",
       "subtitle": "Your magical recipe collection – from anywhere, powered by AI",
       "visitApp": "Visit App",
-      "learnMore": "Learn More"
+      "learnMore": "Learn More",
+      "readGuide": "📖 Read Guide"
     },
     "whatIs": {
       "title": "What is Recipe Pixie?",
@@ -671,7 +672,7 @@
     "stillHaveQuestions": "Still have questions?",
     "contactSupport": "Contact our support team",
     "recipePixieGuide": {
-      "title": "Recipe Pixie - User Guide",
+      "title": "Recipe Pixie - User Guide", 
       "subtitle": "Everything you need to know about Recipe Pixie",
       "breadcrumb": "User Guide",
       "tableOfContents": "Table of Contents",

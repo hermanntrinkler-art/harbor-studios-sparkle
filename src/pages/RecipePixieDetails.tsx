@@ -111,7 +111,7 @@ const RecipePixieDetails = () => {
             <Button asChild size="lg" variant="outline" className="text-lg">
               <Link to="/support/recipe-pixie">
                 <BookOpen className="mr-2 h-5 w-5" />
-                📖 Anleitung lesen
+                {t('recipePixieDetails.readGuide')}
               </Link>
             </Button>
           </div>
