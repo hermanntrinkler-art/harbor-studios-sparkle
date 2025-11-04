@@ -60,7 +60,8 @@
     "tagline": "Construire l'avenir, un projet à la fois",
     "legal": "Mentions Légales",
     "privacy": "Politique de Confidentialité",
-    "dataDeletion": "Suppression des Données"
+    "dataDeletion": "Suppression des Données",
+    "terms": "Conditions d'Utilisation"
   },
   "notFound": {
     "title": "404",
@@ -523,6 +524,78 @@
     },
     "privacyCta": {
       "title": "Plus d'Informations sur la Confidentialité",
+      "button": "Voir la Politique de Confidentialité"
+    }
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "subtitle": "Valable pour : Social Post Pro – une application de Harbor Studios",
+    "lastUpdated": "Dernière mise à jour : 4 novembre 2025",
+    "backHome": "Retour à l'Accueil",
+    "scope": {
+      "title": "1. Champ d'Application",
+      "content1": "Ces Conditions d'Utilisation régissent l'utilisation de l'application Social Post Pro (ci-après \"Application\") de Harbor Studios, accessible sur https://harborstudios.app",
+      "content2": "En vous inscrivant ou en utilisant l'Application, vous acceptez ces conditions."
+    },
+    "purpose": {
+      "title": "2. Objet de l'Application",
+      "content1": "Social Post Pro permet la création, la planification et la gestion de publications sur des plateformes sociales telles que Facebook et Instagram.",
+      "content2": "Pour utiliser certaines fonctionnalités, une connexion via Meta (Facebook/Instagram) est requise."
+    },
+    "access": {
+      "title": "3. Accès et Inscription",
+      "content1": "Pour utiliser certaines fonctionnalités de l'application, une inscription via un compte Facebook ou Instagram existant est requise.",
+      "content2": "Lors de la connexion, vous accordez à l'application les autorisations nécessaires pour créer des publications ou gérer du contenu planifié.",
+      "content3": "L'application ne stocke pas de données sensibles telles que les mots de passe ou les historiques de messages."
+    },
+    "responsibility": {
+      "title": "4. Responsabilité de l'Utilisateur",
+      "content1": "Vous vous engagez à utiliser l'application uniquement conformément aux lois applicables et aux conditions d'utilisation de Meta Platforms.",
+      "forbidden": "Il est interdit d'utiliser l'application pour :",
+      "item1": "Le spam, les faux comptes ou les actions de masse automatisées",
+      "item2": "Le contenu illégal ou offensant",
+      "item3": "La violation des droits d'auteur ou des marques",
+      "consequence": "En cas d'abus, nous nous réservons le droit de bloquer l'accès à l'application."
+    },
+    "dataProtection": {
+      "title": "5. Protection des Données",
+      "content": "Le traitement des données personnelles est effectué exclusivement conformément à notre politique de confidentialité. En utilisant l'application, vous acceptez cette politique.",
+      "ctaButton": "Voir la Politique de Confidentialité"
+    },
+    "liability": {
+      "title": "6. Clause de non-responsabilité",
+      "intro": "Harbor Studios n'assume aucune responsabilité pour :",
+      "item1": "Les perturbations techniques, les pannes de serveur ou les erreurs d'interface avec Meta",
+      "item2": "La perte de données via des services tiers",
+      "item3": "Le contenu publié par les utilisateurs via Social Post Pro",
+      "disclaimer1": "L'utilisation se fait à vos propres risques.",
+      "disclaimer2": "Nous nous efforçons d'assurer une fonctionnalité stable et sécurisée, mais ne garantissons pas une disponibilité ininterrompue."
+    },
+    "changes": {
+      "title": "7. Modifications de l'Application et des Conditions",
+      "content1": "Nous nous réservons le droit de modifier, d'étendre ou d'interrompre l'application ou des fonctionnalités individuelles à tout moment.",
+      "content2": "Ces Conditions d'Utilisation peuvent également être mises à jour si nécessaire.",
+      "content3": "La version actuelle est toujours disponible sur",
+      "link": "https://harborstudios.app/terms"
+    },
+    "contact": {
+      "title": "8. Contact",
+      "content": "Pour toute question ou réclamation :",
+      "email": "support@harborstudios.app",
+      "website": "https://harborstudios.app"
+    },
+    "law": {
+      "title": "9. Loi Applicable",
+      "content1": "La loi du pays de résidence de l'opérateur (Espagne) s'applique.",
+      "content2": "Le lieu de juridiction est le siège social de Harbor Studios, sauf si des dispositions légales impératives prévoient autrement."
+    },
+    "severability": {
+      "title": "10. Clause de Divisibilité",
+      "content": "Si une disposition individuelle de ces Conditions d'Utilisation devait être invalide, la validité des dispositions restantes demeurera inchangée."
+    },
+    "privacyCta": {
+      "title": "Des questions sur la protection des données ?",
+      "description": "En savoir plus sur nos politiques de confidentialité",
       "button": "Voir la Politique de Confidentialité"
     }
   }

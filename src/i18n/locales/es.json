@@ -60,7 +60,8 @@
     "tagline": "Construyendo el futuro, un proyecto a la vez",
     "legal": "Legal",
     "privacy": "Política de Privacidad",
-    "dataDeletion": "Eliminación de Datos"
+    "dataDeletion": "Eliminación de Datos",
+    "terms": "Términos de Servicio"
   },
   "notFound": {
     "title": "404",
@@ -523,6 +524,78 @@
     },
     "privacyCta": {
       "title": "Más Información sobre Privacidad",
+      "button": "Ver Política de Privacidad"
+    }
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "subtitle": "Válido para: Social Post Pro – una aplicación de Harbor Studios",
+    "lastUpdated": "Última actualización: 4 de noviembre de 2025",
+    "backHome": "Volver al Inicio",
+    "scope": {
+      "title": "1. Alcance",
+      "content1": "Estos Términos de Servicio rigen el uso de la aplicación Social Post Pro (en adelante \"Aplicación\") de Harbor Studios, accesible en https://harborstudios.app",
+      "content2": "Al registrarse o utilizar la Aplicación, usted acepta estos términos."
+    },
+    "purpose": {
+      "title": "2. Propósito de la Aplicación",
+      "content1": "Social Post Pro permite la creación, programación y gestión de publicaciones en plataformas sociales como Facebook e Instagram.",
+      "content2": "Para utilizar ciertas funciones, se requiere un inicio de sesión a través de Meta (Facebook/Instagram)."
+    },
+    "access": {
+      "title": "3. Acceso y Registro",
+      "content1": "Para utilizar ciertas funciones de la aplicación, se requiere el registro a través de una cuenta existente de Facebook o Instagram.",
+      "content2": "Al iniciar sesión, otorgas a la aplicación los permisos necesarios para crear publicaciones o gestionar contenido programado.",
+      "content3": "La aplicación no almacena datos sensibles como contraseñas o historiales de mensajes."
+    },
+    "responsibility": {
+      "title": "4. Responsabilidad del Usuario",
+      "content1": "Te comprometes a utilizar la aplicación solo de acuerdo con las leyes aplicables y los términos de servicio de Meta Platforms.",
+      "forbidden": "Está prohibido utilizar la aplicación para:",
+      "item1": "Spam, cuentas falsas o acciones masivas automatizadas",
+      "item2": "Contenido ilegal u ofensivo",
+      "item3": "Violación de derechos de autor o marcas registradas",
+      "consequence": "En caso de uso indebido, nos reservamos el derecho de bloquear el acceso a la aplicación."
+    },
+    "dataProtection": {
+      "title": "5. Protección de Datos",
+      "content": "El procesamiento de datos personales se lleva a cabo exclusivamente de acuerdo con nuestra política de privacidad. Al utilizar la aplicación, aceptas esta política.",
+      "ctaButton": "Ver Política de Privacidad"
+    },
+    "liability": {
+      "title": "6. Exención de Responsabilidad",
+      "intro": "Harbor Studios no asume responsabilidad por:",
+      "item1": "Interrupciones técnicas, fallos del servidor o errores de interfaz con Meta",
+      "item2": "Pérdida de datos a través de servicios de terceros",
+      "item3": "Contenido publicado por usuarios a través de Social Post Pro",
+      "disclaimer1": "El uso es bajo su propio riesgo.",
+      "disclaimer2": "Nos esforzamos por una funcionalidad estable y segura, pero no garantizamos disponibilidad ininterrumpida."
+    },
+    "changes": {
+      "title": "7. Cambios en la Aplicación y los Términos",
+      "content1": "Nos reservamos el derecho de modificar, ampliar o discontinuar la aplicación o funciones individuales en cualquier momento.",
+      "content2": "Estos Términos de Servicio también pueden actualizarse según sea necesario.",
+      "content3": "La versión actual siempre está disponible en",
+      "link": "https://harborstudios.app/terms"
+    },
+    "contact": {
+      "title": "8. Contacto",
+      "content": "Para preguntas o quejas:",
+      "email": "support@harborstudios.app",
+      "website": "https://harborstudios.app"
+    },
+    "law": {
+      "title": "9. Ley Aplicable",
+      "content1": "Se aplica la ley del país de residencia del operador (España).",
+      "content2": "El lugar de jurisdicción es la sede registrada de Harbor Studios, a menos que disposiciones legales obligatorias establezcan lo contrario."
+    },
+    "severability": {
+      "title": "10. Cláusula de Divisibilidad",
+      "content": "Si alguna disposición individual de estos Términos de Servicio fuera inválida, la validez de las disposiciones restantes permanecerá inalterada."
+    },
+    "privacyCta": {
+      "title": "¿Preguntas sobre protección de datos?",
+      "description": "Aprende más sobre nuestras políticas de privacidad",
       "button": "Ver Política de Privacidad"
     }
   }

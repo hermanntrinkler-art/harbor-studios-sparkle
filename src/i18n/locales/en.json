@@ -60,7 +60,8 @@
     "tagline": "Building the future, one project at a time",
     "legal": "Legal",
     "privacy": "Privacy Policy",
-    "dataDeletion": "Data Deletion"
+    "dataDeletion": "Data Deletion",
+    "terms": "Terms of Service"
   },
   "notFound": {
     "title": "404",
@@ -523,6 +524,78 @@
     },
     "privacyCta": {
       "title": "More Information About Privacy",
+      "button": "View Privacy Policy"
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "subtitle": "Valid for: Social Post Pro – an app by Harbor Studios",
+    "lastUpdated": "Last updated: November 4, 2025",
+    "backHome": "Back to Home",
+    "scope": {
+      "title": "1. Scope",
+      "content1": "These Terms of Service govern the use of the Social Post Pro app (hereinafter \"App\") by Harbor Studios, accessible at https://harborstudios.app",
+      "content2": "By registering for or using the App, you agree to these terms."
+    },
+    "purpose": {
+      "title": "2. Purpose of the App",
+      "content1": "Social Post Pro enables the creation, scheduling, and management of posts on social platforms such as Facebook and Instagram.",
+      "content2": "To use certain features, a login via Meta (Facebook/Instagram) is required."
+    },
+    "access": {
+      "title": "3. Access and Registration",
+      "content1": "To use certain app features, registration via an existing Facebook or Instagram account is required.",
+      "content2": "When logging in, you grant the app the necessary permissions to create posts or manage scheduled content.",
+      "content3": "The app does not store sensitive data such as passwords or message histories."
+    },
+    "responsibility": {
+      "title": "4. User Responsibility",
+      "content1": "You agree to use the app only in accordance with applicable laws and the terms of service of Meta Platforms.",
+      "forbidden": "It is prohibited to use the app for:",
+      "item1": "Spam, fake accounts, or automated mass actions",
+      "item2": "Illegal or offensive content",
+      "item3": "Violation of copyright or trademark rights",
+      "consequence": "In case of misuse, we reserve the right to block access to the app."
+    },
+    "dataProtection": {
+      "title": "5. Data Protection",
+      "content": "The processing of personal data is carried out exclusively in accordance with our privacy policy. By using the app, you agree to this policy.",
+      "ctaButton": "View Privacy Policy"
+    },
+    "liability": {
+      "title": "6. Disclaimer",
+      "intro": "Harbor Studios assumes no liability for:",
+      "item1": "Technical disruptions, server failures, or interface errors with Meta",
+      "item2": "Data loss through third-party services",
+      "item3": "Content published by users via Social Post Pro",
+      "disclaimer1": "Use is at your own risk.",
+      "disclaimer2": "We strive for stable and secure functionality, but do not guarantee uninterrupted availability."
+    },
+    "changes": {
+      "title": "7. Changes to the App and Terms",
+      "content1": "We reserve the right to modify, expand, or discontinue the app or individual features at any time.",
+      "content2": "These Terms of Service may also be updated as needed.",
+      "content3": "The current version is always available at",
+      "link": "https://harborstudios.app/terms"
+    },
+    "contact": {
+      "title": "8. Contact",
+      "content": "For questions or complaints:",
+      "email": "support@harborstudios.app",
+      "website": "https://harborstudios.app"
+    },
+    "law": {
+      "title": "9. Applicable Law",
+      "content1": "The law of the operator's country of residence (Spain) applies.",
+      "content2": "The place of jurisdiction is the registered office of Harbor Studios, unless mandatory statutory provisions provide otherwise."
+    },
+    "severability": {
+      "title": "10. Severability Clause",
+      "content": "Should individual provisions of these Terms of Service be invalid, the validity of the remaining provisions shall remain unaffected."
+    },
+    "privacyCta": {
+      "title": "Questions about data protection?",
+      "description": "Learn more about our privacy policies",
       "button": "View Privacy Policy"
     }
   }

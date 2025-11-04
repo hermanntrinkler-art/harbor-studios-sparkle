@@ -33,6 +33,12 @@ const Footer = () => {
                 >
                   {t('footer.dataDeletion')}
                 </Link>
+                <Link 
+                  to="/terms" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {t('footer.terms')}
+                </Link>
               </div>
             </div>
           </div>
