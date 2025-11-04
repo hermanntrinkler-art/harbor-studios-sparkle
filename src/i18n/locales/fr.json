@@ -606,74 +606,66 @@
   },
   "support": {
     "title": "Support et Documentation",
-    "subtitle": "Trouvez des guides, des réponses et de l'aide pour tous nos produits",
-    "searchPlaceholder": "Rechercher dans la documentation...",
-    "backToOverview": "Retour à l'aperçu",
+    "subtitle": "Trouvez de l'aide pour tous les projets Harbor Studios",
+    "searchPlaceholder": "Rechercher de l'aide...",
+    "backToOverview": "Retour à l'aperçu du support",
+    "stillQuestions": "Vous avez encore des questions ?",
+    "contactUs": "Vous ne trouvez pas de réponse ? Contactez-nous directement !",
+    "contactButton": "Contacter le Support",
+    "readGuide": "Lire le Guide",
+    "guideFooter": "Vous n'avez pas trouvé ce que vous cherchiez ? Nous sommes heureux de vous aider !",
     "badges": {
       "complete": "Complet",
       "comingSoon": "Bientôt disponible"
     },
+    "sections": {
+      "documentation": "Documentation des Projets",
+      "faq": "Questions Fréquemment Posées",
+      "contact": "Contacter le Support",
+      "resources": "Ressources Supplémentaires"
+    },
     "projects": {
       "recipePixie": {
-        "title": "Recipe Pixie",
-        "description": "Gestionnaire Intelligent de Recettes",
-        "fullDescription": "Votre compagnon intelligent de recettes"
+        "title": "Guide Recipe Pixie",
+        "description": "Guide complet de l'utilisateur pour l'application de gestion de recettes"
       },
       "captainsLog": {
-        "title": "Captain's Log",
-        "description": "Journal de Navigation",
-        "fullDescription": "Journal professionnel pour marins"
+        "title": "Guide Captain's Log",
+        "description": "Documentation pour l'application de journal maritime"
       },
       "oceanMind": {
-        "title": "OceanMind",
-        "description": "Méditation et Pleine Conscience Océanique",
-        "fullDescription": "Trouvez le calme avec les sons de l'océan"
+        "title": "Guide OceanMind",
+        "description": "Documentation pour votre compagnon de concentration IA"
       },
       "socialPostPro": {
-        "title": "Social Post Pro",
-        "description": "Gestion des Réseaux Sociaux",
-        "fullDescription": "Outil professionnel pour réseaux sociaux"
+        "title": "Guide Social Post Pro",
+        "description": "Documentation pour la plateforme de contenu sur les réseaux sociaux"
       }
     },
-    "documentation": "Documentation",
     "faq": {
       "title": "Questions Fréquemment Posées",
       "general": {
-        "title": "Général",
-        "account": {
-          "question": "Comment créer un compte ?",
-          "answer": "Vous pouvez créer un compte directement dans l'application via le formulaire d'inscription. Il suffit d'entrer votre adresse e-mail et de choisir un mot de passe sécurisé."
-        },
-        "multipleApps": {
-          "question": "Puis-je utiliser plusieurs applications avec un seul compte ?",
-          "answer": "Oui, vous pouvez utiliser la même adresse e-mail et le même mot de passe pour toutes nos applications."
-        },
-        "platforms": {
-          "question": "Sur quelles plateformes les applications sont-elles disponibles ?",
-          "answer": "Nos applications sont actuellement disponibles pour les appareils iOS et Android."
-        }
+        "title": "Questions Générales",
+        "q1": "Qu'est-ce que Harbor Studios ?",
+        "a1": "Harbor Studios est un studio de logiciels innovant spécialisé dans les applications web alimentées par l'IA, les solutions maritimes et les projets de jeux. Nous développons des produits numériques qui rendent la vie plus facile et plus productive.",
+        "q2": "Comment puis-je vous contacter ?",
+        "a2": "Vous pouvez nous contacter via le formulaire de contact sur notre page d'accueil ou envoyer un e-mail directement à support@harborstudios.app. Nous répondons généralement dans les 24 heures.",
+        "q3": "Les applications sont-elles gratuites ?",
+        "a3": "La plupart de nos applications offrent une version de base gratuite. Pour les fonctionnalités avancées comme les capacités d'IA ou l'utilisation illimitée, nous proposons différents plans premium."
       },
       "technical": {
-        "title": "Technique",
-        "sync": {
-          "question": "Comment fonctionne la synchronisation des données ?",
-          "answer": "Vos données sont automatiquement synchronisées sur tous vos appareils lorsque vous êtes connecté avec votre compte."
-        },
-        "offline": {
-          "question": "Puis-je utiliser les applications hors ligne ?",
-          "answer": "Oui, la plupart des fonctionnalités sont disponibles hors ligne. Vos données se synchroniseront automatiquement lorsque vous serez de nouveau en ligne."
-        }
+        "title": "Questions Techniques",
+        "q1": "Quels navigateurs sont pris en charge ?",
+        "a1": "Toutes nos applications fonctionnent de manière optimale dans les navigateurs modernes comme Chrome, Firefox, Safari et Edge (2 dernières versions). Pour la meilleure expérience, nous recommandons Chrome ou Safari.",
+        "q2": "Les applications fonctionnent-elles hors ligne ?",
+        "a2": "La plupart de nos applications sont des Progressive Web Apps (PWA) et offrent une fonctionnalité de base hors ligne. Une fois que vous avez été en ligne, vous pouvez utiliser de nombreuses fonctionnalités sans connexion Internet. Cependant, les fonctionnalités d'IA nécessitent une connexion Internet."
       },
       "privacy": {
         "title": "Confidentialité et Sécurité",
-        "dataStorage": {
-          "question": "Où sont stockées mes données ?",
-          "answer": "Vos données sont stockées en toute sécurité sur nos serveurs et cryptées. Nous respectons les directives du RGPD."
-        },
-        "dataSharing": {
-          "question": "Mes données seront-elles partagées ?",
-          "answer": "Non, vos données personnelles ne seront jamais vendues ni partagées avec des tiers. Consultez notre politique de confidentialité pour plus de détails."
-        }
+        "q1": "Mes données sont-elles sécurisées ?",
+        "a1": "La confidentialité et la sécurité sont nos priorités absolues. Toutes les données sont transmises cryptées (SSL/TLS) et stockées en toute sécurité. Nous ne vendons jamais vos données à des tiers et respectons strictement le RGPD.",
+        "q2": "Puis-je supprimer mes données ?",
+        "a2": "Oui, vous pouvez supprimer toutes vos données à tout moment dans les paramètres de vos applications. Alternativement, vous pouvez nous contacter et nous supprimerons complètement vos données de notre système."
       }
     },
     "stillHaveQuestions": "Vous avez encore des questions ?",

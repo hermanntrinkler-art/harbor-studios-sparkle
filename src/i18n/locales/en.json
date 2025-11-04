@@ -606,74 +606,66 @@
   },
   "support": {
     "title": "Support & Documentation",
-    "subtitle": "Find guides, answers, and help for all our products",
-    "searchPlaceholder": "Search documentation...",
-    "backToOverview": "Back to Overview",
+    "subtitle": "Find help for all Harbor Studios projects",
+    "searchPlaceholder": "Search for help...",
+    "backToOverview": "Back to Support Overview",
+    "stillQuestions": "Still have questions?",
+    "contactUs": "Can't find an answer? Contact us directly!",
+    "contactButton": "Contact Support",
+    "readGuide": "Read Guide",
+    "guideFooter": "Didn't find what you're looking for? We're happy to help!",
     "badges": {
       "complete": "Complete",
       "comingSoon": "Coming Soon"
     },
+    "sections": {
+      "documentation": "Project Documentation",
+      "faq": "Frequently Asked Questions",
+      "contact": "Contact Support",
+      "resources": "Additional Resources"
+    },
     "projects": {
       "recipePixie": {
-        "title": "Recipe Pixie",
-        "description": "Smart Recipe Manager",
-        "fullDescription": "Your intelligent recipe companion"
+        "title": "Recipe Pixie Guide",
+        "description": "Complete user guide for the recipe management app"
       },
       "captainsLog": {
-        "title": "Captain's Log",
-        "description": "Sailing Log & Navigation",
-        "fullDescription": "Professional logbook for sailors"
+        "title": "Captain's Log Guide",
+        "description": "Documentation for the maritime logbook app"
       },
       "oceanMind": {
-        "title": "OceanMind",
-        "description": "Ocean Meditation & Mindfulness",
-        "fullDescription": "Find calm with ocean sounds"
+        "title": "OceanMind Guide",
+        "description": "Documentation for your AI focus companion"
       },
       "socialPostPro": {
-        "title": "Social Post Pro",
-        "description": "Social Media Management",
-        "fullDescription": "Professional social media tool"
+        "title": "Social Post Pro Guide",
+        "description": "Documentation for the social media content platform"
       }
     },
-    "documentation": "Documentation",
     "faq": {
       "title": "Frequently Asked Questions",
       "general": {
-        "title": "General",
-        "account": {
-          "question": "How do I create an account?",
-          "answer": "You can create an account directly in the app via the registration form. Simply enter your email address and choose a secure password."
-        },
-        "multipleApps": {
-          "question": "Can I use multiple apps with one account?",
-          "answer": "Yes, you can use the same email address and password for all our apps."
-        },
-        "platforms": {
-          "question": "On which platforms are the apps available?",
-          "answer": "Our apps are currently available for iOS and Android devices."
-        }
+        "title": "General Questions",
+        "q1": "What is Harbor Studios?",
+        "a1": "Harbor Studios is an innovative software studio specializing in AI-powered web apps, maritime solutions, and gaming projects. We develop digital products that make life easier and more productive.",
+        "q2": "How can I contact you?",
+        "a2": "You can reach us through the contact form on our homepage or send an email directly to support@harborstudios.app. We typically respond within 24 hours.",
+        "q3": "Are the apps free?",
+        "a3": "Most of our apps offer a free basic version. For advanced features like AI capabilities or unlimited usage, we offer various premium plans."
       },
       "technical": {
-        "title": "Technical",
-        "sync": {
-          "question": "How does data synchronization work?",
-          "answer": "Your data is automatically synchronized across all your devices when you're signed in with your account."
-        },
-        "offline": {
-          "question": "Can I use the apps offline?",
-          "answer": "Yes, most features are available offline. Your data will automatically sync when you're back online."
-        }
+        "title": "Technical Questions",
+        "q1": "Which browsers are supported?",
+        "a1": "All our apps work optimally in modern browsers like Chrome, Firefox, Safari, and Edge (latest 2 versions). For the best experience, we recommend Chrome or Safari.",
+        "q2": "Do the apps work offline?",
+        "a2": "Most of our apps are Progressive Web Apps (PWAs) and offer basic offline functionality. Once you've been online, you can use many features without an internet connection. However, AI features require an internet connection."
       },
       "privacy": {
         "title": "Privacy & Security",
-        "dataStorage": {
-          "question": "Where is my data stored?",
-          "answer": "Your data is securely stored on our servers and encrypted. We comply with GDPR guidelines."
-        },
-        "dataSharing": {
-          "question": "Will my data be shared?",
-          "answer": "No, your personal data will never be sold or shared with third parties. See our privacy policy for details."
-        }
+        "q1": "How secure is my data?",
+        "a1": "Privacy and security are our top priorities. All data is transmitted encrypted (SSL/TLS) and stored securely. We never sell your data to third parties and strictly comply with GDPR.",
+        "q2": "Can I delete my data?",
+        "a2": "Yes, you can delete all your data at any time in the settings of your apps. Alternatively, you can contact us and we will completely remove your data from our system."
       }
     },
     "stillHaveQuestions": "Still have questions?",

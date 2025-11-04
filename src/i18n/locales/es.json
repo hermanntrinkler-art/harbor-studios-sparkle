@@ -606,74 +606,66 @@
   },
   "support": {
     "title": "Soporte y Documentación",
-    "subtitle": "Encuentra guías, respuestas y ayuda para todos nuestros productos",
-    "searchPlaceholder": "Buscar documentación...",
-    "backToOverview": "Volver a la Vista General",
+    "subtitle": "Encuentra ayuda para todos los proyectos de Harbor Studios",
+    "searchPlaceholder": "Buscar ayuda...",
+    "backToOverview": "Volver al Resumen de Soporte",
+    "stillQuestions": "¿Aún tienes preguntas?",
+    "contactUs": "¿No encuentras una respuesta? ¡Contáctanos directamente!",
+    "contactButton": "Contactar Soporte",
+    "readGuide": "Leer Guía",
+    "guideFooter": "¿No encontraste lo que buscas? ¡Estaremos encantados de ayudarte!",
     "badges": {
       "complete": "Completo",
       "comingSoon": "Próximamente"
     },
+    "sections": {
+      "documentation": "Documentación de Proyectos",
+      "faq": "Preguntas Frecuentes",
+      "contact": "Contactar Soporte",
+      "resources": "Recursos Adicionales"
+    },
     "projects": {
       "recipePixie": {
-        "title": "Recipe Pixie",
-        "description": "Gestor Inteligente de Recetas",
-        "fullDescription": "Tu compañero inteligente de recetas"
+        "title": "Guía de Recipe Pixie",
+        "description": "Guía completa de usuario para la app de gestión de recetas"
       },
       "captainsLog": {
-        "title": "Captain's Log",
-        "description": "Diario de Navegación",
-        "fullDescription": "Diario profesional para marineros"
+        "title": "Guía de Captain's Log",
+        "description": "Documentación para la app de diario marítimo"
       },
       "oceanMind": {
-        "title": "OceanMind",
-        "description": "Meditación y Mindfulness Oceánico",
-        "fullDescription": "Encuentra calma con sonidos del océano"
+        "title": "Guía de OceanMind",
+        "description": "Documentación para tu compañero de enfoque con IA"
       },
       "socialPostPro": {
-        "title": "Social Post Pro",
-        "description": "Gestión de Redes Sociales",
-        "fullDescription": "Herramienta profesional para redes sociales"
+        "title": "Guía de Social Post Pro",
+        "description": "Documentación para la plataforma de contenido en redes sociales"
       }
     },
-    "documentation": "Documentación",
     "faq": {
       "title": "Preguntas Frecuentes",
       "general": {
-        "title": "General",
-        "account": {
-          "question": "¿Cómo creo una cuenta?",
-          "answer": "Puedes crear una cuenta directamente en la aplicación mediante el formulario de registro. Simplemente ingresa tu dirección de correo electrónico y elige una contraseña segura."
-        },
-        "multipleApps": {
-          "question": "¿Puedo usar varias aplicaciones con una cuenta?",
-          "answer": "Sí, puedes usar la misma dirección de correo electrónico y contraseña para todas nuestras aplicaciones."
-        },
-        "platforms": {
-          "question": "¿En qué plataformas están disponibles las aplicaciones?",
-          "answer": "Nuestras aplicaciones están actualmente disponibles para dispositivos iOS y Android."
-        }
+        "title": "Preguntas Generales",
+        "q1": "¿Qué es Harbor Studios?",
+        "a1": "Harbor Studios es un estudio de software innovador especializado en aplicaciones web con IA, soluciones marítimas y proyectos de juegos. Desarrollamos productos digitales que hacen la vida más fácil y productiva.",
+        "q2": "¿Cómo puedo contactarlos?",
+        "a2": "Puedes contactarnos a través del formulario de contacto en nuestra página principal o enviar un correo electrónico directamente a support@harborstudios.app. Normalmente respondemos en 24 horas.",
+        "q3": "¿Las aplicaciones son gratuitas?",
+        "a3": "La mayoría de nuestras aplicaciones ofrecen una versión básica gratuita. Para funciones avanzadas como capacidades de IA o uso ilimitado, ofrecemos varios planes premium."
       },
       "technical": {
-        "title": "Técnico",
-        "sync": {
-          "question": "¿Cómo funciona la sincronización de datos?",
-          "answer": "Tus datos se sincronizan automáticamente en todos tus dispositivos cuando has iniciado sesión con tu cuenta."
-        },
-        "offline": {
-          "question": "¿Puedo usar las aplicaciones sin conexión?",
-          "answer": "Sí, la mayoría de las funciones están disponibles sin conexión. Tus datos se sincronizarán automáticamente cuando vuelvas a estar en línea."
-        }
+        "title": "Preguntas Técnicas",
+        "q1": "¿Qué navegadores son compatibles?",
+        "a1": "Todas nuestras aplicaciones funcionan óptimamente en navegadores modernos como Chrome, Firefox, Safari y Edge (últimas 2 versiones). Para la mejor experiencia, recomendamos Chrome o Safari.",
+        "q2": "¿Las aplicaciones funcionan sin conexión?",
+        "a2": "La mayoría de nuestras aplicaciones son Progressive Web Apps (PWAs) y ofrecen funcionalidad básica sin conexión. Una vez que hayas estado en línea, puedes usar muchas funciones sin conexión a Internet. Sin embargo, las funciones de IA requieren conexión a Internet."
       },
       "privacy": {
         "title": "Privacidad y Seguridad",
-        "dataStorage": {
-          "question": "¿Dónde se almacenan mis datos?",
-          "answer": "Tus datos se almacenan de forma segura en nuestros servidores y están encriptados. Cumplimos con las directrices del RGPD."
-        },
-        "dataSharing": {
-          "question": "¿Se compartirán mis datos?",
-          "answer": "No, tus datos personales nunca serán vendidos ni compartidos con terceros. Consulta nuestra política de privacidad para más detalles."
-        }
+        "q1": "¿Qué tan seguros están mis datos?",
+        "a1": "La privacidad y seguridad son nuestras máximas prioridades. Todos los datos se transmiten encriptados (SSL/TLS) y se almacenan de forma segura. Nunca vendemos tus datos a terceros y cumplimos estrictamente con el RGPD.",
+        "q2": "¿Puedo eliminar mis datos?",
+        "a2": "Sí, puedes eliminar todos tus datos en cualquier momento en la configuración de tus aplicaciones. Alternativamente, puedes contactarnos y eliminaremos completamente tus datos de nuestro sistema."
       }
     },
     "stillHaveQuestions": "¿Aún tienes preguntas?",
