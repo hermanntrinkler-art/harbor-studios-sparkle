@@ -619,7 +619,7 @@
       "comingSoon": "Bientôt disponible"
     },
     "sections": {
-      "documentation": "Documentation des Projets",
+      "documentation": "Guides de projets",
       "faq": "Questions Fréquemment Posées",
       "contact": "Contacter le Support",
       "resources": "Ressources Supplémentaires"
@@ -671,197 +671,197 @@
     "stillHaveQuestions": "Vous avez encore des questions ?",
     "contactSupport": "Contactez notre équipe de support",
     "recipePixieGuide": {
-      "title": "Recipe Pixie - Guide Complet de l'Utilisateur",
-      "welcome": {
-        "title": "Bienvenue sur Recipe Pixie",
-        "description": "Votre compagnon intelligent de recettes qui rend la cuisine plus facile, plus organisée et plus amusante."
-      },
-      "gettingStarted": {
-        "title": "Premiers Pas",
-        "download": {
-          "title": "1. Téléchargement et Installation",
-          "steps": [
-            "Téléchargez Recipe Pixie depuis l'App Store",
-            "Installez l'application sur votre appareil",
-            "Ouvrez Recipe Pixie"
-          ]
+      "title": "Recipe Pixie - Guide de l'Utilisateur",
+      "subtitle": "Tout ce que vous devez savoir sur Recipe Pixie",
+      "breadcrumb": "Guide de l'Utilisateur",
+      "tableOfContents": "Table des Matières",
+      "sections": {
+        "gettingStarted": {
+          "title": "Premiers Pas",
+          "registration": {
+            "title": "Inscription et Connexion",
+            "content": "Créez un compte avec votre adresse e-mail et votre mot de passe. Après l'inscription, vous pouvez vous connecter directement et commencer à utiliser l'application."
+          },
+          "credits": {
+            "title": "Système de Crédits",
+            "content": "Les nouveaux utilisateurs reçoivent 25 crédits gratuits pour essayer toutes les fonctionnalités. Chaque création de recette coûte 1 crédit. Vous pouvez acheter des crédits supplémentaires si nécessaire dans l'application."
+          },
+          "interface": {
+            "title": "Interface Utilisateur",
+            "content": "L'application dispose d'une interface intuitive avec une barre de navigation inférieure qui donne un accès rapide aux recettes, au planificateur de repas, à la liste de courses, aux livres de cuisine et aux paramètres."
+          }
         },
-        "account": {
-          "title": "2. Créer un Compte",
-          "steps": [
-            "Appuyez sur 'S'inscrire' sur l'écran de démarrage",
-            "Entrez votre adresse e-mail",
-            "Choisissez un mot de passe sécurisé",
-            "Confirmez votre adresse e-mail"
-          ],
-          "note": "Avec un compte, vos recettes se synchronisent sur tous vos appareils."
-        }
-      },
-      "mainFeatures": {
-        "title": "Fonctionnalités Principales",
-        "addRecipes": {
-          "title": "Ajouter des Recettes",
+        "createRecipes": {
+          "title": "Créer des Recettes",
           "manual": {
             "title": "Saisie Manuelle",
-            "steps": [
-              "Appuyez sur le bouton '+'",
-              "Sélectionnez 'Nouvelle Recette'",
-              "Entrez le nom de la recette",
-              "Ajoutez les ingrédients",
-              "Décrivez les étapes de préparation",
-              "Ajoutez une photo (facultatif)",
-              "Enregistrer"
-            ]
+            "content": "Appuyez sur le bouton '+' pour créer une nouvelle recette. Remplissez les champs requis et enregistrez votre recette."
           },
-          "import": {
-            "title": "Importer depuis le Web",
-            "steps": [
-              "Copiez le lien d'un site web de recettes",
-              "Appuyez sur le bouton '+'",
-              "Sélectionnez 'Importer depuis un Lien'",
-              "Collez le lien",
-              "Recipe Pixie extrait automatiquement la recette",
-              "Vérifiez et modifiez si nécessaire",
-              "Enregistrer"
+          "fields": {
+            "title": "Champs Disponibles",
+            "items": [
+              "Nom et description de la recette",
+              "Temps de préparation et de cuisson",
+              "Portions",
+              "Ingrédients avec quantités",
+              "Instructions étape par étape",
+              "Catégorie et tags",
+              "Photo (optionnel)"
             ]
           }
         },
-        "organize": {
-          "title": "Organiser les Recettes",
-          "collections": {
-            "title": "Collections",
-            "description": "Créez des collections personnalisées pour organiser vos recettes :",
-            "examples": [
-              "Végétarien",
-              "Recettes Rapides",
-              "Desserts",
-              "Favoris de la Famille"
-            ],
-            "howTo": "Pour créer une collection : Appuyez sur 'Collections' → '+' → Entrez le nom"
+        "magicPaste": {
+          "title": "Fonction Collage Magique",
+          "intro": "La fonction Collage Magique est la fonctionnalité la plus puissante de Recipe Pixie. Elle vous permet de créer des recettes à partir de presque n'importe quelle source en un seul toucher.",
+          "howTo": {
+            "title": "Comment ça Marche",
+            "steps": [
+              "Copiez le texte de la recette depuis n'importe quelle source (site web, livre, message)",
+              "Appuyez sur le bouton Collage Magique dans l'application",
+              "L'IA analyse le texte et crée automatiquement une recette structurée",
+              "Vérifiez et enregistrez la recette"
+            ]
           },
-          "tags": {
-            "title": "Étiquettes",
-            "description": "Utilisez des étiquettes pour une meilleure organisation :",
-            "examples": [
-              "#sain",
-              "#rapide",
-              "#sansgluten"
+          "sources": {
+            "title": "Sources Supportées",
+            "content": "Le Collage Magique fonctionne avec des textes provenant de sites web, de livres de cuisine, de notes manuscrites, de messages, et plus encore. L'IA reconnaît les ingrédients, les quantités et les instructions quel que soit le format."
+          },
+          "tip": "Astuce : Plus le texte source est structuré, meilleur sera le résultat. Mais même les textes mal formatés fonctionnent généralement !"
+        },
+        "nutrition": {
+          "title": "Informations Nutritionnelles",
+          "intro": "Recipe Pixie peut calculer automatiquement les valeurs nutritionnelles de vos recettes.",
+          "howTo": {
+            "title": "Calcul Automatique",
+            "content": "Appuyez sur 'Calculer la Nutrition' dans la vue de la recette. L'IA analyse les ingrédients et génère un profil nutritionnel détaillé."
+          },
+          "values": {
+            "title": "Valeurs Fournies",
+            "items": [
+              "Calories",
+              "Protéines",
+              "Glucides",
+              "Lipides",
+              "Fibres",
+              "Et plus"
             ]
           }
         },
-        "mealPlanning": {
-          "title": "Planification des Repas",
-          "steps": [
-            "Ouvrez l'onglet 'Plan de Repas'",
-            "Sélectionnez un jour",
-            "Appuyez sur '+' pour ajouter un repas",
-            "Choisissez une recette de votre collection",
-            "Répétez pour toute la semaine"
-          ],
-          "benefits": [
-            "Meilleure vue d'ensemble",
-            "Courses plus faciles",
-            "Moins de gaspillage alimentaire"
-          ]
+        "manageRecipes": {
+          "title": "Gérer les Recettes",
+          "view": {
+            "title": "Voir les Recettes",
+            "content": "Toutes vos recettes sont clairement affichées sur l'écran d'accueil. Utilisez la fonction de recherche pour trouver rapidement des recettes spécifiques."
+          },
+          "edit": {
+            "title": "Modifier les Recettes",
+            "content": "Appuyez sur une recette pour la voir, puis utilisez le bouton de modification pour apporter des changements. Tous les champs peuvent être modifiés par la suite."
+          },
+          "delete": {
+            "title": "Supprimer les Recettes",
+            "content": "Faites glisser une recette vers la gauche ou utilisez le mode édition pour supprimer des recettes. Les recettes supprimées ne peuvent pas être restaurées."
+          }
+        },
+        "selectionMode": {
+          "title": "Mode Sélection",
+          "intro": "Le mode sélection vous permet de modifier plusieurs recettes simultanément.",
+          "actions": {
+            "title": "Actions Disponibles",
+            "items": [
+              "Sélectionner plusieurs recettes",
+              "Ajouter des recettes sélectionnées aux livres de cuisine",
+              "Supprimer plusieurs recettes à la fois",
+              "Exporter des recettes"
+            ]
+          }
+        },
+        "cookbooks": {
+          "title": "Livres de Cuisine",
+          "intro": "Organisez vos recettes dans des livres de cuisine thématiques.",
+          "create": {
+            "title": "Créer des Livres de Cuisine",
+            "content": "Créez de nouveaux livres de cuisine pour différentes occasions, saisons ou préférences (par exemple, 'Salades d'Été', 'Dîners Rapides', 'Favoris Végétaliens')."
+          },
+          "manage": {
+            "title": "Gérer les Livres de Cuisine",
+            "content": "Ajoutez des recettes à plusieurs livres de cuisine, modifiez les noms de livres de cuisine ou supprimez des livres de cuisine entiers."
+          }
+        },
+        "mealPlanner": {
+          "title": "Planificateur de Repas",
+          "intro": "Planifiez vos repas pour la semaine et gardez une trace de ce que vous voulez cuisiner.",
+          "howTo": {
+            "title": "Comment Utiliser",
+            "steps": [
+              "Passez à l'onglet Planificateur de Repas",
+              "Appuyez sur un jour et un repas",
+              "Sélectionnez une recette de votre collection",
+              "Les repas planifiés apparaissent dans votre calendrier"
+            ]
+          }
         },
         "shoppingList": {
           "title": "Liste de Courses",
-          "auto": {
-            "title": "Génération Automatique",
-            "description": "Recipe Pixie crée automatiquement une liste de courses à partir de votre plan de repas :",
-            "steps": [
-              "Allez dans 'Liste de Courses'",
-              "Appuyez sur 'Générer depuis le Plan de Repas'",
-              "Tous les ingrédients sont automatiquement ajoutés",
-              "Les quantités sont additionnées"
+          "intro": "Générez automatiquement des listes de courses à partir de vos recettes et plans de repas.",
+          "features": {
+            "title": "Fonctionnalités",
+            "items": [
+              "Génération automatique à partir des repas planifiés",
+              "Ajout manuel d'articles",
+              "Cocher les articles achetés",
+              "Catégorisé par groupes d'aliments",
+              "Partager des listes avec d'autres"
             ]
-          },
-          "manual": {
-            "title": "Ajouts Manuels",
-            "description": "Ajoutez des articles supplémentaires :",
-            "steps": [
-              "Appuyez sur '+' dans la liste de courses",
-              "Entrez l'article",
-              "Ajoutez la quantité (facultatif)"
-            ]
-          },
-          "shopping": {
-            "title": "Pendant les Courses",
-            "description": "Cochez les articles pendant vos courses - ils restent visibles mais barrés."
           }
-        }
-      },
-      "advanced": {
-        "title": "Fonctionnalités Avancées",
-        "scaling": {
-          "title": "Mise à l'Échelle des Recettes",
-          "description": "Ajustez les portions :",
-          "steps": [
-            "Ouvrez une recette",
-            "Appuyez sur le nombre de portions",
-            "Entrez le nombre souhaité de portions",
-            "Toutes les quantités s'ajustent automatiquement"
-          ]
         },
-        "timer": {
-          "title": "Minuteur Intégré",
-          "steps": [
-            "Pendant la cuisson, appuyez sur un temps dans la recette",
-            "Le minuteur démarre automatiquement",
-            "Vous recevez une notification quand le temps est écoulé"
-          ]
+        "settings": {
+          "title": "Paramètres",
+          "options": {
+            "title": "Options de Personnalisation",
+            "items": [
+              "Sélection de la langue",
+              "Unités (métriques/impériales)",
+              "Thème (clair/sombre)",
+              "Préférences de notification",
+              "Gestion du compte",
+              "Aperçu des crédits"
+            ]
+          }
         },
-        "sharing": {
-          "title": "Partager des Recettes",
-          "steps": [
-            "Ouvrez une recette",
-            "Appuyez sur l'icône de partage",
-            "Choisissez comment partager (message, e-mail, etc.)"
-          ]
+        "cookMode": {
+          "title": "Mode Cuisine",
+          "intro": "Une vue spéciale pour cuisiner qui facilite le suivi des recettes.",
+          "features": {
+            "title": "Fonctionnalités",
+            "items": [
+              "Texte grand et lisible",
+              "Navigation étape par étape",
+              "Fonction minuteur",
+              "L'écran reste allumé",
+              "Fonctionnement mains libres"
+            ]
+          }
         },
-        "notes": {
-          "title": "Notes et Variations",
-          "description": "Ajoutez des notes personnelles à chaque recette :",
-          "examples": [
-            "\"Ajouter plus d'ail la prochaine fois\"",
-            "\"Les enfants ont adoré !\"",
-            "\"Va bien avec du vin blanc\""
+        "mobileApp": {
+          "title": "Application Mobile",
+          "intro": "Recipe Pixie est disponible en tant qu'application web progressive (PWA) et peut être installée sur votre appareil.",
+          "install": {
+            "title": "Installation",
+            "content": "Visitez le site web dans votre navigateur mobile et suivez les instructions pour ajouter l'application à votre écran d'accueil. Cela vous donne un accès rapide et une fonctionnalité hors ligne."
+          }
+        },
+        "tipsTricks": {
+          "title": "Conseils et Astuces",
+          "tips": [
+            "Utilisez le Collage Magique pour des importations rapides de recettes - cela fonctionne même avec des notes manuscrites que vous avez photographiées !",
+            "Créez des livres de cuisine pour différentes occasions pour trouver des recettes plus rapidement",
+            "Le planificateur de repas aide à la préparation des repas et réduit le gaspillage alimentaire",
+            "Les listes de courses peuvent être partagées avec les membres du foyer",
+            "Les valeurs nutritionnelles sont automatiquement calculées par portion",
+            "Vous pouvez modifier et ajuster tous les champs même après avoir créé une recette",
+            "Utilisez des tags pour catégoriser vos recettes (par exemple, 'rapide', 'sain', 'végétarien')"
           ]
         }
-      },
-      "tips": {
-        "title": "Conseils et Astuces",
-        "list": [
-          "Utilisez la fonction de recherche pour trouver rapidement des recettes",
-          "Ajoutez des photos pour reconnaître les recettes plus rapidement",
-          "Notez vos recettes (1-5 étoiles)",
-          "Utilisez la fonction favoris pour vos meilleures recettes",
-          "Synchronisez régulièrement pour garder vos données en sécurité",
-          "Essayez le mode sombre pour cuisiner confortablement le soir"
-        ]
-      },
-      "troubleshooting": {
-        "title": "Dépannage",
-        "problems": [
-          {
-            "issue": "La recette ne s'importe pas",
-            "solution": "Assurez-vous d'avoir une connexion Internet stable. Tous les sites web ne prennent pas en charge l'importation automatique - dans ce cas, entrez la recette manuellement."
-          },
-          {
-            "issue": "La synchronisation ne fonctionne pas",
-            "solution": "Vérifiez votre connexion Internet et assurez-vous d'être connecté. Appuyez sur 'Paramètres' → 'Synchroniser maintenant'."
-          },
-          {
-            "issue": "L'application est lente",
-            "solution": "Fermez et rouvrez l'application. Si les problèmes persistent, essayez de vider le cache dans les paramètres."
-          }
-        ]
-      },
-      "support": {
-        "title": "Support",
-        "description": "Besoin de plus d'aide ?",
-        "contact": "Envoyez-nous un e-mail à : support@harborstudios.com",
-        "response": "Nous répondons généralement dans les 24 heures."
       }
     }
   }

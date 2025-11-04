@@ -619,7 +619,7 @@
       "comingSoon": "Coming Soon"
     },
     "sections": {
-      "documentation": "Project Documentation",
+      "documentation": "Project Guides",
       "faq": "Frequently Asked Questions",
       "contact": "Contact Support",
       "resources": "Additional Resources"
@@ -671,197 +671,197 @@
     "stillHaveQuestions": "Still have questions?",
     "contactSupport": "Contact our support team",
     "recipePixieGuide": {
-      "title": "Recipe Pixie - Complete User Guide",
-      "welcome": {
-        "title": "Welcome to Recipe Pixie",
-        "description": "Your intelligent recipe companion that makes cooking easier, more organized, and more fun."
-      },
-      "gettingStarted": {
-        "title": "Getting Started",
-        "download": {
-          "title": "1. Download & Installation",
-          "steps": [
-            "Download Recipe Pixie from the App Store",
-            "Install the app on your device",
-            "Open Recipe Pixie"
-          ]
+      "title": "Recipe Pixie - User Guide",
+      "subtitle": "Everything you need to know about Recipe Pixie",
+      "breadcrumb": "User Guide",
+      "tableOfContents": "Table of Contents",
+      "sections": {
+        "gettingStarted": {
+          "title": "Getting Started",
+          "registration": {
+            "title": "Registration and Login",
+            "content": "Create an account with your email address and password. After registration, you can log in directly and start using the app."
+          },
+          "credits": {
+            "title": "Credit System",
+            "content": "New users receive 25 free credits to try out all features. Each recipe creation costs 1 credit. You can purchase additional credits as needed in the app."
+          },
+          "interface": {
+            "title": "User Interface",
+            "content": "The app features an intuitive interface with a bottom navigation bar that provides quick access to recipes, meal planner, shopping list, cookbooks, and settings."
+          }
         },
-        "account": {
-          "title": "2. Create Account",
-          "steps": [
-            "Tap 'Register' on the start screen",
-            "Enter your email address",
-            "Choose a secure password",
-            "Confirm your email address"
-          ],
-          "note": "With an account, your recipes sync across all your devices."
-        }
-      },
-      "mainFeatures": {
-        "title": "Main Features",
-        "addRecipes": {
-          "title": "Adding Recipes",
+        "createRecipes": {
+          "title": "Creating Recipes",
           "manual": {
             "title": "Manual Entry",
-            "steps": [
-              "Tap the '+' button",
-              "Select 'New Recipe'",
-              "Enter recipe name",
-              "Add ingredients",
-              "Describe preparation steps",
-              "Add a photo (optional)",
-              "Save"
-            ]
+            "content": "Tap the '+' button to create a new recipe. Fill in the required fields and save your recipe."
           },
-          "import": {
-            "title": "Import from Web",
-            "steps": [
-              "Copy link from a recipe website",
-              "Tap the '+' button",
-              "Select 'Import from Link'",
-              "Paste the link",
-              "Recipe Pixie automatically extracts the recipe",
-              "Review and edit if needed",
-              "Save"
+          "fields": {
+            "title": "Available Fields",
+            "items": [
+              "Recipe name and description",
+              "Preparation and cooking time",
+              "Servings",
+              "Ingredients with quantities",
+              "Step-by-step instructions",
+              "Category and tags",
+              "Photo (optional)"
             ]
           }
         },
-        "organize": {
-          "title": "Organizing Recipes",
-          "collections": {
-            "title": "Collections",
-            "description": "Create custom collections to organize your recipes:",
-            "examples": [
-              "Vegetarian",
-              "Quick Recipes",
-              "Desserts",
-              "Family Favorites"
-            ],
-            "howTo": "To create a collection: Tap 'Collections' → '+' → Enter name"
+        "magicPaste": {
+          "title": "Magic Paste Function",
+          "intro": "The Magic Paste function is Recipe Pixie's most powerful feature. It allows you to create recipes from almost any source with a single tap.",
+          "howTo": {
+            "title": "How it Works",
+            "steps": [
+              "Copy recipe text from any source (website, book, message)",
+              "Tap the Magic Paste button in the app",
+              "The AI analyzes the text and automatically creates a structured recipe",
+              "Review and save the recipe"
+            ]
           },
-          "tags": {
-            "title": "Tags",
-            "description": "Use tags for better organization:",
-            "examples": [
-              "#healthy",
-              "#quick",
-              "#glutenfree"
+          "sources": {
+            "title": "Supported Sources",
+            "content": "Magic Paste works with texts from websites, cookbooks, handwritten notes, messages, and more. The AI recognizes ingredients, quantities, and instructions regardless of format."
+          },
+          "tip": "Tip: The more structured the source text, the better the result. But even poorly formatted texts usually work!"
+        },
+        "nutrition": {
+          "title": "Nutritional Information",
+          "intro": "Recipe Pixie can automatically calculate nutritional values for your recipes.",
+          "howTo": {
+            "title": "Automatic Calculation",
+            "content": "Tap 'Calculate Nutrition' in the recipe view. The AI analyzes the ingredients and generates a detailed nutritional profile."
+          },
+          "values": {
+            "title": "Provided Values",
+            "items": [
+              "Calories",
+              "Protein",
+              "Carbohydrates",
+              "Fat",
+              "Fiber",
+              "And more"
             ]
           }
         },
-        "mealPlanning": {
-          "title": "Meal Planning",
-          "steps": [
-            "Open the 'Meal Plan' tab",
-            "Select a day",
-            "Tap '+' to add a meal",
-            "Choose a recipe from your collection",
-            "Repeat for the whole week"
-          ],
-          "benefits": [
-            "Better overview",
-            "Easier grocery shopping",
-            "Less food waste"
-          ]
+        "manageRecipes": {
+          "title": "Managing Recipes",
+          "view": {
+            "title": "View Recipes",
+            "content": "All your recipes are clearly displayed on the home screen. Use the search function to quickly find specific recipes."
+          },
+          "edit": {
+            "title": "Edit Recipes",
+            "content": "Tap a recipe to view it, then use the edit button to make changes. All fields can be edited afterwards."
+          },
+          "delete": {
+            "title": "Delete Recipes",
+            "content": "Swipe a recipe to the left or use the edit mode to delete recipes. Deleted recipes cannot be restored."
+          }
+        },
+        "selectionMode": {
+          "title": "Selection Mode",
+          "intro": "The selection mode allows you to edit multiple recipes simultaneously.",
+          "actions": {
+            "title": "Available Actions",
+            "items": [
+              "Select multiple recipes",
+              "Add selected recipes to cookbooks",
+              "Delete multiple recipes at once",
+              "Export recipes"
+            ]
+          }
+        },
+        "cookbooks": {
+          "title": "Cookbooks",
+          "intro": "Organize your recipes into thematic cookbooks.",
+          "create": {
+            "title": "Create Cookbooks",
+            "content": "Create new cookbooks for different occasions, seasons, or preferences (e.g., 'Summer Salads', 'Quick Dinners', 'Vegan Favorites')."
+          },
+          "manage": {
+            "title": "Manage Cookbooks",
+            "content": "Add recipes to multiple cookbooks, edit cookbook names, or delete entire cookbooks."
+          }
+        },
+        "mealPlanner": {
+          "title": "Meal Planner",
+          "intro": "Plan your meals for the week and keep track of what you want to cook.",
+          "howTo": {
+            "title": "How to Use",
+            "steps": [
+              "Switch to the Meal Planner tab",
+              "Tap on a day and meal",
+              "Select a recipe from your collection",
+              "The planned meals appear in your calendar"
+            ]
+          }
         },
         "shoppingList": {
           "title": "Shopping List",
-          "auto": {
-            "title": "Automatic Generation",
-            "description": "Recipe Pixie automatically creates a shopping list from your meal plan:",
-            "steps": [
-              "Go to 'Shopping List'",
-              "Tap 'Generate from Meal Plan'",
-              "All ingredients are automatically added",
-              "Quantities are summed up"
+          "intro": "Automatically generate shopping lists from your recipes and meal plans.",
+          "features": {
+            "title": "Features",
+            "items": [
+              "Automatic generation from planned meals",
+              "Manual addition of items",
+              "Check off purchased items",
+              "Categorized by food groups",
+              "Share lists with others"
             ]
-          },
-          "manual": {
-            "title": "Manual Additions",
-            "description": "Add additional items:",
-            "steps": [
-              "Tap '+' in the shopping list",
-              "Enter item",
-              "Add quantity (optional)"
-            ]
-          },
-          "shopping": {
-            "title": "While Shopping",
-            "description": "Check off items as you shop - they remain visible but crossed out."
           }
-        }
-      },
-      "advanced": {
-        "title": "Advanced Features",
-        "scaling": {
-          "title": "Recipe Scaling",
-          "description": "Adjust portions:",
-          "steps": [
-            "Open a recipe",
-            "Tap the portion number",
-            "Enter desired number of servings",
-            "All quantities adjust automatically"
-          ]
         },
-        "timer": {
-          "title": "Integrated Timer",
-          "steps": [
-            "While cooking, tap on a time in the recipe",
-            "Timer starts automatically",
-            "You get a notification when time's up"
-          ]
+        "settings": {
+          "title": "Settings",
+          "options": {
+            "title": "Customization Options",
+            "items": [
+              "Language selection",
+              "Units (metric/imperial)",
+              "Theme (light/dark)",
+              "Notification preferences",
+              "Account management",
+              "Credit overview"
+            ]
+          }
         },
-        "sharing": {
-          "title": "Sharing Recipes",
-          "steps": [
-            "Open a recipe",
-            "Tap the share icon",
-            "Choose how to share (message, email, etc.)"
-          ]
+        "cookMode": {
+          "title": "Cook Mode",
+          "intro": "A special view for cooking that makes it easier to follow recipes.",
+          "features": {
+            "title": "Features",
+            "items": [
+              "Large, readable text",
+              "Step-by-step navigation",
+              "Timer function",
+              "Screen stays on",
+              "Hands-free operation"
+            ]
+          }
         },
-        "notes": {
-          "title": "Notes & Variations",
-          "description": "Add personal notes to each recipe:",
-          "examples": [
-            "\"Add more garlic next time\"",
-            "\"Kids loved it!\"",
-            "\"Goes well with white wine\""
+        "mobileApp": {
+          "title": "Mobile App",
+          "intro": "Recipe Pixie is available as a progressive web app (PWA) and can be installed on your device.",
+          "install": {
+            "title": "Installation",
+            "content": "Visit the website in your mobile browser and follow the instructions to add the app to your home screen. This gives you quick access and offline functionality."
+          }
+        },
+        "tipsTricks": {
+          "title": "Tips & Tricks",
+          "tips": [
+            "Use Magic Paste for quick recipe imports - it works even with handwritten notes you've photographed!",
+            "Create cookbooks for different occasions to find recipes faster",
+            "The meal planner helps with meal prep and reduces food waste",
+            "Shopping lists can be shared with household members",
+            "Nutritional values are automatically calculated per serving",
+            "You can edit and adjust all fields even after creating a recipe",
+            "Use tags to categorize your recipes (e.g., 'quick', 'healthy', 'vegetarian')"
           ]
         }
-      },
-      "tips": {
-        "title": "Tips & Tricks",
-        "list": [
-          "Use the search function to quickly find recipes",
-          "Add photos to recognize recipes faster",
-          "Rate your recipes (1-5 stars)",
-          "Use the favorites feature for your best recipes",
-          "Sync regularly to keep your data safe",
-          "Try the dark mode for comfortable cooking in the evening"
-        ]
-      },
-      "troubleshooting": {
-        "title": "Troubleshooting",
-        "problems": [
-          {
-            "issue": "Recipe won't import",
-            "solution": "Make sure you have a stable internet connection. Not all websites support automatic import - in this case, enter the recipe manually."
-          },
-          {
-            "issue": "Sync not working",
-            "solution": "Check your internet connection and make sure you're signed in. Tap 'Settings' → 'Sync now'."
-          },
-          {
-            "issue": "App is slow",
-            "solution": "Close and reopen the app. If problems persist, try clearing the cache in settings."
-          }
-        ]
-      },
-      "support": {
-        "title": "Support",
-        "description": "Need more help?",
-        "contact": "Email us at: support@harborstudios.com",
-        "response": "We typically respond within 24 hours."
       }
     }
   }
