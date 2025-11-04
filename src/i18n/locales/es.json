@@ -57,7 +57,10 @@
   },
   "footer": {
     "copyright": "© {{year}} Harbor Studios. Todos los derechos reservados.",
-    "tagline": "Construyendo el futuro, un proyecto a la vez"
+    "tagline": "Construyendo el futuro, un proyecto a la vez",
+    "legal": "Legal",
+    "privacy": "Política de Privacidad",
+    "dataDeletion": "Eliminación de Datos"
   },
   "notFound": {
     "title": "404",
@@ -420,6 +423,107 @@
       "subtitle": "OceanMind – Donde la productividad se encuentra con la serenidad. 🌊✨",
       "button": "Recibir Notificación",
       "inDevelopment": "Esta app está actualmente en desarrollo. ¡Mantente informado sobre el lanzamiento!"
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "subtitle": "Válida para: Social Post Pro – una aplicación de Harbor Studios",
+    "backHome": "Volver al Inicio",
+    "responsible": {
+      "title": "1. Responsable",
+      "company": "Harbor Studios",
+      "email": "Correo electrónico: support@harborstudios.app",
+      "website": "Sitio web"
+    },
+    "general": {
+      "title": "2. Información General",
+      "content1": "La protección de tus datos personales es importante para nosotros. Esta política de privacidad explica qué datos se recopilan, almacenan y utilizan en relación con el uso de nuestra aplicación Social Post Pro.",
+      "content2": "Tratamos tus datos de forma confidencial y de acuerdo con las regulaciones legales de protección de datos (en particular GDPR y TTDSG)."
+    },
+    "dataCollection": {
+      "title": "3. Recopilación y Uso de Datos Personales",
+      "appUsage": {
+        "title": "a) Al usar la aplicación:",
+        "content": "Social Post Pro solo accede a los datos que tú mismo compartes a través de tu conexión de Facebook o Instagram (a través de Meta Login). Esto generalmente incluye:",
+        "item1": "tu nombre de perfil público,",
+        "item2": "tu ID de perfil,",
+        "item3": "tus páginas o cuentas conectadas (por ejemplo, para publicar contenido).",
+        "purpose": "Estos datos se utilizan exclusivamente para proporcionar la funcionalidad de la aplicación (por ejemplo, para crear o programar publicaciones).",
+        "storage": "No almacenamos datos permanentemente en nuestros propios servidores. Todos los datos solo se procesan temporalmente."
+      },
+      "noSharing": {
+        "title": "b) Sin compartir con terceros:",
+        "content": "No compartimos datos personales con terceros a menos que estemos legalmente obligados a hacerlo."
+      }
+    },
+    "cookies": {
+      "title": "4. Cookies y Seguimiento",
+      "content1": "Social Post Pro en sí no utiliza cookies ni servicios de seguimiento.",
+      "content2": "Sin embargo, al iniciar sesión a través de Meta, pueden establecerse cookies por Meta Platforms Inc. Puede encontrar información al respecto en la política de privacidad de Meta:"
+    },
+    "storage": {
+      "title": "5. Almacenamiento y Eliminación de Datos",
+      "content1": "No almacenamos datos personales permanentemente.",
+      "content2": "Tan pronto como cierres sesión o te desconectes de Meta, todos los datos almacenados temporalmente se eliminarán inmediatamente."
+    },
+    "rights": {
+      "title": "6. Derechos de los Interesados",
+      "intro": "Tienes derecho en cualquier momento a:",
+      "item1": "Obtener información sobre los datos almacenados,",
+      "item2": "Solicitar la corrección de datos incorrectos,",
+      "item3": "Solicitar la eliminación o restricción del procesamiento,",
+      "item4": "Oponerte al procesamiento de datos,",
+      "item5": "y retirar el consentimiento en cualquier momento.",
+      "contact": "Por favor dirija tales solicitudes a"
+    },
+    "changes": {
+      "title": "7. Cambios en Esta Política de Privacidad",
+      "content1": "Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento.",
+      "content2": "La versión actual siempre está disponible en"
+    },
+    "dataDeletionCta": {
+      "title": "¿Quieres eliminar tus datos?",
+      "description": "Aprende cómo puedes eliminar completamente tus datos de usuario.",
+      "button": "Ir a Eliminación de Datos"
+    }
+  },
+  "dataDeletion": {
+    "title": "Eliminación de Datos de Usuario",
+    "subtitle": "Política de Eliminación de Datos para Social Post Pro",
+    "backHome": "Volver al Inicio",
+    "intro": {
+      "title": "Solicitar Eliminación de Datos",
+      "content": "Si deseas que tus datos almacenados o procesados a través de Social Post Pro sean eliminados, sigue estos pasos:"
+    },
+    "steps": {
+      "step1": {
+        "label": "Paso 1",
+        "title": "Envía un Correo Electrónico",
+        "content": "Envía un correo electrónico con el asunto \"Data Deletion Request\" a:",
+        "to": "Para",
+        "subject": "Asunto"
+      },
+      "step2": {
+        "label": "Paso 2",
+        "title": "Información Requerida",
+        "content": "Incluye la siguiente información en tu mensaje:",
+        "item1": "tu nombre completo,",
+        "item2": "la dirección de correo electrónico que usaste para iniciar sesión con Meta,",
+        "item3": "y si corresponde, el nombre de la página conectada a Social Post Pro."
+      },
+      "step3": {
+        "label": "Paso 3",
+        "title": "Recibir Confirmación",
+        "content": "Al recibir tu solicitud, todos los datos relacionados se eliminarán completamente en un plazo de 7 días hábiles. Recibirás una confirmación por correo electrónico una vez que se complete el proceso."
+      }
+    },
+    "note": {
+      "title": "Nota Importante:",
+      "content": "La eliminación se realizará dentro de los 7 días hábiles posteriores a la recepción de tu solicitud. Luego recibirás un correo electrónico de confirmación."
+    },
+    "privacyCta": {
+      "title": "Más Información sobre Privacidad",
+      "button": "Ver Política de Privacidad"
     }
   }
 }

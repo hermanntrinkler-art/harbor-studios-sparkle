@@ -57,7 +57,10 @@
   },
   "footer": {
     "copyright": "© {{year}} Harbor Studios. All rights reserved.",
-    "tagline": "Building the future, one project at a time"
+    "tagline": "Building the future, one project at a time",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "dataDeletion": "Data Deletion"
   },
   "notFound": {
     "title": "404",
@@ -420,6 +423,107 @@
       "subtitle": "OceanMind – Where productivity meets serenity. 🌊✨",
       "button": "Get Notified",
       "inDevelopment": "This app is currently in development. Stay informed about the launch!"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Valid for: Social Post Pro – an app by Harbor Studios",
+    "backHome": "Back to Home",
+    "responsible": {
+      "title": "1. Responsible Party",
+      "company": "Harbor Studios",
+      "email": "Email: support@harborstudios.app",
+      "website": "Website"
+    },
+    "general": {
+      "title": "2. General Information",
+      "content1": "The protection of your personal data is important to us. This privacy policy explains what data is collected, stored, and used in connection with the use of our app Social Post Pro.",
+      "content2": "We treat your data confidentially and in accordance with legal data protection regulations (particularly GDPR and TTDSG)."
+    },
+    "dataCollection": {
+      "title": "3. Collection and Use of Personal Data",
+      "appUsage": {
+        "title": "a) When using the app:",
+        "content": "Social Post Pro only accesses data that you yourself share via your Facebook or Instagram connection (via Meta Login). This typically includes:",
+        "item1": "your public profile name,",
+        "item2": "your profile ID,",
+        "item3": "your connected pages or accounts (e.g., to post content).",
+        "purpose": "This data is used exclusively to provide the app's functionality (e.g., to create or schedule posts).",
+        "storage": "We do not permanently store data on our own servers. All data is only processed temporarily."
+      },
+      "noSharing": {
+        "title": "b) No sharing with third parties:",
+        "content": "We do not share personal data with third parties unless we are legally required to do so."
+      }
+    },
+    "cookies": {
+      "title": "4. Cookies and Tracking",
+      "content1": "Social Post Pro itself does not use cookies or tracking services.",
+      "content2": "However, when logging in via Meta, cookies may be set by Meta Platforms Inc. You can find information about this in Meta's privacy policy:"
+    },
+    "storage": {
+      "title": "5. Data Storage and Deletion",
+      "content1": "We do not permanently store personal data.",
+      "content2": "As soon as you log out or disconnect from Meta, all temporarily stored data is immediately deleted."
+    },
+    "rights": {
+      "title": "6. Rights of Data Subjects",
+      "intro": "You have the right at any time to:",
+      "item1": "Obtain information about stored data,",
+      "item2": "Request correction of incorrect data,",
+      "item3": "Request deletion or restriction of processing,",
+      "item4": "Object to data processing,",
+      "item5": "and withdraw consent at any time.",
+      "contact": "Please direct such requests to"
+    },
+    "changes": {
+      "title": "7. Changes to This Privacy Policy",
+      "content1": "We reserve the right to update this privacy policy at any time.",
+      "content2": "The current version is always available at"
+    },
+    "dataDeletionCta": {
+      "title": "Want to delete your data?",
+      "description": "Learn how you can completely remove your user data.",
+      "button": "Go to Data Deletion"
+    }
+  },
+  "dataDeletion": {
+    "title": "User Data Deletion",
+    "subtitle": "Data Deletion Policy for Social Post Pro",
+    "backHome": "Back to Home",
+    "intro": {
+      "title": "Request Data Deletion",
+      "content": "If you want your data stored or processed through Social Post Pro to be deleted, please follow these steps:"
+    },
+    "steps": {
+      "step1": {
+        "label": "Step 1",
+        "title": "Send an Email",
+        "content": "Send an email with the subject \"Data Deletion Request\" to:",
+        "to": "To",
+        "subject": "Subject"
+      },
+      "step2": {
+        "label": "Step 2",
+        "title": "Required Information",
+        "content": "Include the following information in your message:",
+        "item1": "your full name,",
+        "item2": "the email address you used to sign in with Meta,",
+        "item3": "and if applicable, the name of the page connected to Social Post Pro."
+      },
+      "step3": {
+        "label": "Step 3",
+        "title": "Receive Confirmation",
+        "content": "Upon receipt of your request, all related data will be completely deleted within 7 business days. You will receive an email confirmation once the process is complete."
+      }
+    },
+    "note": {
+      "title": "Important Note:",
+      "content": "Deletion will occur within 7 business days of receiving your request. You will then receive a confirmation email."
+    },
+    "privacyCta": {
+      "title": "More Information About Privacy",
+      "button": "View Privacy Policy"
     }
   }
 }
