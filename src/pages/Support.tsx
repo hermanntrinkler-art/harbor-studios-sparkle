@@ -16,25 +16,25 @@ const Support = () => {
 
   const projects = [
     {
-      id: "recipe-pixie",
+      id: "recipePixie",
       icon: "🍳",
       status: "complete",
       route: "/support/recipe-pixie"
     },
     {
-      id: "captains-log",
+      id: "captainsLog",
       icon: "⚓",
       status: "coming-soon",
       route: "/support/captains-log"
     },
     {
-      id: "ocean-mind",
+      id: "oceanMind",
       icon: "🧠",
       status: "coming-soon",
       route: "/support/ocean-mind"
     },
     {
-      id: "social-post-pro",
+      id: "socialPostPro",
       icon: "📱",
       status: "coming-soon",
       route: "/support/social-post-pro"
