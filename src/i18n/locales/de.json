@@ -58,6 +58,10 @@
   "footer": {
     "copyright": "© {{year}} Harbor Studios. Alle Rechte vorbehalten.",
     "tagline": "Die Zukunft gestalten, ein Projekt nach dem anderen",
+    "support": "Support",
+    "documentation": "Dokumentation",
+    "faq": "FAQ",
+    "contact": "Kontakt",
     "legal": "Rechtliches",
     "privacy": "Datenschutz",
     "dataDeletion": "Datenlöschung",
@@ -597,6 +601,266 @@
       "title": "Fragen zum Datenschutz?",
       "description": "Erfahre mehr über unsere Datenschutzrichtlinien",
       "button": "Zur Datenschutzerklärung"
+    }
+  },
+  "support": {
+    "title": "Support & Dokumentation",
+    "subtitle": "Finde Hilfe zu allen Harbor Studios Projekten",
+    "searchPlaceholder": "Suche nach Hilfe...",
+    "backToOverview": "Zurück zur Support-Übersicht",
+    "stillQuestions": "Noch Fragen?",
+    "contactUs": "Finde keine Antwort? Kontaktiere uns direkt!",
+    "contactButton": "Support kontaktieren",
+    "readGuide": "Anleitung lesen",
+    "guideFooter": "Nicht gefunden wonach du suchst? Wir helfen gerne weiter!",
+    "badges": {
+      "complete": "Vollständig",
+      "comingSoon": "Bald verfügbar"
+    },
+    "sections": {
+      "documentation": "Projekt-Dokumentationen",
+      "faq": "Häufig gestellte Fragen",
+      "contact": "Support kontaktieren",
+      "resources": "Weitere Ressourcen"
+    },
+    "projects": {
+      "recipePixie": {
+        "title": "Recipe Pixie Anleitung",
+        "description": "Vollständige Gebrauchsanweisung für die Rezept-Management-App"
+      },
+      "captainsLog": {
+        "title": "Captain's Log Anleitung",
+        "description": "Dokumentation für die maritime Logbuch-App"
+      },
+      "oceanMind": {
+        "title": "OceanMind Anleitung",
+        "description": "Dokumentation für deinen KI-Fokus-Begleiter"
+      },
+      "socialPostPro": {
+        "title": "Social Post Pro Anleitung",
+        "description": "Dokumentation für die Social-Media-Content-Plattform"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "general": {
+        "title": "Allgemeine Fragen",
+        "q1": "Was ist Harbor Studios?",
+        "a1": "Harbor Studios ist ein innovatives Software-Studio, das sich auf KI-gestützte Web-Apps, maritime Lösungen und Gaming-Projekte spezialisiert hat. Wir entwickeln digitale Produkte, die das Leben einfacher und produktiver machen.",
+        "q2": "Wie kann ich euch kontaktieren?",
+        "a2": "Du kannst uns über das Kontaktformular auf unserer Startseite erreichen oder direkt eine E-Mail an support@harborstudios.app senden. Wir antworten in der Regel innerhalb von 24 Stunden.",
+        "q3": "Sind die Apps kostenlos?",
+        "a3": "Die meisten unserer Apps bieten eine kostenlose Basisversion. Für erweiterte Funktionen wie KI-Features oder unbegrenzte Nutzung bieten wir verschiedene Premium-Pläne an."
+      },
+      "technical": {
+        "title": "Technische Fragen",
+        "q1": "Welche Browser werden unterstützt?",
+        "a1": "Alle unsere Apps funktionieren optimal in modernen Browsern wie Chrome, Firefox, Safari und Edge (neueste 2 Versionen). Für die beste Erfahrung empfehlen wir Chrome oder Safari.",
+        "q2": "Funktionieren die Apps offline?",
+        "a2": "Die meisten unserer Apps sind Progressive Web Apps (PWAs) und bieten grundlegende Offline-Funktionalität. Sobald du einmal online warst, kannst du viele Features auch ohne Internetverbindung nutzen. KI-Features benötigen jedoch eine Internetverbindung."
+      },
+      "privacy": {
+        "title": "Datenschutz & Sicherheit",
+        "q1": "Wie sicher sind meine Daten?",
+        "a1": "Datenschutz und Sicherheit haben für uns höchste Priorität. Alle Daten werden verschlüsselt übertragen (SSL/TLS) und sicher gespeichert. Wir verkaufen niemals deine Daten an Dritte und halten uns strikt an die DSGVO.",
+        "q2": "Kann ich meine Daten löschen?",
+        "a2": "Ja, du kannst jederzeit in den Einstellungen deiner Apps alle deine Daten löschen. Alternativ kannst du uns kontaktieren und wir löschen deine Daten vollständig aus unserem System."
+      }
+    },
+    "recipePixieGuide": {
+      "title": "Recipe Pixie - Vollständige Gebrauchsanweisung",
+      "subtitle": "Alles was du über Recipe Pixie wissen musst",
+      "breadcrumb": "Gebrauchsanweisung",
+      "tableOfContents": "Inhaltsverzeichnis",
+      "sections": {
+        "gettingStarted": {
+          "title": "Erste Schritte",
+          "registration": {
+            "title": "📝 Anmeldung & Login",
+            "content": "Besuche Recipe Pixie und melde dich mit deiner E-Mail-Adresse an. Nach der Bestätigung kannst du sofort loslegen – keine komplizierte Einrichtung nötig."
+          },
+          "credits": {
+            "title": "💎 Startguthaben & Credits",
+            "content": "Jeder neue Nutzer erhält ein Startguthaben für KI-Features (Magic Paste, Nährwertberechnung). Wenn deine Credits aufgebraucht sind, kannst du weitere Credits kaufen oder auf manuelle Eingabe umsteigen."
+          },
+          "interface": {
+            "title": "🖥️ Benutzeroberfläche",
+            "content": "Die App ist intuitiv aufgebaut: Links findest du die Navigation (Rezepte, Kochbücher, Wochenplaner, Einkaufsliste), in der Mitte deine Rezeptsammlung und oben rechts dein Profil mit Einstellungen."
+          }
+        },
+        "createRecipes": {
+          "title": "Rezepte erstellen",
+          "manual": {
+            "title": "✏️ Manuelles Erstellen",
+            "content": "Klicke auf '+ Neues Rezept' und fülle die Felder aus. Du kannst Titel, Zutaten, Anweisungen, Kochzeit, Portionen und mehr hinzufügen."
+          },
+          "fields": {
+            "title": "📋 Wichtige Felder",
+            "items": [
+              "Titel: Name des Rezepts",
+              "Zutaten: Eine Zutat pro Zeile (z.B. '200g Mehl')",
+              "Anweisungen: Schritt-für-Schritt-Anleitung",
+              "Kochzeit: Gesamt-, Vorbereitungs- und Backzeit",
+              "Portionen: Anzahl der Portionen",
+              "Kategorien & Tags: Für bessere Organisation",
+              "Bild: Optional ein Foto hochladen"
+            ]
+          }
+        },
+        "magicPaste": {
+          "title": "KI-Rezepterkennung (Magic Paste)",
+          "intro": "Magic Paste ist die KI-gestützte Funktion, die Rezepte automatisch aus Text oder URLs extrahiert – das größte Highlight von Recipe Pixie!",
+          "howTo": {
+            "title": "🪄 So funktioniert's",
+            "steps": [
+              "Klicke auf '+ Neues Rezept' → dann auf '✨ Magic Paste'",
+              "Füge entweder eine URL ein (z.B. von Chefkoch, NYT Cooking, etc.) oder kopiere den Rezepttext direkt",
+              "Die KI analysiert den Inhalt und extrahiert automatisch: Titel, Zutaten, Anweisungen, Kochzeit, Portionen",
+              "Prüfe das Ergebnis, korrigiere bei Bedarf und speichere"
+            ]
+          },
+          "sources": {
+            "title": "🌐 Funktioniert mit",
+            "content": "Recipe Pixie unterstützt praktisch alle Rezept-Websites weltweit – egal ob deutsche Blogs, internationale Kochseiten oder Social-Media-Posts. Die KI ist trainiert, Rezepte aus verschiedensten Formaten zu erkennen."
+          },
+          "tip": "Tipp: Je strukturierter der Text, desto besser das Ergebnis. Bei sehr unübersichtlichen Quellen lohnt sich manchmal eine manuelle Nachbearbeitung."
+        },
+        "nutrition": {
+          "title": "Nährwertberechnung",
+          "intro": "Recipe Pixie kann automatisch die Nährwerte deiner Rezepte berechnen – ebenfalls KI-gestützt.",
+          "howTo": {
+            "title": "🧮 Nährwerte berechnen",
+            "content": "Öffne ein Rezept und klicke auf 'Nährwerte berechnen'. Die KI analysiert alle Zutaten und gibt dir eine detaillierte Übersicht pro Portion."
+          },
+          "values": {
+            "title": "📊 Berechnete Werte",
+            "items": [
+              "Kalorien (kcal)",
+              "Kohlenhydrate (g)",
+              "Eiweiß (g)",
+              "Fett (g)",
+              "Ballaststoffe (g)",
+              "Zucker (g)",
+              "Salz (g)"
+            ]
+          }
+        },
+        "manageRecipes": {
+          "title": "Rezepte verwalten",
+          "view": {
+            "title": "👀 Anzeigen",
+            "content": "Klicke auf ein Rezept, um alle Details zu sehen. Du kannst zwischen normaler Ansicht und Kochmodus wechseln."
+          },
+          "edit": {
+            "title": "✏️ Bearbeiten",
+            "content": "Klicke auf das Stift-Symbol, um Änderungen vorzunehmen. Alle Felder können jederzeit angepasst werden."
+          },
+          "delete": {
+            "title": "🗑️ Löschen",
+            "content": "Über das Menü (drei Punkte) kannst du einzelne Rezepte löschen. Achtung: Dies ist unwiderruflich!"
+          }
+        },
+        "selectionMode": {
+          "title": "Auswahlmodus & Mehrfachaktionen",
+          "intro": "Mit dem Auswahlmodus kannst du mehrere Rezepte gleichzeitig bearbeiten – perfekt für Batch-Operationen.",
+          "actions": {
+            "title": "⚡ Mögliche Aktionen",
+            "items": [
+              "Mehrere Rezepte zu einem Kochbuch hinzufügen",
+              "Kombinierte Einkaufsliste erstellen",
+              "Mehrere Rezepte gleichzeitig löschen",
+              "Rezepte exportieren (PDF, JSON)"
+            ]
+          }
+        },
+        "cookbooks": {
+          "title": "Kochbücher",
+          "intro": "Organisiere deine Rezepte in Kochbüchern – wie digitale Ordner für verschiedene Themen.",
+          "create": {
+            "title": "📚 Kochbuch erstellen",
+            "content": "Gehe zu 'Kochbücher' und klicke auf '+ Neues Kochbuch'. Gib einen Namen ein (z.B. 'Italienische Küche', 'Schnelle Gerichte', 'Weihnachtsmenü') und füge Rezepte hinzu."
+          },
+          "manage": {
+            "title": "🔄 Verwalten",
+            "content": "Du kannst Rezepte jederzeit zwischen Kochbüchern verschieben, neue hinzufügen oder entfernen. Ein Rezept kann in mehreren Kochbüchern sein."
+          }
+        },
+        "mealPlanner": {
+          "title": "Wochenplaner",
+          "intro": "Plane deine Mahlzeiten für die kommende Woche und lass dir automatisch eine Einkaufsliste generieren.",
+          "howTo": {
+            "title": "📅 Wochenplan erstellen",
+            "steps": [
+              "Gehe zu 'Wochenplaner'",
+              "Wähle einen Tag und eine Mahlzeit (Frühstück, Mittagessen, Abendessen)",
+              "Füge ein Rezept hinzu (per Drag & Drop oder durch Auswahl)",
+              "Wiederhole das für alle gewünschten Tage",
+              "Klicke auf 'Einkaufsliste generieren' – fertig!"
+            ]
+          }
+        },
+        "shoppingList": {
+          "title": "Einkaufsliste",
+          "intro": "Die automatische Einkaufsliste fasst alle Zutaten deiner geplanten Rezepte zusammen.",
+          "features": {
+            "title": "🛒 Features",
+            "items": [
+              "Automatische Zusammenfassung gleicher Zutaten (z.B. 3x Mehl → 600g Mehl)",
+              "Gruppierung nach Kategorien (Obst/Gemüse, Milchprodukte, etc.)",
+              "Abhaken erledigter Einkäufe",
+              "Export als PDF oder Teilen per WhatsApp",
+              "Manuelle Ergänzung zusätzlicher Artikel möglich"
+            ]
+          }
+        },
+        "settings": {
+          "title": "Einstellungen",
+          "options": {
+            "title": "⚙️ Anpassungsmöglichkeiten",
+            "items": [
+              "Sprache: Deutsch, Englisch, Spanisch, Französisch",
+              "Einheiten: Metrisch (g, ml) oder Imperial (oz, cups)",
+              "Standardportionen: Welche Portionsanzahl soll voreingestellt sein?",
+              "Theme: Hell, Dunkel oder Automatisch",
+              "Datenschutz: Datenexport, Konto löschen"
+            ]
+          }
+        },
+        "cookMode": {
+          "title": "Kochmodus",
+          "intro": "Der Kochmodus ist eine ablenkungsfreie Ansicht, perfekt wenn du gerade am Herd stehst.",
+          "features": {
+            "title": "👨‍🍳 Kochmodus-Features",
+            "items": [
+              "Große, gut lesbare Schrift",
+              "Schritt-für-Schritt-Navigation (nächster/vorheriger Schritt)",
+              "Timer für jeden Schritt",
+              "Bildschirm bleibt an (kein Standby)",
+              "Spritzwasserschutz (Touch-Sperre)"
+            ]
+          }
+        },
+        "mobileApp": {
+          "title": "Mobile App (PWA)",
+          "intro": "Recipe Pixie ist eine Progressive Web App – das bedeutet, du kannst sie wie eine native App installieren!",
+          "install": {
+            "title": "📱 Installation",
+            "content": "iOS: Öffne Recipe Pixie in Safari, tippe auf 'Teilen' → 'Zum Home-Bildschirm'. Android: Chrome öffnet automatisch einen 'Installieren'-Banner. Desktop: Chrome/Edge zeigen ein Installations-Symbol in der Adressleiste."
+          }
+        },
+        "tipsTricks": {
+          "title": "Tipps & Tricks",
+          "tips": [
+            "Nutze Tags für spezielle Eigenschaften (z.B. 'glutenfrei', 'vegan', 'meal-prep')",
+            "Bei unklaren KI-Ergebnissen: Kopiere nur den relevanten Rezept-Teil (ohne Werbung, Kommentare)",
+            "Erstelle ein 'Favoriten'-Kochbuch für deine meistgekochten Rezepte",
+            "Der Wochenplaner zeigt Nährwerte pro Tag an – perfekt für Ernährungsziele",
+            "Du kannst Rezepte auch per E-Mail an Recipe Pixie senden (Premium-Feature)",
+            "Nutze die Suchfunktion: Sie durchsucht Titel, Zutaten und Tags",
+            "Exportiere wichtige Rezepte als PDF-Backup"
+          ]
+        }
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, ExternalLink, Sparkles, Check, X } from "lucide-react";
+import { ArrowLeft, ExternalLink, Sparkles, Check, X, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -107,6 +107,12 @@ const RecipePixieDetails = () => {
                 {t('recipePixieDetails.cta.button')}
                 <ExternalLink className="ml-2 h-5 w-5" />
               </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="text-lg">
+              <Link to="/support/recipe-pixie">
+                <BookOpen className="mr-2 h-5 w-5" />
+                📖 Anleitung lesen
+              </Link>
             </Button>
           </div>
         </div>

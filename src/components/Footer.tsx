@@ -19,6 +19,30 @@ const Footer = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <div className="text-center">
+              <h3 className="text-sm font-semibold mb-2">{t('footer.support')}</h3>
+              <div className="flex flex-col gap-1">
+                <Link 
+                  to="/support" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {t('footer.documentation')}
+                </Link>
+                <Link 
+                  to="/support#faq" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {t('footer.faq')}
+                </Link>
+                <a 
+                  href="/#contact" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {t('footer.contact')}
+                </a>
+              </div>
+            </div>
+            
+            <div className="text-center">
               <h3 className="text-sm font-semibold mb-2">{t('footer.legal')}</h3>
               <div className="flex flex-col gap-1">
                 <Link 

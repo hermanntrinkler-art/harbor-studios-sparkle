@@ -12,6 +12,8 @@ import OceanMindDetails from "./pages/OceanMindDetails";
 import Privacy from "./pages/Privacy";
 import DataDeletion from "./pages/DataDeletion";
 import Terms from "./pages/Terms";
+import Support from "./pages/Support";
+import RecipePixieGuide from "./pages/support/RecipePixieGuide";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/data-deletion" element={<DataDeletion />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/support/recipe-pixie" element={<RecipePixieGuide />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
