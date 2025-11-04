@@ -58,6 +58,10 @@
   "footer": {
     "copyright": "© {{year}} Harbor Studios. Todos los derechos reservados.",
     "tagline": "Construyendo el futuro, un proyecto a la vez",
+    "support": "Soporte",
+    "documentation": "Guías",
+    "faq": "FAQ",
+    "contact": "Contacto",
     "legal": "Legal",
     "privacy": "Política de Privacidad",
     "dataDeletion": "Eliminación de Datos",
