@@ -34,6 +34,9 @@
     "oceanMind": {
       "description": "Your personal focus companion with AI coach, smart tasks and calming soundscapes for more productivity and inner peace"
     },
+    "museMind": {
+      "description": "AI-powered story writing app with empathetic AI – emotional, humorous or thrilling. Your stories, your control."
+    },
     "learnMore": "Learn More",
     "visitProject": "Visit Project",
     "comingSoon": "Coming Soon"
@@ -427,6 +430,89 @@
     "cta": {
       "title": "Coming Soon!",
       "subtitle": "OceanMind – Where productivity meets serenity. 🌊✨",
+      "button": "Get Notified",
+      "inDevelopment": "This app is currently in development. Stay informed about the launch!"
+    }
+  },
+  "museMindDetails": {
+    "backHome": "Harbor Studios",
+    "status": "In Development",
+    "hero": {
+      "title": "MuseMind",
+      "subtitle": "Your AI muse for heartfelt stories – from first thought to finished tale"
+    },
+    "whatIs": {
+      "title": "What is MuseMind?",
+      "description": "MuseMind is your creative writing partner. With empathetic AI, develop stories in four genre modes (Romance, Fantasy, Thriller, Humor), with full control over style, perspective, and tone. Define characters, control narrative form, and watch your ideas come to life word by word – with automatic cloud saving and daily inspiration."
+    },
+    "features": {
+      "title": "What MuseMind Can Do",
+      "items": [
+        {
+          "title": "🎭 Personal Story Creation",
+          "description": "4 Genre Modes: Romance, Fantasy, Thriller, or Humor – each with its own emotional writing style\n\nInteractive Story Chat: Write in dialogue with your AI muse\n\nReal-time Streaming: Experience your story unfolding word by word"
+        },
+        {
+          "title": "✍️ Precise Narrative Control",
+          "description": "Choose Narrative Form: First person, third person, or second person\n\nControl Tense: Present for immediate tension or past for classic storytelling\n\nDefine Narrative Tone: Poetic, factual, introspective, or cinematic\n\nTone Fine-tuning: 3 sliders for intensity, humor, and dreaminess"
+        },
+        {
+          "title": "👥 Character Management",
+          "description": "Define Characters: Give your characters names and roles\n\nUp to 5 characters per story\n\nAI Stays Consistent: The AI uses your characters throughout and develops them organically"
+        },
+        {
+          "title": "🔥 Adult Mode (optional)",
+          "description": "Sensual Content: Mature, atmospheric language for adult stories\n\nStylish & Respectful: No pornography – only heartfelt, metaphorical intimacy\n\nSafe Filter Logic: Automatic protection against inappropriate content"
+        },
+        {
+          "title": "⚡ Smart-Actions for Your Writing Flow",
+          "description": "✨ Continue Story: AI seamlessly continues the narrative\n\n🔄 Change Direction: Steer plot twists and developments\n\n💬 Add Dialogue: Insert vivid conversations\n\n📝 End Chapter: Structure your story into chapters"
+        },
+        {
+          "title": "💾 Cloud-based Saving & 🎨 Daily Inspiration",
+          "description": "Automatic Backup: Your stories are saved in real-time\n\nNever Lost: Continue writing on any device\n\nCreative Writing Prompts: Get daily new story starters\n\nGDPR Compliant: Your texts belong to you"
+        }
+      ]
+    },
+    "perfectFor": {
+      "title": "🎯 Who is MuseMind For?",
+      "items": [
+        "✅ Authors who want to expand their creativity with AI",
+        "✅ Writers seeking structure and emotional depth",
+        "✅ Creatives who love genre-specific styles",
+        "✅ Anyone who wants to create stories with feeling and control"
+      ]
+    },
+    "benefits": {
+      "title": "💡 Your Benefits at a Glance",
+      "featureColumn": "Feature",
+      "benefitColumn": "Benefit",
+      "items": [
+        {
+          "feature": "AI-powered",
+          "benefit": "Never alone in front of the blank page again"
+        },
+        {
+          "feature": "Complete Control",
+          "benefit": "You decide style, tone, perspective"
+        },
+        {
+          "feature": "Characters Come Alive",
+          "benefit": "Define characters, AI brings them to life"
+        },
+        {
+          "feature": "Automatic Saving",
+          "benefit": "Focus on writing, not on saving"
+        },
+        {
+          "feature": "Safe & Private",
+          "benefit": "GDPR compliant, your texts belong to you"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Coming Soon!",
+      "subtitle": "MuseMind – Where creativity meets AI. ✨📖",
       "button": "Get Notified",
       "inDevelopment": "This app is currently in development. Stay informed about the launch!"
     }

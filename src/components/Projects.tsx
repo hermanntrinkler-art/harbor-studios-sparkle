@@ -21,6 +21,14 @@ const Projects = () => {
       image: "/images/ocean_mind.png"
     },
     {
+      title: "MuseMind",
+      description: t('projects.museMind.description'),
+      link: "#",
+      detailPage: "/projects/musemind",
+      tags: ["AI", "Creative Writing", "Storytelling", "PWA"],
+      image: "/images/musemind-hero.png"
+    },
+    {
       title: "Recipe Pixie",
       description: t('projects.recipePixie.description'),
       link: "https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor",

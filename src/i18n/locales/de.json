@@ -34,6 +34,9 @@
     "oceanMind": {
       "description": "Dein persönlicher Fokus-Begleiter mit KI-Coach, Smart Tasks und beruhigenden Soundscapes für mehr Produktivität und innere Ruhe"
     },
+    "museMind": {
+      "description": "KI-gestützte Story-Schreibapp mit empathischer KI – gefühlvoll, humorvoll oder spannend. Deine Geschichten, deine Kontrolle."
+    },
     "learnMore": "Mehr erfahren",
     "visitProject": "Projekt besuchen",
     "comingSoon": "Demnächst"
@@ -427,6 +430,89 @@
     "cta": {
       "title": "Bald verfügbar!",
       "subtitle": "OceanMind – Wo Produktivität auf Gelassenheit trifft. 🌊✨",
+      "button": "Benachrichtigung erhalten",
+      "inDevelopment": "Diese App befindet sich derzeit in Entwicklung. Bleibe informiert über den Launch!"
+    }
+  },
+  "museMindDetails": {
+    "backHome": "Harbor Studios",
+    "status": "In Entwicklung",
+    "hero": {
+      "title": "MuseMind",
+      "subtitle": "Deine KI-Muse für gefühlvolle Geschichten – vom ersten Gedanken bis zur fertigen Story"
+    },
+    "whatIs": {
+      "title": "Was ist MuseMind?",
+      "description": "MuseMind ist deine kreative Schreibpartnerin. Mit empathischer KI entwickelst du Geschichten in vier Genre-Modi (Romance, Fantasy, Thriller, Humor), mit voller Kontrolle über Stil, Perspektive und Ton. Definiere Charaktere, steuere die Erzählform und erlebe, wie deine Ideen Wort für Wort lebendig werden – mit automatischer Cloud-Speicherung und täglicher Inspiration."
+    },
+    "features": {
+      "title": "Was MuseMind alles kann",
+      "items": [
+        {
+          "title": "🎭 Persönliche Story-Erschaffung",
+          "description": "4 Genre-Modi: Romance, Fantasy, Thriller oder Humor – jeder mit eigenem emotionalem Schreibstil\n\nInteraktiver Story-Chat: Schreibe im Dialog mit deiner KI-Muse\n\nEchtzeit-Streaming: Erlebe, wie deine Geschichte Wort für Wort entsteht"
+        },
+        {
+          "title": "✍️ Präzise Erzählkontrolle",
+          "description": "Erzählform wählen: Ich-Form, Er/Sie-Form oder Du-Form\n\nZeitform steuern: Präsens oder Präteritum\n\nErzählton definieren: Poetisch, sachlich, innerlich oder filmisch\n\nTon-Feintuning: 3 Schieberegler für Intensität, Humor und Traumhaftigkeit"
+        },
+        {
+          "title": "👥 Charakter-Management",
+          "description": "Charaktere definieren: Gib deinen Figuren Namen und Rollen\n\nBis zu 5 Charaktere pro Geschichte\n\nKI bleibt konsistent: Die KI verwendet deine Charaktere durchgehend"
+        },
+        {
+          "title": "🔥 Erwachsenenmodus (optional)",
+          "description": "Sinnliche Inhalte: Reife, atmosphärische Sprache für erwachsene Geschichten\n\nStilvoll & respektvoll: Keine Pornografie – nur gefühlvolle, metaphorische Nähe\n\nSichere Filterlogik: Automatischer Schutz vor unangemessenen Inhalten"
+        },
+        {
+          "title": "⚡ Smart-Actions für deinen Schreibfluss",
+          "description": "✨ Erzähle weiter: Die KI setzt die Geschichte nahtlos fort\n\n🔄 Richtung ändern: Steuere Wendungen und Entwicklungen\n\n💬 Dialog einbauen: Füge lebendige Gespräche ein\n\n📝 Kapitel beenden: Strukturiere deine Geschichte"
+        },
+        {
+          "title": "💾 Cloud-basiertes Speichern & 🎨 Tägliche Inspiration",
+          "description": "Automatische Sicherung: Deine Geschichten werden in Echtzeit gespeichert\n\nNiemals verloren: Schreibe auf jedem Gerät weiter\n\nKreative Schreibimpulse: Erhalte täglich neue Storystarter\n\nDSGVO-konform: Deine Texte gehören Dir"
+        }
+      ]
+    },
+    "perfectFor": {
+      "title": "🎯 Für wen ist MuseMind?",
+      "items": [
+        "✅ Autor:innen, die ihre Kreativität mit KI erweitern wollen",
+        "✅ Schreibende, die Struktur und emotionale Tiefe suchen",
+        "✅ Kreative, die Genre-spezifische Stile lieben",
+        "✅ Alle, die Geschichten mit Gefühl und Kontrolle erschaffen möchten"
+      ]
+    },
+    "benefits": {
+      "title": "💡 Deine Vorteile auf einen Blick",
+      "featureColumn": "Feature",
+      "benefitColumn": "Benefit",
+      "items": [
+        {
+          "feature": "KI-gestützt",
+          "benefit": "Nie wieder allein vor dem leeren Blatt"
+        },
+        {
+          "feature": "Vollständige Kontrolle",
+          "benefit": "Du entscheidest Stil, Ton, Perspektive"
+        },
+        {
+          "feature": "Charaktere leben",
+          "benefit": "Definiere Figuren, die KI macht sie lebendig"
+        },
+        {
+          "feature": "Automatisches Speichern",
+          "benefit": "Konzentriere dich aufs Schreiben, nicht aufs Speichern"
+        },
+        {
+          "feature": "Sicher & privat",
+          "benefit": "DSGVO-konform, deine Texte gehören dir"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bald verfügbar!",
+      "subtitle": "MuseMind – Wo Kreativität auf KI trifft. ✨📖",
       "button": "Benachrichtigung erhalten",
       "inDevelopment": "Diese App befindet sich derzeit in Entwicklung. Bleibe informiert über den Launch!"
     }

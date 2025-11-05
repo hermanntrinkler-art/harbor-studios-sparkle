@@ -34,6 +34,9 @@
     "oceanMind": {
       "description": "Tu compañero personal de enfoque con coach de IA, tareas inteligentes y paisajes sonoros relajantes para más productividad y paz interior"
     },
+    "museMind": {
+      "description": "App de escritura de historias impulsada por IA con IA empática – emocional, humorística o emocionante. Tus historias, tu control."
+    },
     "learnMore": "Más información",
     "visitProject": "Visitar Proyecto",
     "comingSoon": "Próximamente"
@@ -427,6 +430,89 @@
     "cta": {
       "title": "¡Próximamente!",
       "subtitle": "OceanMind – Donde la productividad se encuentra con la serenidad. 🌊✨",
+      "button": "Recibir Notificación",
+      "inDevelopment": "Esta app está actualmente en desarrollo. ¡Mantente informado sobre el lanzamiento!"
+    }
+  },
+  "museMindDetails": {
+    "backHome": "Harbor Studios",
+    "status": "En Desarrollo",
+    "hero": {
+      "title": "MuseMind",
+      "subtitle": "Tu musa de IA para historias emotivas – desde la primera idea hasta el relato terminado"
+    },
+    "whatIs": {
+      "title": "¿Qué es MuseMind?",
+      "description": "MuseMind es tu compañera creativa de escritura. Con IA empática, desarrolla historias en cuatro modos de género (Romance, Fantasía, Thriller, Humor), con control total sobre estilo, perspectiva y tono. Define personajes, controla la forma narrativa y observa cómo tus ideas cobran vida palabra por palabra – con guardado automático en la nube e inspiración diaria."
+    },
+    "features": {
+      "title": "Lo que MuseMind puede hacer",
+      "items": [
+        {
+          "title": "🎭 Creación Personal de Historias",
+          "description": "4 Modos de Género: Romance, Fantasía, Thriller o Humor – cada uno con su propio estilo emocional de escritura\n\nChat Interactivo de Historias: Escribe en diálogo con tu musa de IA\n\nTransmisión en Tiempo Real: Experimenta cómo tu historia se desarrolla palabra por palabra"
+        },
+        {
+          "title": "✍️ Control Narrativo Preciso",
+          "description": "Elegir Forma Narrativa: Primera persona, tercera persona o segunda persona\n\nControlar Tiempo: Presente para tensión inmediata o pasado para narración clásica\n\nDefinir Tono Narrativo: Poético, factual, introspectivo o cinemático\n\nAjuste Fino de Tono: 3 deslizadores para intensidad, humor y ensoñación"
+        },
+        {
+          "title": "👥 Gestión de Personajes",
+          "description": "Definir Personajes: Da a tus personajes nombres y roles\n\nHasta 5 personajes por historia\n\nIA Consistente: La IA usa tus personajes de manera coherente y los desarrolla orgánicamente"
+        },
+        {
+          "title": "🔥 Modo Adulto (opcional)",
+          "description": "Contenido Sensual: Lenguaje maduro y atmosférico para historias adultas\n\nElegante y Respetuoso: Sin pornografía – solo intimidad metafórica y emotiva\n\nLógica de Filtro Segura: Protección automática contra contenido inapropiado"
+        },
+        {
+          "title": "⚡ Acciones Inteligentes para tu Flujo de Escritura",
+          "description": "✨ Continuar Historia: La IA continúa la narrativa sin problemas\n\n🔄 Cambiar Dirección: Dirige giros argumentales y desarrollos\n\n💬 Añadir Diálogo: Inserta conversaciones vívidas\n\n📝 Finalizar Capítulo: Estructura tu historia en capítulos"
+        },
+        {
+          "title": "💾 Guardado en la Nube & 🎨 Inspiración Diaria",
+          "description": "Copia de Seguridad Automática: Tus historias se guardan en tiempo real\n\nNunca Perdidas: Continúa escribiendo en cualquier dispositivo\n\nPrompts de Escritura Creativos: Recibe nuevos iniciadores de historias diariamente\n\nCumple RGPD: Tus textos te pertenecen"
+        }
+      ]
+    },
+    "perfectFor": {
+      "title": "🎯 ¿Para quién es MuseMind?",
+      "items": [
+        "✅ Autores que quieren expandir su creatividad con IA",
+        "✅ Escritores que buscan estructura y profundidad emocional",
+        "✅ Creativos que aman estilos específicos de género",
+        "✅ Cualquiera que quiera crear historias con sentimiento y control"
+      ]
+    },
+    "benefits": {
+      "title": "💡 Tus Beneficios de un Vistazo",
+      "featureColumn": "Característica",
+      "benefitColumn": "Beneficio",
+      "items": [
+        {
+          "feature": "Impulsado por IA",
+          "benefit": "Nunca más solo frente a la página en blanco"
+        },
+        {
+          "feature": "Control Completo",
+          "benefit": "Tú decides estilo, tono, perspectiva"
+        },
+        {
+          "feature": "Personajes Cobran Vida",
+          "benefit": "Define personajes, la IA los hace vivir"
+        },
+        {
+          "feature": "Guardado Automático",
+          "benefit": "Concéntrate en escribir, no en guardar"
+        },
+        {
+          "feature": "Seguro y Privado",
+          "benefit": "Cumple RGPD, tus textos te pertenecen"
+        }
+      ]
+    },
+    "cta": {
+      "title": "¡Próximamente!",
+      "subtitle": "MuseMind – Donde la creatividad se encuentra con la IA. ✨📖",
       "button": "Recibir Notificación",
       "inDevelopment": "Esta app está actualmente en desarrollo. ¡Mantente informado sobre el lanzamiento!"
     }
