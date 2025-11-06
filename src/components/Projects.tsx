@@ -21,10 +21,10 @@ const Projects = () => {
       image: "/images/ocean_mind.png"
     },
     {
-      title: "MuseMind",
-      description: t('projects.museMind.description'),
+      title: "StoryPixie",
+      description: t('projects.storyPixie.description'),
       link: "#",
-      detailPage: "/projects/musemind",
+      detailPage: "/projects/storypixie",
       tags: ["AI", "Creative Writing", "Storytelling", "PWA"],
       image: "/images/musemind-hero.png"
     },

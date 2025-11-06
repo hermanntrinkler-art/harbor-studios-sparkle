@@ -34,8 +34,8 @@
     "oceanMind": {
       "description": "Dein persönlicher Fokus-Begleiter mit KI-Coach, Smart Tasks und beruhigenden Soundscapes für mehr Produktivität und innere Ruhe"
     },
-    "museMind": {
-      "description": "KI-gestützte Story-Schreibapp mit empathischer KI – gefühlvoll, humorvoll oder spannend. Deine Geschichten, deine Kontrolle."
+    "storyPixie": {
+      "description": "KI-gestützte Story-Schreibapp mit 5 Genre-Modi, Charakter-Management und automatischen Illustrationen. Deine Geschichten, professionell exportiert."
     },
     "learnMore": "Mehr erfahren",
     "visitProject": "Projekt besuchen",
@@ -434,87 +434,104 @@
       "inDevelopment": "Diese App befindet sich derzeit in Entwicklung. Bleibe informiert über den Launch!"
     }
   },
-  "museMindDetails": {
-    "backHome": "Harbor Studios",
+  "storyPixieDetails": {
     "status": "In Entwicklung",
+    "backHome": "Zurück zur Startseite",
     "hero": {
-      "title": "MuseMind",
-      "subtitle": "Deine KI-Muse für gefühlvolle Geschichten – vom ersten Gedanken bis zur fertigen Story"
+      "title": "StoryPixie",
+      "subtitle": "KI-gestützte Story-Erschaffung mit Illustrationen & PDF-Export"
     },
     "whatIs": {
-      "title": "Was ist MuseMind?",
-      "description": "MuseMind ist deine kreative Schreibpartnerin. Mit empathischer KI entwickelst du Geschichten in vier Genre-Modi (Romance, Fantasy, Thriller, Humor), mit voller Kontrolle über Stil, Perspektive und Ton. Definiere Charaktere, steuere die Erzählform und erlebe, wie deine Ideen Wort für Wort lebendig werden – mit automatischer Cloud-Speicherung und täglicher Inspiration."
+      "title": "Was ist StoryPixie?",
+      "description": "StoryPixie ist eine KI-gestützte Schreib-App mit 5 Genre-Modi (Romance, Fantasy, Thriller, Humor, Kinderbuch), Charakter-Management, automatischen Illustrationen und professionellem PDF-Export. Verwandle deine Ideen in vollständige, visualisierte Geschichten."
     },
     "features": {
-      "title": "Was MuseMind alles kann",
+      "title": "Hauptfunktionen",
       "items": [
         {
-          "title": "🎭 Persönliche Story-Erschaffung",
-          "description": "4 Genre-Modi: Romance, Fantasy, Thriller oder Humor – jeder mit eigenem emotionalem Schreibstil\n\nInteraktiver Story-Chat: Schreibe im Dialog mit deiner KI-Muse\n\nEchtzeit-Streaming: Erlebe, wie deine Geschichte Wort für Wort entsteht"
+          "title": "🎯 Story-Chat mit KI-Muse",
+          "description": "Interaktives Geschichtenschreiben im Dialog\nKI stellt Fragen, schlägt Wendungen vor und reagiert auf Emotionen\nStreaming-Antworten in Echtzeit\n\"Erzähle weiter\"-Funktion für nahtlose Story-Fortsetzung"
         },
         {
-          "title": "✍️ Präzise Erzählkontrolle",
-          "description": "Erzählform wählen: Ich-Form, Er/Sie-Form oder Du-Form\n\nZeitform steuern: Präsens oder Präteritum\n\nErzählton definieren: Poetisch, sachlich, innerlich oder filmisch\n\nTon-Feintuning: 3 Schieberegler für Intensität, Humor und Traumhaftigkeit"
+          "title": "🎯 Story-Manager",
+          "description": "Verwaltung aller Geschichten an einem Ort\nSpeichern, Bearbeiten und Wiederaufnehmen von Stories\nAutomatisches Speichern jedes Kapitels\nÜbersicht aller eigenen Werke"
         },
         {
-          "title": "👥 Charakter-Management",
-          "description": "Charaktere definieren: Gib deinen Figuren Namen und Rollen\n\nBis zu 5 Charaktere pro Geschichte\n\nKI bleibt konsistent: Die KI verwendet deine Charaktere durchgehend"
+          "title": "🎨 Genre-Modi (5 Stimmungen)",
+          "description": "❤️ Romance - emotionale, herzerwärmende Geschichten\n🧙 Fantasy - magische Welten und Abenteuer\n🔥 Thriller - spannende, packende Handlungen\n😂 Humor - witzige, unterhaltsame Erzählungen\n📚 Kinderbuch - altersgerechte, fantasievolle Kindergeschichten"
         },
         {
-          "title": "🔥 Erwachsenenmodus (optional)",
-          "description": "Sinnliche Inhalte: Reife, atmosphärische Sprache für erwachsene Geschichten\n\nStilvoll & respektvoll: Keine Pornografie – nur gefühlvolle, metaphorische Nähe\n\nSichere Filterlogik: Automatischer Schutz vor unangemessenen Inhalten"
+          "title": "🎨 Narrative Einstellungen",
+          "description": "Erzählstil: Ich-Perspektive oder Dritte Person\nZeitform: Präteritum (Vergangenheit) oder Präsens (Gegenwart)\nTonalität: Poetisch, sachlich oder intensiv"
         },
         {
-          "title": "⚡ Smart-Actions für deinen Schreibfluss",
-          "description": "✨ Erzähle weiter: Die KI setzt die Geschichte nahtlos fort\n\n🔄 Richtung ändern: Steuere Wendungen und Entwicklungen\n\n💬 Dialog einbauen: Füge lebendige Gespräche ein\n\n📝 Kapitel beenden: Strukturiere deine Geschichte"
+          "title": "🎨 Feinabstimmung mit Slidern",
+          "description": "Intensität-Regler (0-100%)\nHumor-Anteil (0-100%)\nTraumhafte Qualität (0-100%)\nErwachsenen-Modus (optional)"
         },
         {
-          "title": "💾 Cloud-basiertes Speichern & 🎨 Tägliche Inspiration",
-          "description": "Automatische Sicherung: Deine Geschichten werden in Echtzeit gespeichert\n\nNiemals verloren: Schreibe auf jedem Gerät weiter\n\nKreative Schreibimpulse: Erhalte täglich neue Storystarter\n\nDSGVO-konform: Deine Texte gehören Dir"
+          "title": "👥 Charakter-System",
+          "description": "Bis zu 5 Charaktere pro Geschichte\nName, Rolle und physische Beschreibung\nKI-generierte Charakterreferenzen (visuelle Darstellungen)\nAutomatische Integration in Story-Generation"
+        },
+        {
+          "title": "🎨 KI-Illustrationen",
+          "description": "Automatische Kapitel-Illustrationen\nWählbare Anzahl: 1-3 Bilder pro Kapitel\nCover-Generierung\nKunststile: Watercolor, und weitere\nHintergrund-Cutout Option\nEinzelne Bilder neu generieren oder löschen"
+        },
+        {
+          "title": "🎨 PDF-Export",
+          "description": "Professionelles Buchformat\nFormate: A4, A5, Square\nSchriftgrößen: Klein, Mittel, Groß\nIllustrationen integriert\nDownload als fertiges E-Book"
+        },
+        {
+          "title": "✨ Tägliche Schreibimpulse",
+          "description": "Kreative Prompts gegen Schreibblockade\nDirekt startbare Story-Ideen\nVerschiedene Themen und Szenarien"
+        },
+        {
+          "title": "✨ Benutzerfreundlichkeit",
+          "description": "Authentifizierung & Benutzerverwaltung\nResponsive Design (Mobile, Tablet, Desktop)\nDunkelmodus-Unterstützung\nAnimierte, magische UI-Elemente"
         }
       ]
     },
     "perfectFor": {
-      "title": "🎯 Für wen ist MuseMind?",
+      "title": "Für wen ist StoryPixie?",
       "items": [
-        "✅ Autor:innen, die ihre Kreativität mit KI erweitern wollen",
-        "✅ Schreibende, die Struktur und emotionale Tiefe suchen",
+        "✅ Autor:innen, die mit KI experimentieren wollen",
+        "✅ Schreibende, die Struktur und visuelle Unterstützung suchen",
         "✅ Kreative, die Genre-spezifische Stile lieben",
-        "✅ Alle, die Geschichten mit Gefühl und Kontrolle erschaffen möchten"
+        "✅ Kinderbuchautor:innen, die altersgerechte Geschichten schreiben",
+        "✅ Alle, die Geschichten professionell exportieren möchten"
       ]
     },
     "benefits": {
-      "title": "💡 Deine Vorteile auf einen Blick",
+      "title": "Was bringt dir StoryPixie?",
       "featureColumn": "Feature",
-      "benefitColumn": "Benefit",
+      "benefitColumn": "Dein Vorteil",
       "items": [
         {
-          "feature": "KI-gestützt",
+          "feature": "KI-Story-Chat",
           "benefit": "Nie wieder allein vor dem leeren Blatt"
         },
         {
-          "feature": "Vollständige Kontrolle",
-          "benefit": "Du entscheidest Stil, Ton, Perspektive"
+          "feature": "Genre-Modi & Slider",
+          "benefit": "Vollständige Kontrolle über Stil & Ton"
         },
         {
-          "feature": "Charaktere leben",
-          "benefit": "Definiere Figuren, die KI macht sie lebendig"
+          "feature": "Charakter-Management",
+          "benefit": "Definiere Figuren, KI macht sie lebendig"
         },
         {
-          "feature": "Automatisches Speichern",
-          "benefit": "Konzentriere dich aufs Schreiben, nicht aufs Speichern"
+          "feature": "KI-Illustrationen",
+          "benefit": "Visualisiere deine Geschichte automatisch"
         },
         {
-          "feature": "Sicher & privat",
-          "benefit": "DSGVO-konform, deine Texte gehören dir"
+          "feature": "PDF-Export",
+          "benefit": "Professionelle E-Books mit einem Klick"
         }
       ]
     },
     "cta": {
-      "title": "Bald verfügbar!",
-      "subtitle": "MuseMind – Wo Kreativität auf KI trifft. ✨📖",
-      "button": "Benachrichtigung erhalten",
-      "inDevelopment": "Diese App befindet sich derzeit in Entwicklung. Bleibe informiert über den Launch!"
+      "title": "Bereit zum Schreiben?",
+      "subtitle": "Starte deine erste Geschichte mit StoryPixie",
+      "button": "App starten",
+      "inDevelopment": "Derzeit in Entwicklung – bald verfügbar!"
     }
   },
   "privacy": {

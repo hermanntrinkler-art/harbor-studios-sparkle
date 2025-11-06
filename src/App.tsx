@@ -10,7 +10,7 @@ import RecipePixieDetails from "./pages/RecipePixieDetails";
 import CaptainsLogDetails from "./pages/CaptainsLogDetails";
 import SocialPostProDetails from "./pages/SocialPostProDetails";
 import OceanMindDetails from "./pages/OceanMindDetails";
-import MuseMindDetails from "./pages/MuseMindDetails";
+import StoryPixieDetails from "./pages/StoryPixieDetails";
 import Privacy from "./pages/Privacy";
 import DataDeletion from "./pages/DataDeletion";
 import Terms from "./pages/Terms";
@@ -31,7 +31,7 @@ const App = () => (
         <Route path="/projects/captains-log" element={<CaptainsLogDetails />} />
         <Route path="/projects/social-post-pro" element={<SocialPostProDetails />} />
         <Route path="/projects/ocean-mind" element={<OceanMindDetails />} />
-        <Route path="/projects/musemind" element={<MuseMindDetails />} />
+        <Route path="/projects/storypixie" element={<StoryPixieDetails />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/data-deletion" element={<DataDeletion />} />
         <Route path="/terms" element={<Terms />} />

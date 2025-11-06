@@ -6,63 +6,80 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const MuseMindDetails = () => {
+const StoryPixieDetails = () => {
   const { t } = useTranslation();
 
   const features = [
     {
-      title: t('museMindDetails.features.items.0.title'),
-      description: t('museMindDetails.features.items.0.description'),
+      title: t('storyPixieDetails.features.items.0.title'),
+      description: t('storyPixieDetails.features.items.0.description'),
     },
     {
-      title: t('museMindDetails.features.items.1.title'),
-      description: t('museMindDetails.features.items.1.description'),
+      title: t('storyPixieDetails.features.items.1.title'),
+      description: t('storyPixieDetails.features.items.1.description'),
     },
     {
-      title: t('museMindDetails.features.items.2.title'),
-      description: t('museMindDetails.features.items.2.description'),
+      title: t('storyPixieDetails.features.items.2.title'),
+      description: t('storyPixieDetails.features.items.2.description'),
     },
     {
-      title: t('museMindDetails.features.items.3.title'),
-      description: t('museMindDetails.features.items.3.description'),
+      title: t('storyPixieDetails.features.items.3.title'),
+      description: t('storyPixieDetails.features.items.3.description'),
     },
     {
-      title: t('museMindDetails.features.items.4.title'),
-      description: t('museMindDetails.features.items.4.description'),
+      title: t('storyPixieDetails.features.items.4.title'),
+      description: t('storyPixieDetails.features.items.4.description'),
     },
     {
-      title: t('museMindDetails.features.items.5.title'),
-      description: t('museMindDetails.features.items.5.description'),
+      title: t('storyPixieDetails.features.items.5.title'),
+      description: t('storyPixieDetails.features.items.5.description'),
+    },
+    {
+      title: t('storyPixieDetails.features.items.6.title'),
+      description: t('storyPixieDetails.features.items.6.description'),
+    },
+    {
+      title: t('storyPixieDetails.features.items.7.title'),
+      description: t('storyPixieDetails.features.items.7.description'),
+    },
+    {
+      title: t('storyPixieDetails.features.items.8.title'),
+      description: t('storyPixieDetails.features.items.8.description'),
+    },
+    {
+      title: t('storyPixieDetails.features.items.9.title'),
+      description: t('storyPixieDetails.features.items.9.description'),
     },
   ];
 
   const perfectFor = [
-    t('museMindDetails.perfectFor.items.0'),
-    t('museMindDetails.perfectFor.items.1'),
-    t('museMindDetails.perfectFor.items.2'),
-    t('museMindDetails.perfectFor.items.3'),
+    t('storyPixieDetails.perfectFor.items.0'),
+    t('storyPixieDetails.perfectFor.items.1'),
+    t('storyPixieDetails.perfectFor.items.2'),
+    t('storyPixieDetails.perfectFor.items.3'),
+    t('storyPixieDetails.perfectFor.items.4'),
   ];
 
   const benefits = [
     {
-      feature: t('museMindDetails.benefits.items.0.feature'),
-      benefit: t('museMindDetails.benefits.items.0.benefit'),
+      feature: t('storyPixieDetails.benefits.items.0.feature'),
+      benefit: t('storyPixieDetails.benefits.items.0.benefit'),
     },
     {
-      feature: t('museMindDetails.benefits.items.1.feature'),
-      benefit: t('museMindDetails.benefits.items.1.benefit'),
+      feature: t('storyPixieDetails.benefits.items.1.feature'),
+      benefit: t('storyPixieDetails.benefits.items.1.benefit'),
     },
     {
-      feature: t('museMindDetails.benefits.items.2.feature'),
-      benefit: t('museMindDetails.benefits.items.2.benefit'),
+      feature: t('storyPixieDetails.benefits.items.2.feature'),
+      benefit: t('storyPixieDetails.benefits.items.2.benefit'),
     },
     {
-      feature: t('museMindDetails.benefits.items.3.feature'),
-      benefit: t('museMindDetails.benefits.items.3.benefit'),
+      feature: t('storyPixieDetails.benefits.items.3.feature'),
+      benefit: t('storyPixieDetails.benefits.items.3.benefit'),
     },
     {
-      feature: t('museMindDetails.benefits.items.4.feature'),
-      benefit: t('museMindDetails.benefits.items.4.benefit'),
+      feature: t('storyPixieDetails.benefits.items.4.feature'),
+      benefit: t('storyPixieDetails.benefits.items.4.benefit'),
     },
   ];
 
@@ -75,7 +92,7 @@ const MuseMindDetails = () => {
           <Link to="/">
             <Button variant="ghost" size="sm">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              {t('museMindDetails.backHome')}
+              {t('storyPixieDetails.backHome')}
             </Button>
           </Link>
         </div>
@@ -85,13 +102,13 @@ const MuseMindDetails = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-primary text-primary-foreground">
-              {t('museMindDetails.status')}
+              {t('storyPixieDetails.status')}
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              {t('museMindDetails.hero.title')}
+              {t('storyPixieDetails.hero.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {t('museMindDetails.hero.subtitle')}
+              {t('storyPixieDetails.hero.subtitle')}
             </p>
           </div>
 
@@ -99,10 +116,10 @@ const MuseMindDetails = () => {
             <Card>
               <CardContent className="pt-6">
                 <h2 className="text-3xl font-bold mb-4 text-foreground">
-                  {t('museMindDetails.whatIs.title')}
+                  {t('storyPixieDetails.whatIs.title')}
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  {t('museMindDetails.whatIs.description')}
+                  {t('storyPixieDetails.whatIs.description')}
                 </p>
               </CardContent>
             </Card>
@@ -110,7 +127,7 @@ const MuseMindDetails = () => {
 
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center text-foreground">
-              {t('museMindDetails.features.title')}
+              {t('storyPixieDetails.features.title')}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {features.map((feature, index) => (
@@ -132,7 +149,7 @@ const MuseMindDetails = () => {
             <Card className="bg-primary/5">
               <CardContent className="pt-6">
                 <h2 className="text-3xl font-bold mb-6 text-center text-foreground">
-                  {t('museMindDetails.perfectFor.title')}
+                  {t('storyPixieDetails.perfectFor.title')}
                 </h2>
                 <div className="space-y-3">
                   {perfectFor.map((item, index) => (
@@ -149,17 +166,17 @@ const MuseMindDetails = () => {
             <Card>
               <CardContent className="pt-6">
                 <h2 className="text-3xl font-bold mb-6 text-center text-foreground">
-                  {t('museMindDetails.benefits.title')}
+                  {t('storyPixieDetails.benefits.title')}
                 </h2>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
                       <tr className="border-b border-border">
                         <th className="text-left py-3 px-4 text-lg font-semibold text-foreground">
-                          {t('museMindDetails.benefits.featureColumn')}
+                          {t('storyPixieDetails.benefits.featureColumn')}
                         </th>
                         <th className="text-left py-3 px-4 text-lg font-semibold text-foreground">
-                          {t('museMindDetails.benefits.benefitColumn')}
+                          {t('storyPixieDetails.benefits.benefitColumn')}
                         </th>
                       </tr>
                     </thead>
@@ -185,16 +202,16 @@ const MuseMindDetails = () => {
             <Card className="bg-gradient-to-r from-primary/10 to-primary/5">
               <CardContent className="pt-8 pb-8">
                 <h2 className="text-3xl font-bold mb-4 text-foreground">
-                  {t('museMindDetails.cta.title')}
+                  {t('storyPixieDetails.cta.title')}
                 </h2>
                 <p className="text-xl text-muted-foreground mb-6">
-                  {t('museMindDetails.cta.subtitle')}
+                  {t('storyPixieDetails.cta.subtitle')}
                 </p>
                 <Button size="lg" disabled className="mb-4">
-                  {t('museMindDetails.cta.button')}
+                  {t('storyPixieDetails.cta.button')}
                 </Button>
                 <p className="text-sm text-muted-foreground">
-                  {t('museMindDetails.cta.inDevelopment')}
+                  {t('storyPixieDetails.cta.inDevelopment')}
                 </p>
               </CardContent>
             </Card>
@@ -205,4 +222,4 @@ const MuseMindDetails = () => {
   );
 };
 
-export default MuseMindDetails;
+export default StoryPixieDetails;

@@ -34,8 +34,8 @@
     "oceanMind": {
       "description": "Votre compagnon personnel de concentration avec coach IA, tâches intelligentes et paysages sonores apaisants pour plus de productivité et de sérénité"
     },
-    "museMind": {
-      "description": "Application d'écriture d'histoires propulsée par l'IA avec IA empathique – émotionnelle, humoristique ou palpitante. Vos histoires, votre contrôle."
+    "storyPixie": {
+      "description": "Application d'écriture d'histoires assistée par IA avec 5 modes de genre, gestion des personnages et illustrations automatiques. Vos histoires, exportées professionnellement."
     },
     "learnMore": "En savoir plus",
     "visitProject": "Visiter le Projet",
@@ -434,87 +434,104 @@
       "inDevelopment": "Cette application est actuellement en développement. Restez informé du lancement !"
     }
   },
-  "museMindDetails": {
-    "backHome": "Harbor Studios",
+  "storyPixieDetails": {
     "status": "En Développement",
+    "backHome": "Retour à l'Accueil",
     "hero": {
-      "title": "MuseMind",
-      "subtitle": "Votre muse IA pour des histoires pleines d'émotion – de la première pensée au récit achevé"
+      "title": "StoryPixie",
+      "subtitle": "Création d'Histoires par IA avec Illustrations & Export PDF"
     },
     "whatIs": {
-      "title": "Qu'est-ce que MuseMind ?",
-      "description": "MuseMind est votre partenaire créative d'écriture. Avec une IA empathique, développez des histoires dans quatre modes de genre (Romance, Fantasy, Thriller, Humour), avec un contrôle total sur le style, la perspective et le ton. Définissez des personnages, contrôlez la forme narrative et regardez vos idées prendre vie mot par mot – avec sauvegarde automatique dans le cloud et inspiration quotidienne."
+      "title": "Qu'est-ce que StoryPixie ?",
+      "description": "StoryPixie est une application d'écriture assistée par IA avec 5 modes de genre (Romance, Fantasy, Thriller, Humour, Livre pour Enfants), gestion des personnages, illustrations automatiques et export PDF professionnel. Transformez vos idées en histoires complètes et visualisées."
     },
     "features": {
-      "title": "Ce que MuseMind peut faire",
+      "title": "Fonctionnalités Principales",
       "items": [
         {
-          "title": "🎭 Création d'Histoires Personnelles",
-          "description": "4 Modes de Genre : Romance, Fantasy, Thriller ou Humour – chacun avec son propre style d'écriture émotionnel\n\nChat Interactif d'Histoire : Écrivez en dialogue avec votre muse IA\n\nStreaming en Temps Réel : Vivez votre histoire se déployer mot par mot"
+          "title": "🎯 Chat d'Histoire avec Muse IA",
+          "description": "Écriture interactive d'histoires par dialogue\nL'IA pose des questions, suggère des rebondissements et réagit aux émotions\nRéponses en temps réel\nFonction \"Continuer l'histoire\" pour une continuation fluide"
         },
         {
-          "title": "✍️ Contrôle Narratif Précis",
-          "description": "Choisir la Forme Narrative : Première personne, troisième personne ou deuxième personne\n\nContrôler le Temps : Présent pour une tension immédiate ou passé pour une narration classique\n\nDéfinir le Ton Narratif : Poétique, factuel, introspectif ou cinématographique\n\nAffinage du Ton : 3 curseurs pour l'intensité, l'humour et l'onirisme"
+          "title": "🎯 Gestionnaire d'Histoires",
+          "description": "Gérez toutes vos histoires en un seul endroit\nEnregistrez, modifiez et reprenez des histoires\nSauvegarde automatique de chaque chapitre\nVue d'ensemble de toutes vos œuvres"
         },
         {
-          "title": "👥 Gestion des Personnages",
-          "description": "Définir les Personnages : Donnez à vos personnages des noms et des rôles\n\nJusqu'à 5 personnages par histoire\n\nIA Cohérente : L'IA utilise vos personnages de manière cohérente et les développe organiquement"
+          "title": "🎨 Modes de Genre (5 Ambiances)",
+          "description": "❤️ Romance - histoires émotionnelles et réconfortantes\n🧙 Fantasy - mondes magiques et aventures\n🔥 Thriller - intrigues palpitantes et suspense\n😂 Humour - récits amusants et divertissants\n📚 Livre pour Enfants - histoires imaginatives adaptées aux enfants"
         },
         {
-          "title": "🔥 Mode Adulte (optionnel)",
-          "description": "Contenu Sensuel : Langage mature et atmosphérique pour histoires adultes\n\nÉlégant et Respectueux : Pas de pornographie – seulement intimité métaphorique et émotionnelle\n\nLogique de Filtre Sûre : Protection automatique contre le contenu inapproprié"
+          "title": "🎨 Paramètres Narratifs",
+          "description": "Style narratif : Première personne ou troisième personne\nTemps : Passé ou présent\nTonalité : Poétique, neutre ou intense"
         },
         {
-          "title": "⚡ Actions Intelligentes pour votre Flux d'Écriture",
-          "description": "✨ Continuer l'Histoire : L'IA continue le récit sans interruption\n\n🔄 Changer de Direction : Dirigez les rebondissements et développements\n\n💬 Ajouter un Dialogue : Insérez des conversations vivantes\n\n📝 Terminer le Chapitre : Structurez votre histoire en chapitres"
+          "title": "🎨 Réglage Fin avec Curseurs",
+          "description": "Contrôle d'intensité (0-100%)\nNiveau d'humour (0-100%)\nQualité onirique (0-100%)\nMode adulte (optionnel)"
         },
         {
-          "title": "💾 Sauvegarde Cloud & 🎨 Inspiration Quotidienne",
-          "description": "Sauvegarde Automatique : Vos histoires sont sauvegardées en temps réel\n\nJamais Perdues : Continuez à écrire sur n'importe quel appareil\n\nPrompts d'Écriture Créatifs : Recevez de nouveaux démarreurs d'histoires quotidiennement\n\nConforme RGPD : Vos textes vous appartiennent"
+          "title": "👥 Système de Personnages",
+          "description": "Jusqu'à 5 personnages par histoire\nNom, rôle et description physique\nRéférences visuelles de personnages générées par IA\nIntégration automatique dans la génération d'histoires"
+        },
+        {
+          "title": "🎨 Illustrations IA",
+          "description": "Illustrations automatiques de chapitres\nQuantité sélectionnable : 1-3 images par chapitre\nGénération de couvertures\nStyles artistiques : Aquarelle, et plus\nOption de découpe d'arrière-plan\nRégénérer ou supprimer des images individuelles"
+        },
+        {
+          "title": "🎨 Export PDF",
+          "description": "Format de livre professionnel\nFormats : A4, A5, Carré\nTailles de police : Petite, Moyenne, Grande\nIllustrations intégrées\nTéléchargement en tant que livre électronique terminé"
+        },
+        {
+          "title": "✨ Invitations d'Écriture Quotidiennes",
+          "description": "Prompts créatifs contre le blocage de l'écrivain\nIdées d'histoires directement démarrables\nThèmes et scénarios variés"
+        },
+        {
+          "title": "✨ Convivialité",
+          "description": "Authentification et gestion des utilisateurs\nDesign responsive (Mobile, Tablette, Bureau)\nSupport du mode sombre\nÉléments UI animés et magiques"
         }
       ]
     },
     "perfectFor": {
-      "title": "🎯 Pour qui est MuseMind ?",
+      "title": "Pour qui est StoryPixie ?",
       "items": [
-        "✅ Auteurs qui veulent élargir leur créativité avec l'IA",
-        "✅ Écrivains recherchant structure et profondeur émotionnelle",
+        "✅ Auteurs qui veulent expérimenter avec l'IA",
+        "✅ Écrivains recherchant structure et soutien visuel",
         "✅ Créatifs qui aiment les styles spécifiques aux genres",
-        "✅ Tous ceux qui veulent créer des histoires avec émotion et contrôle"
+        "✅ Auteurs de livres pour enfants écrivant des histoires adaptées à leur âge",
+        "✅ Tous ceux qui veulent exporter des histoires professionnellement"
       ]
     },
     "benefits": {
-      "title": "💡 Vos Avantages en un Coup d'Œil",
+      "title": "Que vous apporte StoryPixie ?",
       "featureColumn": "Fonctionnalité",
-      "benefitColumn": "Avantage",
+      "benefitColumn": "Votre Avantage",
       "items": [
         {
-          "feature": "Propulsé par l'IA",
-          "benefit": "Plus jamais seul devant la page blanche"
+          "feature": "Chat d'Histoire IA",
+          "benefit": "Plus jamais seul face à la page blanche"
         },
         {
-          "feature": "Contrôle Complet",
-          "benefit": "Vous décidez du style, ton, perspective"
+          "feature": "Modes de Genre et Curseurs",
+          "benefit": "Contrôle complet sur le style et le ton"
         },
         {
-          "feature": "Personnages Prennent Vie",
-          "benefit": "Définissez des personnages, l'IA les fait vivre"
+          "feature": "Gestion des Personnages",
+          "benefit": "Définissez les personnages, l'IA les fait vivre"
         },
         {
-          "feature": "Sauvegarde Automatique",
-          "benefit": "Concentrez-vous sur l'écriture, pas sur la sauvegarde"
+          "feature": "Illustrations IA",
+          "benefit": "Visualisez votre histoire automatiquement"
         },
         {
-          "feature": "Sûr et Privé",
-          "benefit": "Conforme RGPD, vos textes vous appartiennent"
+          "feature": "Export PDF",
+          "benefit": "Livres électroniques professionnels en un clic"
         }
       ]
     },
     "cta": {
-      "title": "Bientôt disponible !",
-      "subtitle": "MuseMind – Où la créativité rencontre l'IA. ✨📖",
-      "button": "Être Notifié",
-      "inDevelopment": "Cette application est actuellement en développement. Restez informé du lancement !"
+      "title": "Prêt à écrire ?",
+      "subtitle": "Commencez votre première histoire avec StoryPixie",
+      "button": "Lancer l'App",
+      "inDevelopment": "Actuellement en développement - bientôt disponible !"
     }
   },
   "privacy": {

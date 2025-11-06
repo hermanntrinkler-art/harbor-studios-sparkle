@@ -34,8 +34,8 @@
     "oceanMind": {
       "description": "Your personal focus companion with AI coach, smart tasks and calming soundscapes for more productivity and inner peace"
     },
-    "museMind": {
-      "description": "AI-powered story writing app with empathetic AI – emotional, humorous or thrilling. Your stories, your control."
+    "storyPixie": {
+      "description": "AI-powered story writing app with 5 genre modes, character management, and automatic illustrations. Your stories, professionally exported."
     },
     "learnMore": "Learn More",
     "visitProject": "Visit Project",
@@ -434,87 +434,104 @@
       "inDevelopment": "This app is currently in development. Stay informed about the launch!"
     }
   },
-  "museMindDetails": {
-    "backHome": "Harbor Studios",
+  "storyPixieDetails": {
     "status": "In Development",
+    "backHome": "Back to Home",
     "hero": {
-      "title": "MuseMind",
-      "subtitle": "Your AI muse for heartfelt stories – from first thought to finished tale"
+      "title": "StoryPixie",
+      "subtitle": "AI-Powered Story Creation with Illustrations & PDF Export"
     },
     "whatIs": {
-      "title": "What is MuseMind?",
-      "description": "MuseMind is your creative writing partner. With empathetic AI, develop stories in four genre modes (Romance, Fantasy, Thriller, Humor), with full control over style, perspective, and tone. Define characters, control narrative form, and watch your ideas come to life word by word – with automatic cloud saving and daily inspiration."
+      "title": "What is StoryPixie?",
+      "description": "StoryPixie is an AI-powered writing app with 5 genre modes (Romance, Fantasy, Thriller, Humor, Children's Book), character management, automatic illustrations, and professional PDF export. Transform your ideas into complete, visualized stories."
     },
     "features": {
-      "title": "What MuseMind Can Do",
+      "title": "Key Features",
       "items": [
         {
-          "title": "🎭 Personal Story Creation",
-          "description": "4 Genre Modes: Romance, Fantasy, Thriller, or Humor – each with its own emotional writing style\n\nInteractive Story Chat: Write in dialogue with your AI muse\n\nReal-time Streaming: Experience your story unfolding word by word"
+          "title": "🎯 Story Chat with AI Muse",
+          "description": "Interactive storytelling through dialogue\nAI asks questions, suggests plot twists, and responds to emotions\nReal-time streaming responses\n\"Continue story\" function for seamless continuation"
         },
         {
-          "title": "✍️ Precise Narrative Control",
-          "description": "Choose Narrative Form: First person, third person, or second person\n\nControl Tense: Present for immediate tension or past for classic storytelling\n\nDefine Narrative Tone: Poetic, factual, introspective, or cinematic\n\nTone Fine-tuning: 3 sliders for intensity, humor, and dreaminess"
+          "title": "🎯 Story Manager",
+          "description": "Manage all your stories in one place\nSave, edit, and resume stories\nAutomatic saving of each chapter\nOverview of all your works"
         },
         {
-          "title": "👥 Character Management",
-          "description": "Define Characters: Give your characters names and roles\n\nUp to 5 characters per story\n\nAI Stays Consistent: The AI uses your characters throughout and develops them organically"
+          "title": "🎨 Genre Modes (5 Moods)",
+          "description": "❤️ Romance - emotional, heartwarming stories\n🧙 Fantasy - magical worlds and adventures\n🔥 Thriller - gripping, suspenseful plots\n😂 Humor - witty, entertaining narratives\n📚 Children's Book - age-appropriate, imaginative children's stories"
         },
         {
-          "title": "🔥 Adult Mode (optional)",
-          "description": "Sensual Content: Mature, atmospheric language for adult stories\n\nStylish & Respectful: No pornography – only heartfelt, metaphorical intimacy\n\nSafe Filter Logic: Automatic protection against inappropriate content"
+          "title": "🎨 Narrative Settings",
+          "description": "Narrative style: First person or third person\nTense: Past tense or present tense\nTone: Poetic, matter-of-fact, or intense"
         },
         {
-          "title": "⚡ Smart-Actions for Your Writing Flow",
-          "description": "✨ Continue Story: AI seamlessly continues the narrative\n\n🔄 Change Direction: Steer plot twists and developments\n\n💬 Add Dialogue: Insert vivid conversations\n\n📝 End Chapter: Structure your story into chapters"
+          "title": "🎨 Fine-Tuning with Sliders",
+          "description": "Intensity control (0-100%)\nHumor level (0-100%)\nDreamlike quality (0-100%)\nAdult mode (optional)"
         },
         {
-          "title": "💾 Cloud-based Saving & 🎨 Daily Inspiration",
-          "description": "Automatic Backup: Your stories are saved in real-time\n\nNever Lost: Continue writing on any device\n\nCreative Writing Prompts: Get daily new story starters\n\nGDPR Compliant: Your texts belong to you"
+          "title": "👥 Character System",
+          "description": "Up to 5 characters per story\nName, role, and physical description\nAI-generated character references (visual representations)\nAutomatic integration into story generation"
+        },
+        {
+          "title": "🎨 AI Illustrations",
+          "description": "Automatic chapter illustrations\nSelectable quantity: 1-3 images per chapter\nCover generation\nArt styles: Watercolor, and more\nBackground cutout option\nRegenerate or delete individual images"
+        },
+        {
+          "title": "🎨 PDF Export",
+          "description": "Professional book format\nFormats: A4, A5, Square\nFont sizes: Small, Medium, Large\nIntegrated illustrations\nDownload as finished e-book"
+        },
+        {
+          "title": "✨ Daily Writing Prompts",
+          "description": "Creative prompts to overcome writer's block\nDirectly startable story ideas\nVarious themes and scenarios"
+        },
+        {
+          "title": "✨ User-Friendliness",
+          "description": "Authentication & user management\nResponsive design (Mobile, Tablet, Desktop)\nDark mode support\nAnimated, magical UI elements"
         }
       ]
     },
     "perfectFor": {
-      "title": "🎯 Who is MuseMind For?",
+      "title": "Who is StoryPixie for?",
       "items": [
-        "✅ Authors who want to expand their creativity with AI",
-        "✅ Writers seeking structure and emotional depth",
+        "✅ Authors who want to experiment with AI",
+        "✅ Writers seeking structure and visual support",
         "✅ Creatives who love genre-specific styles",
-        "✅ Anyone who wants to create stories with feeling and control"
+        "✅ Children's book authors writing age-appropriate stories",
+        "✅ Anyone wanting to export stories professionally"
       ]
     },
     "benefits": {
-      "title": "💡 Your Benefits at a Glance",
+      "title": "What Does StoryPixie Give You?",
       "featureColumn": "Feature",
-      "benefitColumn": "Benefit",
+      "benefitColumn": "Your Benefit",
       "items": [
         {
-          "feature": "AI-powered",
-          "benefit": "Never alone in front of the blank page again"
+          "feature": "AI Story Chat",
+          "benefit": "Never alone facing the blank page"
         },
         {
-          "feature": "Complete Control",
-          "benefit": "You decide style, tone, perspective"
+          "feature": "Genre Modes & Sliders",
+          "benefit": "Complete control over style & tone"
         },
         {
-          "feature": "Characters Come Alive",
+          "feature": "Character Management",
           "benefit": "Define characters, AI brings them to life"
         },
         {
-          "feature": "Automatic Saving",
-          "benefit": "Focus on writing, not on saving"
+          "feature": "AI Illustrations",
+          "benefit": "Visualize your story automatically"
         },
         {
-          "feature": "Safe & Private",
-          "benefit": "GDPR compliant, your texts belong to you"
+          "feature": "PDF Export",
+          "benefit": "Professional e-books with one click"
         }
       ]
     },
     "cta": {
-      "title": "Coming Soon!",
-      "subtitle": "MuseMind – Where creativity meets AI. ✨📖",
-      "button": "Get Notified",
-      "inDevelopment": "This app is currently in development. Stay informed about the launch!"
+      "title": "Ready to Write?",
+      "subtitle": "Start your first story with StoryPixie",
+      "button": "Launch App",
+      "inDevelopment": "Currently in development – coming soon!"
     }
   },
   "privacy": {
