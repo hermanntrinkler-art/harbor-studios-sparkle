@@ -26,7 +26,7 @@ const Projects = () => {
       link: "#",
       detailPage: "/projects/storypixie",
       tags: ["AI", "Creative Writing", "Storytelling", "PWA"],
-      image: "/images/musemind-hero.png"
+      image: "/images/storypixie-hero.png"
     },
     {
       title: "Recipe Pixie",
