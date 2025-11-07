@@ -536,103 +536,102 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "subtitle": "Valid for: Social Post Pro – an app by Harbor Studios",
+    "subtitle": "Valid for: Recipe Pixie – an app by Harbor Studios",
     "backHome": "Back to Home",
     "responsible": {
       "title": "1. Responsible Party",
       "company": "Harbor Studios",
-      "email": "Email: support@harborstudios.app",
+      "address": "Calle Calima Sector 1, Riosol 167\n35627 Costa Calma, Spain",
       "website": "Website"
     },
     "general": {
       "title": "2. General Information",
-      "content1": "The protection of your personal data is important to us. This privacy policy explains what data is collected, stored, and used in connection with the use of our app Social Post Pro.",
-      "content2": "We treat your data confidentially and in accordance with legal data protection regulations (particularly GDPR and TTDSG)."
+      "content1": "The protection of your personal data is important to us. This privacy policy explains what data is collected, stored, and used in connection with the use of our app Recipe Pixie.",
+      "content2": "We treat your data confidentially and in accordance with applicable data protection regulations, particularly the GDPR and TTDSG."
     },
     "dataCollection": {
       "title": "3. Collection and Use of Personal Data",
       "appUsage": {
-        "title": "a) When using the app:",
-        "content": "Social Post Pro only accesses data that you yourself share via your Facebook or Instagram connection (via Meta Login). This typically includes:",
-        "item1": "your public profile name,",
-        "item2": "your profile ID,",
-        "item3": "your connected pages or accounts (e.g., to post content).",
-        "purpose": "This data is used exclusively to provide the app's functionality (e.g., to create or schedule posts).",
-        "storage": "We do not permanently store data on our own servers. All data is only processed temporarily."
+        "title": "a) When Using the App",
+        "content": "Recipe Pixie only processes data that you provide or actively generate. This includes in particular:",
+        "item1": "your email address (for registration / authentication)",
+        "item2": "recipes and notes that you create yourself",
+        "item3": "optional photos that you upload via camera or gallery",
+        "purpose": "This data is used exclusively to provide the app's functionality: storing, managing, and displaying your own recipes.",
+        "storage": "Data storage and management is handled via Supabase, a European cloud service provider that encrypts and stores data (TLS & AES-256). There is no sharing with third parties for advertising, analytics, or other purposes."
       },
       "noSharing": {
-        "title": "b) No sharing with third parties:",
-        "content": "We do not share personal data with third parties unless we are legally required to do so."
+        "title": "b) No Sharing with Third Parties",
+        "content": "Personal data is not sold or shared with other companies unless there is a legal obligation to do so."
       }
     },
     "cookies": {
       "title": "4. Cookies and Tracking",
-      "content1": "Social Post Pro itself does not use cookies or tracking services.",
-      "content2": "However, when logging in via Meta, cookies may be set by Meta Platforms Inc. You can find information about this in Meta's privacy policy:"
+      "content": "Recipe Pixie does not use cookies, analytics, or tracking services. Communication with Supabase occurs exclusively via encrypted HTTPS connections."
     },
     "storage": {
       "title": "5. Data Storage and Deletion",
-      "content1": "We do not permanently store personal data.",
-      "content2": "As soon as you log out or disconnect from Meta, all temporarily stored data is immediately deleted."
+      "content1": "All your content (email, recipes, photos) is securely stored in the Supabase database. You can delete recipes and photos at any time.",
+      "content2": "You can also delete your entire account – directly in the app or via the following link: https://harborstudios.app/data-deletion. After deletion, all personal data and content will be completely removed within 7 days."
     },
     "rights": {
       "title": "6. Rights of Data Subjects",
       "intro": "You have the right at any time to:",
-      "item1": "Obtain information about stored data,",
-      "item2": "Request correction of incorrect data,",
-      "item3": "Request deletion or restriction of processing,",
-      "item4": "Object to data processing,",
-      "item5": "and withdraw consent at any time.",
-      "contact": "Please direct such requests to"
+      "item1": "Receive information about stored data",
+      "item2": "Request correction of incorrect data",
+      "item3": "Request deletion or restriction of processing",
+      "item4": "Object to processing",
+      "item5": "Withdraw consent at any time",
+      "contact": "Please direct inquiries to"
     },
     "changes": {
-      "title": "7. Changes to This Privacy Policy",
-      "content1": "We reserve the right to update this privacy policy at any time.",
+      "title": "7. Changes to this Privacy Policy",
+      "content1": "We reserve the right to adapt this policy at any time.",
       "content2": "The current version is always available at"
+    },
+    "dataDeletionSection": {
+      "title": "8. Data Deletion",
+      "content": "Information on complete deletion of your account can be found here: https://harborstudios.app/data-deletion"
     },
     "dataDeletionCta": {
       "title": "Want to delete your data?",
-      "description": "Learn how you can completely remove your user data.",
+      "description": "Learn how to completely remove your account and all associated data.",
       "button": "Go to Data Deletion"
     }
   },
   "dataDeletion": {
-    "title": "User Data Deletion",
-    "subtitle": "Data Deletion Policy for Social Post Pro",
+    "title": "Data Deletion for Recipe Pixie",
+    "subtitle": "Delete your account and all associated data",
     "backHome": "Back to Home",
     "intro": {
-      "title": "Request Data Deletion",
-      "content": "If you want your data stored or processed through Social Post Pro to be deleted, please follow these steps:"
+      "title": "Your Options",
+      "content": "If you want your personal data to be completely deleted, you have the following options:"
     },
-    "steps": {
-      "step1": {
-        "label": "Step 1",
-        "title": "Send an Email",
-        "content": "Send an email with the subject \"Data Deletion Request\" to:",
-        "to": "To",
-        "subject": "Subject"
+    "options": {
+      "inApp": {
+        "title": "In the App",
+        "content": "Open Settings → Account → Delete Account. This will delete your account, email address, all recipes, and photos from the database."
       },
-      "step2": {
-        "label": "Step 2",
-        "title": "Required Information",
-        "content": "Include the following information in your message:",
-        "item1": "your full name,",
-        "item2": "the email address you used to sign in with Meta,",
-        "item3": "and if applicable, the name of the page connected to Social Post Pro."
-      },
-      "step3": {
-        "label": "Step 3",
-        "title": "Receive Confirmation",
-        "content": "Upon receipt of your request, all related data will be completely deleted within 7 business days. You will receive an email confirmation once the process is complete."
+      "email": {
+        "title": "Via Email",
+        "content": "Send a message to support@harborstudios.app with the subject \"Delete Account\" and provide the email address used in the app."
       }
     },
-    "note": {
-      "title": "Important Note:",
-      "content": "Deletion will occur within 7 business days of receiving your request. You will then receive a confirmation email."
+    "timeline": {
+      "title": "Deletion Period",
+      "content": "Upon receipt of your request, your data will be completely removed within a maximum of 7 days in accordance with Art. 17 GDPR (\"Right to Erasure\")."
+    },
+    "security": {
+      "title": "Data Security",
+      "content": "No personal data is stored permanently or shared with third parties. Storage is exclusively with our service provider Supabase, which manages data in encrypted form and permanently removes it after deletion."
+    },
+    "contact": {
+      "title": "Further Questions?",
+      "content": "For further questions about data processing, please contact us at: support@harborstudios.app"
     },
     "privacyCta": {
-      "title": "More Information About Privacy",
-      "button": "View Privacy Policy"
+      "title": "View Privacy Policy",
+      "button": "Go to Privacy Policy"
     }
   },
   "terms": {

@@ -536,103 +536,102 @@
   },
   "privacy": {
     "title": "Politique de Confidentialité",
-    "subtitle": "Valable pour : Social Post Pro – une application de Harbor Studios",
+    "subtitle": "Valable pour : Recipe Pixie – une application de Harbor Studios",
     "backHome": "Retour à l'Accueil",
     "responsible": {
       "title": "1. Responsable",
       "company": "Harbor Studios",
-      "email": "E-mail : support@harborstudios.app",
+      "address": "Calle Calima Sector 1, Riosol 167\n35627 Costa Calma, Espagne",
       "website": "Site web"
     },
     "general": {
       "title": "2. Informations Générales",
-      "content1": "La protection de vos données personnelles est importante pour nous. Cette politique de confidentialité explique quelles données sont collectées, stockées et utilisées dans le cadre de l'utilisation de notre application Social Post Pro.",
-      "content2": "Nous traitons vos données de manière confidentielle et conformément aux réglementations légales sur la protection des données (notamment le RGPD et le TTDSG)."
+      "content1": "La protection de vos données personnelles est importante pour nous. Cette politique de confidentialité explique quelles données sont collectées, stockées et utilisées dans le cadre de l'utilisation de notre application Recipe Pixie.",
+      "content2": "Nous traitons vos données de manière confidentielle et conformément aux réglementations applicables en matière de protection des données, en particulier le RGPD et le TTDSG."
     },
     "dataCollection": {
       "title": "3. Collecte et Utilisation des Données Personnelles",
       "appUsage": {
-        "title": "a) Lors de l'utilisation de l'application :",
-        "content": "Social Post Pro n'accède qu'aux données que vous partagez vous-même via votre connexion Facebook ou Instagram (via Meta Login). Cela inclut généralement :",
-        "item1": "votre nom de profil public,",
-        "item2": "votre ID de profil,",
-        "item3": "vos pages ou comptes connectés (par exemple, pour publier du contenu).",
-        "purpose": "Ces données sont utilisées exclusivement pour fournir les fonctionnalités de l'application (par exemple, pour créer ou planifier des publications).",
-        "storage": "Nous ne stockons pas les données de manière permanente sur nos propres serveurs. Toutes les données ne sont traitées que temporairement."
+        "title": "a) Lors de l'Utilisation de l'Application",
+        "content": "Recipe Pixie ne traite que les données que vous fournissez ou générez activement. Cela inclut en particulier :",
+        "item1": "votre adresse e-mail (pour l'inscription / l'authentification)",
+        "item2": "les recettes et notes que vous créez vous-même",
+        "item3": "les photos facultatives que vous téléchargez via l'appareil photo ou la galerie",
+        "purpose": "Ces données sont utilisées exclusivement pour fournir les fonctionnalités de l'application : stocker, gérer et afficher vos propres recettes.",
+        "storage": "Le stockage et la gestion des données sont gérés via Supabase, un fournisseur de services cloud européen qui crypte et stocke les données (TLS et AES-256). Aucun partage avec des tiers à des fins publicitaires, analytiques ou autres."
       },
       "noSharing": {
-        "title": "b) Aucun partage avec des tiers :",
-        "content": "Nous ne partageons pas de données personnelles avec des tiers, sauf si nous y sommes légalement obligés."
+        "title": "b) Aucun Partage avec des Tiers",
+        "content": "Les données personnelles ne sont ni vendues ni partagées avec d'autres entreprises, sauf obligation légale."
       }
     },
     "cookies": {
       "title": "4. Cookies et Suivi",
-      "content1": "Social Post Pro lui-même n'utilise pas de cookies ou de services de suivi.",
-      "content2": "Cependant, lors de la connexion via Meta, des cookies peuvent être définis par Meta Platforms Inc. Vous pouvez trouver des informations à ce sujet dans la politique de confidentialité de Meta :"
+      "content": "Recipe Pixie n'utilise pas de cookies, de services d'analyse ou de suivi. La communication avec Supabase se fait exclusivement via des connexions HTTPS cryptées."
     },
     "storage": {
       "title": "5. Stockage et Suppression des Données",
-      "content1": "Nous ne stockons pas de données personnelles de manière permanente.",
-      "content2": "Dès que vous vous déconnectez ou que vous vous déconnectez de Meta, toutes les données stockées temporairement sont immédiatement supprimées."
+      "content1": "Tout votre contenu (e-mail, recettes, photos) est stocké en toute sécurité dans la base de données Supabase. Vous pouvez supprimer des recettes et des photos à tout moment.",
+      "content2": "Vous pouvez également supprimer l'intégralité de votre compte – directement dans l'application ou via le lien suivant : https://harborstudios.app/data-deletion. Après la suppression, toutes les données personnelles et le contenu seront complètement supprimés dans un délai de 7 jours."
     },
     "rights": {
       "title": "6. Droits des Personnes Concernées",
       "intro": "Vous avez le droit à tout moment de :",
-      "item1": "Obtenir des informations sur les données stockées,",
-      "item2": "Demander la correction de données incorrectes,",
-      "item3": "Demander la suppression ou la limitation du traitement,",
-      "item4": "Vous opposer au traitement des données,",
-      "item5": "et retirer votre consentement à tout moment.",
-      "contact": "Veuillez adresser ces demandes à"
+      "item1": "Recevoir des informations sur les données stockées",
+      "item2": "Demander la correction de données incorrectes",
+      "item3": "Demander la suppression ou la restriction du traitement",
+      "item4": "S'opposer au traitement",
+      "item5": "Retirer votre consentement à tout moment",
+      "contact": "Veuillez adresser vos demandes à"
     },
     "changes": {
-      "title": "7. Modifications de Cette Politique de Confidentialité",
-      "content1": "Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment.",
+      "title": "7. Modifications de cette Politique de Confidentialité",
+      "content1": "Nous nous réservons le droit d'adapter cette politique à tout moment.",
       "content2": "La version actuelle est toujours disponible sur"
+    },
+    "dataDeletionSection": {
+      "title": "8. Suppression des Données",
+      "content": "Les informations sur la suppression complète de votre compte se trouvent ici : https://harborstudios.app/data-deletion"
     },
     "dataDeletionCta": {
       "title": "Vous souhaitez supprimer vos données ?",
-      "description": "Découvrez comment supprimer complètement vos données utilisateur.",
+      "description": "Découvrez comment supprimer complètement votre compte et toutes les données associées.",
       "button": "Aller à la Suppression des Données"
     }
   },
   "dataDeletion": {
-    "title": "Suppression des Données Utilisateur",
-    "subtitle": "Politique de Suppression des Données pour Social Post Pro",
+    "title": "Suppression des Données pour Recipe Pixie",
+    "subtitle": "Supprimez votre compte et toutes les données associées",
     "backHome": "Retour à l'Accueil",
     "intro": {
-      "title": "Demander la Suppression des Données",
-      "content": "Si vous souhaitez que vos données stockées ou traitées via Social Post Pro soient supprimées, veuillez suivre ces étapes :"
+      "title": "Vos Options",
+      "content": "Si vous souhaitez que vos données personnelles soient complètement supprimées, vous disposez des options suivantes :"
     },
-    "steps": {
-      "step1": {
-        "label": "Étape 1",
-        "title": "Envoyer un E-mail",
-        "content": "Envoyez un e-mail avec l'objet \"Data Deletion Request\" à :",
-        "to": "À",
-        "subject": "Objet"
+    "options": {
+      "inApp": {
+        "title": "Dans l'Application",
+        "content": "Ouvrez Paramètres → Compte → Supprimer le Compte. Cela supprimera votre compte, votre adresse e-mail, toutes les recettes et photos de la base de données."
       },
-      "step2": {
-        "label": "Étape 2",
-        "title": "Informations Requises",
-        "content": "Incluez les informations suivantes dans votre message :",
-        "item1": "votre nom complet,",
-        "item2": "l'adresse e-mail que vous avez utilisée pour vous connecter avec Meta,",
-        "item3": "et le cas échéant, le nom de la page connectée à Social Post Pro."
-      },
-      "step3": {
-        "label": "Étape 3",
-        "title": "Recevoir une Confirmation",
-        "content": "À la réception de votre demande, toutes les données associées seront complètement supprimées dans un délai de 7 jours ouvrables. Vous recevrez une confirmation par e-mail une fois le processus terminé."
+      "email": {
+        "title": "Par E-mail",
+        "content": "Envoyez un message à support@harborstudios.app avec l'objet \"Supprimer le Compte\" et indiquez l'adresse e-mail utilisée dans l'application."
       }
     },
-    "note": {
-      "title": "Note Importante :",
-      "content": "La suppression aura lieu dans les 7 jours ouvrables suivant la réception de votre demande. Vous recevrez ensuite un e-mail de confirmation."
+    "timeline": {
+      "title": "Délai de Suppression",
+      "content": "Dès réception de votre demande, vos données seront complètement supprimées dans un délai maximum de 7 jours conformément à l'Art. 17 RGPD (\"Droit à l'Effacement\")."
+    },
+    "security": {
+      "title": "Sécurité des Données",
+      "content": "Aucune donnée personnelle n'est stockée de manière permanente ou partagée avec des tiers. Le stockage est exclusivement effectué par notre fournisseur de services Supabase, qui gère les données de manière cryptée et les supprime définitivement après la suppression."
+    },
+    "contact": {
+      "title": "D'autres Questions ?",
+      "content": "Pour toute question supplémentaire sur le traitement des données, veuillez nous contacter à : support@harborstudios.app"
     },
     "privacyCta": {
-      "title": "Plus d'Informations sur la Confidentialité",
-      "button": "Voir la Politique de Confidentialité"
+      "title": "Voir la Politique de Confidentialité",
+      "button": "Aller à la Politique de Confidentialité"
     }
   },
   "terms": {

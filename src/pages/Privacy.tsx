@@ -42,6 +42,7 @@ const Privacy = () => {
             </CardHeader>
             <CardContent className="prose prose-sm max-w-none dark:prose-invert">
               <p className="font-semibold">{t('privacy.responsible.company')}</p>
+              <p className="whitespace-pre-line">{t('privacy.responsible.address')}</p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:support@harborstudios.app" className="text-primary hover:underline">
@@ -96,19 +97,7 @@ const Privacy = () => {
               <CardTitle className="text-2xl">{t('privacy.cookies.title')}</CardTitle>
             </CardHeader>
             <CardContent className="prose prose-sm max-w-none dark:prose-invert">
-              <p>{t('privacy.cookies.content1')}</p>
-              <p>
-                {t('privacy.cookies.content2')}{' '}
-                <a 
-                  href="https://www.facebook.com/privacy/policy" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline inline-flex items-center gap-1"
-                >
-                  https://www.facebook.com/privacy/policy
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-              </p>
+              <p>{t('privacy.cookies.content')}</p>
             </CardContent>
           </Card>
 
@@ -157,6 +146,21 @@ const Privacy = () => {
                 {t('privacy.changes.content2')}:<br />
                 👉 <a href="https://harborstudios.app/privacy" className="text-primary hover:underline">
                   https://harborstudios.app/privacy
+                </a>
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* 8. Data Deletion */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl">{t('privacy.dataDeletionSection.title')}</CardTitle>
+            </CardHeader>
+            <CardContent className="prose prose-sm max-w-none dark:prose-invert">
+              <p>
+                {t('privacy.dataDeletionSection.content').split('https://harborstudios.app/data-deletion')[0]}
+                <a href="https://harborstudios.app/data-deletion" className="text-primary hover:underline">
+                  https://harborstudios.app/data-deletion
                 </a>
               </p>
             </CardContent>

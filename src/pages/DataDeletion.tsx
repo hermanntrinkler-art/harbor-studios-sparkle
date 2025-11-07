@@ -44,87 +44,85 @@ const DataDeletion = () => {
           </CardContent>
         </Card>
 
-        {/* Steps */}
-        <div className="space-y-6 mb-8">
-          {/* Step 1 */}
-          <Card className="border-l-4 border-l-primary">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <div className="text-sm text-muted-foreground">{t('dataDeletion.steps.step1.label')}</div>
-                  <div className="text-lg">{t('dataDeletion.steps.step1.title')}</div>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-3">{t('dataDeletion.steps.step1.content')}</p>
-              <div className="bg-muted/50 p-4 rounded-lg">
-                <p className="font-mono text-sm">
-                  <strong>{t('dataDeletion.steps.step1.to')}:</strong>{' '}
-                  <a href="mailto:support@harborstudios.app" className="text-primary hover:underline">
-                    support@harborstudios.app
-                  </a>
-                </p>
-                <p className="font-mono text-sm mt-2">
-                  <strong>{t('dataDeletion.steps.step1.subject')}:</strong> "Data Deletion Request"
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Step 2 */}
-          <Card className="border-l-4 border-l-primary">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
-                  <FileText className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <div className="text-sm text-muted-foreground">{t('dataDeletion.steps.step2.label')}</div>
-                  <div className="text-lg">{t('dataDeletion.steps.step2.title')}</div>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-3">{t('dataDeletion.steps.step2.content')}</p>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                <li>{t('dataDeletion.steps.step2.item1')}</li>
-                <li>{t('dataDeletion.steps.step2.item2')}</li>
-                <li>{t('dataDeletion.steps.step2.item3')}</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          {/* Step 3 */}
+        {/* Options */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* In App */}
           <Card className="border-l-4 border-l-primary">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
                   <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
-                <div>
-                  <div className="text-sm text-muted-foreground">{t('dataDeletion.steps.step3.label')}</div>
-                  <div className="text-lg">{t('dataDeletion.steps.step3.title')}</div>
-                </div>
+                {t('dataDeletion.options.inApp.title')}
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">{t('dataDeletion.steps.step3.content')}</p>
+              <p className="text-muted-foreground">{t('dataDeletion.options.inApp.content')}</p>
+            </CardContent>
+          </Card>
+
+          {/* Via Email */}
+          <Card className="border-l-4 border-l-primary">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
+                  <Mail className="h-5 w-5 text-primary" />
+                </div>
+                {t('dataDeletion.options.email.title')}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">{t('dataDeletion.options.email.content')}</p>
             </CardContent>
           </Card>
         </div>
 
-        {/* Important Note */}
-        <Alert className="border-primary/50 bg-primary/5">
-          <Info className="h-4 w-4" />
-          <AlertDescription className="ml-2">
-            <strong>{t('dataDeletion.note.title')}</strong>
-            <p className="mt-2">{t('dataDeletion.note.content')}</p>
-          </AlertDescription>
-        </Alert>
+        {/* Additional Information */}
+        <div className="space-y-6 mb-8">
+          {/* Timeline */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                {t('dataDeletion.timeline.title')}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">{t('dataDeletion.timeline.content')}</p>
+            </CardContent>
+          </Card>
+
+          {/* Security */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Info className="h-5 w-5 text-primary" />
+                {t('dataDeletion.security.title')}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">{t('dataDeletion.security.content')}</p>
+            </CardContent>
+          </Card>
+
+          {/* Contact */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Mail className="h-5 w-5 text-primary" />
+                {t('dataDeletion.contact.title')}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                {t('dataDeletion.contact.content').split('support@harborstudios.app')[0]}
+                <a href="mailto:support@harborstudios.app" className="text-primary hover:underline">
+                  support@harborstudios.app
+                </a>
+              </p>
+            </CardContent>
+          </Card>
+        </div>
 
         {/* CTA to Privacy Policy */}
         <div className="mt-12 text-center">
