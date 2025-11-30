@@ -37,6 +37,9 @@
     "storyPixie": {
       "description": "KI-gestützte Story-Schreibapp mit 5 Genre-Modi, Charakter-Management und automatischen Illustrationen. Deine Geschichten, professionell exportiert."
     },
+    "pixieGuardVPN": {
+      "description": "Modernes VPN mit WireGuard-Integration, 30 Min kostenlos testen, QR-Code Export und Stripe-Zahlungen. Sicher, schnell und anonym surfen."
+    },
     "learnMore": "Mehr erfahren",
     "visitProject": "Projekt besuchen",
     "comingSoon": "Demnächst"
@@ -964,6 +967,68 @@
           ]
         }
       }
+    }
+  },
+  "pixieGuardVPNDetails": {
+    "backHome": "Zurück zur Startseite",
+    "hero": {
+      "subtitle": "Modernes VPN mit WireGuard-Integration. Sicher, schnell und anonym surfen – mit eleganter Dark-Mode-Oberfläche.",
+      "cta": "Jetzt starten"
+    },
+    "whatIs": {
+      "title": "Was ist PixieGuard VPN?",
+      "description": "PixieGuard VPN ist eine vollständig funktionierende VPN Web-Applikation mit WireGuard-Integration. Die App bietet sicheren, schnellen und anonymen Internetzugang mit einem eleganten, dunklen UI-Design und automatischer Schlüsselgenerierung."
+    },
+    "features": {
+      "title": "Hauptfunktionen",
+      "wireguard": {
+        "title": "WireGuard-Integration",
+        "description": "Automatische Schlüsselgenerierung und Konfigurationserstellung für maximale Sicherheit"
+      },
+      "freeTrial": {
+        "title": "30 Minuten Kostenlos",
+        "description": "Testphase ohne Kreditkarte zum Ausprobieren aller Funktionen"
+      },
+      "qrCode": {
+        "title": "QR-Code Export",
+        "description": "WireGuard-Konfiguration scanbar für mobile Geräte exportieren"
+      },
+      "stripe": {
+        "title": "Stripe-Integration",
+        "description": "Sichere Abo-Verwaltung mit Checkout & Customer Portal"
+      },
+      "auth": {
+        "title": "Benutzer-Authentifizierung",
+        "description": "Vollständige Registrierung & Login mit E-Mail-Verifizierung"
+      },
+      "pwa": {
+        "title": "PWA-ready",
+        "description": "Als App auf dem Homescreen installierbar für schnellen Zugriff"
+      }
+    },
+    "security": {
+      "title": "Sicherheitsfeatures"
+    },
+    "techStack": {
+      "title": "Tech Stack"
+    },
+    "pricing": {
+      "title": "Preismodelle",
+      "month": "Monat",
+      "device": "Gerät",
+      "devices": "Geräte",
+      "unlimited": "Unbegrenzt",
+      "allServers": "Alle Server",
+      "unlimitedDevices": "Unbegrenzte Geräte",
+      "dedicatedIP": "Dedizierte IP"
+    },
+    "server": {
+      "title": "VPN Server"
+    },
+    "cta": {
+      "title": "Bereit für sicheres Surfen?",
+      "subtitle": "Starte mit 30 Minuten kostenlos – keine Kreditkarte erforderlich",
+      "button": "Kostenlos starten"
     }
   }
 }

@@ -37,6 +37,9 @@
     "storyPixie": {
       "description": "AI-powered story writing app with 5 genre modes, character management, and automatic illustrations. Your stories, professionally exported."
     },
+    "pixieGuardVPN": {
+      "description": "Modern VPN with WireGuard integration, 30 min free trial, QR code export and Stripe payments. Browse securely, fast and anonymously."
+    },
     "learnMore": "Learn More",
     "visitProject": "Visit Project",
     "comingSoon": "Coming Soon"
@@ -966,6 +969,68 @@
           ]
         }
       }
+    }
+  },
+  "pixieGuardVPNDetails": {
+    "backHome": "Back to Home",
+    "hero": {
+      "subtitle": "Modern VPN with WireGuard integration. Browse securely, fast and anonymously – with elegant dark mode interface.",
+      "cta": "Get Started"
+    },
+    "whatIs": {
+      "title": "What is PixieGuard VPN?",
+      "description": "PixieGuard VPN is a fully functional VPN web application with WireGuard integration. The app provides secure, fast and anonymous internet access with an elegant dark UI design and automatic key generation."
+    },
+    "features": {
+      "title": "Key Features",
+      "wireguard": {
+        "title": "WireGuard Integration",
+        "description": "Automatic key generation and configuration creation for maximum security"
+      },
+      "freeTrial": {
+        "title": "30 Minutes Free",
+        "description": "Trial period without credit card to try all features"
+      },
+      "qrCode": {
+        "title": "QR Code Export",
+        "description": "Export WireGuard configuration scannable for mobile devices"
+      },
+      "stripe": {
+        "title": "Stripe Integration",
+        "description": "Secure subscription management with Checkout & Customer Portal"
+      },
+      "auth": {
+        "title": "User Authentication",
+        "description": "Complete registration & login with email verification"
+      },
+      "pwa": {
+        "title": "PWA-ready",
+        "description": "Installable as app on homescreen for quick access"
+      }
+    },
+    "security": {
+      "title": "Security Features"
+    },
+    "techStack": {
+      "title": "Tech Stack"
+    },
+    "pricing": {
+      "title": "Pricing Plans",
+      "month": "month",
+      "device": "Device",
+      "devices": "Devices",
+      "unlimited": "Unlimited",
+      "allServers": "All Servers",
+      "unlimitedDevices": "Unlimited Devices",
+      "dedicatedIP": "Dedicated IP"
+    },
+    "server": {
+      "title": "VPN Server"
+    },
+    "cta": {
+      "title": "Ready for Secure Browsing?",
+      "subtitle": "Start with 30 minutes free – no credit card required",
+      "button": "Start for Free"
     }
   }
 }
