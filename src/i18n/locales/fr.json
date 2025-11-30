@@ -37,6 +37,9 @@
     "storyPixie": {
       "description": "Application d'écriture d'histoires assistée par IA avec 5 modes de genre, gestion des personnages et illustrations automatiques. Vos histoires, exportées professionnellement."
     },
+    "pixieGuardVPN": {
+      "description": "VPN moderne avec intégration WireGuard, 30 min d'essai gratuit, export code QR et paiements Stripe. Naviguez en toute sécurité, rapidement et anonymement."
+    },
     "learnMore": "En savoir plus",
     "visitProject": "Visiter le Projet",
     "comingSoon": "Bientôt Disponible"
@@ -966,6 +969,68 @@
           ]
         }
       }
+    }
+  },
+  "pixieGuardVPNDetails": {
+    "backHome": "Retour à l'Accueil",
+    "hero": {
+      "subtitle": "VPN moderne avec intégration WireGuard. Naviguez en toute sécurité, rapidement et anonymement – avec une élégante interface sombre.",
+      "cta": "Commencer"
+    },
+    "whatIs": {
+      "title": "Qu'est-ce que PixieGuard VPN?",
+      "description": "PixieGuard VPN est une application web VPN entièrement fonctionnelle avec intégration WireGuard. L'application offre un accès internet sécurisé, rapide et anonyme avec un design d'interface sombre élégant et une génération automatique de clés."
+    },
+    "features": {
+      "title": "Fonctionnalités Principales",
+      "wireguard": {
+        "title": "Intégration WireGuard",
+        "description": "Génération automatique de clés et création de configuration pour une sécurité maximale"
+      },
+      "freeTrial": {
+        "title": "30 Minutes Gratuites",
+        "description": "Période d'essai sans carte de crédit pour essayer toutes les fonctionnalités"
+      },
+      "qrCode": {
+        "title": "Export Code QR",
+        "description": "Exportez la configuration WireGuard scannable pour appareils mobiles"
+      },
+      "stripe": {
+        "title": "Intégration Stripe",
+        "description": "Gestion sécurisée des abonnements avec Checkout et Portail Client"
+      },
+      "auth": {
+        "title": "Authentification Utilisateur",
+        "description": "Inscription complète et connexion avec vérification par email"
+      },
+      "pwa": {
+        "title": "PWA-ready",
+        "description": "Installable comme application sur l'écran d'accueil pour un accès rapide"
+      }
+    },
+    "security": {
+      "title": "Fonctionnalités de Sécurité"
+    },
+    "techStack": {
+      "title": "Stack Technique"
+    },
+    "pricing": {
+      "title": "Plans Tarifaires",
+      "month": "mois",
+      "device": "Appareil",
+      "devices": "Appareils",
+      "unlimited": "Illimité",
+      "allServers": "Tous les Serveurs",
+      "unlimitedDevices": "Appareils Illimités",
+      "dedicatedIP": "IP Dédiée"
+    },
+    "server": {
+      "title": "Serveur VPN"
+    },
+    "cta": {
+      "title": "Prêt pour une Navigation Sécurisée?",
+      "subtitle": "Commencez avec 30 minutes gratuites – sans carte de crédit",
+      "button": "Commencer Gratuitement"
     }
   }
 }

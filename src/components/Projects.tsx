@@ -5,6 +5,14 @@ const Projects = () => {
   const { t } = useTranslation();
   const projects = [
     {
+      title: "PixieGuard VPN",
+      description: t('projects.pixieGuardVPN.description'),
+      link: "#",
+      detailPage: "/projects/pixieguard-vpn",
+      tags: ["VPN", "WireGuard", "Security", "PWA"],
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
       title: "Captain's Log",
       description: t('projects.captainsLog.description'),
       link: "#",
