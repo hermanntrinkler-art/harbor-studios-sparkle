@@ -40,6 +40,9 @@
     "pixieGuardVPN": {
       "description": "Modern VPN with WireGuard integration, 30 min free trial, QR code export and Stripe payments. Browse securely, fast and anonymously."
     },
+    "cookitsimple": {
+      "description": "Modern food blog for everyday recipes. Simple cooking, simply delicious – with over 10 years of cooking experience and new recipes weekly."
+    },
     "learnMore": "Learn More",
     "visitProject": "Visit Project",
     "comingSoon": "Coming Soon"
