@@ -65,6 +65,13 @@ const Projects = () => {
       link: "https://www.roblox.com",
       tags: ["Gaming", "Roblox", "Lua"],
       image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      title: "cookitsimple",
+      description: t('projects.cookitsimple.description'),
+      link: "https://cookitsimple.net",
+      tags: ["Food Blog", "Rezepte", "Kochen"],
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2070&auto=format&fit=crop"
     }
   ];
 

@@ -40,6 +40,9 @@
     "pixieGuardVPN": {
       "description": "VPN moderno con integración WireGuard, 30 min de prueba gratis, exportación de código QR y pagos con Stripe. Navega de forma segura, rápida y anónima."
     },
+    "cookitsimple": {
+      "description": "Blog de comida moderno con recetas para el día a día. Cocina simple, simplemente delicioso – con más de 10 años de experiencia y nuevas recetas cada semana."
+    },
     "learnMore": "Más información",
     "visitProject": "Visitar Proyecto",
     "comingSoon": "Próximamente"
