@@ -37,6 +37,14 @@ const Projects = () => {
       image: "/images/storypixie-hero.png"
     },
     {
+      title: "Video Pixie",
+      description: t('projects.videoPixie.description'),
+      link: "#",
+      detailPage: "/projects/video-pixie",
+      tags: ["AI", "Video", "E-Commerce", "Content Creation"],
+      image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
       title: "Recipe Pixie",
       description: t('projects.recipePixie.description'),
       link: "https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor",
