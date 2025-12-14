@@ -40,6 +40,9 @@
     "pixieGuardVPN": {
       "description": "VPN moderno con integración WireGuard, 30 min de prueba gratis, exportación de código QR y pagos con Stripe. Navega de forma segura, rápida y anónima."
     },
+    "videoPixie": {
+      "description": "Transforma automáticamente fotos de productos en video ads profesionales – con templates, efectos frescos y renderizado en navegador. Sin conocimientos de diseño."
+    },
     "cookitsimple": {
       "description": "Blog de comida moderno con recetas para el día a día. Cocina simple, simplemente delicioso – con más de 10 años de experiencia y nuevas recetas cada semana."
     },
@@ -1034,6 +1037,76 @@
       "title": "¿Listo para Navegar Seguro?",
       "subtitle": "Empieza con 30 minutos gratis – sin tarjeta de crédito",
       "button": "Empezar Gratis"
+    }
+  },
+  "videoPixieDetails": {
+    "backHome": "Volver al Inicio",
+    "status": "🚧 En Desarrollo",
+    "hero": {
+      "title": "Video Pixie",
+      "subtitle": "Generador de Video desde Fotos de Productos – Transforma automáticamente tus fotos de productos en video ads profesionales"
+    },
+    "whatIs": {
+      "title": "¿Qué es Video Pixie?",
+      "description": "Video Pixie es una web app que transforma automáticamente fotos de productos en video ads profesionales – sin conocimientos de diseño. Simplemente sube fotos, elige una plantilla, personaliza y tu video está listo."
+    },
+    "features": {
+      "title": "Funciones Principales",
+      "items": [
+        {
+          "title": "📸 Subir Fotos de Productos",
+          "description": "Sube múltiples imágenes de productos y tu logo – Video Pixie se encarga del resto."
+        },
+        {
+          "title": "🎨 Selección de Plantillas",
+          "description": "Elige entre varios estilos de video: Minimal, Dynamic, Elegant o Bold – acorde a tu marca."
+        },
+        {
+          "title": "📐 Formatos Flexibles",
+          "description": "9:16 para TikTok & Reels, 1:1 para posts de feed, 16:9 para YouTube – todos los formatos comunes soportados."
+        },
+        {
+          "title": "✨ Efectos Fresh",
+          "description": "Animaciones profesionales especialmente para videos de comida: vapor, gotas de agua, partículas y más."
+        },
+        {
+          "title": "🎬 Personalizaciones",
+          "description": "Titular, CTA, precio, color de marca y estilo de música – todo personalizable individualmente."
+        },
+        {
+          "title": "🖥️ Renderizado en Navegador",
+          "description": "Generación de video basada en Canvas directamente en el navegador – sin instalación necesaria."
+        }
+      ]
+    },
+    "freshEffects": {
+      "title": "Efectos Fresh",
+      "subtitle": "Animaciones profesionales para videos de Food & Beverage",
+      "items": [
+        "🔥 Vapor – para platos calientes",
+        "💧 Gotas de agua – para bebidas frías",
+        "✨ Partículas – para look elegante",
+        "🌿 Hojas de hierbas – para look fresco",
+        "💎 Brillo – para postres"
+      ]
+    },
+    "targetAudience": {
+      "title": "Perfecto Para",
+      "items": [
+        "🛒 E-Commerce y Tiendas Online",
+        "🍔 Marcas de Food & Beverage",
+        "📱 Social Media Managers",
+        "🏪 Pequeños Negocios sin Equipo de Diseño"
+      ]
+    },
+    "techStack": {
+      "title": "Tech Stack"
+    },
+    "cta": {
+      "title": "¡Próximamente!",
+      "subtitle": "Video Pixie está actualmente en desarrollo",
+      "button": "Recibir Notificación",
+      "inDevelopment": "Esta app está siendo desarrollada. ¡Mantente informado sobre el lanzamiento!"
     }
   }
 }
