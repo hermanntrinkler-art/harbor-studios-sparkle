@@ -1,0 +1,320 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Harbor Studios",
+    "subtitle": "Soluções Digitais Criativas",
+    "cta": "Descubra Nossos Projetos"
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "description": "Harbor Studios é uma agência digital especializada na criação de soluções de software inovadoras.",
+    "longDescription": "Harbor Studios representa inovação digital com substância. Combinamos conhecimento técnico com visão criativa para desenvolver produtos digitais de alta qualidade com valor agregado claro. Nosso portfólio vai desde aplicativos web com IA até soluções marítimas especializadas e projetos de jogos interativos. Nosso foco está sempre em design ponderado, implementação técnica limpa e soluções que criam impacto duradouro."
+  },
+  "projects": {
+    "title": "Nossos Projetos",
+    "description": "Descubra nossa seleção de projetos inovadores e soluções digitais.",
+    "viewProject": "Ver Projeto",
+    "learnMore": "Saiba Mais",
+    "storyPixie": {
+      "description": "Gerador de histórias infantis com IA que cria contos personalizados com belas ilustrações."
+    },
+    "oceanMind": {
+      "description": "Companheiro de meditação marítimo com paisagens sonoras oceânicas e sessões de relaxamento guiadas."
+    },
+    "museMind": {
+      "description": "Plataforma de assistente criativo para brainstorming, mapeamento de ideias e visualização de projetos."
+    },
+    "captainsLog": {
+      "description": "Diário de bordo digital para marinheiros com registro GPS, dados meteorológicos e crônica de viagem."
+    },
+    "recipePixie": {
+      "description": "App de receitas inteligente que gera receitas personalizadas baseadas nos ingredientes e preferências alimentares."
+    },
+    "socialPostPro": {
+      "description": "Ferramenta de gestão de redes sociais para agendar, criar e analisar conteúdo em múltiplas plataformas."
+    },
+    "pixieGuardVPN": {
+      "description": "Serviço VPN seguro e fácil de usar com criptografia de nível militar e servidores globais."
+    },
+    "snapQR": {
+      "description": "Scanner QR para eventos com check-in de ingressos, gestão de participantes e análises em tempo real."
+    },
+    "videoPixie": {
+      "description": "Transforma fotos de produtos em vídeos publicitários profissionais – sem conhecimentos de design."
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "description": "Tem perguntas ou quer trabalhar conosco? Entre em contato!",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso!",
+    "successDescription": "Responderemos o mais breve possível.",
+    "error": "Erro ao enviar mensagem",
+    "errorDescription": "Por favor, tente novamente mais tarde."
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "support": "Suporte",
+    "dataDeletion": "Exclusão de Dados"
+  },
+  "storyPixieDetails": {
+    "title": "StoryPixie",
+    "subtitle": "Gerador de histórias infantis com IA",
+    "status": "Em Desenvolvimento",
+    "description": "StoryPixie é uma aplicação inovadora que usa inteligência artificial para criar histórias personalizadas para crianças. Cada história é única e adaptada à idade, interesses e preferências da criança.",
+    "features": {
+      "title": "Recursos",
+      "ai": {
+        "title": "Histórias Geradas por IA",
+        "description": "Cada história é criada de forma única pela IA com base nas preferências da criança."
+      },
+      "illustrations": {
+        "title": "Belas Ilustrações",
+        "description": "Imagens geradas automaticamente que dão vida à história."
+      },
+      "personalization": {
+        "title": "Personalização",
+        "description": "O nome da criança, interesses e personagens favoritos são integrados."
+      },
+      "ageAppropriate": {
+        "title": "Apropriado para Idade",
+        "description": "O conteúdo é adaptado ao respectivo grupo etário."
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico"
+    },
+    "cta": {
+      "title": "Em Breve",
+      "description": "StoryPixie está atualmente em desenvolvimento. Cadastre-se para ser notificado sobre o lançamento.",
+      "button": "Cadastre-se para Atualizações"
+    }
+  },
+  "oceanMindDetails": {
+    "title": "OceanMind",
+    "subtitle": "Seu companheiro de meditação marítimo",
+    "status": "Disponível",
+    "description": "OceanMind é um app de meditação que usa sons oceânicos relaxantes e visualizações para ajudá-lo a relaxar. Perfeito para reduzir o estresse e melhorar a qualidade do sono.",
+    "features": {
+      "title": "Recursos",
+      "sounds": {
+        "title": "Paisagens Sonoras Oceânicas",
+        "description": "Sons autênticos do oceano gravados em vários locais costeiros."
+      },
+      "meditation": {
+        "title": "Meditações Guiadas",
+        "description": "Sessões profissionais com temas marítimos."
+      },
+      "sleep": {
+        "title": "Histórias para Dormir",
+        "description": "Histórias relaxantes para adormecer com tema marinho."
+      },
+      "timer": {
+        "title": "Temporizadores Personalizáveis",
+        "description": "Sessões flexíveis de 5 a 60 minutos."
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico"
+    },
+    "cta": {
+      "title": "Comece sua jornada",
+      "description": "Descubra a calma do oceano onde quer que esteja.",
+      "button": "Baixar Agora"
+    }
+  },
+  "captainsLogDetails": {
+    "title": "Captain's Log",
+    "subtitle": "O diário de bordo digital para marinheiros",
+    "status": "Em Desenvolvimento",
+    "description": "Captain's Log é uma aplicação abrangente para marinheiros que querem documentar digitalmente suas viagens. Do registro GPS aos dados meteorológicos até a crônica da viagem - tudo em um único app.",
+    "features": {
+      "title": "Recursos",
+      "gps": {
+        "title": "Registro GPS",
+        "description": "Gravação automática de rota com visualização no mapa."
+      },
+      "weather": {
+        "title": "Integração Meteorológica",
+        "description": "Dados meteorológicos atuais e previsões para sua localização."
+      },
+      "logbook": {
+        "title": "Diário de Bordo Digital",
+        "description": "Registre eventos, observações e fotos."
+      },
+      "export": {
+        "title": "Exportação",
+        "description": "Exporte suas viagens como PDF ou compartilhe com outros marinheiros."
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico"
+    },
+    "cta": {
+      "title": "Para Marinheiros",
+      "description": "Captain's Log é desenvolvido por marinheiros para marinheiros.",
+      "button": "Entrar na Lista de Espera"
+    }
+  },
+  "recipePixieDetails": {
+    "title": "RecipePixie",
+    "subtitle": "Seu assistente de receitas inteligente",
+    "status": "Disponível",
+    "description": "RecipePixie gera receitas personalizadas baseadas nos ingredientes disponíveis e suas preferências alimentares. Seja vegano, sem glúten ou amante da cozinha tradicional - RecipePixie tem a receita perfeita para você.",
+    "features": {
+      "title": "Recursos",
+      "ingredients": {
+        "title": "Busca por Ingredientes",
+        "description": "Insira quais ingredientes você tem e receba receitas adequadas."
+      },
+      "preferences": {
+        "title": "Preferências Alimentares",
+        "description": "Suporte para vegano, vegetariano, sem glúten e mais."
+      },
+      "nutrition": {
+        "title": "Informações Nutricionais",
+        "description": "Valores nutricionais detalhados para cada receita."
+      },
+      "save": {
+        "title": "Salvar Receitas",
+        "description": "Salve suas receitas favoritas e crie listas de compras."
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico"
+    },
+    "cta": {
+      "title": "Comece a Cozinhar",
+      "description": "Descubra novas receitas todos os dias.",
+      "button": "Experimente Grátis"
+    }
+  },
+  "socialPostProDetails": {
+    "title": "SocialPostPro",
+    "subtitle": "Sua solução completa para redes sociais",
+    "status": "Em Desenvolvimento",
+    "description": "SocialPostPro é uma ferramenta poderosa para gestão de redes sociais que ajuda a planejar, criar e analisar conteúdo em múltiplas plataformas.",
+    "features": {
+      "title": "Recursos",
+      "scheduling": {
+        "title": "Agendamento",
+        "description": "Planeje posts com antecedência para todas as plataformas."
+      },
+      "analytics": {
+        "title": "Análises",
+        "description": "Métricas de desempenho detalhadas para seu conteúdo."
+      },
+      "templates": {
+        "title": "Templates",
+        "description": "Templates profissionais para posts e stories."
+      },
+      "collaboration": {
+        "title": "Funções de Equipe",
+        "description": "Colabore com sua equipe e gerencie aprovações."
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico"
+    },
+    "cta": {
+      "title": "Otimize suas Redes Sociais",
+      "description": "Economize tempo e aumente seu alcance.",
+      "button": "Solicitar Acesso Beta"
+    }
+  },
+  "pixieGuardVPNDetails": {
+    "title": "PixieGuard VPN",
+    "subtitle": "Navegação segura com criptografia de nível militar",
+    "status": "Disponível",
+    "description": "PixieGuard VPN oferece proteção de primeira classe para sua privacidade online. Com servidores em mais de 50 países e criptografia de nível militar, seus dados estão sempre seguros.",
+    "features": {
+      "title": "Recursos",
+      "encryption": {
+        "title": "Criptografia AES-256",
+        "description": "Padrão de criptografia de nível militar para máxima segurança."
+      },
+      "servers": {
+        "title": "Rede Global",
+        "description": "Mais de 1000 servidores em mais de 50 países."
+      },
+      "speed": {
+        "title": "Conexões Rápidas",
+        "description": "Streaming e downloads otimizados sem buffering."
+      },
+      "privacy": {
+        "title": "Sem Logs",
+        "description": "Política rigorosa de zero logs para sua privacidade."
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico"
+    },
+    "cta": {
+      "title": "Proteja sua Privacidade",
+      "description": "Comece com um teste gratuito de 7 dias.",
+      "button": "Iniciar Teste Gratuito"
+    }
+  },
+  "videoPixieDetails": {
+    "title": "Video Pixie",
+    "subtitle": "Gerador de Vídeo a partir de Foto de Produto",
+    "status": "Em Desenvolvimento",
+    "whatIs": {
+      "title": "O que é Video Pixie?",
+      "description": "Video Pixie é um webapp que transforma automaticamente fotos de produtos em anúncios de vídeo profissionais – sem conhecimentos de design."
+    },
+    "features": {
+      "title": "Recursos Principais",
+      "upload": {
+        "title": "Carregar Fotos de Produto",
+        "description": "Carregue múltiplas imagens + logo"
+      },
+      "templates": {
+        "title": "Selecionar Template",
+        "description": "Vários estilos de vídeo: Minimal, Dynamic, Elegant, Bold"
+      },
+      "formats": {
+        "title": "Formatos Flexíveis",
+        "description": "9:16 (TikTok/Reels), 1:1 (Feed), 16:9 (YouTube)"
+      },
+      "effects": {
+        "title": "Fresh Effects",
+        "description": "Animações profissionais para vídeos de comida: Vapor, Gotas d'água, Partículas, Folhas de ervas, Glitter"
+      },
+      "customization": {
+        "title": "Personalização",
+        "description": "Título, CTA, Preço, Cor da marca, Estilo musical"
+      },
+      "rendering": {
+        "title": "Renderização no Navegador",
+        "description": "Geração de vídeo baseada em Canvas diretamente no navegador"
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico"
+    },
+    "targetAudience": {
+      "title": "Público-Alvo",
+      "ecommerce": "E-Commerce / Lojas Online",
+      "food": "Marcas de Food & Beverage",
+      "social": "Gerentes de Redes Sociais",
+      "smallBusiness": "Pequenas empresas sem equipe de design"
+    },
+    "cta": {
+      "title": "Em Breve",
+      "description": "Video Pixie está atualmente em desenvolvimento. Fique atento para atualizações!",
+      "button": "Cadastre-se para Atualizações"
+    }
+  }
+}
