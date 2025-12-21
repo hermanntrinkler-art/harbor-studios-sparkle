@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Wifi } from "lucide-react";
+import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Wifi, Ship, CheckSquare, Radio } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -46,6 +46,22 @@ const CaptainsLogDetails = () => {
       description: t('captainsLogDetails.features.anchorWatch.description')
     },
     {
+      icon: Ship,
+      title: t('captainsLogDetails.features.boatProfile.title'),
+      description: t('captainsLogDetails.features.boatProfile.description')
+    },
+    {
+      icon: CheckSquare,
+      title: t('captainsLogDetails.features.checklists.title'),
+      description: t('captainsLogDetails.features.checklists.description')
+    },
+    {
+      icon: Radio,
+      title: t('captainsLogDetails.features.signalK.title'),
+      description: t('captainsLogDetails.features.signalK.description'),
+      isNew: true
+    },
+    {
       icon: Globe,
       title: t('captainsLogDetails.features.offline.title'),
       description: t('captainsLogDetails.features.offline.description')
@@ -56,7 +72,9 @@ const CaptainsLogDetails = () => {
     { text: t('captainsLogDetails.perfectFor.hobbySkippers') },
     { text: t('captainsLogDetails.perfectFor.sailingSchools') },
     { text: t('captainsLogDetails.perfectFor.charterCrews') },
-    { text: t('captainsLogDetails.perfectFor.documentation') }
+    { text: t('captainsLogDetails.perfectFor.regattaTeams') },
+    { text: t('captainsLogDetails.perfectFor.motorboaters') },
+    { text: t('captainsLogDetails.perfectFor.bluewaterSailors') }
   ];
 
   return (
@@ -182,6 +200,8 @@ const CaptainsLogDetails = () => {
                 <Badge variant="secondary">GPS API</Badge>
                 <Badge variant="secondary">PDF Generation</Badge>
                 <Badge variant="secondary">i18n</Badge>
+                <Badge variant="secondary">SignalK</Badge>
+                <Badge variant="secondary">WebSocket</Badge>
               </div>
             </CardContent>
           </Card>

@@ -199,11 +199,11 @@
       },
       "sailConfig": {
         "title": "⛵ Sail Configuration",
-        "description": "Document mainsail, reef levels, headsail (jib/genoa) and spinnaker deployment"
+        "description": "Dynamic sail selection for multi-mast yachts (ketch, yawl, schooner). Sail types: mainsail, jib, genoa, spinnaker, mizzen, staysail with reef tracking (1-3 reefs)"
       },
       "weather": {
         "title": "🌊 Weather & Navigation",
-        "description": "Record wind (direction & strength), weather, sea state and visibility"
+        "description": "Record wind (direction & strength), weather, sea state and visibility. Status: Underway, At Anchor, Moored, Completed"
       },
       "pdfExport": {
         "title": "📄 PDF Export",
@@ -211,11 +211,23 @@
       },
       "anchorWatch": {
         "title": "🔔 GPS Anchor Watch",
-        "description": "Monitor your anchor position with adjustable radius and automatic alarm"
+        "description": "Monitor your anchor position with adjustable radius and acoustic alarm. Works even with locked screen"
+      },
+      "boatProfile": {
+        "title": "🛥️ Boat Profile",
+        "description": "Boat data: length, beam, draft, mast height. Number of masts (1, 2, 3+) with individual sail configuration and automatic mizzen suggestion for multi-mast"
+      },
+      "checklists": {
+        "title": "✅ Checklists",
+        "description": "Create your own checklists with templates for recurring procedures: pre-voyage, safety, arrival and more"
+      },
+      "signalK": {
+        "title": "📡 SignalK / NMEA Integration",
+        "description": "NEW: Connect to Raymarine, B&G, Garmin and other marine devices. Receive GPS, SOG/COG, wind, depth and water temperature via WebSocket"
       },
       "offline": {
-        "title": "🌍 Offline-Ready & Multilingual",
-        "description": "Works without internet connection (PWA-capable). Available in German, English, Spanish and French"
+        "title": "🌍 Offline & Cloud Sync",
+        "description": "PWA-ready with automatic cloud storage. Multi-language: 🇩🇪 Deutsch, 🇬🇧 English, 🇪🇸 Español, 🇫🇷 Français, 🇮🇹 Italiano, 🇧🇷 Português"
       }
     },
     "perfectFor": {
@@ -223,7 +235,9 @@
       "hobbySkippers": "🧭 Hobby sailors and skippers who appreciate professional documentation",
       "sailingSchools": "⛵ Sailing schools for training voyages and education",
       "charterCrews": "📋 Charter crews for handover protocols",
-      "documentation": "📝 Anyone who wants to record their sailing experiences in a structured way"
+      "regattaTeams": "🏁 Regatta teams for competition documentation",
+      "motorboaters": "🚤 Motor boaters for structured logbooks",
+      "bluewaterSailors": "🌊 Cruisers & bluewater sailors"
     },
     "techStack": {
       "title": "Technical Details",
