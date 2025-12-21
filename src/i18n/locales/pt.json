@@ -135,36 +135,81 @@
     }
   },
   "captainsLogDetails": {
-    "title": "Captain's Log",
-    "subtitle": "O diário de bordo digital para marinheiros",
-    "status": "Em Desenvolvimento",
-    "description": "Captain's Log é uma aplicação abrangente para marinheiros que querem documentar digitalmente suas viagens. Do registro GPS aos dados meteorológicos até a crônica da viagem - tudo em um único app.",
+    "backHome": "Voltar ao Início",
+    "status": "🚧 Em Desenvolvimento – Versão Beta",
+    "hero": {
+      "title": "Captain's Log",
+      "subtitle": "Seu diário de bordo digital moderno para navegar relaxado. Registre rumos, velas, clima e vento, rastreie sua rota via GPS e exporte relatórios PDF profissionais – tudo offline e multilíngue."
+    },
+    "whatIs": {
+      "title": "O que é o Captain's Log?",
+      "description": "Captain's Log é a solução moderna para seu diário de bordo marítimo. O app web combina a manutenção tradicional do diário de bordo com tecnologia digital, tornando a documentação de suas navegações mais fácil do que nunca."
+    },
     "features": {
-      "title": "Recursos",
-      "gps": {
-        "title": "Registro GPS",
-        "description": "Gravação automática de rota com visualização no mapa."
+      "title": "Recursos Principais",
+      "subtitle": "Tudo que você precisa para manutenção profissional do diário de bordo",
+      "voyageManagement": {
+        "title": "⚓️ Gestão de Viagens",
+        "description": "Crie, edite e rastreie todas suas viagens com porto de origem/destino, data e status"
+      },
+      "gpsTracking": {
+        "title": "🧭 Rastreamento GPS ao Vivo",
+        "description": "Registre automaticamente sua rota – com velocidade, rumo e cálculo preciso de distância"
+      },
+      "timeline": {
+        "title": "📍 Linha do Tempo Detalhada",
+        "description": "Capture todos os eventos importantes – mudanças de rumo, configuração de velas, mudanças climáticas, notas"
+      },
+      "sailConfig": {
+        "title": "⛵ Configuração de Velas",
+        "description": "Seleção dinâmica para iates multi-mastro (ketch, yawl, escuna). Tipos: vela mestra, buja, genoa, spinnaker, mezena, estai com tracking de rizos (1-3)"
       },
       "weather": {
-        "title": "Integração Meteorológica",
-        "description": "Dados meteorológicos atuais e previsões para sua localização."
+        "title": "🌊 Clima e Navegação",
+        "description": "Registre vento (direção e força), clima, estado do mar e visibilidade. Status: Em Navegação, Ancorado, Atracado, Concluído"
       },
-      "logbook": {
-        "title": "Diário de Bordo Digital",
-        "description": "Registre eventos, observações e fotos."
+      "pdfExport": {
+        "title": "📄 Exportação PDF",
+        "description": "Gere relatórios profissionais de viagem com mapa, linha do tempo e todos os detalhes – perfeito para o diário de bordo"
       },
-      "export": {
-        "title": "Exportação",
-        "description": "Exporte suas viagens como PDF ou compartilhe com outros marinheiros."
+      "anchorWatch": {
+        "title": "🔔 Vigia de Âncora GPS",
+        "description": "Monitore sua posição de ancoragem com raio ajustável e alarme sonoro. Funciona mesmo com tela bloqueada"
+      },
+      "boatProfile": {
+        "title": "🛥️ Perfil do Barco",
+        "description": "Dados do barco: comprimento, boca, calado, altura do mastro. Número de mastros (1, 2, 3+) com configuração individual e sugestão automática de mezena"
+      },
+      "checklists": {
+        "title": "✅ Checklists",
+        "description": "Crie suas próprias checklists com modelos para procedimentos recorrentes: pré-navegação, segurança, chegada e mais"
+      },
+      "signalK": {
+        "title": "📡 Integração SignalK / NMEA",
+        "description": "NOVO: Conexão com Raymarine, B&G, Garmin e outros dispositivos marítimos. Receba GPS, SOG/COG, vento, profundidade e temperatura via WebSocket"
+      },
+      "offline": {
+        "title": "🌍 Offline e Sync Cloud",
+        "description": "PWA-ready com armazenamento automático na nuvem. Multi-idioma: 🇩🇪 Deutsch, 🇬🇧 English, 🇪🇸 Español, 🇫🇷 Français, 🇮🇹 Italiano, 🇧🇷 Português"
       }
     },
+    "perfectFor": {
+      "title": "Perfeito para",
+      "hobbySkippers": "🧭 Velejadores amadores e skippers que apreciam documentação profissional",
+      "sailingSchools": "⛵ Escolas de vela para navegações de formação e educação",
+      "charterCrews": "📋 Tripulações de charter para protocolos de entrega",
+      "regattaTeams": "🏁 Equipes de regata para documentação de competição",
+      "motorboaters": "🚤 Navegadores a motor para diários de bordo estruturados",
+      "bluewaterSailors": "🌊 Cruzeiristas e velejadores de longo curso"
+    },
     "techStack": {
-      "title": "Stack Tecnológico"
+      "title": "Detalhes Técnicos",
+      "description": "Progressive Web App (PWA) fullstack construída com React, TypeScript, Leaflet Maps e Lovable Cloud (Supabase). Recursos: Rastreamento GPS em tempo real, geração de PDF (pdf-lib), atualizações realtime, banco de dados RLS-secured, suporte i18n multilíngue, design responsivo com Tailwind CSS."
     },
     "cta": {
-      "title": "Para Marinheiros",
-      "description": "Captain's Log é desenvolvido por marinheiros para marinheiros.",
-      "button": "Entrar na Lista de Espera"
+      "title": "Em Breve!",
+      "button": "Receber Notificação",
+      "inDevelopment": "Este app está atualmente em desenvolvimento. Fique informado sobre o lançamento!"
     }
   },
   "recipePixieDetails": {

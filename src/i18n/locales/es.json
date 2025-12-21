@@ -199,11 +199,11 @@
       },
       "sailConfig": {
         "title": "⛵ Configuración de Velas",
-        "description": "Documenta vela mayor, niveles de rizo, vela de proa (foque/génova) y despliegue de spinnaker"
+        "description": "Selección dinámica de velas para yates multi-mástil (ketch, yawl, goleta). Tipos: mayor, foque, génova, spinnaker, mesana, estay con seguimiento de rizos (1-3)"
       },
       "weather": {
         "title": "🌊 Clima y Navegación",
-        "description": "Registra viento (dirección y fuerza), clima, estado del mar y visibilidad"
+        "description": "Registra viento (dirección y fuerza), clima, estado del mar y visibilidad. Estado: En Navegación, Fondeado, Amarrado, Finalizado"
       },
       "pdfExport": {
         "title": "📄 Exportación PDF",
@@ -211,11 +211,23 @@
       },
       "anchorWatch": {
         "title": "🔔 Vigilancia de Ancla GPS",
-        "description": "Monitorea tu posición de anclaje con radio ajustable y alarma automática"
+        "description": "Monitorea tu posición de anclaje con radio ajustable y alarma acústica. Funciona incluso con pantalla bloqueada"
+      },
+      "boatProfile": {
+        "title": "🛥️ Perfil del Barco",
+        "description": "Datos del barco: eslora, manga, calado, altura del mástil. Número de mástiles (1, 2, 3+) con configuración individual y sugerencia automática de mesana"
+      },
+      "checklists": {
+        "title": "✅ Listas de Verificación",
+        "description": "Crea tus propias listas con plantillas para procedimientos recurrentes: pre-travesía, seguridad, llegada y más"
+      },
+      "signalK": {
+        "title": "📡 Integración SignalK / NMEA",
+        "description": "NUEVO: Conexión con Raymarine, B&G, Garmin y otros dispositivos marinos. Recibe GPS, SOG/COG, viento, profundidad y temperatura por WebSocket"
       },
       "offline": {
-        "title": "🌍 Sin Conexión y Multilingüe",
-        "description": "Funciona sin conexión a internet (PWA). Disponible en alemán, inglés, español y francés"
+        "title": "🌍 Offline y Sincronización Cloud",
+        "description": "PWA-ready con almacenamiento automático en la nube. Multi-idioma: 🇩🇪 Deutsch, 🇬🇧 English, 🇪🇸 Español, 🇫🇷 Français, 🇮🇹 Italiano, 🇧🇷 Português"
       }
     },
     "perfectFor": {
@@ -223,7 +235,9 @@
       "hobbySkippers": "🧭 Navegantes aficionados y patrones que aprecian la documentación profesional",
       "sailingSchools": "⛵ Escuelas de vela para travesías de formación y educación",
       "charterCrews": "📋 Tripulaciones de chárter para protocolos de entrega",
-      "documentation": "📝 Cualquiera que quiera registrar sus experiencias de navegación de manera estructurada"
+      "regattaTeams": "🏁 Equipos de regata para documentación de competición",
+      "motorboaters": "🚤 Navegantes a motor para cuadernos de bitácora estructurados",
+      "bluewaterSailors": "🌊 Navegantes de altura y cruceristas oceánicos"
     },
     "techStack": {
       "title": "Detalles Técnicos",
