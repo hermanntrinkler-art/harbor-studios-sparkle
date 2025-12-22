@@ -203,6 +203,10 @@
       "title": "Pronti a salpare!",
       "button": "Prova ora",
       "inDevelopment": "Captain's Log è disponibile in beta – prova l'app gratis!"
+    },
+    "support": {
+      "title": "Domande, feedback o idee?",
+      "description": "Accogliamo richieste di supporto, critiche e suggerimenti di miglioramento!"
     }
   },
   "recipePixieDetails": {

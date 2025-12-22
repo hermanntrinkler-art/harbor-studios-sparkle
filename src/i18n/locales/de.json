@@ -240,6 +240,10 @@
       "title": "Bereit zum Ablegen!",
       "button": "Jetzt ausprobieren",
       "inDevelopment": "Captain's Log ist als Beta verfügbar – teste die App kostenlos!"
+    },
+    "support": {
+      "title": "Fragen, Feedback oder Ideen?",
+      "description": "Wir freuen uns über Supportanfragen, Kritik und Verbesserungsvorschläge!"
     }
   },
   "contact": {
