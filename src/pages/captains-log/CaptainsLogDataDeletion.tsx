@@ -104,7 +104,7 @@ const CaptainsLogDataDeletion = () => {
                 <strong>Bei Löschung in der App:</strong> Sofortige Wirkung
               </p>
               <p className="text-muted-foreground">
-                <strong>Bei Löschung per E-Mail:</strong> Wir bearbeiten deine Anfrage innerhalb von 30 Tagen und informieren dich über den Abschluss.
+                <strong>Bei Löschung per E-Mail:</strong> Wir bearbeiten deine Anfrage innerhalb von 7 Tagen und informieren dich über den Abschluss. Alle personenbezogenen Daten werden vollständig entfernt.
               </p>
             </CardContent>
           </Card>
