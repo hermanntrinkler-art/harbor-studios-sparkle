@@ -173,10 +173,10 @@
   },
   "captainsLogDetails": {
     "backHome": "Retour à l'Accueil",
-    "status": "🚧 En Développement – Version Bêta",
+    "status": "✅ Bêta disponible – Essayez maintenant !",
     "hero": {
       "title": "Captain's Log",
-      "subtitle": "Votre journal de bord numérique moderne pour une navigation sereine. Enregistrez les routes, les voiles, la météo et le vent, suivez votre parcours par GPS et exportez des rapports PDF professionnels – tout fonctionne hors ligne et en plusieurs langues."
+      "subtitle": "Journal de bord numérique pour navigateurs – documentation de voyage avec trace GPS, surveillance d'ancre, bibliothèque de matelotage et export PDF. Fonctionne hors ligne et installable comme PWA."
     },
     "whatIs": {
       "title": "Qu'est-ce que Captain's Log ?",
@@ -186,67 +186,59 @@
       "title": "Fonctionnalités Principales",
       "subtitle": "Tout ce dont vous avez besoin pour une tenue de journal professionnelle",
       "voyageManagement": {
-        "title": "⚓️ Gestion des Voyages",
-        "description": "Créez, modifiez et suivez tous vos voyages avec port de départ/destination, date et statut"
-      },
-      "gpsTracking": {
-        "title": "🧭 Suivi GPS en Direct",
-        "description": "Enregistrez automatiquement votre route – avec vitesse, cap et calcul précis de la distance"
-      },
-      "timeline": {
-        "title": "📍 Chronologie Détaillée",
-        "description": "Capturez tous les événements importants – changements de cap, configuration des voiles, changements météo, notes"
-      },
-      "sailConfig": {
-        "title": "⛵ Configuration des Voiles",
-        "description": "Sélection dynamique pour yachts multi-mâts (ketch, yawl, goélette). Types: grand-voile, foc, génois, spi, artimon, voile d'étai avec suivi des ris (1-3)"
-      },
-      "weather": {
-        "title": "🌊 Météo et Navigation",
-        "description": "Enregistrez le vent (direction et force), la météo, l'état de la mer et la visibilité. Statut: En Route, Au Mouillage, Amarré, Terminé"
-      },
-      "pdfExport": {
-        "title": "📄 Export PDF",
-        "description": "Générez des rapports de voyage professionnels avec carte, chronologie et tous les détails – parfait pour le livre de bord"
+        "title": "🚢 Documentation de Voyage",
+        "description": "Créez des voyages avec port de départ/destination, skipper et équipage. Enregistrement automatique de trace GPS avec calcul de distance. Chronologie avec tous les événements et export PDF du rapport complet avec carte."
       },
       "anchorWatch": {
-        "title": "🔔 Surveillance d'Ancre GPS",
-        "description": "Surveillez votre position d'ancrage avec rayon réglable et alarme sonore. Fonctionne même avec l'écran verrouillé"
+        "title": "⚓ Surveillance d'Ancre",
+        "description": "Surveillance d'ancre basée sur GPS avec rayon réglable. Alarme sonore en cas de dépassement du cercle d'évitage. Journal d'alarmes avec horodatages. Fonctionne en arrière-plan."
       },
       "boatProfile": {
-        "title": "🛥️ Profil du Bateau",
-        "description": "Données: longueur, largeur, tirant d'eau, hauteur de mât. Nombre de mâts (1, 2, 3+) avec configuration individuelle et suggestion automatique d'artimon"
+        "title": "⛵ Profil du Bateau",
+        "description": "Configurez la garde-robe de voiles individuelle (grand-voile, voile d'avant, spi, etc.). Enregistrez les données du bateau (longueur, largeur, tirant d'eau, hauteur de mât). Informations réservoirs et moteur."
       },
       "checklists": {
         "title": "✅ Listes de Contrôle",
-        "description": "Créez vos propres listes avec modèles pour procédures récurrentes: pré-navigation, sécurité, arrivée et plus"
+        "description": "Créez vos propres modèles de listes. Vérifications de départ, arrivée et sécurité. Sauvegardez la progression et terminez."
+      },
+      "seamanship": {
+        "title": "📚 Bibliothèque de Matelotage",
+        "description": "Instructions de nœuds avec images étape par étape. Échelle Beaufort et niveaux d'état de la mer. Glossaire nautique, protocole radio et alphabet des pavillons. Descriptions de manœuvres."
+      },
+      "weatherTides": {
+        "title": "🌤️ Météo et Marées",
+        "description": "Premium : Données météo actuelles (vent, vagues, température). Prévisions à 3 jours. Horaires des marées et niveaux d'eau. Mises à jour automatiques."
       },
       "signalK": {
         "title": "📡 Intégration SignalK / NMEA",
-        "description": "NOUVEAU: Connexion à Raymarine, B&G, Garmin et autres appareils marins. Recevez GPS, SOG/COG, vent, profondeur et température via WebSocket"
+        "description": "Connexion à Raymarine, B&G, Garmin et autres appareils marins. Recevez GPS, SOG/COG, vent, profondeur et température via WebSocket."
       },
       "offline": {
-        "title": "🌍 Hors Ligne et Sync Cloud",
-        "description": "PWA-ready avec stockage cloud automatique. Multi-langues: 🇩🇪 Deutsch, 🇬🇧 English, 🇪🇸 Español, 🇫🇷 Français, 🇮🇹 Italiano, 🇧🇷 Português"
+        "title": "📴 Fonctionnalité Hors Ligne",
+        "description": "L'appli fonctionne sans connexion internet. Les points de trace sont stockés localement. Synchronisation automatique à la reconnexion. Indicateur hors ligne montre l'état de connexion. Multilingue : DE, EN, ES, FR."
+      },
+      "pwa": {
+        "title": "📱 Installable comme App",
+        "description": "Installez la Progressive Web App (PWA) sur votre écran d'accueil – sensation d'app native sans store."
       }
     },
     "perfectFor": {
       "title": "Parfait pour",
-      "hobbySkippers": "🧭 Plaisanciers et skippers qui apprécient la documentation professionnelle",
-      "sailingSchools": "⛵ Écoles de voile pour les voyages de formation et l'éducation",
-      "charterCrews": "📋 Équipages de charter pour les protocoles de remise",
+      "hobbySkippers": "🧭 Croisiéristes et navigateurs hauturiers",
+      "sailingSchools": "⛵ Écoles de voile pour les voyages de formation",
+      "charterCrews": "📋 Skippers de charter pour les protocoles de remise",
       "regattaTeams": "🏁 Équipes de régate pour documentation de compétition",
       "motorboaters": "🚤 Plaisanciers à moteur pour journaux de bord structurés",
-      "bluewaterSailors": "🌊 Navigateurs hauturiers et croisiéristes océaniques"
+      "bluewaterSailors": "🌊 Plaisanciers et skippers amateurs"
     },
     "techStack": {
       "title": "Détails Techniques",
-      "description": "Application Web Progressive (PWA) fullstack construite avec React, TypeScript, Leaflet Maps et Lovable Cloud (Supabase). Fonctionnalités : Suivi GPS en temps réel avec API de géolocalisation, génération PDF (pdf-lib), mises à jour en temps réel, base de données sécurisée RLS, support i18n multilingue, design responsive avec Tailwind CSS."
+      "description": "Application Web Progressive (PWA) fullstack construite avec React, TypeScript, Leaflet Maps et Lovable Cloud. Fonctionnalités : Suivi GPS en temps réel, génération PDF, mises à jour en temps réel, intégration SignalK/NMEA, Weather API, Tidal API, support i18n multilingue."
     },
     "cta": {
-      "title": "Bientôt Disponible !",
-      "button": "Recevoir une Notification",
-      "inDevelopment": "Cette application est actuellement en développement. Restez informé du lancement !"
+      "title": "Prêt à larguer les amarres !",
+      "button": "Essayer maintenant",
+      "inDevelopment": "Captain's Log est disponible en bêta – essayez l'appli gratuitement !"
     }
   },
   "contact": {

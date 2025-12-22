@@ -173,10 +173,10 @@
   },
   "captainsLogDetails": {
     "backHome": "Back to Home",
-    "status": "🚧 In Development – Beta Version",
+    "status": "✅ Beta Available – Try it now!",
     "hero": {
       "title": "Captain's Log",
-      "subtitle": "Your modern digital logbook for relaxed sailing. Record courses, sails, weather and wind, track your route via GPS tracking and export professional PDF reports – all offline-capable and multilingual."
+      "subtitle": "Digital logbook for sailors – voyage documentation with GPS track, anchor watch, seamanship library and PDF export. Works offline and installable as PWA."
     },
     "whatIs": {
       "title": "What is Captain's Log?",
@@ -186,67 +186,59 @@
       "title": "Key Features",
       "subtitle": "Everything you need for professional logbook keeping",
       "voyageManagement": {
-        "title": "⚓️ Voyage Management",
-        "description": "Create, edit and track all your trips with start/destination port, date and status"
-      },
-      "gpsTracking": {
-        "title": "🧭 Live GPS Tracking",
-        "description": "Automatically record your route – with speed, course and precise distance calculation"
-      },
-      "timeline": {
-        "title": "📍 Detailed Timeline",
-        "description": "Capture all important events – course changes, sail configuration, weather changes, notes"
-      },
-      "sailConfig": {
-        "title": "⛵ Sail Configuration",
-        "description": "Dynamic sail selection for multi-mast yachts (ketch, yawl, schooner). Sail types: mainsail, jib, genoa, spinnaker, mizzen, staysail with reef tracking (1-3 reefs)"
-      },
-      "weather": {
-        "title": "🌊 Weather & Navigation",
-        "description": "Record wind (direction & strength), weather, sea state and visibility. Status: Underway, At Anchor, Moored, Completed"
-      },
-      "pdfExport": {
-        "title": "📄 PDF Export",
-        "description": "Generate professional voyage reports with map, timeline and all details – perfect for ship's log"
+        "title": "🚢 Voyage Documentation",
+        "description": "Create voyages with start/destination port, skipper and crew. Automatic GPS track recording with distance calculation. Timeline with all events and PDF export of complete voyage report with map."
       },
       "anchorWatch": {
-        "title": "🔔 GPS Anchor Watch",
-        "description": "Monitor your anchor position with adjustable radius and acoustic alarm. Works even with locked screen"
+        "title": "⚓ Anchor Watch",
+        "description": "GPS-based anchor monitoring with adjustable radius. Acoustic alarm when exceeding swing circle. Alarm log with timestamps. Works in background."
       },
       "boatProfile": {
-        "title": "🛥️ Boat Profile",
-        "description": "Boat data: length, beam, draft, mast height. Number of masts (1, 2, 3+) with individual sail configuration and automatic mizzen suggestion for multi-mast"
+        "title": "⛵ Boat Profile",
+        "description": "Configure individual sail wardrobe (mainsail, headsail, spinnaker, etc.). Record boat data (length, beam, draft, mast height). Tank and engine information."
       },
       "checklists": {
         "title": "✅ Checklists",
-        "description": "Create your own checklists with templates for recurring procedures: pre-voyage, safety, arrival and more"
+        "description": "Create your own checklist templates. Departure, arrival and safety checks. Save progress and complete."
+      },
+      "seamanship": {
+        "title": "📚 Seamanship Library",
+        "description": "Knot instructions with step-by-step images. Beaufort scale and sea state levels. Nautical glossary, radio protocol and flag alphabet. Maneuver descriptions."
+      },
+      "weatherTides": {
+        "title": "🌤️ Weather & Tides",
+        "description": "Premium: Current weather data (wind, waves, temperature). 3-day forecast. Tide times and water levels. Automatic updates."
       },
       "signalK": {
         "title": "📡 SignalK / NMEA Integration",
-        "description": "NEW: Connect to Raymarine, B&G, Garmin and other marine devices. Receive GPS, SOG/COG, wind, depth and water temperature via WebSocket"
+        "description": "Connect to Raymarine, B&G, Garmin and other marine devices. Receive GPS, SOG/COG, wind, depth and water temperature via WebSocket."
       },
       "offline": {
-        "title": "🌍 Offline & Cloud Sync",
-        "description": "PWA-ready with automatic cloud storage. Multi-language: 🇩🇪 Deutsch, 🇬🇧 English, 🇪🇸 Español, 🇫🇷 Français, 🇮🇹 Italiano, 🇧🇷 Português"
+        "title": "📴 Offline Functionality",
+        "description": "App works without internet connection. Track points stored locally. Automatic sync on reconnect. Offline indicator shows connection status. Multilingual: DE, EN, ES, FR."
+      },
+      "pwa": {
+        "title": "📱 Installable as App",
+        "description": "Install Progressive Web App (PWA) on your home screen – native app feeling without app store."
       }
     },
     "perfectFor": {
       "title": "Perfect for",
-      "hobbySkippers": "🧭 Hobby sailors and skippers who appreciate professional documentation",
-      "sailingSchools": "⛵ Sailing schools for training voyages and education",
-      "charterCrews": "📋 Charter crews for handover protocols",
+      "hobbySkippers": "🧭 Cruisers & bluewater sailors",
+      "sailingSchools": "⛵ Sailing schools for training voyages",
+      "charterCrews": "📋 Charter skippers for handover protocols",
       "regattaTeams": "🏁 Regatta teams for competition documentation",
       "motorboaters": "🚤 Motor boaters for structured logbooks",
-      "bluewaterSailors": "🌊 Cruisers & bluewater sailors"
+      "bluewaterSailors": "🌊 Hobby sailors and skippers"
     },
     "techStack": {
       "title": "Technical Details",
-      "description": "Fullstack Progressive Web App (PWA) built with React, TypeScript, Leaflet Maps and Lovable Cloud (Supabase). Features: Real-time GPS tracking with Geolocation API, PDF generation (pdf-lib), realtime updates, RLS-secured database, multilingual i18n support, responsive design with Tailwind CSS."
+      "description": "Fullstack Progressive Web App (PWA) built with React, TypeScript, Leaflet Maps and Lovable Cloud. Features: Real-time GPS tracking, PDF generation, realtime updates, SignalK/NMEA integration, Weather API, Tidal API, multilingual i18n support."
     },
     "cta": {
-      "title": "Coming Soon!",
-      "button": "Get Notified",
-      "inDevelopment": "This app is currently in development. Stay informed about the launch!"
+      "title": "Ready to set sail!",
+      "button": "Try it now",
+      "inDevelopment": "Captain's Log is available as beta – try the app for free!"
     }
   },
   "contact": {
