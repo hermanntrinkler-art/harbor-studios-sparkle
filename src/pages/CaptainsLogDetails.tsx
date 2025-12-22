@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Wifi, Ship, CheckSquare, Radio } from "lucide-react";
+import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Ship, CheckSquare, Radio, BookOpen, Cloud, Smartphone, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -14,31 +14,6 @@ const CaptainsLogDetails = () => {
       icon: Anchor,
       title: t('captainsLogDetails.features.voyageManagement.title'),
       description: t('captainsLogDetails.features.voyageManagement.description')
-    },
-    {
-      icon: Navigation,
-      title: t('captainsLogDetails.features.gpsTracking.title'),
-      description: t('captainsLogDetails.features.gpsTracking.description')
-    },
-    {
-      icon: Map,
-      title: t('captainsLogDetails.features.timeline.title'),
-      description: t('captainsLogDetails.features.timeline.description')
-    },
-    {
-      icon: Wind,
-      title: t('captainsLogDetails.features.sailConfig.title'),
-      description: t('captainsLogDetails.features.sailConfig.description')
-    },
-    {
-      icon: Wind,
-      title: t('captainsLogDetails.features.weather.title'),
-      description: t('captainsLogDetails.features.weather.description')
-    },
-    {
-      icon: FileText,
-      title: t('captainsLogDetails.features.pdfExport.title'),
-      description: t('captainsLogDetails.features.pdfExport.description')
     },
     {
       icon: Bell,
@@ -56,6 +31,18 @@ const CaptainsLogDetails = () => {
       description: t('captainsLogDetails.features.checklists.description')
     },
     {
+      icon: BookOpen,
+      title: t('captainsLogDetails.features.seamanship.title'),
+      description: t('captainsLogDetails.features.seamanship.description'),
+      isNew: true
+    },
+    {
+      icon: Cloud,
+      title: t('captainsLogDetails.features.weatherTides.title'),
+      description: t('captainsLogDetails.features.weatherTides.description'),
+      isPremium: true
+    },
+    {
       icon: Radio,
       title: t('captainsLogDetails.features.signalK.title'),
       description: t('captainsLogDetails.features.signalK.description'),
@@ -65,6 +52,11 @@ const CaptainsLogDetails = () => {
       icon: Globe,
       title: t('captainsLogDetails.features.offline.title'),
       description: t('captainsLogDetails.features.offline.description')
+    },
+    {
+      icon: Smartphone,
+      title: t('captainsLogDetails.features.pwa.title'),
+      description: t('captainsLogDetails.features.pwa.description')
     }
   ];
 
@@ -93,7 +85,7 @@ const CaptainsLogDetails = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <Badge variant="secondary" className="mb-4 text-lg px-4 py-2">
+          <Badge variant="secondary" className="mb-4 text-lg px-4 py-2 bg-green-500/20 text-green-600 border-green-500/30">
             {t('captainsLogDetails.status')}
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
@@ -103,10 +95,12 @@ const CaptainsLogDetails = () => {
             {t('captainsLogDetails.hero.subtitle')}
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" disabled className="opacity-60">
-              <Wifi className="w-5 h-5 mr-2" />
-              {t('captainsLogDetails.cta.button')}
-            </Button>
+            <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
+              <Button size="lg">
+                <ExternalLink className="w-5 h-5 mr-2" />
+                {t('captainsLogDetails.cta.button')}
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -149,7 +143,15 @@ const CaptainsLogDetails = () => {
                       <feature.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl mb-2">{feature.title}</CardTitle>
+                      <div className="flex items-center gap-2 mb-2">
+                        <CardTitle className="text-xl">{feature.title}</CardTitle>
+                        {feature.isNew && (
+                          <Badge variant="default" className="bg-blue-500 text-white text-xs">NEU</Badge>
+                        )}
+                        {feature.isPremium && (
+                          <Badge variant="default" className="bg-amber-500 text-white text-xs">Premium</Badge>
+                        )}
+                      </div>
                       <CardDescription className="text-base">
                         {feature.description}
                       </CardDescription>
@@ -202,6 +204,8 @@ const CaptainsLogDetails = () => {
                 <Badge variant="secondary">i18n</Badge>
                 <Badge variant="secondary">SignalK</Badge>
                 <Badge variant="secondary">WebSocket</Badge>
+                <Badge variant="secondary">Tidal API</Badge>
+                <Badge variant="secondary">Weather API</Badge>
               </div>
             </CardContent>
           </Card>
@@ -217,10 +221,12 @@ const CaptainsLogDetails = () => {
           <p className="text-xl text-muted-foreground mb-8">
             {t('captainsLogDetails.cta.inDevelopment')}
           </p>
-          <Button size="lg" disabled className="opacity-60">
-            <Bell className="w-5 h-5 mr-2" />
-            {t('captainsLogDetails.cta.button')}
-          </Button>
+          <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
+            <Button size="lg">
+              <ExternalLink className="w-5 h-5 mr-2" />
+              {t('captainsLogDetails.cta.button')}
+            </Button>
+          </a>
         </div>
       </section>
     </div>

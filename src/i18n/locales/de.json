@@ -173,10 +173,10 @@
   },
   "captainsLogDetails": {
     "backHome": "Zurück zur Startseite",
-    "status": "🚧 In Entwicklung – Beta Version",
+    "status": "✅ Beta verfügbar – Jetzt testen!",
     "hero": {
       "title": "Captain's Log",
-      "subtitle": "Dein modernes digitales Logbuch für entspanntes Segeln. Erfasse Kurse, Segel, Wetter und Wind, verfolge deine Route per GPS-Tracking und exportiere professionelle PDF-Berichte – alles offline-fähig und mehrsprachig."
+      "subtitle": "Digitales Bordbuch für Segler – Törn-Dokumentation mit GPS-Track, Ankerwache, Seemannschaft-Bibliothek und PDF-Export. Offline-fähig und als PWA installierbar."
     },
     "whatIs": {
       "title": "Was ist Captain's Log?",
@@ -186,67 +186,59 @@
       "title": "Hauptfunktionen",
       "subtitle": "Alles, was du für professionelle Fahrtenbuch-Führung brauchst",
       "voyageManagement": {
-        "title": "⚓️ Fahrten verwalten",
-        "description": "Erstelle, bearbeite und verfolge alle deine Törns mit Start-/Zielhafen, Datum und Status"
-      },
-      "gpsTracking": {
-        "title": "🧭 Live GPS-Tracking",
-        "description": "Zeichne automatisch deine Route auf – mit Geschwindigkeit, Kurs und präziser Distanzberechnung"
-      },
-      "timeline": {
-        "title": "📍 Detaillierte Timeline",
-        "description": "Erfasse alle wichtigen Ereignisse – Kurswechsel, Segelkonfiguration, Wetterwechsel, Notizen"
-      },
-      "sailConfig": {
-        "title": "⛵ Segelkonfiguration",
-        "description": "Dynamische Segelauswahl für Mehrmast-Yachten (Ketch, Yawl, Schoner). Segeltypen: Großsegel, Fock, Genua, Spinnaker, Besan, Staysegel mit Reff-Tracking (1-3 Reffs)"
-      },
-      "weather": {
-        "title": "🌊 Wetter & Navigation",
-        "description": "Halte Wind (Richtung & Stärke), Wetter, Seegang und Sichtweite fest. Status: In Fahrt, Vor Anker, Festgemacht, Beendet"
-      },
-      "pdfExport": {
-        "title": "📄 PDF-Export",
-        "description": "Generiere professionelle Fahrtberichte mit Karte, Timeline und allen Details – perfekt fürs Schiffslogbuch"
+        "title": "🚢 Törn-Dokumentation",
+        "description": "Törns erstellen mit Start-/Zielhafen, Skipper und Crew. Automatische GPS-Track-Aufzeichnung mit Distanzberechnung. Timeline mit allen Ereignissen und PDF-Export des kompletten Fahrtberichts mit Karte."
       },
       "anchorWatch": {
-        "title": "🔔 GPS-Ankerwache",
-        "description": "Überwache deine Ankerposition mit einstellbarem Radius und akustischem Alarm. Funktioniert auch bei gesperrtem Bildschirm"
+        "title": "⚓ Ankerwache",
+        "description": "GPS-basierte Ankerüberwachung mit einstellbarem Radius. Akustischer Alarm bei Überschreitung des Schwoikreises. Alarm-Protokoll mit Zeitstempeln. Funktioniert auch im Hintergrund."
       },
       "boatProfile": {
-        "title": "🛥️ Boot-Profil",
-        "description": "Bootsdaten: Länge, Breite, Tiefgang, Masthöhe. Masten-Anzahl (1, 2, 3+) mit individueller Segelkonfiguration und automatischem Besan-Vorschlag bei Mehrmast"
+        "title": "⛵ Boot-Profil",
+        "description": "Individuelle Segelgarderobe konfigurieren (Großsegel, Vorsegel, Spinnaker, etc.). Bootsdaten erfassen (Länge, Breite, Tiefgang, Masthöhe). Tank- und Motorinformationen."
       },
       "checklists": {
         "title": "✅ Checklisten",
-        "description": "Eigene Checklisten erstellen mit Vorlagen für wiederkehrende Abläufe: Vor-Törn, Sicherheit, Ankunft und mehr"
+        "description": "Eigene Checklisten-Vorlagen erstellen. Ablegen-, Ankunft- und Sicherheitschecks. Fortschritt speichern und abschließen."
+      },
+      "seamanship": {
+        "title": "📚 Seemannschaft-Bibliothek",
+        "description": "Knoten-Anleitungen mit Schritt-für-Schritt-Bildern. Beaufort-Skala und Seegangsstufen. Seemännisches Glossar, Funkprotokoll und Flaggenalphabet. Manöver-Beschreibungen."
+      },
+      "weatherTides": {
+        "title": "🌤️ Wetter & Gezeiten",
+        "description": "Premium: Aktuelle Wetterdaten (Wind, Wellen, Temperatur). 3-Tage-Vorhersage. Gezeitenzeiten und Wasserstand. Automatische Aktualisierung."
       },
       "signalK": {
         "title": "📡 SignalK / NMEA Integration",
-        "description": "NEU: Verbindung zu Raymarine, B&G, Garmin und anderen Marinegeräten. Empfange GPS, SOG/COG, Wind, Tiefe und Wassertemperatur per WebSocket"
+        "description": "Verbindung zu Raymarine, B&G, Garmin und anderen Marinegeräten. Empfange GPS, SOG/COG, Wind, Tiefe und Wassertemperatur per WebSocket."
       },
       "offline": {
-        "title": "🌍 Offline & Cloud-Sync",
-        "description": "PWA-ready mit automatischer Cloud-Speicherung. Multi-Sprachen: 🇩🇪 Deutsch, 🇬🇧 English, 🇪🇸 Español, 🇫🇷 Français, 🇮🇹 Italiano, 🇧🇷 Português"
+        "title": "📴 Offline-Funktionalität",
+        "description": "App funktioniert auch ohne Internetverbindung. Track-Punkte werden lokal gespeichert. Automatische Synchronisation bei Reconnect. Offline-Indikator zeigt Verbindungsstatus. Mehrsprachig: DE, EN, ES, FR."
+      },
+      "pwa": {
+        "title": "📱 Installierbar als App",
+        "description": "Progressive Web App (PWA) auf deinem Startbildschirm installieren – natives App-Feeling ohne App Store."
       }
     },
     "perfectFor": {
       "title": "Perfekt für",
-      "hobbySkippers": "🧭 Hobbysegler und Skipper, die professionelle Dokumentation schätzen",
-      "sailingSchools": "⛵ Segelschulen für Ausbildungstörns und Training",
-      "charterCrews": "📋 Charter-Crews für Übergabeprotokolle",
+      "hobbySkippers": "🧭 Fahrtensegler & Blauwassersegler",
+      "sailingSchools": "⛵ Segelschulen für Ausbildungstörns",
+      "charterCrews": "📋 Charter-Skipper für Übergabeprotokolle",
       "regattaTeams": "🏁 Regatta-Teams für Wettkampf-Dokumentation",
       "motorboaters": "🚤 Motorbootfahrer für strukturierte Fahrtenbücher",
-      "bluewaterSailors": "🌊 Fahrtensegler & Blauwassersegler"
+      "bluewaterSailors": "🌊 Hobbysegler und Skipper"
     },
     "techStack": {
       "title": "Technische Details",
-      "description": "Fullstack Progressive Web App (PWA) entwickelt mit React, TypeScript, Leaflet Maps und Lovable Cloud (Supabase). Features: Echtzeit-GPS-Tracking mit Geolocation API, PDF-Generierung (pdf-lib), Realtime-Updates, RLS-gesicherte Datenbank, mehrsprachige i18n-Unterstützung, responsive Design mit Tailwind CSS."
+      "description": "Fullstack Progressive Web App (PWA) entwickelt mit React, TypeScript, Leaflet Maps und Lovable Cloud. Features: Echtzeit-GPS-Tracking, PDF-Generierung, Realtime-Updates, SignalK/NMEA-Integration, Weather API, Tidal API, mehrsprachige i18n-Unterstützung."
     },
     "cta": {
-      "title": "Bald verfügbar!",
-      "button": "Benachrichtigung erhalten",
-      "inDevelopment": "Diese App befindet sich derzeit in Entwicklung. Bleibe informiert über den Launch!"
+      "title": "Bereit zum Ablegen!",
+      "button": "Jetzt ausprobieren",
+      "inDevelopment": "Captain's Log ist als Beta verfügbar – teste die App kostenlos!"
     }
   },
   "contact": {
