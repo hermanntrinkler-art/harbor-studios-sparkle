@@ -176,7 +176,8 @@
     "status": "✅ Beta Available – Try it now!",
     "hero": {
       "title": "Captain's Log",
-      "subtitle": "Digital logbook for sailors – voyage documentation with GPS track, anchor watch, seamanship library and PDF export. Works offline and installable as PWA."
+      "subtitle": "Digital logbook for sailors – voyage documentation with GPS track, anchor watch, seamanship library and PDF export. Works offline and installable as PWA.",
+      "learnMore": "Learn More"
     },
     "whatIs": {
       "title": "What is Captain's Log?",

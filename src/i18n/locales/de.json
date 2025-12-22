@@ -176,7 +176,8 @@
     "status": "✅ Beta verfügbar – Jetzt testen!",
     "hero": {
       "title": "Captain's Log",
-      "subtitle": "Digitales Bordbuch für Segler – Törn-Dokumentation mit GPS-Track, Ankerwache, Seemannschaft-Bibliothek und PDF-Export. Offline-fähig und als PWA installierbar."
+      "subtitle": "Digitales Bordbuch für Segler – Törn-Dokumentation mit GPS-Track, Ankerwache, Seemannschaft-Bibliothek und PDF-Export. Offline-fähig und als PWA installierbar.",
+      "learnMore": "Mehr erfahren"
     },
     "whatIs": {
       "title": "Was ist Captain's Log?",

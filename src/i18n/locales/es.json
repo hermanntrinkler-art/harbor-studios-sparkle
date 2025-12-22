@@ -176,7 +176,8 @@
     "status": "✅ Beta disponible – ¡Pruébalo ahora!",
     "hero": {
       "title": "Captain's Log",
-      "subtitle": "Cuaderno de bitácora digital para navegantes – documentación de travesías con track GPS, vigilancia de ancla, biblioteca de marinería y exportación PDF. Funciona sin conexión e instalable como PWA."
+      "subtitle": "Cuaderno de bitácora digital para navegantes – documentación de travesías con track GPS, vigilancia de ancla, biblioteca de marinería y exportación PDF. Funciona sin conexión e instalable como PWA.",
+      "learnMore": "Más información"
     },
     "whatIs": {
       "title": "¿Qué es Captain's Log?",
