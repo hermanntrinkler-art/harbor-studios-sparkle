@@ -176,7 +176,8 @@
     "status": "✅ Bêta disponible – Essayez maintenant !",
     "hero": {
       "title": "Captain's Log",
-      "subtitle": "Journal de bord numérique pour navigateurs – documentation de voyage avec trace GPS, surveillance d'ancre, bibliothèque de matelotage et export PDF. Fonctionne hors ligne et installable comme PWA."
+      "subtitle": "Journal de bord numérique pour navigateurs – documentation de voyage avec trace GPS, surveillance d'ancre, bibliothèque de matelotage et export PDF. Fonctionne hors ligne et installable comme PWA.",
+      "learnMore": "En savoir plus"
     },
     "whatIs": {
       "title": "Qu'est-ce que Captain's Log ?",

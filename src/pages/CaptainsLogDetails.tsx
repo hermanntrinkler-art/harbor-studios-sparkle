@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Ship, CheckSquare, Radio, BookOpen, Cloud, Smartphone, ExternalLink } from "lucide-react";
+import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Ship, CheckSquare, Radio, BookOpen, Cloud, Smartphone, ExternalLink, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -94,7 +94,13 @@ const CaptainsLogDetails = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             {t('captainsLogDetails.hero.subtitle')}
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="#features">
+              <Button size="lg" variant="outline">
+                <Info className="w-5 h-5 mr-2" />
+                {t('captainsLogDetails.hero.learnMore')}
+              </Button>
+            </a>
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
               <Button size="lg">
                 <ExternalLink className="w-5 h-5 mr-2" />
@@ -122,7 +128,7 @@ const CaptainsLogDetails = () => {
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 px-4">
+      <section id="features" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
             {t('captainsLogDetails.features.title')}

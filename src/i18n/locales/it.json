@@ -139,7 +139,8 @@
     "status": "✅ Beta disponibile – Provalo ora!",
     "hero": {
       "title": "Captain's Log",
-      "subtitle": "Diario di bordo digitale per velisti – documentazione viaggi con traccia GPS, guardia all'ancora, biblioteca di marineria ed export PDF. Funziona offline e installabile come PWA."
+      "subtitle": "Diario di bordo digitale per velisti – documentazione viaggi con traccia GPS, guardia all'ancora, biblioteca di marineria ed export PDF. Funziona offline e installabile come PWA.",
+      "learnMore": "Scopri di più"
     },
     "whatIs": {
       "title": "Cos'è Captain's Log?",
