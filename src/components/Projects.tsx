@@ -15,7 +15,7 @@ const Projects = () => {
     {
       title: "Captain's Log",
       description: t('projects.captainsLog.description'),
-      link: "#",
+      link: "https://captainlog.pro/",
       detailPage: "/projects/captains-log",
       tags: ["Maritime", "GPS", "PWA", "Offline"],
       image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?q=80&w=2070&auto=format&fit=crop"
