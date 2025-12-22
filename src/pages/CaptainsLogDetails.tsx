@@ -256,6 +256,32 @@ const CaptainsLogDetails = () => {
           </p>
         </div>
       </section>
+
+      {/* Legal Links */}
+      <section className="py-8 px-4 border-t border-border/40">
+        <div className="max-w-2xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <Link 
+              to="/captains-log/imprint" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Impressum
+            </Link>
+            <Link 
+              to="/captains-log/privacy" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Datenschutz
+            </Link>
+            <Link 
+              to="/captains-log/data-deletion" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Datenlöschung
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
