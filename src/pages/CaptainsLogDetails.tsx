@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Ship, CheckSquare, Radio, BookOpen, Cloud, Smartphone, ExternalLink, Info } from "lucide-react";
+import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Ship, CheckSquare, Radio, BookOpen, Cloud, Smartphone, ExternalLink, Info, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -233,6 +233,27 @@ const CaptainsLogDetails = () => {
               {t('captainsLogDetails.cta.button')}
             </Button>
           </a>
+        </div>
+      </section>
+
+      {/* Support */}
+      <section className="py-12 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Mail className="w-5 h-5 text-muted-foreground" />
+            <span className="text-muted-foreground">
+              {t('captainsLogDetails.support.title')}
+            </span>
+          </div>
+          <a
+            href="mailto:support@harborstudios.app"
+            className="text-primary hover:underline text-lg font-medium"
+          >
+            support@harborstudios.app
+          </a>
+          <p className="text-sm text-muted-foreground mt-2">
+            {t('captainsLogDetails.support.description')}
+          </p>
         </div>
       </section>
     </div>

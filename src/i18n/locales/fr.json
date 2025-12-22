@@ -240,6 +240,10 @@
       "title": "Prêt à larguer les amarres !",
       "button": "Essayer maintenant",
       "inDevelopment": "Captain's Log est disponible en bêta – essayez l'appli gratuitement !"
+    },
+    "support": {
+      "title": "Questions, retours ou idées ?",
+      "description": "Nous accueillons les demandes de support, critiques et suggestions d'amélioration !"
     }
   },
   "contact": {
