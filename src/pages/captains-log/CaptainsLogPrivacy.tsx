@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Shield, Database, Cookie, Clock, UserCheck, Mail, Info, Globe, FileText, Lock } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import Footer from "@/components/Footer";
+import CaptainsLogFooter from "./CaptainsLogFooter";
 import { Link } from "react-router-dom";
 
 const CaptainsLogPrivacy = () => {
@@ -255,7 +255,7 @@ const CaptainsLogPrivacy = () => {
         </div>
       </div>
 
-      <Footer />
+      <CaptainsLogFooter />
     </div>
   );
 };

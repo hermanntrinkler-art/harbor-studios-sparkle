@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Mail, Globe, FileText, Scale, Shield, User, Smartphone, AlertTriangle, RefreshCw, Gavel } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import Footer from "@/components/Footer";
+import CaptainsLogFooter from "./CaptainsLogFooter";
 import { Link } from "react-router-dom";
 
 const CaptainsLogTerms = () => {
@@ -239,7 +239,7 @@ const CaptainsLogTerms = () => {
         </div>
       </div>
 
-      <Footer />
+      <CaptainsLogFooter />
     </div>
   );
 };
