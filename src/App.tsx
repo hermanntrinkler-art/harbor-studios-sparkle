@@ -21,6 +21,7 @@ import RecipePixieGuide from "./pages/support/RecipePixieGuide";
 import CaptainsLogImprint from "./pages/captains-log/CaptainsLogImprint";
 import CaptainsLogPrivacy from "./pages/captains-log/CaptainsLogPrivacy";
 import CaptainsLogDataDeletion from "./pages/captains-log/CaptainsLogDataDeletion";
+import CaptainsLogTerms from "./pages/captains-log/CaptainsLogTerms";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
         <Route path="/captains-log/imprint" element={<CaptainsLogImprint />} />
         <Route path="/captains-log/privacy" element={<CaptainsLogPrivacy />} />
         <Route path="/captains-log/data-deletion" element={<CaptainsLogDataDeletion />} />
+        <Route path="/captains-log/terms" element={<CaptainsLogTerms />} />
         <Route path="/projects/social-post-pro" element={<SocialPostProDetails />} />
         <Route path="/projects/ocean-mind" element={<OceanMindDetails />} />
         <Route path="/projects/storypixie" element={<StoryPixieDetails />} />
