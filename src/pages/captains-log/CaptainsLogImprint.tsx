@@ -135,14 +135,17 @@ const CaptainsLogImprint = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5 text-primary" />
-                7. Datenschutz
+                7. Datenschutz & Rechtliches
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p>Informationen zur Verarbeitung personenbezogener Daten findest du in unserer Datenschutzerklärung:</p>
+              <p>Informationen zur Verarbeitung personenbezogener Daten sowie zu unseren rechtlichen Bedingungen findest du hier:</p>
               <div className="flex flex-col gap-2">
                 <Link to="/captains-log/privacy" className="text-primary hover:underline flex items-center gap-2">
                   👉 Datenschutzerklärung
+                </Link>
+                <Link to="/captains-log/terms" className="text-primary hover:underline flex items-center gap-2">
+                  👉 Nutzungsbedingungen
                 </Link>
                 <Link to="/captains-log/data-deletion" className="text-primary hover:underline flex items-center gap-2">
                   👉 Informationen zur Datenlöschung
