@@ -230,6 +230,28 @@ const CaptainsLogPrivacy = () => {
               </Link>
             </CardContent>
           </Card>
+
+          {/* Legal Links */}
+          <div className="flex flex-wrap justify-center gap-6 text-sm pt-8 border-t border-border/40">
+            <Link 
+              to="/captains-log/imprint" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Impressum
+            </Link>
+            <Link 
+              to="/captains-log/terms" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Nutzungsbedingungen
+            </Link>
+            <Link 
+              to="/captains-log/data-deletion" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Datenlöschung
+            </Link>
+          </div>
         </div>
       </div>
 
