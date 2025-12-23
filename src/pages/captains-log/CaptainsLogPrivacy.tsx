@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ArrowLeft, Shield, Database, Cookie, Clock, UserCheck, Mail, Info, Globe } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowLeft, Shield, Database, Cookie, Clock, UserCheck, Mail, Info, Globe, FileText, Lock } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -24,8 +23,7 @@ const CaptainsLogPrivacy = () => {
 
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Datenschutzerklärung</h1>
-          <p className="text-muted-foreground text-lg">Gültig für: Captain's Log – eine App von Harbor Studios</p>
+          <h1 className="text-4xl font-bold mb-4">Datenschutzerklärung – Captain's Log</h1>
         </div>
 
         <div className="space-y-6">
@@ -40,7 +38,8 @@ const CaptainsLogPrivacy = () => {
             <CardContent className="space-y-3">
               <p className="font-semibold">Harbor Studios</p>
               <p>Calle Calima Sector 1, Riosol 167</p>
-              <p>35627 Costa Calma, Spanien</p>
+              <p>35627 Costa Calma</p>
+              <p>Spanien</p>
               <div className="flex items-center gap-2 mt-4">
                 <Mail className="h-4 w-4 text-muted-foreground" />
                 <a href="mailto:support@harborstudios.app" className="text-primary hover:underline">
@@ -66,13 +65,11 @@ const CaptainsLogPrivacy = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Der Schutz deiner personenbezogenen Daten ist uns wichtig. Diese Datenschutzerklärung 
-                erläutert, welche Daten im Zusammenhang mit der Nutzung unserer App Captain's Log 
-                erhoben, gespeichert und verwendet werden.
+                Der Schutz deiner personenbezogenen Daten ist uns wichtig.
+                Diese Datenschutzerklärung informiert dich darüber, welche personenbezogenen Daten im Zusammenhang mit der Nutzung unserer App Captain's Log erhoben, verarbeitet und gespeichert werden.
               </p>
               <p className="text-muted-foreground">
-                Wir behandeln deine Daten vertraulich und gemäß den geltenden Datenschutzvorschriften, 
-                insbesondere der DSGVO und des TTDSG.
+                Wir behandeln deine Daten vertraulich und entsprechend den geltenden gesetzlichen Datenschutzvorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO) sowie des TTDSG.
               </p>
             </CardContent>
           </Card>
@@ -89,30 +86,36 @@ const CaptainsLogPrivacy = () => {
               <div>
                 <h4 className="font-semibold mb-3">a) Bei Nutzung der App</h4>
                 <p className="text-muted-foreground mb-4">
-                  Captain's Log verarbeitet nur Daten, die du selbst bereitstellst oder aktiv erzeugst. 
-                  Dazu gehören insbesondere:
+                  Captain's Log verarbeitet ausschließlich Daten, die du selbst bereitstellst oder aktiv erzeugst. Dazu gehören insbesondere:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                  <li>deine E-Mail-Adresse (zur Anmeldung / Authentifizierung)</li>
-                  <li>Logbucheinträge und Notizen, die du selbst erstellst</li>
-                  <li>optional Fotos, die du über die Kamera oder Galerie hochlädst</li>
-                  <li>Standortdaten und Wetterdaten für deine Fahrten</li>
+                  <li>deine E-Mail-Adresse (zur Anmeldung und Authentifizierung)</li>
+                  <li>Logbucheinträge, Notizen und Fahrtdaten, die du selbst erstellst</li>
+                  <li>optionale Fotos, die du über die Kamera oder aus der Galerie hochlädst</li>
+                  <li>Standortdaten (GPS) sowie Wetterinformationen, die zur automatischen Erfassung, Darstellung und Dokumentation deiner Fahrten im Logbuch verwendet werden</li>
                 </ul>
-                <p className="text-muted-foreground mb-4">
-                  Diese Daten werden ausschließlich verwendet, um die Funktionalität der App 
-                  bereitzustellen: Speichern, Verwalten und Anzeigen deiner eigenen Logbucheinträge.
-                </p>
                 <p className="text-muted-foreground">
-                  Die Speicherung und Verwaltung der Daten erfolgt über Supabase, einen europäischen 
-                  Cloud-Dienstleister, der Daten verschlüsselt überträgt und speichert (TLS & AES-256). 
-                  Es erfolgt keine Weitergabe an Dritte zu Werbe-, Analyse- oder sonstigen Zwecken.
+                  Diese Daten werden ausschließlich genutzt, um die Kernfunktionen der App bereitzustellen, insbesondere zum Speichern, Verwalten und Anzeigen deiner eigenen Logbucheinträge.
                 </p>
               </div>
+
               <div>
-                <h4 className="font-semibold mb-3">b) Keine Weitergabe an Dritte</h4>
+                <h4 className="font-semibold mb-3">b) Speicherung und Auftragsverarbeitung</h4>
+                <p className="text-muted-foreground mb-2">
+                  Die Speicherung und Verwaltung der Daten erfolgt über Supabase, einen europäischen Cloud-Dienstleister, der als Auftragsverarbeiter gemäß Art. 28 DSGVO eingesetzt wird.
+                </p>
+                <p className="text-muted-foreground mb-2">
+                  Die Datenübertragung und -speicherung erfolgt verschlüsselt (TLS bei der Übertragung, AES-256 bei der Speicherung).
+                </p>
                 <p className="text-muted-foreground">
-                  Personenbezogene Daten werden nicht verkauft oder an andere Unternehmen weitergegeben, 
-                  es sei denn, es besteht eine gesetzliche Verpflichtung.
+                  Es findet keine Weitergabe personenbezogener Daten an Dritte zu Werbe-, Analyse- oder sonstigen kommerziellen Zwecken statt.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-3">c) Keine Weitergabe an Dritte</h4>
+                <p className="text-muted-foreground">
+                  Deine personenbezogenen Daten werden nicht verkauft, vermietet oder an andere Unternehmen weitergegeben, es sei denn, es besteht eine gesetzliche Verpflichtung zur Herausgabe.
                 </p>
               </div>
             </CardContent>
@@ -126,11 +129,12 @@ const CaptainsLogPrivacy = () => {
                 4. Cookies und Tracking
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Captain's Log verwendet keine Cookies, Analyse- oder Tracking-Dienste. 
-                Die Kommunikation mit Supabase erfolgt ausschließlich über verschlüsselte 
-                HTTPS-Verbindungen.
+                Captain's Log verwendet keine Cookies, keine Analyse-Tools und keine Tracking- oder Werbedienste.
+              </p>
+              <p className="text-muted-foreground">
+                Die gesamte Kommunikation zwischen App und Server erfolgt ausschließlich über verschlüsselte HTTPS-Verbindungen.
               </p>
             </CardContent>
           </Card>
@@ -145,16 +149,16 @@ const CaptainsLogPrivacy = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Alle deine Inhalte (E-Mail, Logbucheinträge, Fotos) werden sicher in der 
-                Supabase-Datenbank gespeichert. Du kannst Einträge und Fotos jederzeit selbst löschen.
+                Alle personenbezogenen Daten (z. B. E-Mail-Adresse, Logbucheinträge, Fotos, Fahrtdaten) werden sicher in der Supabase-Datenbank gespeichert.
               </p>
               <p className="text-muted-foreground">
-                Du kannst außerdem dein gesamtes Konto löschen – direkt in der App oder über unsere{" "}
-                <Link to="/captains-log/data-deletion" className="text-primary hover:underline">
-                  Datenlöschungsseite
-                </Link>
-                . Nach der Löschung werden alle personenbezogenen Daten und Inhalte innerhalb 
-                von 7 Tagen vollständig entfernt.
+                Du kannst einzelne Einträge und Fotos jederzeit selbst innerhalb der App löschen.
+              </p>
+              <p className="text-muted-foreground">
+                Zusätzlich hast du die Möglichkeit, dein gesamtes Benutzerkonto zu löschen – entweder direkt in der App oder über unsere separate Seite zur Datenlöschung.
+              </p>
+              <p className="text-muted-foreground">
+                Nach der Löschung werden alle personenbezogenen Daten und Inhalte innerhalb von spätestens 7 Tagen vollständig und unwiderruflich entfernt, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
               </p>
             </CardContent>
           </Card>
@@ -170,53 +174,60 @@ const CaptainsLogPrivacy = () => {
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">Du hast jederzeit das Recht:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                <li>Auskunft über gespeicherte Daten zu erhalten</li>
-                <li>Berichtigung unrichtiger Daten zu verlangen</li>
-                <li>Löschung oder Einschränkung der Verarbeitung zu fordern</li>
-                <li>der Verarbeitung zu widersprechen</li>
-                <li>sowie eine Einwilligung jederzeit zu widerrufen</li>
+                <li>Auskunft über deine gespeicherten personenbezogenen Daten zu erhalten</li>
+                <li>die Berichtigung unrichtiger oder unvollständiger Daten zu verlangen</li>
+                <li>die Löschung oder Einschränkung der Verarbeitung deiner Daten zu fordern</li>
+                <li>der Verarbeitung deiner Daten zu widersprechen</li>
+                <li>eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen</li>
               </ul>
-              <Alert className="mt-4">
-                <Mail className="h-4 w-4" />
-                <AlertDescription>
-                  Anfragen bitte an:{" "}
-                  <a href="mailto:support@harborstudios.app" className="text-primary hover:underline font-medium">
-                    support@harborstudios.app
-                  </a>
-                </AlertDescription>
-              </Alert>
+              <p className="text-muted-foreground mt-4">
+                Anfragen zu deinen Rechten kannst du jederzeit per E-Mail richten an:
+              </p>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-muted-foreground" />
+                <a href="mailto:support@harborstudios.app" className="text-primary hover:underline">
+                  support@harborstudios.app
+                </a>
+              </div>
             </CardContent>
           </Card>
 
-          {/* 7. Änderungen */}
+          {/* 7. Änderungen dieser Datenschutzerklärung */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Info className="h-5 w-5 text-primary" />
+                <FileText className="h-5 w-5 text-primary" />
                 7. Änderungen dieser Datenschutzerklärung
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Wir behalten uns das Recht vor, diese Erklärung jederzeit anzupassen.
+                Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an rechtliche Anforderungen oder Änderungen der App-Funktionalität anzupassen.
+              </p>
+              <p className="text-muted-foreground">
+                Die jeweils aktuelle Version ist jederzeit innerhalb der App und auf unserer Website verfügbar.
               </p>
             </CardContent>
           </Card>
 
-          {/* 8. Datenlöschung CTA */}
-          <Card className="bg-primary/5 border-primary/20">
+          {/* 8. Datenlöschung */}
+          <Card>
             <CardHeader>
-              <CardTitle>8. Datenlöschung</CardTitle>
-              <CardDescription>
-                Informationen zur Löschung deiner Daten findest du auf unserer Seite zur Datenlöschung.
-              </CardDescription>
+              <CardTitle className="flex items-center gap-2">
+                <Lock className="h-5 w-5 text-primary" />
+                8. Datenlöschung
+              </CardTitle>
             </CardHeader>
-            <CardContent>
-              <Button asChild variant="default" size="lg">
-                <Link to="/captains-log/data-deletion">
-                  Zur Datenlöschung
-                </Link>
-              </Button>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                Informationen zur Löschung deines Benutzerkontos und deiner personenbezogenen Daten findest du auf unserer separaten Seite zur Datenlöschung.
+                Dort wird transparent beschrieben, welche Daten gelöscht werden und wie du eine Löschanfrage stellen kannst.
+              </p>
+              <Link to="/captains-log/data-deletion">
+                <Button className="mt-4">
+                  Zur Datenlöschungsseite
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>
