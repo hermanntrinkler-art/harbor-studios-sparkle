@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Mail, Globe, MapPin, FileText, Link as LinkIcon, Scale, Shield } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import Footer from "@/components/Footer";
+import CaptainsLogFooter from "./CaptainsLogFooter";
 import { Link } from "react-router-dom";
 
 const CaptainsLogImprint = () => {
@@ -156,7 +156,7 @@ const CaptainsLogImprint = () => {
         </div>
       </div>
 
-      <Footer />
+      <CaptainsLogFooter />
     </div>
   );
 };

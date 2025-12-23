@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { ArrowLeft, Mail, Smartphone, Clock, Shield, Info, CheckCircle } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import Footer from "@/components/Footer";
+import CaptainsLogFooter from "./CaptainsLogFooter";
 import { Link } from "react-router-dom";
 
 const CaptainsLogDataDeletion = () => {
@@ -163,7 +163,7 @@ const CaptainsLogDataDeletion = () => {
         </div>
       </div>
 
-      <Footer />
+      <CaptainsLogFooter />
     </div>
   );
 };
