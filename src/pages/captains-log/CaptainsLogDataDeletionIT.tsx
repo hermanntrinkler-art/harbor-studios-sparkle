@@ -20,9 +20,9 @@ const languages = [
   { code: "pt", label: "🇧🇷 Português", path: "/captains-log/data-deletion/pt" },
 ];
 
-const CaptainsLogDataDeletion = () => {
+const CaptainsLogDataDeletionIT = () => {
   const navigate = useNavigate();
-  const currentLang = languages.find(l => l.code === "de");
+  const currentLang = languages.find(l => l.code === "it");
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-background/95">
@@ -34,7 +34,7 @@ const CaptainsLogDataDeletion = () => {
           onClick={() => window.history.back()}
         >
           <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-          Zurück
+          Indietro
         </Button>
         
         <DropdownMenu>
@@ -49,7 +49,7 @@ const CaptainsLogDataDeletion = () => {
               <DropdownMenuItem
                 key={lang.code}
                 onClick={() => navigate(lang.path)}
-                className={lang.code === "de" ? "bg-accent" : ""}
+                className={lang.code === "it" ? "bg-accent" : ""}
               >
                 {lang.label}
               </DropdownMenuItem>
@@ -61,128 +61,128 @@ const CaptainsLogDataDeletion = () => {
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Datenlöschung</h1>
-          <p className="text-muted-foreground text-lg">Captain Log – So löschst du deine Daten</p>
+          <h1 className="text-4xl font-bold mb-4">Cancellazione Dati</h1>
+          <p className="text-muted-foreground text-lg">Captain Log – Come eliminare i tuoi dati</p>
         </div>
 
         <Alert className="mb-8">
           <Info className="h-4 w-4" />
           <AlertDescription>
-            Du hast das Recht, jederzeit die Löschung deiner personenbezogenen Daten zu verlangen. Hier erfährst du, wie das funktioniert.
+            Hai il diritto di richiedere la cancellazione dei tuoi dati personali in qualsiasi momento. Ecco come funziona.
           </AlertDescription>
         </Alert>
 
         <div className="space-y-6">
-          {/* Option 1: In der App */}
+          {/* Option 1: In the App */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Smartphone className="h-5 w-5 text-primary" />
-                Option 1: Daten in der App löschen
+                Opzione 1: Elimina i dati nell'app
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Du kannst deine Daten direkt in der Captain Log App löschen:
+                Puoi eliminare i tuoi dati direttamente nell'app Captain Log:
               </p>
               <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                <li>Öffne die Captain Log App</li>
-                <li>Gehe zu <strong>Einstellungen</strong></li>
-                <li>Wähle <strong>Account & Daten</strong></li>
-                <li>Tippe auf <strong>Alle Daten löschen</strong> oder <strong>Account löschen</strong></li>
-                <li>Bestätige die Löschung</li>
+                <li>Apri l'app Captain Log</li>
+                <li>Vai su <strong>Impostazioni</strong></li>
+                <li>Seleziona <strong>Account e Dati</strong></li>
+                <li>Tocca <strong>Elimina tutti i dati</strong> o <strong>Elimina account</strong></li>
+                <li>Conferma l'eliminazione</li>
               </ol>
               <Alert>
                 <CheckCircle className="h-4 w-4" />
                 <AlertDescription>
-                  Diese Aktion ist sofort wirksam und kann nicht rückgängig gemacht werden.
+                  Questa azione ha effetto immediato e non può essere annullata.
                 </AlertDescription>
               </Alert>
             </CardContent>
           </Card>
 
-          {/* Option 2: Per E-Mail */}
+          {/* Option 2: Via Email */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                Option 2: Löschung per E-Mail beantragen
+                Opzione 2: Richiedi cancellazione via email
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Du kannst auch eine E-Mail an uns senden, um die Löschung deiner Daten zu beantragen:
+                Puoi anche inviarci un'email per richiedere la cancellazione dei tuoi dati:
               </p>
               <div className="bg-muted/50 p-4 rounded-lg">
-                <p className="font-semibold mb-2">Sende eine E-Mail an:</p>
-                <a href="mailto:support@harborstudios.app?subject=Datenlöschung%20Captain%20Log" className="text-primary hover:underline text-lg">
+                <p className="font-semibold mb-2">Invia un'email a:</p>
+                <a href="mailto:support@harborstudios.app?subject=Cancellazione%20Dati%20Captain%20Log" className="text-primary hover:underline text-lg">
                   support@harborstudios.app
                 </a>
               </div>
-              <p className="text-muted-foreground">Bitte gib in deiner E-Mail folgende Informationen an:</p>
+              <p className="text-muted-foreground">Per favore includi le seguenti informazioni nella tua email:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li>Betreff: "Datenlöschung Captain Log"</li>
-                <li>Die E-Mail-Adresse deines Accounts</li>
-                <li>Optional: Grund für die Löschung (hilft uns, unseren Service zu verbessern)</li>
+                <li>Oggetto: "Cancellazione Dati Captain Log"</li>
+                <li>L'indirizzo email del tuo account</li>
+                <li>Opzionale: Motivo della cancellazione (ci aiuta a migliorare il nostro servizio)</li>
               </ul>
             </CardContent>
           </Card>
 
-          {/* Zeitrahmen */}
+          {/* Processing Time */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Clock className="h-5 w-5 text-primary" />
-                Bearbeitungszeitraum
+                Tempo di Elaborazione
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="text-muted-foreground">
-                <strong>Bei Löschung in der App:</strong> Sofortige Wirkung
+                <strong>Eliminazione nell'app:</strong> Effetto immediato
               </p>
               <p className="text-muted-foreground">
-                <strong>Bei Löschung per E-Mail:</strong> Wir bearbeiten deine Anfrage innerhalb von 7 Tagen und informieren dich über den Abschluss. Alle personenbezogenen Daten werden vollständig entfernt.
+                <strong>Eliminazione via email:</strong> Elaboreremo la tua richiesta entro 7 giorni e ti informeremo al completamento. Tutti i dati personali saranno completamente rimossi.
               </p>
             </CardContent>
           </Card>
 
-          {/* Was wird gelöscht */}
+          {/* What gets deleted */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-primary" />
-                Was wird gelöscht?
+                Cosa viene eliminato?
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="text-muted-foreground">Bei einer vollständigen Datenlöschung werden folgende Daten entfernt:</p>
+              <p className="text-muted-foreground">Una cancellazione completa dei dati rimuove le seguenti informazioni:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li>Alle Logbucheinträge</li>
-                <li>Bootsinformationen</li>
-                <li>Crew-Daten</li>
-                <li>Einstellungen und Präferenzen</li>
-                <li>Account-Informationen (bei Account-Löschung)</li>
+                <li>Tutte le voci del diario di bordo</li>
+                <li>Informazioni sulla barca</li>
+                <li>Dati dell'equipaggio</li>
+                <li>Impostazioni e preferenze</li>
+                <li>Informazioni dell'account (quando si elimina l'account)</li>
               </ul>
               <Alert className="mt-4">
                 <Info className="h-4 w-4" />
                 <AlertDescription>
-                  Anonymisierte, aggregierte Nutzungsstatistiken können für Analysezwecke aufbewahrt werden, enthalten jedoch keine personenbezogenen Daten.
+                  Le statistiche di utilizzo anonimizzate e aggregate possono essere conservate per scopi di analisi, ma non contengono dati personali.
                 </AlertDescription>
               </Alert>
             </CardContent>
           </Card>
 
-          {/* Kontakt */}
+          {/* Contact */}
           <Card className="bg-primary/5 border-primary/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                Fragen?
+                Domande?
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Bei Fragen zur Datenlöschung oder zum Datenschutz stehen wir dir gerne zur Verfügung:
+                Se hai domande sulla cancellazione dei dati o sulla privacy, siamo qui per aiutarti:
               </p>
               <a href="mailto:support@harborstudios.app" className="text-primary hover:underline flex items-center gap-2 text-lg">
                 <Mail className="h-4 w-4" />
@@ -190,8 +190,8 @@ const CaptainsLogDataDeletion = () => {
               </a>
               <div className="pt-4">
                 <Button asChild variant="outline">
-                  <Link to="/captains-log/privacy">
-                    Zur Datenschutzerklärung
+                  <Link to="/captains-log/privacy/it">
+                    Vedi Informativa sulla Privacy
                   </Link>
                 </Button>
               </div>
@@ -205,4 +205,4 @@ const CaptainsLogDataDeletion = () => {
   );
 };
 
-export default CaptainsLogDataDeletion;
+export default CaptainsLogDataDeletionIT;
