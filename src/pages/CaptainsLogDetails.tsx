@@ -1,72 +1,118 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Anchor, Navigation, Map, Wind, FileText, Bell, Globe, Ship, CheckSquare, Radio, BookOpen, Cloud, Smartphone, ExternalLink, Info, Mail } from "lucide-react";
+import { ArrowLeft, Anchor, Navigation, Map, FileText, Bell, Globe, Ship, CheckSquare, BookOpen, Cloud, Smartphone, ExternalLink, Mail, Shield, Settings, Compass, Download } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const CaptainsLogDetails = () => {
-  const { t } = useTranslation();
-
   const features = [
     {
-      icon: Anchor,
-      title: t('captainsLogDetails.features.voyageManagement.title'),
-      description: t('captainsLogDetails.features.voyageManagement.description')
+      emoji: "📔",
+      title: "Digitales Logbuch & Törnverwaltung",
+      items: [
+        "Anlegen und Verwalten kompletter Törns",
+        "Automatische Erfassung von Start, Ziel, Dauer und Strecke",
+        "Protokollierung von Manövern, Kursänderungen und Ereignissen",
+        "Freie Notizen zu jedem Zeitpunkt",
+        "Übersichtliche Statistiken zu Distanz, Zeit und Nutzung"
+      ]
     },
     {
-      icon: Bell,
-      title: t('captainsLogDetails.features.anchorWatch.title'),
-      description: t('captainsLogDetails.features.anchorWatch.description')
+      emoji: "⚓",
+      title: "GPS- & Positionsfunktionen",
+      items: [
+        "Automatische Positionsaufzeichnung während der Fahrt",
+        "Erkennung von Ankern, Manövern und Stopps",
+        "Dynamischer Tiefgang (z. B. bei Schwenkkielbooten)",
+        "Optionaler Import über Signal K (Bordnetz)"
+      ]
     },
     {
-      icon: Ship,
-      title: t('captainsLogDetails.features.boatProfile.title'),
-      description: t('captainsLogDetails.features.boatProfile.description')
+      emoji: "🧭",
+      title: "Ankerwache & Sicherheit",
+      items: [
+        "Setzen eines Ankerpunkts mit Schwojkreis",
+        "Permanente Überwachung der Position",
+        "Alarm bei Positionsabweichung",
+        "Offline-fähig – funktioniert auch ohne Internetverbindung"
+      ]
     },
     {
-      icon: CheckSquare,
-      title: t('captainsLogDetails.features.checklists.title'),
-      description: t('captainsLogDetails.features.checklists.description')
+      emoji: "🧰",
+      title: "Wartung & Bootsdaten",
+      items: [
+        "Verwaltung von Bootsdaten (Maße, Motor, Segel, Tanks)",
+        "Wartungspläne mit Intervallen (Zeit oder Betriebsstunden)",
+        "Historie aller durchgeführten Arbeiten",
+        "Automatische Berechnung von Betriebsstunden",
+        "Übersichtlicher Wartungsstatus (OK / fällig / überfällig)"
+      ]
     },
     {
-      icon: BookOpen,
-      title: t('captainsLogDetails.features.seamanship.title'),
-      description: t('captainsLogDetails.features.seamanship.description'),
-      isNew: true
+      emoji: "📋",
+      title: "Checklisten & Abläufe",
+      items: [
+        "Vordefinierte Checklisten (Ablegen, Ankern, Nachtfahrt usw.)",
+        "Eigene Checklisten anlegen",
+        "Fortschritt pro Durchgang sichtbar",
+        "Ideal für Crew-Wechsel oder wiederkehrende Abläufe"
+      ]
     },
     {
-      icon: Cloud,
-      title: t('captainsLogDetails.features.weatherTides.title'),
-      description: t('captainsLogDetails.features.weatherTides.description'),
+      emoji: "📚",
+      title: "Wissensbereich",
+      items: [
+        "Nautisches Lexikon",
+        "Knoten- und Manöverübersichten",
+        "Funk- & Notfallprozeduren (Mayday, Pan-Pan, Sécurité)",
+        "Internationales Flaggenalphabet",
+        "Integrierte Suchfunktion"
+      ]
+    },
+    {
+      emoji: "🗺️",
+      title: "Export & Dokumentation",
+      items: [
+        "PDF-Export vollständiger Logbücher",
+        "GPX- und KML-Export für Navigationssoftware",
+        "Vollständige Datensicherung und Wiederherstellung"
+      ]
+    },
+    {
+      emoji: "🔒",
+      title: "Sicherheit & Datenschutz",
+      items: [
+        "Persönliche Daten bleiben privat",
+        "Keine Weitergabe an Dritte",
+        "Volle Kontrolle über Löschung und Export",
+        "Revisionssichere Speicherung der Logdaten",
+        "DSGVO-konforme Verarbeitung"
+      ]
+    },
+    {
+      emoji: "⚙️",
+      title: "Technik & Plattform",
+      items: [
+        "Progressive Web App (PWA)",
+        "Läuft auf Smartphone, Tablet und Desktop",
+        "Offline nutzbar",
+        "Synchronisation bei bestehender Verbindung",
+        "Optional: Signal-K-Anbindung für Borddaten"
+      ]
+    },
+    {
+      emoji: "💎",
+      title: "Premium-Funktionen",
+      items: [
+        "Signal-K-Integration",
+        "Erweiterte Wartungsfunktionen",
+        "Wetter- & Gezeitendaten",
+        "Eigene Checklisten",
+        "Zukünftige Premium-Features inklusive"
+      ],
       isPremium: true
-    },
-    {
-      icon: Radio,
-      title: t('captainsLogDetails.features.signalK.title'),
-      description: t('captainsLogDetails.features.signalK.description'),
-      isNew: true
-    },
-    {
-      icon: Globe,
-      title: t('captainsLogDetails.features.offline.title'),
-      description: t('captainsLogDetails.features.offline.description')
-    },
-    {
-      icon: Smartphone,
-      title: t('captainsLogDetails.features.pwa.title'),
-      description: t('captainsLogDetails.features.pwa.description')
     }
-  ];
-
-  const perfectFor = [
-    { text: t('captainsLogDetails.perfectFor.hobbySkippers') },
-    { text: t('captainsLogDetails.perfectFor.sailingSchools') },
-    { text: t('captainsLogDetails.perfectFor.charterCrews') },
-    { text: t('captainsLogDetails.perfectFor.regattaTeams') },
-    { text: t('captainsLogDetails.perfectFor.motorboaters') },
-    { text: t('captainsLogDetails.perfectFor.bluewaterSailors') }
   ];
 
   return (
@@ -76,7 +122,7 @@ const CaptainsLogDetails = () => {
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
             <ArrowLeft className="w-5 h-5" />
-            <span className="font-medium">{t('captainsLogDetails.backHome')}</span>
+            <span className="font-medium">Zurück</span>
           </Link>
           <LanguageSwitcher />
         </div>
@@ -86,101 +132,72 @@ const CaptainsLogDetails = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Badge variant="secondary" className="mb-4 text-lg px-4 py-2 bg-green-500/20 text-green-600 border-green-500/30">
-            {t('captainsLogDetails.status')}
+            Live
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            {t('captainsLogDetails.hero.title')} ⚓️
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+            Captain's Log ⚓️
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            {t('captainsLogDetails.hero.subtitle')}
+          <p className="text-xl md:text-2xl text-primary font-semibold mb-4">
+            Dein digitales Logbuch für echte Segler
+          </p>
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            Captain's Log ist eine moderne, offlinefähige Logbuch-App für Seglerinnen und Segler, 
+            die ihr Boot, ihre Törns und ihre Daten zuverlässig dokumentieren möchten – ohne unnötige Komplexität.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="#features">
               <Button size="lg" variant="outline">
-                <Info className="w-5 h-5 mr-2" />
-                {t('captainsLogDetails.hero.learnMore')}
+                🚀 Zentrale Funktionen
               </Button>
             </a>
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
               <Button size="lg">
                 <ExternalLink className="w-5 h-5 mr-2" />
-                {t('captainsLogDetails.cta.button')}
+                Zur App
               </Button>
             </a>
           </div>
         </div>
       </section>
 
-      {/* What is Captain's Log */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <Card className="border-2">
-            <CardHeader>
-              <CardTitle className="text-3xl">{t('captainsLogDetails.whatIs.title')}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {t('captainsLogDetails.whatIs.description')}
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* Features Grid */}
-      <section id="features" className="py-20 px-4">
+      <section id="features" className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            {t('captainsLogDetails.features.title')}
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
+            🚀 Zentrale Funktionen
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12">
-            {t('captainsLogDetails.features.subtitle')}
+            Alles was du für dein digitales Bordbuch brauchst
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <Card 
                 key={index} 
-                className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg"
+                className={`border-2 hover:border-primary transition-all duration-300 hover:shadow-lg ${
+                  feature.isPremium ? 'border-amber-500/50 bg-gradient-to-br from-amber-500/5 to-transparent' : ''
+                }`}
               >
                 <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10">
-                      <feature.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <CardTitle className="text-xl">{feature.title}</CardTitle>
-                        {feature.isNew && (
-                          <Badge variant="default" className="bg-blue-500 text-white text-xs">NEU</Badge>
-                        )}
-                        {feature.isPremium && (
-                          <Badge variant="default" className="bg-amber-500 text-white text-xs">Premium</Badge>
-                        )}
-                      </div>
-                      <CardDescription className="text-base">
-                        {feature.description}
-                      </CardDescription>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl">{feature.emoji}</span>
+                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    {feature.isPremium && (
+                      <Badge variant="default" className="bg-amber-500 text-white text-xs ml-auto">
+                        Premium
+                      </Badge>
+                    )}
                   </div>
                 </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Perfect For */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
-            {t('captainsLogDetails.perfectFor.title')}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {perfectFor.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-6">
-                  <p className="text-lg">{item.text}</p>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {feature.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-2 text-muted-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}
@@ -188,61 +205,39 @@ const CaptainsLogDetails = () => {
         </div>
       </section>
 
-      {/* Tech Stack */}
+      {/* Kurz gesagt */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <Card className="border-2 bg-card">
+          <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-transparent">
             <CardHeader>
-              <CardTitle className="text-3xl">{t('captainsLogDetails.techStack.title')}</CardTitle>
+              <CardTitle className="text-3xl text-center">Kurz gesagt</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-lg text-muted-foreground mb-4">
-                {t('captainsLogDetails.techStack.description')}
+            <CardContent className="text-center">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Captain's Log ist kein Navigationssystem, sondern dein digitales Bordbuch.
+                <br />
+                <span className="text-foreground font-medium">
+                  Es denkt mit, dokumentiert zuverlässig und hilft dir, den Überblick zu behalten – ohne dich zu bevormunden.
+                </span>
               </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">React</Badge>
-                <Badge variant="secondary">TypeScript</Badge>
-                <Badge variant="secondary">Leaflet Maps</Badge>
-                <Badge variant="secondary">Lovable Cloud</Badge>
-                <Badge variant="secondary">PWA</Badge>
-                <Badge variant="secondary">GPS API</Badge>
-                <Badge variant="secondary">PDF Generation</Badge>
-                <Badge variant="secondary">i18n</Badge>
-                <Badge variant="secondary">SignalK</Badge>
-                <Badge variant="secondary">WebSocket</Badge>
-                <Badge variant="secondary">Tidal API</Badge>
-                <Badge variant="secondary">Weather API</Badge>
-              </div>
+              <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
+                <Button size="lg">
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  Jetzt Captain's Log entdecken
+                </Button>
+              </a>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-foreground">
-            {t('captainsLogDetails.cta.title')}
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            {t('captainsLogDetails.cta.inDevelopment')}
-          </p>
-          <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
-            <Button size="lg">
-              <ExternalLink className="w-5 h-5 mr-2" />
-              {t('captainsLogDetails.cta.button')}
-            </Button>
-          </a>
-        </div>
-      </section>
-
       {/* Support */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-muted/30">
         <div className="max-w-2xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Mail className="w-5 h-5 text-muted-foreground" />
             <span className="text-muted-foreground">
-              {t('captainsLogDetails.support.title')}
+              Fragen oder Feedback?
             </span>
           </div>
           <a
@@ -252,7 +247,7 @@ const CaptainsLogDetails = () => {
             support@harborstudios.app
           </a>
           <p className="text-sm text-muted-foreground mt-2">
-            {t('captainsLogDetails.support.description')}
+            Wir freuen uns auf deine Nachricht!
           </p>
         </div>
       </section>
