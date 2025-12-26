@@ -24,6 +24,11 @@ import Terms from "./pages/Terms";
 import Support from "./pages/Support";
 import RecipePixieGuide from "./pages/support/RecipePixieGuide";
 import CaptainsLogImprint from "./pages/captains-log/CaptainsLogImprint";
+import CaptainsLogImprintEN from "./pages/captains-log/CaptainsLogImprintEN";
+import CaptainsLogImprintES from "./pages/captains-log/CaptainsLogImprintES";
+import CaptainsLogImprintFR from "./pages/captains-log/CaptainsLogImprintFR";
+import CaptainsLogImprintIT from "./pages/captains-log/CaptainsLogImprintIT";
+import CaptainsLogImprintPT from "./pages/captains-log/CaptainsLogImprintPT";
 import CaptainsLogPrivacy from "./pages/captains-log/CaptainsLogPrivacy";
 import CaptainsLogDataDeletion from "./pages/captains-log/CaptainsLogDataDeletion";
 import CaptainsLogTerms from "./pages/captains-log/CaptainsLogTerms";
@@ -46,6 +51,11 @@ const App = () => (
         <Route path="/projects/captains-log/it" element={<CaptainsLogDetailsIT />} />
         <Route path="/projects/captains-log/pt" element={<CaptainsLogDetailsPT />} />
         <Route path="/captains-log/imprint" element={<CaptainsLogImprint />} />
+        <Route path="/captains-log/imprint/en" element={<CaptainsLogImprintEN />} />
+        <Route path="/captains-log/imprint/es" element={<CaptainsLogImprintES />} />
+        <Route path="/captains-log/imprint/fr" element={<CaptainsLogImprintFR />} />
+        <Route path="/captains-log/imprint/it" element={<CaptainsLogImprintIT />} />
+        <Route path="/captains-log/imprint/pt" element={<CaptainsLogImprintPT />} />
         <Route path="/captains-log/privacy" element={<CaptainsLogPrivacy />} />
         <Route path="/captains-log/data-deletion" element={<CaptainsLogDataDeletion />} />
         <Route path="/captains-log/terms" element={<CaptainsLogTerms />} />

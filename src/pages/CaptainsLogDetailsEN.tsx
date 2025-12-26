@@ -293,7 +293,7 @@ const CaptainsLogDetailsEN = () => {
         <div className="max-w-2xl mx-auto">
           <div className="flex flex-wrap justify-center gap-6 text-sm">
             <Link 
-              to="/captains-log/imprint" 
+              to="/captains-log/imprint/en" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Imprint
