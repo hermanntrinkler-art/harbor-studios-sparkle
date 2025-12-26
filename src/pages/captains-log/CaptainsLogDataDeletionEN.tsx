@@ -20,9 +20,9 @@ const languages = [
   { code: "pt", label: "🇧🇷 Português", path: "/captains-log/data-deletion/pt" },
 ];
 
-const CaptainsLogDataDeletion = () => {
+const CaptainsLogDataDeletionEN = () => {
   const navigate = useNavigate();
-  const currentLang = languages.find(l => l.code === "de");
+  const currentLang = languages.find(l => l.code === "en");
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-background/95">
@@ -34,7 +34,7 @@ const CaptainsLogDataDeletion = () => {
           onClick={() => window.history.back()}
         >
           <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-          Zurück
+          Back
         </Button>
         
         <DropdownMenu>
@@ -49,7 +49,7 @@ const CaptainsLogDataDeletion = () => {
               <DropdownMenuItem
                 key={lang.code}
                 onClick={() => navigate(lang.path)}
-                className={lang.code === "de" ? "bg-accent" : ""}
+                className={lang.code === "en" ? "bg-accent" : ""}
               >
                 {lang.label}
               </DropdownMenuItem>
@@ -61,128 +61,128 @@ const CaptainsLogDataDeletion = () => {
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Datenlöschung</h1>
-          <p className="text-muted-foreground text-lg">Captain Log – So löschst du deine Daten</p>
+          <h1 className="text-4xl font-bold mb-4">Data Deletion</h1>
+          <p className="text-muted-foreground text-lg">Captain Log – How to delete your data</p>
         </div>
 
         <Alert className="mb-8">
           <Info className="h-4 w-4" />
           <AlertDescription>
-            Du hast das Recht, jederzeit die Löschung deiner personenbezogenen Daten zu verlangen. Hier erfährst du, wie das funktioniert.
+            You have the right to request the deletion of your personal data at any time. Here's how it works.
           </AlertDescription>
         </Alert>
 
         <div className="space-y-6">
-          {/* Option 1: In der App */}
+          {/* Option 1: In the App */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Smartphone className="h-5 w-5 text-primary" />
-                Option 1: Daten in der App löschen
+                Option 1: Delete data in the app
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Du kannst deine Daten direkt in der Captain Log App löschen:
+                You can delete your data directly in the Captain Log app:
               </p>
               <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                <li>Öffne die Captain Log App</li>
-                <li>Gehe zu <strong>Einstellungen</strong></li>
-                <li>Wähle <strong>Account & Daten</strong></li>
-                <li>Tippe auf <strong>Alle Daten löschen</strong> oder <strong>Account löschen</strong></li>
-                <li>Bestätige die Löschung</li>
+                <li>Open the Captain Log app</li>
+                <li>Go to <strong>Settings</strong></li>
+                <li>Select <strong>Account & Data</strong></li>
+                <li>Tap <strong>Delete all data</strong> or <strong>Delete account</strong></li>
+                <li>Confirm the deletion</li>
               </ol>
               <Alert>
                 <CheckCircle className="h-4 w-4" />
                 <AlertDescription>
-                  Diese Aktion ist sofort wirksam und kann nicht rückgängig gemacht werden.
+                  This action takes effect immediately and cannot be undone.
                 </AlertDescription>
               </Alert>
             </CardContent>
           </Card>
 
-          {/* Option 2: Per E-Mail */}
+          {/* Option 2: Via Email */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                Option 2: Löschung per E-Mail beantragen
+                Option 2: Request deletion via email
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Du kannst auch eine E-Mail an uns senden, um die Löschung deiner Daten zu beantragen:
+                You can also send us an email to request the deletion of your data:
               </p>
               <div className="bg-muted/50 p-4 rounded-lg">
-                <p className="font-semibold mb-2">Sende eine E-Mail an:</p>
-                <a href="mailto:support@harborstudios.app?subject=Datenlöschung%20Captain%20Log" className="text-primary hover:underline text-lg">
+                <p className="font-semibold mb-2">Send an email to:</p>
+                <a href="mailto:support@harborstudios.app?subject=Data%20Deletion%20Captain%20Log" className="text-primary hover:underline text-lg">
                   support@harborstudios.app
                 </a>
               </div>
-              <p className="text-muted-foreground">Bitte gib in deiner E-Mail folgende Informationen an:</p>
+              <p className="text-muted-foreground">Please include the following information in your email:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li>Betreff: "Datenlöschung Captain Log"</li>
-                <li>Die E-Mail-Adresse deines Accounts</li>
-                <li>Optional: Grund für die Löschung (hilft uns, unseren Service zu verbessern)</li>
+                <li>Subject: "Data Deletion Captain Log"</li>
+                <li>The email address of your account</li>
+                <li>Optional: Reason for deletion (helps us improve our service)</li>
               </ul>
             </CardContent>
           </Card>
 
-          {/* Zeitrahmen */}
+          {/* Processing Time */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Clock className="h-5 w-5 text-primary" />
-                Bearbeitungszeitraum
+                Processing Time
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="text-muted-foreground">
-                <strong>Bei Löschung in der App:</strong> Sofortige Wirkung
+                <strong>Deletion in the app:</strong> Immediate effect
               </p>
               <p className="text-muted-foreground">
-                <strong>Bei Löschung per E-Mail:</strong> Wir bearbeiten deine Anfrage innerhalb von 7 Tagen und informieren dich über den Abschluss. Alle personenbezogenen Daten werden vollständig entfernt.
+                <strong>Deletion via email:</strong> We will process your request within 7 days and inform you upon completion. All personal data will be completely removed.
               </p>
             </CardContent>
           </Card>
 
-          {/* Was wird gelöscht */}
+          {/* What gets deleted */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-primary" />
-                Was wird gelöscht?
+                What gets deleted?
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="text-muted-foreground">Bei einer vollständigen Datenlöschung werden folgende Daten entfernt:</p>
+              <p className="text-muted-foreground">A complete data deletion removes the following data:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li>Alle Logbucheinträge</li>
-                <li>Bootsinformationen</li>
-                <li>Crew-Daten</li>
-                <li>Einstellungen und Präferenzen</li>
-                <li>Account-Informationen (bei Account-Löschung)</li>
+                <li>All logbook entries</li>
+                <li>Boat information</li>
+                <li>Crew data</li>
+                <li>Settings and preferences</li>
+                <li>Account information (when deleting account)</li>
               </ul>
               <Alert className="mt-4">
                 <Info className="h-4 w-4" />
                 <AlertDescription>
-                  Anonymisierte, aggregierte Nutzungsstatistiken können für Analysezwecke aufbewahrt werden, enthalten jedoch keine personenbezogenen Daten.
+                  Anonymized, aggregated usage statistics may be retained for analysis purposes but do not contain any personal data.
                 </AlertDescription>
               </Alert>
             </CardContent>
           </Card>
 
-          {/* Kontakt */}
+          {/* Contact */}
           <Card className="bg-primary/5 border-primary/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                Fragen?
+                Questions?
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Bei Fragen zur Datenlöschung oder zum Datenschutz stehen wir dir gerne zur Verfügung:
+                If you have questions about data deletion or privacy, we're happy to help:
               </p>
               <a href="mailto:support@harborstudios.app" className="text-primary hover:underline flex items-center gap-2 text-lg">
                 <Mail className="h-4 w-4" />
@@ -190,8 +190,8 @@ const CaptainsLogDataDeletion = () => {
               </a>
               <div className="pt-4">
                 <Button asChild variant="outline">
-                  <Link to="/captains-log/privacy">
-                    Zur Datenschutzerklärung
+                  <Link to="/captains-log/privacy/en">
+                    View Privacy Policy
                   </Link>
                 </Button>
               </div>
@@ -205,4 +205,4 @@ const CaptainsLogDataDeletion = () => {
   );
 };
 
-export default CaptainsLogDataDeletion;
+export default CaptainsLogDataDeletionEN;

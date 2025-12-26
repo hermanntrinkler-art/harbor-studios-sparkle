@@ -36,6 +36,11 @@ import CaptainsLogPrivacyFR from "./pages/captains-log/CaptainsLogPrivacyFR";
 import CaptainsLogPrivacyIT from "./pages/captains-log/CaptainsLogPrivacyIT";
 import CaptainsLogPrivacyPT from "./pages/captains-log/CaptainsLogPrivacyPT";
 import CaptainsLogDataDeletion from "./pages/captains-log/CaptainsLogDataDeletion";
+import CaptainsLogDataDeletionEN from "./pages/captains-log/CaptainsLogDataDeletionEN";
+import CaptainsLogDataDeletionES from "./pages/captains-log/CaptainsLogDataDeletionES";
+import CaptainsLogDataDeletionFR from "./pages/captains-log/CaptainsLogDataDeletionFR";
+import CaptainsLogDataDeletionIT from "./pages/captains-log/CaptainsLogDataDeletionIT";
+import CaptainsLogDataDeletionPT from "./pages/captains-log/CaptainsLogDataDeletionPT";
 import CaptainsLogTerms from "./pages/captains-log/CaptainsLogTerms";
 
 const queryClient = new QueryClient();
@@ -68,6 +73,11 @@ const App = () => (
         <Route path="/captains-log/privacy/it" element={<CaptainsLogPrivacyIT />} />
         <Route path="/captains-log/privacy/pt" element={<CaptainsLogPrivacyPT />} />
         <Route path="/captains-log/data-deletion" element={<CaptainsLogDataDeletion />} />
+        <Route path="/captains-log/data-deletion/en" element={<CaptainsLogDataDeletionEN />} />
+        <Route path="/captains-log/data-deletion/es" element={<CaptainsLogDataDeletionES />} />
+        <Route path="/captains-log/data-deletion/fr" element={<CaptainsLogDataDeletionFR />} />
+        <Route path="/captains-log/data-deletion/it" element={<CaptainsLogDataDeletionIT />} />
+        <Route path="/captains-log/data-deletion/pt" element={<CaptainsLogDataDeletionPT />} />
         <Route path="/captains-log/terms" element={<CaptainsLogTerms />} />
         <Route path="/projects/social-post-pro" element={<SocialPostProDetails />} />
         <Route path="/projects/ocean-mind" element={<OceanMindDetails />} />
