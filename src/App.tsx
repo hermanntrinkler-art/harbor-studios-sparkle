@@ -9,6 +9,10 @@ import NotFound from "./pages/NotFound";
 import RecipePixieDetails from "./pages/RecipePixieDetails";
 import CaptainsLogDetails from "./pages/CaptainsLogDetails";
 import CaptainsLogDetailsEN from "./pages/CaptainsLogDetailsEN";
+import CaptainsLogDetailsES from "./pages/CaptainsLogDetailsES";
+import CaptainsLogDetailsFR from "./pages/CaptainsLogDetailsFR";
+import CaptainsLogDetailsIT from "./pages/CaptainsLogDetailsIT";
+import CaptainsLogDetailsPT from "./pages/CaptainsLogDetailsPT";
 import SocialPostProDetails from "./pages/SocialPostProDetails";
 import OceanMindDetails from "./pages/OceanMindDetails";
 import StoryPixieDetails from "./pages/StoryPixieDetails";
@@ -37,6 +41,10 @@ const App = () => (
         <Route path="/projects/recipe-pixie" element={<RecipePixieDetails />} />
         <Route path="/projects/captains-log" element={<CaptainsLogDetails />} />
         <Route path="/projects/captains-log/en" element={<CaptainsLogDetailsEN />} />
+        <Route path="/projects/captains-log/es" element={<CaptainsLogDetailsES />} />
+        <Route path="/projects/captains-log/fr" element={<CaptainsLogDetailsFR />} />
+        <Route path="/projects/captains-log/it" element={<CaptainsLogDetailsIT />} />
+        <Route path="/projects/captains-log/pt" element={<CaptainsLogDetailsPT />} />
         <Route path="/captains-log/imprint" element={<CaptainsLogImprint />} />
         <Route path="/captains-log/privacy" element={<CaptainsLogPrivacy />} />
         <Route path="/captains-log/data-deletion" element={<CaptainsLogDataDeletion />} />

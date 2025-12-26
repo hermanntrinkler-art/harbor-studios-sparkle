@@ -19,114 +19,114 @@ const languages = [
   { code: 'pt', name: 'Português', flag: '🇧🇷', path: '/projects/captains-log/pt' },
 ];
 
-const CaptainsLogDetailsEN = () => {
+const CaptainsLogDetailsIT = () => {
   const navigate = useNavigate();
-  const currentLanguage = languages.find(lang => lang.code === 'en')!;
+  const currentLanguage = languages.find(lang => lang.code === 'it')!;
 
   const features = [
     {
       emoji: "📔",
-      title: "Digital Logbook & Voyage Management",
+      title: "Giornale di Bordo Digitale e Gestione delle Traversate",
       items: [
-        "Create and manage complete voyages",
-        "Automatic recording of start, destination, duration, and distance",
-        "Log maneuvers, course changes, and events",
-        "Free notes at any time",
-        "Clear statistics on distance, time, and usage"
+        "Creare e gestire traversate complete",
+        "Registrazione automatica di partenza, destinazione, durata e distanza",
+        "Registrare manovre, cambi di rotta ed eventi",
+        "Note libere in qualsiasi momento",
+        "Statistiche chiare su distanza, tempo e utilizzo"
       ]
     },
     {
       emoji: "⚓",
-      title: "GPS & Position Features",
+      title: "GPS e Funzioni di Posizione",
       items: [
-        "Automatic position recording during navigation",
-        "Detection of anchoring, maneuvers, and stops",
-        "Dynamic draft (e.g., for swing keel boats)",
-        "Optional import via Signal K (onboard network)"
+        "Registrazione automatica della posizione durante la navigazione",
+        "Rilevamento dell'ancoraggio, manovre e soste",
+        "Pescaggio dinamico (es. per barche a chiglia basculante)",
+        "Importazione opzionale via Signal K (rete di bordo)"
       ]
     },
     {
       emoji: "🧭",
-      title: "Anchor Watch & Safety",
+      title: "Guardia all'Ancora e Sicurezza",
       items: [
-        "Set an anchor point with swing circle",
-        "Permanent position monitoring",
-        "Alarm on position deviation",
-        "Offline capable – works without internet connection"
+        "Impostare punto di ancoraggio con cerchio di bordata",
+        "Monitoraggio permanente della posizione",
+        "Allarme in caso di deriva",
+        "Funziona offline – opera senza connessione internet"
       ]
     },
     {
       emoji: "🧰",
-      title: "Maintenance & Boat Data",
+      title: "Manutenzione e Dati della Barca",
       items: [
-        "Management of boat data (dimensions, engine, sails, tanks)",
-        "Maintenance schedules with intervals (time or operating hours)",
-        "History of all completed work",
-        "Automatic calculation of operating hours",
-        "Clear maintenance status (OK / due / overdue)"
+        "Gestione dei dati della barca (dimensioni, motore, vele, serbatoi)",
+        "Programmi di manutenzione con intervalli (tempo o ore di funzionamento)",
+        "Cronologia di tutti i lavori completati",
+        "Calcolo automatico delle ore di funzionamento",
+        "Stato di manutenzione chiaro (OK / da fare / in ritardo)"
       ]
     },
     {
       emoji: "📋",
-      title: "Checklists & Procedures",
+      title: "Checklist e Procedure",
       items: [
-        "Predefined checklists (departure, anchoring, night sailing, etc.)",
-        "Create custom checklists",
-        "Progress visible per run",
-        "Ideal for crew changes or recurring procedures"
+        "Checklist predefinite (partenza, ancoraggio, navigazione notturna, ecc.)",
+        "Creare checklist personalizzate",
+        "Progresso visibile per esecuzione",
+        "Ideale per cambi di equipaggio o procedure ricorrenti"
       ]
     },
     {
       emoji: "📚",
-      title: "Knowledge Base",
+      title: "Base di Conoscenze",
       items: [
-        "Nautical dictionary",
-        "Knots and maneuver overviews",
-        "Radio & emergency procedures (Mayday, Pan-Pan, Sécurité)",
-        "International flag alphabet",
-        "Integrated search function"
+        "Dizionario nautico",
+        "Panoramiche di nodi e manovre",
+        "Procedure radio e di emergenza (Mayday, Pan-Pan, Sécurité)",
+        "Alfabeto delle bandiere internazionale",
+        "Funzione di ricerca integrata"
       ]
     },
     {
       emoji: "🗺️",
-      title: "Export & Documentation",
+      title: "Esportazione e Documentazione",
       items: [
-        "PDF export of complete logbooks",
-        "GPX and KML export for navigation software",
-        "Complete data backup and recovery"
+        "Esportazione PDF dei giornali di bordo completi",
+        "Esportazione GPX e KML per software di navigazione",
+        "Backup e recupero completo dei dati"
       ]
     },
     {
       emoji: "🔒",
-      title: "Security & Privacy",
+      title: "Sicurezza e Privacy",
       items: [
-        "Personal data stays private",
-        "No sharing with third parties",
-        "Full control over deletion and export",
-        "Audit-proof storage of log data",
-        "GDPR-compliant processing"
+        "I dati personali rimangono privati",
+        "Nessuna condivisione con terze parti",
+        "Controllo totale su eliminazione ed esportazione",
+        "Archiviazione verificabile dei dati di bordo",
+        "Trattamento conforme al GDPR"
       ]
     },
     {
       emoji: "⚙️",
-      title: "Technology & Platform",
+      title: "Tecnologia e Piattaforma",
       items: [
         "Progressive Web App (PWA)",
-        "Runs on smartphone, tablet, and desktop",
-        "Usable offline",
-        "Synchronization when connected",
-        "Optional: Signal-K connection for onboard data"
+        "Funziona su smartphone, tablet e desktop",
+        "Utilizzabile offline",
+        "Sincronizzazione quando connesso",
+        "Opzionale: Connessione Signal-K per dati di bordo"
       ]
     },
     {
       emoji: "💎",
-      title: "Premium Features",
+      title: "Funzionalità Premium",
       items: [
-        "Signal-K integration",
-        "Extended maintenance features",
-        "Weather & tide data",
-        "Custom checklists",
-        "Future premium features included"
+        "Integrazione Signal-K",
+        "Funzioni di manutenzione estese",
+        "Dati meteo e maree",
+        "Checklist personalizzate",
+        "Future funzionalità premium incluse"
       ],
       isPremium: true
     }
@@ -139,7 +139,7 @@ const CaptainsLogDetailsEN = () => {
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
             <ArrowLeft className="w-5 h-5" />
-            <span className="font-medium">Back</span>
+            <span className="font-medium">Indietro</span>
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -153,7 +153,7 @@ const CaptainsLogDetailsEN = () => {
                 <DropdownMenuItem
                   key={lang.code}
                   onClick={() => navigate(lang.path)}
-                  className={`cursor-pointer ${lang.code === 'en' ? 'bg-primary/10' : ''}`}
+                  className={`cursor-pointer ${lang.code === 'it' ? 'bg-primary/10' : ''}`}
                 >
                   <span className="mr-2">{lang.flag}</span>
                   {lang.name}
@@ -168,28 +168,28 @@ const CaptainsLogDetailsEN = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Badge variant="secondary" className="mb-4 text-lg px-4 py-2 bg-green-500/20 text-green-600 border-green-500/30">
-            Live
+            Online
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
             Captain's Log ⚓️
           </h1>
           <p className="text-xl md:text-2xl text-primary font-semibold mb-4">
-            Your Digital Logbook for Real Sailors
+            Il Tuo Giornale di Bordo Digitale per Veri Navigatori
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Captain's Log is a modern, offline-capable logbook app for sailors who want to reliably document 
-            their boat, their voyages, and their data – without unnecessary complexity.
+            Captain's Log è un'applicazione di giornale di bordo moderna e funzionante offline per navigatori 
+            che vogliono documentare in modo affidabile la loro barca, le loro traversate e i loro dati – senza complessità inutile.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="#features">
               <Button size="lg" variant="outline">
-                🚀 Key Features
+                🚀 Funzionalità Principali
               </Button>
             </a>
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
               <Button size="lg">
                 <ExternalLink className="w-5 h-5 mr-2" />
-                Go to App
+                Vai all'App
               </Button>
             </a>
           </div>
@@ -200,10 +200,10 @@ const CaptainsLogDetailsEN = () => {
       <section id="features" className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
-            🚀 Key Features
+            🚀 Funzionalità Principali
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12">
-            Everything you need for your digital ship's log
+            Tutto ciò di cui hai bisogno per il tuo giornale di bordo digitale
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -246,20 +246,20 @@ const CaptainsLogDetailsEN = () => {
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-transparent">
             <CardHeader>
-              <CardTitle className="text-3xl text-center">In a Nutshell</CardTitle>
+              <CardTitle className="text-3xl text-center">In Sintesi</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Captain's Log is not a navigation system, but your digital ship's log.
+                Captain's Log non è un sistema di navigazione, ma il tuo giornale di bordo digitale.
                 <br />
                 <span className="text-foreground font-medium">
-                  It thinks ahead, documents reliably, and helps you keep track – without being patronizing.
+                  Pensa in anticipo, documenta in modo affidabile e ti aiuta a mantenere il controllo – senza essere paternalistico.
                 </span>
               </p>
               <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg">
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Discover Captain's Log Now
+                  Scopri Captain's Log Ora
                 </Button>
               </a>
             </CardContent>
@@ -273,7 +273,7 @@ const CaptainsLogDetailsEN = () => {
           <div className="flex items-center justify-center gap-2 mb-2">
             <Mail className="w-5 h-5 text-muted-foreground" />
             <span className="text-muted-foreground">
-              Questions or feedback?
+              Domande o feedback?
             </span>
           </div>
           <a
@@ -283,7 +283,7 @@ const CaptainsLogDetailsEN = () => {
             support@harborstudios.app
           </a>
           <p className="text-sm text-muted-foreground mt-2">
-            We look forward to hearing from you!
+            Non vediamo l'ora di sentirti!
           </p>
         </div>
       </section>
@@ -296,25 +296,25 @@ const CaptainsLogDetailsEN = () => {
               to="/captains-log/imprint" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Imprint
+              Note Legali
             </Link>
             <Link 
               to="/captains-log/privacy" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Privacy Policy
+              Informativa sulla Privacy
             </Link>
             <Link 
               to="/captains-log/terms" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Terms of Use
+              Termini di Utilizzo
             </Link>
             <Link 
               to="/captains-log/data-deletion" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Data Deletion
+              Eliminazione Dati
             </Link>
           </div>
         </div>
@@ -323,4 +323,4 @@ const CaptainsLogDetailsEN = () => {
   );
 };
 
-export default CaptainsLogDetailsEN;
+export default CaptainsLogDetailsIT;
