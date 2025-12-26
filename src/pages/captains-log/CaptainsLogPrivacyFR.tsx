@@ -19,9 +19,9 @@ const languages = [
   { code: 'pt', name: 'Português', flag: '🇧🇷', path: '/captains-log/privacy/pt' },
 ];
 
-const CaptainsLogPrivacy = () => {
+const CaptainsLogPrivacyFR = () => {
   const navigate = useNavigate();
-  const currentLanguage = languages.find(lang => lang.code === 'de')!;
+  const currentLanguage = languages.find(lang => lang.code === 'fr')!;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-background/95">
@@ -34,7 +34,7 @@ const CaptainsLogPrivacy = () => {
             onClick={() => window.history.back()}
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Zurück
+            Retour
           </Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -48,7 +48,7 @@ const CaptainsLogPrivacy = () => {
                 <DropdownMenuItem
                   key={lang.code}
                   onClick={() => navigate(lang.path)}
-                  className={`cursor-pointer ${lang.code === 'de' ? 'bg-primary/10' : ''}`}
+                  className={`cursor-pointer ${lang.code === 'fr' ? 'bg-primary/10' : ''}`}
                 >
                   <span className="mr-2">{lang.flag}</span>
                   {lang.name}
@@ -62,23 +62,23 @@ const CaptainsLogPrivacy = () => {
       <div className="container mx-auto px-4 py-8 max-w-4xl pt-24">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Datenschutzerklärung – Captain's Log</h1>
+          <h1 className="text-4xl font-bold mb-4">Politique de Confidentialité – Captain's Log</h1>
         </div>
 
         <div className="space-y-6">
-          {/* 1. Verantwortlicher */}
+          {/* 1. Responsable */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-primary" />
-                1. Verantwortlicher
+                1. Responsable du Traitement
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="font-semibold">Harbor Studios</p>
               <p>Calle Calima Sector 1, Riosol 167</p>
               <p>35627 Costa Calma</p>
-              <p>Spanien</p>
+              <p>Espagne</p>
               <div className="flex items-center gap-2 mt-4">
                 <Mail className="h-4 w-4 text-muted-foreground" />
                 <a href="mailto:support@harborstudios.app" className="text-primary hover:underline">
@@ -94,147 +94,147 @@ const CaptainsLogPrivacy = () => {
             </CardContent>
           </Card>
 
-          {/* 2. Allgemeine Hinweise */}
+          {/* 2. Informations Générales */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Info className="h-5 w-5 text-primary" />
-                2. Allgemeine Hinweise
+                2. Informations Générales
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Der Schutz deiner personenbezogenen Daten ist uns wichtig.
-                Diese Datenschutzerklärung informiert dich darüber, welche personenbezogenen Daten im Zusammenhang mit der Nutzung unserer App Captain's Log erhoben, verarbeitet und gespeichert werden.
+                La protection de vos données personnelles est importante pour nous.
+                Cette politique de confidentialité vous informe sur les données personnelles collectées, traitées et stockées dans le cadre de l'utilisation de notre application Captain's Log.
               </p>
               <p className="text-muted-foreground">
-                Wir behandeln deine Daten vertraulich und entsprechend den geltenden gesetzlichen Datenschutzvorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO) sowie des TTDSG.
+                Nous traitons vos données de manière confidentielle et conformément aux réglementations applicables en matière de protection des données, notamment le Règlement Général sur la Protection des Données (RGPD) et le TTDSG.
               </p>
             </CardContent>
           </Card>
 
-          {/* 3. Erhebung und Verwendung */}
+          {/* 3. Collecte et Utilisation */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Database className="h-5 w-5 text-primary" />
-                3. Erhebung und Verwendung personenbezogener Daten
+                3. Collecte et Utilisation des Données Personnelles
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h4 className="font-semibold mb-3">a) Bei Nutzung der App</h4>
+                <h4 className="font-semibold mb-3">a) Lors de l'Utilisation de l'Application</h4>
                 <p className="text-muted-foreground mb-4">
-                  Captain's Log verarbeitet ausschließlich Daten, die du selbst bereitstellst oder aktiv erzeugst. Dazu gehören insbesondere:
+                  Captain's Log ne traite que les données que vous fournissez vous-même ou que vous générez activement. Cela comprend notamment :
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                  <li>deine E-Mail-Adresse (zur Anmeldung und Authentifizierung)</li>
-                  <li>Logbucheinträge, Notizen und Fahrtdaten, die du selbst erstellst</li>
-                  <li>optionale Fotos, die du über die Kamera oder aus der Galerie hochlädst</li>
-                  <li>Standortdaten (GPS) sowie Wetterinformationen, die zur automatischen Erfassung, Darstellung und Dokumentation deiner Fahrten im Logbuch verwendet werden</li>
+                  <li>votre adresse e-mail (pour l'inscription et l'authentification)</li>
+                  <li>les entrées du journal de bord, notes et données de voyage que vous créez vous-même</li>
+                  <li>les photos optionnelles que vous téléchargez via l'appareil photo ou depuis votre galerie</li>
+                  <li>les données de localisation (GPS) et les informations météorologiques utilisées pour l'enregistrement automatique, l'affichage et la documentation de vos voyages dans le journal de bord</li>
                 </ul>
                 <p className="text-muted-foreground">
-                  Diese Daten werden ausschließlich genutzt, um die Kernfunktionen der App bereitzustellen, insbesondere zum Speichern, Verwalten und Anzeigen deiner eigenen Logbucheinträge.
+                  Ces données sont utilisées exclusivement pour fournir les fonctions principales de l'application, notamment pour stocker, gérer et afficher vos propres entrées du journal de bord.
                 </p>
               </div>
 
               <div>
-                <h4 className="font-semibold mb-3">b) Speicherung und Auftragsverarbeitung</h4>
+                <h4 className="font-semibold mb-3">b) Stockage et Traitement des Données</h4>
                 <p className="text-muted-foreground mb-2">
-                  Die Speicherung und Verwaltung der Daten erfolgt über Supabase, einen europäischen Cloud-Dienstleister, der als Auftragsverarbeiter gemäß Art. 28 DSGVO eingesetzt wird.
+                  Le stockage et la gestion des données sont effectués via Supabase, un fournisseur de services cloud européen utilisé comme sous-traitant conformément à l'Art. 28 du RGPD.
                 </p>
                 <p className="text-muted-foreground mb-2">
-                  Die Datenübertragung und -speicherung erfolgt verschlüsselt (TLS bei der Übertragung, AES-256 bei der Speicherung).
+                  La transmission et le stockage des données sont chiffrés (TLS pour la transmission, AES-256 pour le stockage).
                 </p>
                 <p className="text-muted-foreground">
-                  Es findet keine Weitergabe personenbezogener Daten an Dritte zu Werbe-, Analyse- oder sonstigen kommerziellen Zwecken statt.
+                  Les données personnelles ne sont pas partagées avec des tiers à des fins publicitaires, analytiques ou commerciales.
                 </p>
               </div>
 
               <div>
-                <h4 className="font-semibold mb-3">c) Keine Weitergabe an Dritte</h4>
+                <h4 className="font-semibold mb-3">c) Pas de Divulgation à des Tiers</h4>
                 <p className="text-muted-foreground">
-                  Deine personenbezogenen Daten werden nicht verkauft, vermietet oder an andere Unternehmen weitergegeben, es sei denn, es besteht eine gesetzliche Verpflichtung zur Herausgabe.
+                  Vos données personnelles ne seront pas vendues, louées ou partagées avec d'autres entreprises, sauf s'il existe une obligation légale de le faire.
                 </p>
               </div>
             </CardContent>
           </Card>
 
-          {/* 4. Cookies und Tracking */}
+          {/* 4. Cookies et Suivi */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Cookie className="h-5 w-5 text-primary" />
-                4. Cookies und Tracking
+                4. Cookies et Suivi
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Captain's Log verwendet keine Cookies, keine Analyse-Tools und keine Tracking- oder Werbedienste.
+                Captain's Log n'utilise pas de cookies, d'outils d'analyse, ni de services de suivi ou de publicité.
               </p>
               <p className="text-muted-foreground">
-                Die gesamte Kommunikation zwischen App und Server erfolgt ausschließlich über verschlüsselte HTTPS-Verbindungen.
+                Toute communication entre l'application et le serveur est effectuée exclusivement via des connexions HTTPS chiffrées.
               </p>
             </CardContent>
           </Card>
 
-          {/* 5. Datenspeicherung und Datenlöschung */}
+          {/* 5. Stockage et Suppression des Données */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Clock className="h-5 w-5 text-primary" />
-                5. Datenspeicherung und Datenlöschung
+                5. Stockage et Suppression des Données
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Personenbezogene Daten (z. B. E-Mail-Adresse, Logbucheinträge, Positionsdaten, Fotos) werden ausschließlich zum Betrieb der Anwendung verarbeitet und in einer gesicherten Datenbank gespeichert.
+                Les données personnelles (par exemple, adresse e-mail, entrées du journal de bord, données de localisation, photos) sont traitées exclusivement pour le fonctionnement de l'application et stockées dans une base de données sécurisée.
               </p>
               <p className="text-muted-foreground">
-                Nutzer können einzelne Einträge sowie hochgeladene Inhalte jederzeit eigenständig innerhalb der Anwendung löschen. Zusätzlich besteht die Möglichkeit, das Benutzerkonto vollständig zu löschen. In diesem Fall werden sämtliche personenbezogenen Daten spätestens innerhalb von 7 Tagen vollständig und unwiderruflich entfernt, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+                Les utilisateurs peuvent supprimer des entrées individuelles et du contenu téléchargé à tout moment dans l'application. De plus, il est possible de supprimer complètement le compte utilisateur. Dans ce cas, toutes les données personnelles seront supprimées de manière complète et irréversible dans un délai maximum de 7 jours, sauf si des exigences légales de conservation s'appliquent.
               </p>
 
-              {/* Revisionssichere Logbucheinträge */}
+              {/* Entrées du journal de bord infalsifiables */}
               <div className="mt-6 pt-6 border-t border-border/40">
                 <h4 className="font-semibold mb-4 flex items-center gap-2">
                   <Shield className="h-4 w-4 text-primary" />
-                  Revisionssichere Logbucheinträge
+                  Entrées du Journal de Bord Infalsifiables
                 </h4>
                 <p className="text-muted-foreground mb-4">
-                  Bestimmte Logbucheinträge (z. B. Fahrt- oder Ereignisprotokolle) werden revisionssicher gespeichert. Eine nachträgliche Änderung oder Löschung einzelner Einträge ist technisch ausgeschlossen.
+                  Certaines entrées du journal de bord (par exemple, les journaux de voyage ou d'événements) sont stockées de manière infalsifiable. La modification ou la suppression ultérieure d'entrées individuelles est techniquement impossible.
                 </p>
                 <p className="text-muted-foreground mb-4">
-                  Dies dient der Wahrung der Datenintegrität sowie der Nachvollziehbarkeit im Sinne eines ordnungsgemäßen Schiffstagebuchs, insbesondere im Zusammenhang mit möglichen Versicherungs-, Haftungs- oder Beweisfragen.
+                  Cela sert à préserver l'intégrité des données et la traçabilité au sens d'un journal de bord de navire approprié, notamment en relation avec d'éventuelles questions d'assurance, de responsabilité ou de preuve.
                 </p>
                 <p className="text-muted-foreground mb-4">
-                  Die Speicherung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) sowie Art. 17 Abs. 3 lit. e DSGVO (Ausnahme vom Recht auf Löschung zur Geltendmachung, Ausübung oder Verteidigung rechtlicher Ansprüche).
+                  Le stockage est basé sur l'Art. 6(1)(f) du RGPD (intérêt légitime) et l'Art. 17(3)(e) du RGPD (exception au droit à l'effacement pour la constatation, l'exercice ou la défense de droits en justice).
                 </p>
                 <p className="text-muted-foreground">
-                  Unberührt bleibt das Recht des Nutzers, sein gesamtes Konto jederzeit löschen zu lassen. In diesem Fall werden sämtliche zugehörigen personenbezogenen Daten vollständig entfernt.
+                  Le droit de l'utilisateur de faire supprimer son compte complet à tout moment reste inchangé. Dans ce cas, toutes les données personnelles associées seront complètement supprimées.
                 </p>
               </div>
             </CardContent>
           </Card>
 
-          {/* 6. Rechte der betroffenen Personen */}
+          {/* 6. Droits des Utilisateurs */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <UserCheck className="h-5 w-5 text-primary" />
-                6. Rechte der betroffenen Personen
+                6. Droits des Utilisateurs
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-muted-foreground">Du hast jederzeit das Recht:</p>
+              <p className="text-muted-foreground">Vous avez le droit à tout moment de :</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                <li>Auskunft über deine gespeicherten personenbezogenen Daten zu erhalten</li>
-                <li>die Berichtigung unrichtiger oder unvollständiger Daten zu verlangen</li>
-                <li>die Löschung oder Einschränkung der Verarbeitung deiner Daten zu fordern</li>
-                <li>der Verarbeitung deiner Daten zu widersprechen</li>
-                <li>eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen</li>
+                <li>obtenir des informations sur vos données personnelles stockées</li>
+                <li>demander la correction de données inexactes ou incomplètes</li>
+                <li>demander la suppression ou la limitation du traitement de vos données</li>
+                <li>vous opposer au traitement de vos données</li>
+                <li>retirer votre consentement à tout moment avec effet pour l'avenir</li>
               </ul>
               <p className="text-muted-foreground mt-4">
-                Anfragen zu deinen Rechten kannst du jederzeit per E-Mail richten an:
+                Vous pouvez envoyer des demandes concernant vos droits à tout moment par e-mail à :
               </p>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-muted-foreground" />
@@ -245,40 +245,40 @@ const CaptainsLogPrivacy = () => {
             </CardContent>
           </Card>
 
-          {/* 7. Änderungen dieser Datenschutzerklärung */}
+          {/* 7. Modifications de la Politique de Confidentialité */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5 text-primary" />
-                7. Änderungen dieser Datenschutzerklärung
+                7. Modifications de Cette Politique de Confidentialité
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an rechtliche Anforderungen oder Änderungen der App-Funktionalität anzupassen.
+                Nous nous réservons le droit de mettre à jour cette politique de confidentialité si nécessaire pour l'adapter aux exigences légales ou aux changements de fonctionnalité de l'application.
               </p>
               <p className="text-muted-foreground">
-                Die jeweils aktuelle Version ist jederzeit innerhalb der App und auf unserer Website verfügbar.
+                La version actuelle est toujours disponible dans l'application et sur notre site web.
               </p>
             </CardContent>
           </Card>
 
-          {/* 8. Datenlöschung */}
+          {/* 8. Suppression des Données */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Lock className="h-5 w-5 text-primary" />
-                8. Datenlöschung
+                8. Suppression des Données
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Informationen zur Löschung deines Benutzerkontos und deiner personenbezogenen Daten findest du auf unserer separaten Seite zur Datenlöschung.
-                Dort wird transparent beschrieben, welche Daten gelöscht werden und wie du eine Löschanfrage stellen kannst.
+                Les informations sur la suppression de votre compte utilisateur et de vos données personnelles se trouvent sur notre page dédiée à la suppression des données.
+                Vous y trouverez une description transparente des données supprimées et comment soumettre une demande de suppression.
               </p>
               <Link to="/captains-log/data-deletion">
                 <Button className="mt-4">
-                  Zur Datenlöschungsseite
+                  Aller à la Page de Suppression des Données
                 </Button>
               </Link>
             </CardContent>
@@ -287,22 +287,22 @@ const CaptainsLogPrivacy = () => {
           {/* Legal Links */}
           <div className="flex flex-wrap justify-center gap-6 text-sm pt-8 border-t border-border/40">
             <Link 
-              to="/captains-log/imprint" 
+              to="/captains-log/imprint/fr" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Impressum
+              Mentions Légales
             </Link>
             <Link 
               to="/captains-log/terms" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Nutzungsbedingungen
+              Conditions d'Utilisation
             </Link>
             <Link 
               to="/captains-log/data-deletion" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Datenlöschung
+              Suppression des Données
             </Link>
           </div>
         </div>
@@ -313,4 +313,4 @@ const CaptainsLogPrivacy = () => {
   );
 };
 
-export default CaptainsLogPrivacy;
+export default CaptainsLogPrivacyFR;
