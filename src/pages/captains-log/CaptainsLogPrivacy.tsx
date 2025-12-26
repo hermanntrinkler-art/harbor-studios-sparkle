@@ -139,54 +139,39 @@ const CaptainsLogPrivacy = () => {
             </CardContent>
           </Card>
 
-          {/* 5. Datenspeicherung und Löschung */}
+          {/* 5. Datenspeicherung und Datenlöschung */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Clock className="h-5 w-5 text-primary" />
-                5. Datenspeicherung und Löschung
+                5. Datenspeicherung und Datenlöschung
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Alle personenbezogenen Daten (z. B. E-Mail-Adresse, Logbucheinträge, Fotos, Fahrtdaten) werden sicher in der Supabase-Datenbank gespeichert.
+                Personenbezogene Daten (z. B. E-Mail-Adresse, Logbucheinträge, Positionsdaten, Fotos) werden ausschließlich zum Betrieb der Anwendung verarbeitet und in einer gesicherten Datenbank gespeichert.
               </p>
               <p className="text-muted-foreground">
-                Du kannst einzelne Einträge und Fotos jederzeit selbst innerhalb der App löschen.
-              </p>
-              <p className="text-muted-foreground">
-                Zusätzlich hast du die Möglichkeit, dein gesamtes Benutzerkonto zu löschen – entweder direkt in der App oder über unsere separate Seite zur Datenlöschung.
-              </p>
-              <p className="text-muted-foreground">
-                Nach der Löschung werden alle personenbezogenen Daten und Inhalte innerhalb von spätestens 7 Tagen vollständig und unwiderruflich entfernt, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
+                Nutzer können einzelne Einträge sowie hochgeladene Inhalte jederzeit eigenständig innerhalb der Anwendung löschen. Zusätzlich besteht die Möglichkeit, das Benutzerkonto vollständig zu löschen. In diesem Fall werden sämtliche personenbezogenen Daten spätestens innerhalb von 7 Tagen vollständig und unwiderruflich entfernt, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
               </p>
 
-              {/* 5.1 Revisionssichere Logbuchführung */}
+              {/* Revisionssichere Logbucheinträge */}
               <div className="mt-6 pt-6 border-t border-border/40">
                 <h4 className="font-semibold mb-4 flex items-center gap-2">
                   <Shield className="h-4 w-4 text-primary" />
-                  § Revisionssichere Logbuchführung
+                  Revisionssichere Logbucheinträge
                 </h4>
                 <p className="text-muted-foreground mb-4">
-                  Das digitale Logbuch verwendet eine revisionssichere Speicherung (Hash-Chain), wie sie für rechtlich anerkannte Schiffstagebücher erforderlich ist. Dies bedeutet:
+                  Bestimmte Logbucheinträge (z. B. Fahrt- oder Ereignisprotokolle) werden revisionssicher gespeichert. Eine nachträgliche Änderung oder Löschung einzelner Einträge ist technisch ausgeschlossen.
                 </p>
-                <div className="bg-muted/50 rounded-lg p-4 mb-4">
-                  <p className="text-muted-foreground text-sm">
-                    <strong>Wichtig:</strong> Einzelne Logbucheinträge (Events innerhalb einer Reise) können aus technischen und rechtlichen Gründen nicht nachträglich gelöscht oder verändert werden. Dies dient dem Nachweis der Authentizität und Unversehrtheit gemäß seefahrtsrechtlicher Anforderungen.
-                  </p>
-                </div>
-                <ul className="space-y-2 text-muted-foreground mb-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-500">✓</span>
-                    <span>Komplette Reisen können jederzeit gelöscht werden. Dabei werden alle zugehörigen Events, Tracks und Fotos vollständig entfernt.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-500">✓</span>
-                    <span>Dein gesamtes Konto kann jederzeit gelöscht werden (Einstellungen → Konto löschen). Dabei werden unwiderruflich alle Daten entfernt.</span>
-                  </li>
-                </ul>
-                <p className="text-muted-foreground text-sm">
-                  <strong>Rechtsgrundlage:</strong> Die revisionssichere Speicherung einzelner Events ist gemäß DSGVO Art. 17 Abs. 3 lit. e) zulässig, da sie der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen dient (z.B. bei Versicherungsfällen, Unfällen oder Streitigkeiten).
+                <p className="text-muted-foreground mb-4">
+                  Dies dient der Wahrung der Datenintegrität sowie der Nachvollziehbarkeit im Sinne eines ordnungsgemäßen Schiffstagebuchs, insbesondere im Zusammenhang mit möglichen Versicherungs-, Haftungs- oder Beweisfragen.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Die Speicherung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) sowie Art. 17 Abs. 3 lit. e DSGVO (Ausnahme vom Recht auf Löschung zur Geltendmachung, Ausübung oder Verteidigung rechtlicher Ansprüche).
+                </p>
+                <p className="text-muted-foreground">
+                  Unberührt bleibt das Recht des Nutzers, sein gesamtes Konto jederzeit löschen zu lassen. In diesem Fall werden sämtliche zugehörigen personenbezogenen Daten vollständig entfernt.
                 </p>
               </div>
             </CardContent>
