@@ -1,10 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, ExternalLink, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowLeft, ExternalLink, Mail, Globe } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const languages = [
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪', path: '/projects/captains-log' },
+  { code: 'en', name: 'English', flag: '🇬🇧', path: '/projects/captains-log/en' },
+  { code: 'es', name: 'Español', flag: '🇪🇸', path: '/projects/captains-log/es' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷', path: '/projects/captains-log/fr' },
+  { code: 'it', name: 'Italiano', flag: '🇮🇹', path: '/projects/captains-log/it' },
+  { code: 'pt', name: 'Português', flag: '🇧🇷', path: '/projects/captains-log/pt' },
+];
 
 const CaptainsLogDetails = () => {
+  const navigate = useNavigate();
+  const currentLanguage = languages.find(lang => lang.code === 'de')!;
+
   const features = [
     {
       emoji: "📔",
@@ -123,11 +141,26 @@ const CaptainsLogDetails = () => {
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Zurück</span>
           </Link>
-          <Link to="/projects/captains-log/en">
-            <Button variant="outline" size="sm" className="gap-2">
-              🇬🇧 English
-            </Button>
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="gap-2">
+                <Globe className="h-4 w-4" />
+                <span>{currentLanguage.flag} {currentLanguage.code.toUpperCase()}</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-40 bg-background">
+              {languages.map((lang) => (
+                <DropdownMenuItem
+                  key={lang.code}
+                  onClick={() => navigate(lang.path)}
+                  className={`cursor-pointer ${lang.code === 'de' ? 'bg-primary/10' : ''}`}
+                >
+                  <span className="mr-2">{lang.flag}</span>
+                  {lang.name}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </nav>
 
