@@ -1,26 +1,65 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Mail, Globe, MapPin, FileText, Link as LinkIcon, Scale, Shield } from "lucide-react";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import CaptainsLogFooter from "./CaptainsLogFooter";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const languages = [
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪', path: '/captains-log/imprint' },
+  { code: 'en', name: 'English', flag: '🇬🇧', path: '/captains-log/imprint/en' },
+  { code: 'es', name: 'Español', flag: '🇪🇸', path: '/captains-log/imprint/es' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷', path: '/captains-log/imprint/fr' },
+  { code: 'it', name: 'Italiano', flag: '🇮🇹', path: '/captains-log/imprint/it' },
+  { code: 'pt', name: 'Português', flag: '🇧🇷', path: '/captains-log/imprint/pt' },
+];
 
 const CaptainsLogImprint = () => {
+  const navigate = useNavigate();
+  const currentLanguage = languages.find(lang => lang.code === 'de')!;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-background/95">
-      <LanguageSwitcher />
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
+        <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+          <Button
+            variant="ghost"
+            className="group"
+            onClick={() => window.history.back()}
+          >
+            <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+            Zurück
+          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="gap-2">
+                <Globe className="h-4 w-4" />
+                <span>{currentLanguage.flag} {currentLanguage.code.toUpperCase()}</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-40 bg-background">
+              {languages.map((lang) => (
+                <DropdownMenuItem
+                  key={lang.code}
+                  onClick={() => navigate(lang.path)}
+                  className={`cursor-pointer ${lang.code === 'de' ? 'bg-primary/10' : ''}`}
+                >
+                  <span className="mr-2">{lang.flag}</span>
+                  {lang.name}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </nav>
       
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
-        {/* Back Button */}
-        <Button
-          variant="ghost"
-          className="mb-8 group"
-          onClick={() => window.history.back()}
-        >
-          <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-          Zurück
-        </Button>
-
+      <div className="container mx-auto px-4 py-8 max-w-4xl pt-24">
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Impressum – Captain Log</h1>
