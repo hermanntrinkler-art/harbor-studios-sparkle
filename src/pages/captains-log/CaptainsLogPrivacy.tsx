@@ -160,6 +160,35 @@ const CaptainsLogPrivacy = () => {
               <p className="text-muted-foreground">
                 Nach der Löschung werden alle personenbezogenen Daten und Inhalte innerhalb von spätestens 7 Tagen vollständig und unwiderruflich entfernt, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
               </p>
+
+              {/* 5.1 Revisionssichere Logbuchführung */}
+              <div className="mt-6 pt-6 border-t border-border/40">
+                <h4 className="font-semibold mb-4 flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-primary" />
+                  § Revisionssichere Logbuchführung
+                </h4>
+                <p className="text-muted-foreground mb-4">
+                  Das digitale Logbuch verwendet eine revisionssichere Speicherung (Hash-Chain), wie sie für rechtlich anerkannte Schiffstagebücher erforderlich ist. Dies bedeutet:
+                </p>
+                <div className="bg-muted/50 rounded-lg p-4 mb-4">
+                  <p className="text-muted-foreground text-sm">
+                    <strong>Wichtig:</strong> Einzelne Logbucheinträge (Events innerhalb einer Reise) können aus technischen und rechtlichen Gründen nicht nachträglich gelöscht oder verändert werden. Dies dient dem Nachweis der Authentizität und Unversehrtheit gemäß seefahrtsrechtlicher Anforderungen.
+                  </p>
+                </div>
+                <ul className="space-y-2 text-muted-foreground mb-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">✓</span>
+                    <span>Komplette Reisen können jederzeit gelöscht werden. Dabei werden alle zugehörigen Events, Tracks und Fotos vollständig entfernt.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">✓</span>
+                    <span>Dein gesamtes Konto kann jederzeit gelöscht werden (Einstellungen → Konto löschen). Dabei werden unwiderruflich alle Daten entfernt.</span>
+                  </li>
+                </ul>
+                <p className="text-muted-foreground text-sm">
+                  <strong>Rechtsgrundlage:</strong> Die revisionssichere Speicherung einzelner Events ist gemäß DSGVO Art. 17 Abs. 3 lit. e) zulässig, da sie der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen dient (z.B. bei Versicherungsfällen, Unfällen oder Streitigkeiten).
+                </p>
+              </div>
             </CardContent>
           </Card>
 
