@@ -57,6 +57,11 @@ const App = () => (
         <Route path="/captains-log/imprint/it" element={<CaptainsLogImprintIT />} />
         <Route path="/captains-log/imprint/pt" element={<CaptainsLogImprintPT />} />
         <Route path="/captains-log/privacy" element={<CaptainsLogPrivacy />} />
+        <Route path="/captains-log/privacy/en" element={<CaptainsLogPrivacyEN />} />
+        <Route path="/captains-log/privacy/es" element={<CaptainsLogPrivacyES />} />
+        <Route path="/captains-log/privacy/fr" element={<CaptainsLogPrivacyFR />} />
+        <Route path="/captains-log/privacy/it" element={<CaptainsLogPrivacyIT />} />
+        <Route path="/captains-log/privacy/pt" element={<CaptainsLogPrivacyPT />} />
         <Route path="/captains-log/data-deletion" element={<CaptainsLogDataDeletion />} />
         <Route path="/captains-log/terms" element={<CaptainsLogTerms />} />
         <Route path="/projects/social-post-pro" element={<SocialPostProDetails />} />
