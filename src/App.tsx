@@ -30,6 +30,11 @@ import CaptainsLogImprintFR from "./pages/captains-log/CaptainsLogImprintFR";
 import CaptainsLogImprintIT from "./pages/captains-log/CaptainsLogImprintIT";
 import CaptainsLogImprintPT from "./pages/captains-log/CaptainsLogImprintPT";
 import CaptainsLogPrivacy from "./pages/captains-log/CaptainsLogPrivacy";
+import CaptainsLogPrivacyEN from "./pages/captains-log/CaptainsLogPrivacyEN";
+import CaptainsLogPrivacyES from "./pages/captains-log/CaptainsLogPrivacyES";
+import CaptainsLogPrivacyFR from "./pages/captains-log/CaptainsLogPrivacyFR";
+import CaptainsLogPrivacyIT from "./pages/captains-log/CaptainsLogPrivacyIT";
+import CaptainsLogPrivacyPT from "./pages/captains-log/CaptainsLogPrivacyPT";
 import CaptainsLogDataDeletion from "./pages/captains-log/CaptainsLogDataDeletion";
 import CaptainsLogTerms from "./pages/captains-log/CaptainsLogTerms";
 
