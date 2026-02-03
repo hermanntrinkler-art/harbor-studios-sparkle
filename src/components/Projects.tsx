@@ -85,6 +85,7 @@ const Projects = () => {
       title: "BirthdayPixie",
       description: t('projects.birthdayPixie.description'),
       link: "#",
+      detailPage: "/projects/birthday-pixie",
       tags: ["Reminder", "Email", "PWA", "Import"],
       image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?q=80&w=2070&auto=format&fit=crop"
     }
