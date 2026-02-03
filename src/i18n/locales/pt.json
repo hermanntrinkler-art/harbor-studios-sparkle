@@ -46,6 +46,9 @@
     },
     "videoPixie": {
       "description": "Transforma fotos de produtos em vídeos publicitários profissionais – sem conhecimentos de design."
+    },
+    "birthdayPixie": {
+      "description": "Nunca mais esqueça um aniversário! Lembretes por email, importação de Outlook/Google/Apple, notas e ideias de presente. Seguro, privado e multilíngue."
     }
   },
   "contact": {

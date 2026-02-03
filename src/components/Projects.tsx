@@ -80,6 +80,13 @@ const Projects = () => {
       link: "https://cookitsimple.net",
       tags: ["Food Blog", "Rezepte", "Kochen"],
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      title: "BirthdayPixie",
+      description: t('projects.birthdayPixie.description'),
+      link: "#",
+      tags: ["Reminder", "Email", "PWA", "Import"],
+      image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?q=80&w=2070&auto=format&fit=crop"
     }
   ];
 
