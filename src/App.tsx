@@ -18,6 +18,7 @@ import OceanMindDetails from "./pages/OceanMindDetails";
 import StoryPixieDetails from "./pages/StoryPixieDetails";
 import PixieGuardVPNDetails from "./pages/PixieGuardVPNDetails";
 import VideoPixieDetails from "./pages/VideoPixieDetails";
+import BirthdayPixieDetails from "./pages/BirthdayPixieDetails";
 import Privacy from "./pages/Privacy";
 import DataDeletion from "./pages/DataDeletion";
 import Terms from "./pages/Terms";
@@ -84,6 +85,7 @@ const App = () => (
         <Route path="/projects/storypixie" element={<StoryPixieDetails />} />
         <Route path="/projects/pixieguard-vpn" element={<PixieGuardVPNDetails />} />
         <Route path="/projects/video-pixie" element={<VideoPixieDetails />} />
+        <Route path="/projects/birthday-pixie" element={<BirthdayPixieDetails />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/data-deletion" element={<DataDeletion />} />
         <Route path="/terms" element={<Terms />} />
