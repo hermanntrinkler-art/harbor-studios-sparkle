@@ -49,6 +49,9 @@
     "birthdayPixie": {
       "description": "Nie wieder einen Geburtstag vergessen! Erinnerungen per E-Mail, Import aus Outlook/Google/Apple, Notizen & Geschenkideen. Sicher, privat und mehrsprachig."
     },
+    "legacyVault": {
+      "description": "Sicherer digitaler Vermögens- und Nachlassmanager für Paare und Familien – Konten, Verträge, Dokumente und Notfall-Export an einem Ort. Ohne Passwörter zu speichern."
+    },
     "learnMore": "Mehr erfahren",
     "visitProject": "Projekt besuchen",
     "comingSoon": "Demnächst"

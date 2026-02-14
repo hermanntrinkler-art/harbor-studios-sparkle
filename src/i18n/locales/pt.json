@@ -49,6 +49,9 @@
     },
     "birthdayPixie": {
       "description": "Nunca mais esqueça um aniversário! Lembretes por email, importação de Outlook/Google/Apple, notas e ideias de presente. Seguro, privado e multilíngue."
+    },
+    "legacyVault": {
+      "description": "Gerenciador digital seguro de patrimônio e herança para casais e famílias – contas, contratos, documentos e exportação de emergência em um só lugar. Sem armazenar senhas."
     }
   },
   "contact": {
