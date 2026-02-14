@@ -88,6 +88,14 @@ const Projects = () => {
       detailPage: "/projects/birthday-pixie",
       tags: ["Reminder", "Email", "PWA", "Import"],
       image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      title: "LegacyVault",
+      description: t('projects.legacyVault.description'),
+      link: "#",
+      detailPage: "/projects/legacy-vault",
+      tags: ["Finanzen", "Nachlass", "Sicherheit", "PWA"],
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2070&auto=format&fit=crop"
     }
   ];
 

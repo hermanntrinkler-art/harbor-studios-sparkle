@@ -49,6 +49,9 @@
     },
     "birthdayPixie": {
       "description": "Non dimenticare mai più un compleanno! Promemoria via email, importazione da Outlook/Google/Apple, note e idee regalo. Sicuro, privato e multilingue."
+    },
+    "legacyVault": {
+      "description": "Gestore digitale sicuro di patrimonio e successione per coppie e famiglie – conti, contratti, documenti ed export di emergenza in un unico posto. Senza memorizzare password."
     }
   },
   "contact": {
