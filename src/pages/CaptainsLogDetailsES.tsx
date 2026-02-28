@@ -277,11 +277,6 @@ const CaptainsLogDetailsES = () => {
             que quieren documentar de forma fiable su barco, sus travesías y sus datos – sin complejidad innecesaria.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="#features">
-              <Button size="lg" variant="outline">
-                🚀 Todas las Funciones
-              </Button>
-            </a>
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
               <Button size="lg">
                 <ExternalLink className="w-5 h-5 mr-2" />
