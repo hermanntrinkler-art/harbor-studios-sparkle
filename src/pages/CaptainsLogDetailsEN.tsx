@@ -26,107 +26,203 @@ const CaptainsLogDetailsEN = () => {
   const features = [
     {
       emoji: "📔",
-      title: "Digital Logbook & Voyage Management",
+      title: "Logbook & Voyages",
       items: [
-        "Create and manage complete voyages",
-        "Automatic recording of start, destination, duration, and distance",
-        "Log maneuvers, course changes, and events",
-        "Free notes at any time",
-        "Clear statistics on distance, time, and usage"
+        "Digital logbook with timeline entries (weather, sails, course, notes)",
+        "GPS tracking with incremental distance calculation",
+        "Automatic and manual voyage events",
+        "Backdated entries possible",
+        "Day view with segment display",
+        "Map view of sailed route (Leaflet)",
+        "PDF export of logbook with map snapshots",
+        "Share voyage as community route"
       ]
     },
     {
       emoji: "⚓",
-      title: "GPS & Position Features",
+      title: "Anchor Watch",
       items: [
-        "Automatic position recording during navigation",
-        "Detection of anchoring, maneuvers, and stops",
-        "Dynamic draft (e.g., for swing keel boats)",
-        "Optional import via Signal K (onboard network)"
+        "GPS-based drift detection with adjustable radius",
+        "Acoustic alarm on drift",
+        "Live map with anchor position and swing circle"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "📋",
+      title: "Checklists",
+      items: [
+        "Pre-built templates (departure, docking, storm, etc.)",
+        "Create and edit custom checklists",
+        "Checklist runs with progress indicator"
       ]
     },
     {
-      emoji: "🧭",
-      title: "Anchor Watch & Safety",
+      emoji: "🚨",
+      title: "Safety & Emergency",
       items: [
-        "Set an anchor point with swing circle",
-        "Permanent position monitoring",
-        "Alarm on position deviation",
-        "Offline capable – works without internet connection"
+        "Safety checklists (life-saving equipment, fire protection, etc.)",
+        "Checklists expandable with custom items",
+        "Medical first-aid kit with expiry date tracking",
+        "Crew emergency contacts and medical info",
+        "Shopping list for missing safety equipment",
+        "Safety tips and guidance texts"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "⛵",
+      title: "Boat Profile & Management",
+      items: [
+        "Manage multiple boats (boat switcher)",
+        "Boat data: length, beam, draft, displacement, engine, tanks",
+        "Swing keel support (min/max draft)",
+        "Multi-mast configuration with dynamic sail wardrobe",
+        "Emergency info: contacts, insurance, MMSI, call sign",
+        "Transducer configuration for depth measurement"
+      ]
+    },
+    {
+      emoji: "💰",
+      title: "Cash Book (Boat Expense Ledger)",
+      items: [
+        "Independent cost management per boat",
+        "Categories: insurance, repair, equipment, berth, fuel, and more",
+        "Add and reuse custom categories",
+        "Receipt upload (PDF, JPG, PNG, max 10 MB)",
+        "Year and category filters with totals row",
+        "PDF export with period and category details",
+        "Ideal for boat sale or tax overview"
+      ]
+    },
+    {
+      emoji: "📄",
+      title: "Documents",
+      items: [
+        "Upload and manage boat documents",
+        "Categorization and metadata"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "🛒",
+      title: "Shopping List",
+      items: [
+        "Boat shopping list with item management"
       ]
     },
     {
       emoji: "🧰",
-      title: "Maintenance & Boat Data",
+      title: "Maintenance",
       items: [
-        "Management of boat data (dimensions, engine, sails, tanks)",
-        "Maintenance schedules with intervals (time or operating hours)",
-        "History of all completed work",
-        "Automatic calculation of operating hours",
-        "Clear maintenance status (OK / due / overdue)"
-      ]
+        "Maintenance schedule with intervals (hours/months)",
+        "Engine hours tracking",
+        "Maintenance templates",
+        "Status display (due, overdue, ok)",
+        "Maintenance history with entries"
+      ],
+      isPremium: true
     },
     {
-      emoji: "📋",
-      title: "Checklists & Procedures",
+      emoji: "🥫",
+      title: "Provisions",
       items: [
-        "Predefined checklists (departure, anchoring, night sailing, etc.)",
-        "Create custom checklists",
-        "Progress visible per run",
-        "Ideal for crew changes or recurring procedures"
+        "Create and manage provision lists",
+        "Templates for different trip durations",
+        "Quantity calculation by crew size",
+        "PDF export of provision list"
       ]
     },
     {
       emoji: "📚",
-      title: "Knowledge Base",
+      title: "Seamanship Library",
       items: [
-        "Nautical dictionary",
-        "Knots and maneuver overviews",
-        "Radio & emergency procedures (Mayday, Pan-Pan, Sécurité)",
-        "International flag alphabet",
-        "Integrated search function"
+        "Glossary (nautical terms)",
+        "Knot guide",
+        "Maneuver reference",
+        "Radio communication protocols",
+        "Beaufort scale",
+        "Flag alphabet"
       ]
     },
     {
       emoji: "🗺️",
-      title: "Export & Documentation",
+      title: "Sailing Routes",
       items: [
-        "PDF export of complete logbooks",
-        "GPX and KML export for navigation software",
-        "Complete data backup and recovery"
+        "Classic sailing routes with descriptions",
+        "Community routes (shared by users)",
+        "World map with route overview"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "📖",
+      title: "Manual",
+      items: [
+        "Integrated app manual"
       ]
     },
     {
-      emoji: "🔒",
-      title: "Security & Privacy",
+      emoji: "📡",
+      title: "SignalK / NMEA Integration",
       items: [
-        "Personal data stays private",
-        "No sharing with third parties",
-        "Full control over deletion and export",
-        "Audit-proof storage of log data",
-        "GDPR-compliant processing"
+        "Connect to SignalK server (onboard instruments)",
+        "Live data display (wind, depth, position)",
+        "Save connection profiles",
+        "Setup wizard for easy configuration",
+        "Mixed content handling",
+        "Access request dialog"
+      ]
+    },
+    {
+      emoji: "🌤️",
+      title: "Weather",
+      items: [
+        "Weather widget with current data",
+        "Wind compass display",
+        "Depth gauge with draft slider"
+      ]
+    },
+    {
+      emoji: "🏛️",
+      title: "Digital Legacy",
+      items: [
+        "Set up access to boat data for trusted persons",
+        "Verification via email token",
+        "Contact person management"
       ]
     },
     {
       emoji: "⚙️",
       title: "Technology & Platform",
       items: [
-        "Progressive Web App (PWA)",
-        "Runs on smartphone, tablet, and desktop",
-        "Usable offline",
-        "Synchronization when connected",
-        "Optional: Signal-K connection for onboard data"
+        "Offline-first with IndexedDB (Dexie)",
+        "Automatic sync when connected",
+        "PWA installation (iOS, Android, Desktop)",
+        "7 languages: DE, EN, FR, ES, IT, NL, PT",
+        "Revision-proof hash chain (blockchain principle)",
+        "Dark/Light mode",
+        "Responsive design (mobile-first)"
+      ]
+    },
+    {
+      emoji: "🔒",
+      title: "Security & Privacy",
+      items: [
+        "Row-level security on all tables",
+        "GDPR compliant",
+        "Data deletion function (account + data)",
+        "Imprint, privacy policy, ToS in all languages"
       ]
     },
     {
       emoji: "💎",
-      title: "Premium Features",
+      title: "Premium / Subscription",
       items: [
-        "Signal-K integration",
-        "Extended maintenance features",
-        "Weather & tide data",
-        "Custom checklists",
-        "Future premium features included"
+        "Stripe integration with checkout",
+        "Customer portal for subscription management",
+        "Lifetime license option",
+        "Premium features: anchor watch, safety, maintenance, documents, cash book, sailing routes"
       ],
       isPremium: true
     }
@@ -183,7 +279,7 @@ const CaptainsLogDetailsEN = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="#features">
               <Button size="lg" variant="outline">
-                🚀 Key Features
+                🚀 All Features
               </Button>
             </a>
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
@@ -200,7 +296,7 @@ const CaptainsLogDetailsEN = () => {
       <section id="features" className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
-            🚀 Key Features
+            🚀 Feature Overview
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12">
             Everything you need for your digital ship's log
