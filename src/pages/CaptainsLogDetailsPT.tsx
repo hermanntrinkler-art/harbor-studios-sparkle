@@ -26,107 +26,203 @@ const CaptainsLogDetailsPT = () => {
   const features = [
     {
       emoji: "📔",
-      title: "Diário de Bordo Digital e Gestão de Viagens",
+      title: "Diário de Bordo e Viagens",
       items: [
-        "Criar e gerenciar viagens completas",
-        "Registro automático de partida, destino, duração e distância",
-        "Registrar manobras, mudanças de rumo e eventos",
-        "Notas livres a qualquer momento",
-        "Estatísticas claras sobre distância, tempo e uso"
+        "Diário de bordo digital com entradas cronológicas (clima, velas, rumo, notas)",
+        "Rastreamento GPS com cálculo incremental de distância",
+        "Eventos de viagem automáticos e manuais",
+        "Entradas retroativas possíveis",
+        "Vista diária com segmentos",
+        "Vista de mapa da rota percorrida (Leaflet)",
+        "Exportação PDF do diário com capturas de mapa",
+        "Compartilhar viagem como rota comunitária"
       ]
     },
     {
       emoji: "⚓",
-      title: "GPS e Funções de Posição",
+      title: "Vigília de Âncora",
       items: [
-        "Registro automático de posição durante a navegação",
-        "Detecção de ancoragem, manobras e paradas",
-        "Calado dinâmico (ex: para veleiros com quilha basculante)",
-        "Importação opcional via Signal K (rede de bordo)"
+        "Detecção de deriva GPS com raio ajustável",
+        "Alarme acústico em caso de deriva",
+        "Mapa ao vivo com posição da âncora e círculo de giro"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "📋",
+      title: "Checklists",
+      items: [
+        "Templates predefinidos (partida, atracação, tempestade, etc.)",
+        "Criar e editar checklists personalizadas",
+        "Execuções com indicador de progresso"
       ]
     },
     {
-      emoji: "🧭",
-      title: "Vigília de Âncora e Segurança",
+      emoji: "🚨",
+      title: "Segurança e Emergência",
       items: [
-        "Definir ponto de ancoragem com círculo de giro",
-        "Monitoramento permanente da posição",
-        "Alarme em caso de deriva",
-        "Funciona offline – opera sem conexão com internet"
+        "Checklists de segurança (equipamento salva-vidas, proteção contra incêndio, etc.)",
+        "Checklists expansíveis com itens personalizados",
+        "Kit médico com rastreamento de datas de validade",
+        "Contatos de emergência e infos médicas da tripulação",
+        "Lista de compras para equipamento de segurança em falta",
+        "Dicas de segurança e textos de orientação"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "⛵",
+      title: "Perfil do Barco e Gestão",
+      items: [
+        "Gerenciar vários barcos (seletor de barco)",
+        "Dados: comprimento, boca, calado, deslocamento, motor, tanques",
+        "Suporte quilha basculante (calado mín/máx)",
+        "Configuração multi-mastro com guarda-roupa de velas dinâmico",
+        "Info emergência: contatos, seguros, MMSI, indicativo",
+        "Configuração transdutor para medição de profundidade"
+      ]
+    },
+    {
+      emoji: "💰",
+      title: "Livro Caixa (Despesas do Barco)",
+      items: [
+        "Gestão de custos independente por barco",
+        "Categorias: seguro, reparo, equipamento, vaga, combustível, e mais",
+        "Adicionar e reutilizar categorias personalizadas",
+        "Upload de recibos (PDF, JPG, PNG, máx 10 MB)",
+        "Filtros por ano e categoria com linha de totais",
+        "Exportação PDF com período e categoria",
+        "Ideal para venda de barco ou visão fiscal"
+      ]
+    },
+    {
+      emoji: "📄",
+      title: "Documentos",
+      items: [
+        "Carregar e gerenciar documentos do barco",
+        "Categorização e metadados"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "🛒",
+      title: "Lista de Compras",
+      items: [
+        "Lista de compras do barco com gestão de itens"
       ]
     },
     {
       emoji: "🧰",
-      title: "Manutenção e Dados do Barco",
+      title: "Manutenção",
       items: [
-        "Gestão dos dados do barco (dimensões, motor, velas, tanques)",
-        "Programas de manutenção com intervalos (tempo ou horas de operação)",
-        "Histórico de todos os trabalhos concluídos",
-        "Cálculo automático das horas de operação",
-        "Status de manutenção claro (OK / pendente / atrasado)"
-      ]
+        "Plano de manutenção com intervalos (horas/meses)",
+        "Registro de horas do motor",
+        "Templates de manutenção",
+        "Indicador de status (pendente, atrasado, ok)",
+        "Histórico de manutenção com entradas"
+      ],
+      isPremium: true
     },
     {
-      emoji: "📋",
-      title: "Checklists e Procedimentos",
+      emoji: "🥫",
+      title: "Provisões",
       items: [
-        "Checklists predefinidas (partida, ancoragem, navegação noturna, etc.)",
-        "Criar checklists personalizadas",
-        "Progresso visível por execução",
-        "Ideal para trocas de tripulação ou procedimentos recorrentes"
+        "Criar e gerenciar listas de provisões",
+        "Templates para diferentes durações de viagem",
+        "Cálculo de quantidades por tamanho da tripulação",
+        "Exportação PDF da lista de provisões"
       ]
     },
     {
       emoji: "📚",
-      title: "Base de Conhecimento",
+      title: "Biblioteca Náutica",
       items: [
-        "Dicionário náutico",
-        "Visões gerais de nós e manobras",
-        "Procedimentos de rádio e emergência (Mayday, Pan-Pan, Sécurité)",
-        "Alfabeto de bandeiras internacional",
-        "Função de busca integrada"
+        "Glossário (termos náuticos)",
+        "Guia de nós",
+        "Referência de manobras",
+        "Protocolos de comunicação por rádio",
+        "Escala Beaufort",
+        "Alfabeto de bandeiras"
       ]
     },
     {
       emoji: "🗺️",
-      title: "Exportação e Documentação",
+      title: "Rotas de Navegação",
       items: [
-        "Exportação PDF de diários de bordo completos",
-        "Exportação GPX e KML para software de navegação",
-        "Backup e recuperação completa de dados"
+        "Rotas de navegação clássicas com descrições",
+        "Rotas comunitárias (compartilhadas por usuários)",
+        "Mapa mundial com visão geral das rotas"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "📖",
+      title: "Manual",
+      items: [
+        "Manual integrado do aplicativo"
       ]
     },
     {
-      emoji: "🔒",
-      title: "Segurança e Privacidade",
+      emoji: "📡",
+      title: "Integração SignalK / NMEA",
       items: [
-        "Dados pessoais permanecem privados",
-        "Sem compartilhamento com terceiros",
-        "Controle total sobre exclusão e exportação",
-        "Armazenamento auditável dos dados de bordo",
-        "Processamento em conformidade com o GDPR"
+        "Conexão com servidor SignalK (instrumentos de bordo)",
+        "Exibição de dados ao vivo (vento, profundidade, posição)",
+        "Salvar perfis de conexão",
+        "Assistente de configuração",
+        "Tratamento de conteúdo misto",
+        "Diálogo de solicitação de acesso"
+      ]
+    },
+    {
+      emoji: "🌤️",
+      title: "Clima",
+      items: [
+        "Widget meteorológico com dados atuais",
+        "Bússola de vento",
+        "Medidor de profundidade com controle de calado"
+      ]
+    },
+    {
+      emoji: "🏛️",
+      title: "Legado Digital",
+      items: [
+        "Configurar acesso aos dados do barco para pessoas de confiança",
+        "Verificação por token de email",
+        "Gestão de pessoas de contato"
       ]
     },
     {
       emoji: "⚙️",
       title: "Tecnologia e Plataforma",
       items: [
-        "Progressive Web App (PWA)",
-        "Funciona em smartphone, tablet e desktop",
-        "Utilizável offline",
-        "Sincronização quando conectado",
-        "Opcional: Conexão Signal-K para dados de bordo"
+        "Offline-first com IndexedDB (Dexie)",
+        "Sincronização automática quando conectado",
+        "Instalação PWA (iOS, Android, Desktop)",
+        "7 idiomas: DE, EN, FR, ES, IT, NL, PT",
+        "Cadeia hash à prova de revisão (princípio blockchain)",
+        "Modo escuro/claro",
+        "Design responsive (mobile-first)"
+      ]
+    },
+    {
+      emoji: "🔒",
+      title: "Segurança e Privacidade",
+      items: [
+        "Segurança em nível de linha em todas as tabelas",
+        "Conforme com o GDPR",
+        "Função de exclusão de dados (conta + dados)",
+        "Aviso legal, privacidade, termos em todos os idiomas"
       ]
     },
     {
       emoji: "💎",
-      title: "Funcionalidades Premium",
+      title: "Premium / Assinatura",
       items: [
-        "Integração Signal-K",
-        "Funções de manutenção estendidas",
-        "Dados de clima e marés",
-        "Checklists personalizadas",
-        "Futuras funcionalidades premium incluídas"
+        "Integração Stripe com checkout",
+        "Portal do cliente para gestão de assinatura",
+        "Opção de licença vitalícia",
+        "Features premium: vigília de âncora, segurança, manutenção, documentos, livro caixa, rotas"
       ],
       isPremium: true
     }
@@ -183,7 +279,7 @@ const CaptainsLogDetailsPT = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="#features">
               <Button size="lg" variant="outline">
-                🚀 Funcionalidades Principais
+                🚀 Todas as Funcionalidades
               </Button>
             </a>
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
@@ -200,7 +296,7 @@ const CaptainsLogDetailsPT = () => {
       <section id="features" className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
-            🚀 Funcionalidades Principais
+            🚀 Visão Geral das Funcionalidades
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12">
             Tudo o que você precisa para seu diário de bordo digital

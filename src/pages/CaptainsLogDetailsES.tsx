@@ -26,107 +26,203 @@ const CaptainsLogDetailsES = () => {
   const features = [
     {
       emoji: "📔",
-      title: "Cuaderno de Bitácora Digital y Gestión de Travesías",
+      title: "Cuaderno de Bitácora y Travesías",
       items: [
-        "Crear y gestionar travesías completas",
-        "Registro automático de inicio, destino, duración y distancia",
-        "Registrar maniobras, cambios de rumbo y eventos",
-        "Notas libres en cualquier momento",
-        "Estadísticas claras sobre distancia, tiempo y uso"
+        "Cuaderno de bitácora digital con entradas en línea de tiempo (clima, velas, rumbo, notas)",
+        "Seguimiento GPS con cálculo incremental de distancia",
+        "Eventos de travesía automáticos y manuales",
+        "Entradas retroactivas posibles",
+        "Vista diaria con segmentos",
+        "Vista de mapa de la ruta navegada (Leaflet)",
+        "Exportación PDF del cuaderno con capturas de mapa",
+        "Compartir travesía como ruta comunitaria"
       ]
     },
     {
       emoji: "⚓",
-      title: "GPS y Funciones de Posición",
+      title: "Guardia de Fondeo",
       items: [
-        "Registro automático de posición durante la navegación",
-        "Detección de fondeo, maniobras y paradas",
-        "Calado dinámico (p.ej., para veleros con quilla basculante)",
-        "Importación opcional vía Signal K (red a bordo)"
+        "Detección de deriva basada en GPS con radio ajustable",
+        "Alarma acústica en caso de deriva",
+        "Mapa en vivo con posición del ancla y círculo de borneo"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "📋",
+      title: "Listas de Verificación",
+      items: [
+        "Plantillas predefinidas (salida, atraque, tormenta, etc.)",
+        "Crear y editar listas personalizadas",
+        "Ejecuciones con indicador de progreso"
       ]
     },
     {
-      emoji: "🧭",
-      title: "Guardia de Fondeo y Seguridad",
+      emoji: "🚨",
+      title: "Seguridad y Emergencia",
       items: [
-        "Establecer punto de fondeo con círculo de borneo",
-        "Monitoreo permanente de la posición",
-        "Alarma por desviación de posición",
-        "Funciona sin conexión – opera sin internet"
+        "Listas de seguridad (equipos de salvamento, protección contra incendios, etc.)",
+        "Listas ampliables con puntos propios",
+        "Botiquín médico con seguimiento de caducidad",
+        "Contactos de emergencia y datos médicos de la tripulación",
+        "Lista de compras para equipo de seguridad faltante",
+        "Consejos de seguridad y textos de orientación"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "⛵",
+      title: "Perfil del Barco y Gestión",
+      items: [
+        "Gestionar varios barcos (selector de barco)",
+        "Datos: eslora, manga, calado, desplazamiento, motor, tanques",
+        "Soporte de quilla basculante (calado mín/máx)",
+        "Configuración multi-mástil con guardarropa de velas dinámico",
+        "Info de emergencia: contactos, seguros, MMSI, indicativo",
+        "Configuración de transductor para medición de profundidad"
+      ]
+    },
+    {
+      emoji: "💰",
+      title: "Libro de Caja (Gastos del Barco)",
+      items: [
+        "Gestión de costes independiente por barco",
+        "Categorías: seguro, reparación, equipamiento, amarre, combustible, y más",
+        "Añadir y reutilizar categorías personalizadas",
+        "Subida de recibos (PDF, JPG, PNG, máx 10 MB)",
+        "Filtros por año y categoría con fila de totales",
+        "Exportación PDF con período y categoría",
+        "Ideal para venta de barco o resumen fiscal"
+      ]
+    },
+    {
+      emoji: "📄",
+      title: "Documentos",
+      items: [
+        "Subir y gestionar documentos del barco",
+        "Categorización y metadatos"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "🛒",
+      title: "Lista de Compras",
+      items: [
+        "Lista de compras del barco con gestión de artículos"
       ]
     },
     {
       emoji: "🧰",
-      title: "Mantenimiento y Datos del Barco",
+      title: "Mantenimiento",
       items: [
-        "Gestión de datos del barco (dimensiones, motor, velas, tanques)",
-        "Programas de mantenimiento con intervalos (tiempo u horas de operación)",
-        "Historial de todos los trabajos completados",
-        "Cálculo automático de horas de operación",
-        "Estado de mantenimiento claro (OK / pendiente / vencido)"
-      ]
+        "Plan de mantenimiento con intervalos (horas/meses)",
+        "Registro de horas de motor",
+        "Plantillas de mantenimiento",
+        "Indicador de estado (pendiente, vencido, ok)",
+        "Historial de mantenimiento con entradas"
+      ],
+      isPremium: true
     },
     {
-      emoji: "📋",
-      title: "Listas de Verificación y Procedimientos",
+      emoji: "🥫",
+      title: "Provisiones",
       items: [
-        "Listas predefinidas (salida, fondeo, navegación nocturna, etc.)",
-        "Crear listas personalizadas",
-        "Progreso visible por ejecución",
-        "Ideal para cambios de tripulación o procedimientos recurrentes"
+        "Crear y gestionar listas de provisiones",
+        "Plantillas para diferentes duraciones de viaje",
+        "Cálculo de cantidades según tamaño de tripulación",
+        "Exportación PDF de la lista de provisiones"
       ]
     },
     {
       emoji: "📚",
-      title: "Base de Conocimientos",
+      title: "Biblioteca Náutica",
       items: [
-        "Diccionario náutico",
-        "Resúmenes de nudos y maniobras",
-        "Procedimientos de radio y emergencia (Mayday, Pan-Pan, Sécurité)",
-        "Alfabeto de banderas internacional",
-        "Función de búsqueda integrada"
+        "Glosario (términos náuticos)",
+        "Guía de nudos",
+        "Referencia de maniobras",
+        "Protocolos de comunicación por radio",
+        "Escala Beaufort",
+        "Alfabeto de banderas"
       ]
     },
     {
       emoji: "🗺️",
-      title: "Exportación y Documentación",
+      title: "Rutas de Navegación",
       items: [
-        "Exportación PDF de cuadernos de bitácora completos",
-        "Exportación GPX y KML para software de navegación",
-        "Copia de seguridad y recuperación completa de datos"
+        "Rutas de navegación clásicas con descripciones",
+        "Rutas comunitarias (compartidas por usuarios)",
+        "Mapa mundial con vista general de rutas"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "📖",
+      title: "Manual",
+      items: [
+        "Manual integrado de la aplicación"
       ]
     },
     {
-      emoji: "🔒",
-      title: "Seguridad y Privacidad",
+      emoji: "📡",
+      title: "Integración SignalK / NMEA",
       items: [
-        "Los datos personales permanecen privados",
-        "Sin compartir con terceros",
-        "Control total sobre eliminación y exportación",
-        "Almacenamiento auditable de datos de bitácora",
-        "Procesamiento conforme al RGPD"
+        "Conexión con servidor SignalK (instrumentos de a bordo)",
+        "Visualización de datos en vivo (viento, profundidad, posición)",
+        "Guardar perfiles de conexión",
+        "Asistente de configuración",
+        "Manejo de contenido mixto",
+        "Diálogo de solicitud de acceso"
+      ]
+    },
+    {
+      emoji: "🌤️",
+      title: "Clima",
+      items: [
+        "Widget meteorológico con datos actuales",
+        "Brújula de viento",
+        "Medidor de profundidad con control de calado"
+      ]
+    },
+    {
+      emoji: "🏛️",
+      title: "Legado Digital",
+      items: [
+        "Configurar acceso a datos del barco para personas de confianza",
+        "Verificación por token de email",
+        "Gestión de personas de contacto"
       ]
     },
     {
       emoji: "⚙️",
       title: "Tecnología y Plataforma",
       items: [
-        "Progressive Web App (PWA)",
-        "Funciona en smartphone, tablet y escritorio",
-        "Utilizable sin conexión",
-        "Sincronización cuando hay conexión",
-        "Opcional: Conexión Signal-K para datos a bordo"
+        "Offline-first con IndexedDB (Dexie)",
+        "Sincronización automática al conectar",
+        "Instalación PWA (iOS, Android, Escritorio)",
+        "7 idiomas: DE, EN, FR, ES, IT, NL, PT",
+        "Cadena de hash a prueba de revisión (principio blockchain)",
+        "Modo oscuro/claro",
+        "Diseño responsive (mobile-first)"
+      ]
+    },
+    {
+      emoji: "🔒",
+      title: "Seguridad y Privacidad",
+      items: [
+        "Seguridad a nivel de fila en todas las tablas",
+        "Conforme al RGPD",
+        "Función de eliminación de datos (cuenta + datos)",
+        "Aviso legal, privacidad, condiciones en todos los idiomas"
       ]
     },
     {
       emoji: "💎",
-      title: "Funciones Premium",
+      title: "Premium / Suscripción",
       items: [
-        "Integración Signal-K",
-        "Funciones de mantenimiento ampliadas",
-        "Datos de clima y mareas",
-        "Listas de verificación personalizadas",
-        "Futuras funciones premium incluidas"
+        "Integración Stripe con checkout",
+        "Portal de cliente para gestión de suscripción",
+        "Opción de licencia vitalicia",
+        "Features premium: guardia de fondeo, seguridad, mantenimiento, documentos, libro de caja, rutas"
       ],
       isPremium: true
     }
@@ -183,7 +279,7 @@ const CaptainsLogDetailsES = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="#features">
               <Button size="lg" variant="outline">
-                🚀 Funciones Principales
+                🚀 Todas las Funciones
               </Button>
             </a>
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
@@ -200,7 +296,7 @@ const CaptainsLogDetailsES = () => {
       <section id="features" className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
-            🚀 Funciones Principales
+            🚀 Resumen de Funciones
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12">
             Todo lo que necesitas para tu cuaderno de bitácora digital

@@ -26,107 +26,203 @@ const CaptainsLogDetailsFR = () => {
   const features = [
     {
       emoji: "📔",
-      title: "Journal de Bord Numérique et Gestion des Traversées",
+      title: "Journal de Bord et Traversées",
       items: [
-        "Créer et gérer des traversées complètes",
-        "Enregistrement automatique du départ, destination, durée et distance",
-        "Enregistrer les manœuvres, changements de cap et événements",
-        "Notes libres à tout moment",
-        "Statistiques claires sur la distance, le temps et l'utilisation"
+        "Journal de bord numérique avec entrées chronologiques (météo, voiles, cap, notes)",
+        "Suivi GPS avec calcul incrémental de distance",
+        "Événements de traversée automatiques et manuels",
+        "Entrées antidatées possibles",
+        "Vue journalière avec segments",
+        "Vue carte de la route parcourue (Leaflet)",
+        "Export PDF du journal avec captures de carte",
+        "Partager la traversée comme route communautaire"
       ]
     },
     {
       emoji: "⚓",
-      title: "GPS et Fonctions de Position",
+      title: "Veille au Mouillage",
       items: [
-        "Enregistrement automatique de la position pendant la navigation",
-        "Détection du mouillage, des manœuvres et des arrêts",
-        "Tirant d'eau dynamique (p.ex., pour voiliers à quille pivotante)",
-        "Importation optionnelle via Signal K (réseau de bord)"
+        "Détection de dérive GPS avec rayon réglable",
+        "Alarme acoustique en cas de dérive",
+        "Carte en direct avec position de l'ancre et cercle d'évitage"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "📋",
+      title: "Check-lists",
+      items: [
+        "Modèles prédéfinis (départ, accostage, tempête, etc.)",
+        "Créer et modifier des check-lists personnalisées",
+        "Exécutions avec indicateur de progression"
       ]
     },
     {
-      emoji: "🧭",
-      title: "Veille au Mouillage et Sécurité",
+      emoji: "🚨",
+      title: "Sécurité et Urgence",
       items: [
-        "Définir un point de mouillage avec cercle d'évitage",
-        "Surveillance permanente de la position",
-        "Alarme en cas de dérive",
-        "Fonctionne hors ligne – opère sans connexion internet"
+        "Check-lists de sécurité (équipements de sauvetage, protection incendie, etc.)",
+        "Check-lists extensibles avec points personnalisés",
+        "Pharmacie de bord avec suivi des dates d'expiration",
+        "Contacts d'urgence et infos médicales de l'équipage",
+        "Liste d'achats pour équipement de sécurité manquant",
+        "Conseils de sécurité et textes de guidance"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "⛵",
+      title: "Profil du Bateau et Gestion",
+      items: [
+        "Gérer plusieurs bateaux (sélecteur de bateau)",
+        "Données : longueur, largeur, tirant d'eau, déplacement, moteur, réservoirs",
+        "Support quille pivotante (tirant d'eau min/max)",
+        "Configuration multi-mât avec garde-robe de voiles dynamique",
+        "Infos d'urgence : contacts, assurances, MMSI, indicatif",
+        "Configuration transducteur pour mesure de profondeur"
+      ]
+    },
+    {
+      emoji: "💰",
+      title: "Livre de Caisse (Dépenses du Bateau)",
+      items: [
+        "Gestion des coûts indépendante par bateau",
+        "Catégories : assurance, réparation, équipement, place de port, carburant, et plus",
+        "Ajouter et réutiliser des catégories personnalisées",
+        "Téléchargement de reçus (PDF, JPG, PNG, max 10 Mo)",
+        "Filtres par année et catégorie avec ligne de totaux",
+        "Export PDF avec période et catégorie",
+        "Idéal pour vente de bateau ou aperçu fiscal"
+      ]
+    },
+    {
+      emoji: "📄",
+      title: "Documents",
+      items: [
+        "Télécharger et gérer les documents du bateau",
+        "Catégorisation et métadonnées"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "🛒",
+      title: "Liste d'Achats",
+      items: [
+        "Liste d'achats du bateau avec gestion des articles"
       ]
     },
     {
       emoji: "🧰",
-      title: "Maintenance et Données du Bateau",
+      title: "Maintenance",
       items: [
-        "Gestion des données du bateau (dimensions, moteur, voiles, réservoirs)",
-        "Programmes de maintenance avec intervalles (temps ou heures de fonctionnement)",
-        "Historique de tous les travaux effectués",
-        "Calcul automatique des heures de fonctionnement",
-        "État de maintenance clair (OK / à faire / en retard)"
-      ]
+        "Plan de maintenance avec intervalles (heures/mois)",
+        "Suivi des heures moteur",
+        "Modèles de maintenance",
+        "Affichage du statut (à faire, en retard, ok)",
+        "Historique de maintenance avec entrées"
+      ],
+      isPremium: true
     },
     {
-      emoji: "📋",
-      title: "Check-lists et Procédures",
+      emoji: "🥫",
+      title: "Provisions",
       items: [
-        "Check-lists prédéfinies (départ, mouillage, navigation de nuit, etc.)",
-        "Créer des check-lists personnalisées",
-        "Progression visible par exécution",
-        "Idéal pour les changements d'équipage ou procédures récurrentes"
+        "Créer et gérer des listes de provisions",
+        "Modèles pour différentes durées de navigation",
+        "Calcul des quantités selon la taille de l'équipage",
+        "Export PDF de la liste de provisions"
       ]
     },
     {
       emoji: "📚",
-      title: "Base de Connaissances",
+      title: "Bibliothèque Maritime",
       items: [
-        "Dictionnaire nautique",
-        "Aperçus des nœuds et manœuvres",
-        "Procédures radio et d'urgence (Mayday, Pan-Pan, Sécurité)",
-        "Alphabet des pavillons international",
-        "Fonction de recherche intégrée"
+        "Glossaire (termes nautiques)",
+        "Guide des nœuds",
+        "Référence des manœuvres",
+        "Protocoles de communication radio",
+        "Échelle de Beaufort",
+        "Alphabet des pavillons"
       ]
     },
     {
       emoji: "🗺️",
-      title: "Export et Documentation",
+      title: "Routes de Navigation",
       items: [
-        "Export PDF des journaux de bord complets",
-        "Export GPX et KML pour logiciels de navigation",
-        "Sauvegarde et récupération complète des données"
+        "Routes de navigation classiques avec descriptions",
+        "Routes communautaires (partagées par les utilisateurs)",
+        "Carte mondiale avec vue d'ensemble des routes"
+      ],
+      isPremium: true
+    },
+    {
+      emoji: "📖",
+      title: "Manuel",
+      items: [
+        "Manuel intégré de l'application"
       ]
     },
     {
-      emoji: "🔒",
-      title: "Sécurité et Confidentialité",
+      emoji: "📡",
+      title: "Intégration SignalK / NMEA",
       items: [
-        "Les données personnelles restent privées",
-        "Pas de partage avec des tiers",
-        "Contrôle total sur la suppression et l'export",
-        "Stockage auditable des données de bord",
-        "Traitement conforme au RGPD"
+        "Connexion au serveur SignalK (instruments de bord)",
+        "Affichage de données en direct (vent, profondeur, position)",
+        "Sauvegarder les profils de connexion",
+        "Assistant de configuration",
+        "Gestion du contenu mixte",
+        "Dialogue de demande d'accès"
+      ]
+    },
+    {
+      emoji: "🌤️",
+      title: "Météo",
+      items: [
+        "Widget météo avec données actuelles",
+        "Compas de vent",
+        "Jauge de profondeur avec curseur de tirant d'eau"
+      ]
+    },
+    {
+      emoji: "🏛️",
+      title: "Héritage Numérique",
+      items: [
+        "Configurer l'accès aux données du bateau pour des personnes de confiance",
+        "Vérification par jeton email",
+        "Gestion des personnes de contact"
       ]
     },
     {
       emoji: "⚙️",
       title: "Technologie et Plateforme",
       items: [
-        "Progressive Web App (PWA)",
-        "Fonctionne sur smartphone, tablette et ordinateur",
-        "Utilisable hors ligne",
-        "Synchronisation une fois connecté",
-        "Optionnel : Connexion Signal-K pour données de bord"
+        "Offline-first avec IndexedDB (Dexie)",
+        "Synchronisation automatique une fois connecté",
+        "Installation PWA (iOS, Android, Bureau)",
+        "7 langues : DE, EN, FR, ES, IT, NL, PT",
+        "Chaîne de hachage infalsifiable (principe blockchain)",
+        "Mode sombre/clair",
+        "Design responsive (mobile-first)"
+      ]
+    },
+    {
+      emoji: "🔒",
+      title: "Sécurité et Confidentialité",
+      items: [
+        "Sécurité au niveau des lignes sur toutes les tables",
+        "Conforme au RGPD",
+        "Fonction de suppression des données (compte + données)",
+        "Mentions légales, confidentialité, CGU dans toutes les langues"
       ]
     },
     {
       emoji: "💎",
-      title: "Fonctionnalités Premium",
+      title: "Premium / Abonnement",
       items: [
-        "Intégration Signal-K",
-        "Fonctions de maintenance étendues",
-        "Données météo et marées",
-        "Check-lists personnalisées",
-        "Futures fonctionnalités premium incluses"
+        "Intégration Stripe avec checkout",
+        "Portail client pour gestion d'abonnement",
+        "Option licence à vie",
+        "Features premium : veille au mouillage, sécurité, maintenance, documents, livre de caisse, routes"
       ],
       isPremium: true
     }
@@ -183,7 +279,7 @@ const CaptainsLogDetailsFR = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="#features">
               <Button size="lg" variant="outline">
-                🚀 Fonctionnalités Principales
+                🚀 Toutes les Fonctionnalités
               </Button>
             </a>
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
@@ -200,7 +296,7 @@ const CaptainsLogDetailsFR = () => {
       <section id="features" className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
-            🚀 Fonctionnalités Principales
+            🚀 Aperçu des Fonctionnalités
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12">
             Tout ce dont vous avez besoin pour votre journal de bord numérique
