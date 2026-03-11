@@ -5,6 +5,14 @@ const Projects = () => {
   const { t } = useTranslation();
   const projects = [
     {
+      title: "NutrioTrack",
+      description: t('projects.nutrioTrack.description'),
+      link: "#",
+      detailPage: "/projects/nutriotrack",
+      tags: ["AI", "Nutrition", "Health", "PWA"],
+      image: "/images/nutriotrack-hero.png"
+    },
+    {
       title: "PixieGuard VPN",
       description: t('projects.pixieGuardVPN.description'),
       link: "#",

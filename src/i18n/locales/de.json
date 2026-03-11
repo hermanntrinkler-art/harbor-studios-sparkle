@@ -52,6 +52,9 @@
     "legacyVault": {
       "description": "Sicherer digitaler Vermögens- und Nachlassmanager für Paare und Familien – Konten, Verträge, Dokumente und Notfall-Export an einem Ort. Ohne Passwörter zu speichern."
     },
+    "nutrioTrack": {
+      "description": "Smarter Ernährungsbegleiter mit KI-Fotoanalyse, Barcode-Scanner, Makro-Tracking und persönlichen Zielen. Einfach fotografieren und loslegen."
+    },
     "learnMore": "Mehr erfahren",
     "visitProject": "Projekt besuchen",
     "comingSoon": "Demnächst"

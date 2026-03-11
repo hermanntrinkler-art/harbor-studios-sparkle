@@ -52,6 +52,9 @@
     "legacyVault": {
       "description": "Gestor digital seguro de patrimonio y herencia para parejas y familias – cuentas, contratos, documentos y exportación de emergencia en un solo lugar. Sin almacenar contraseñas."
     },
+    "nutrioTrack": {
+      "description": "Compañero inteligente de nutrición con análisis de fotos por IA, escáner de código de barras, seguimiento de macros y objetivos personales. Simplemente fotografía y empieza."
+    },
     "learnMore": "Más información",
     "visitProject": "Visitar Proyecto",
     "comingSoon": "Próximamente"
