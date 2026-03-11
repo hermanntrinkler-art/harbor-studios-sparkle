@@ -5,7 +5,21 @@ const Projects = () => {
   const { t } = useTranslation();
   const projects = [
     {
+      title: "NutrioTrack",
+      description: t('projects.nutrioTrack.description'),
+      link: "#",
+      detailPage: "/projects/nutriotrack",
+      tags: ["AI", "Nutrition", "Health", "PWA"],
+      image: "/images/nutriotrack-hero.png"
+    },
+    {
       title: "PixieGuard VPN",
+      description: t('projects.pixieGuardVPN.description'),
+      link: "#",
+      detailPage: "/projects/pixieguard-vpn",
+      tags: ["VPN", "WireGuard", "Security", "PWA"],
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop"
+    },
       description: t('projects.pixieGuardVPN.description'),
       link: "#",
       detailPage: "/projects/pixieguard-vpn",

@@ -89,6 +89,7 @@ const App = () => (
         <Route path="/projects/video-pixie" element={<VideoPixieDetails />} />
         <Route path="/projects/birthday-pixie" element={<BirthdayPixieDetails />} />
         <Route path="/projects/legacy-vault" element={<LegacyVaultDetails />} />
+        <Route path="/projects/nutriotrack" element={<NutrioTrackDetails />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/data-deletion" element={<DataDeletion />} />
         <Route path="/terms" element={<Terms />} />
