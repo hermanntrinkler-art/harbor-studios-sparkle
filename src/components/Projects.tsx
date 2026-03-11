@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "NutrioTrack",
       description: t('projects.nutrioTrack.description'),
-      link: "#",
+      link: "https://nutriotrack.com",
       detailPage: "/projects/nutriotrack",
       tags: ["AI", "Nutrition", "Health", "PWA"],
       image: "/images/nutriotrack-hero.png"
