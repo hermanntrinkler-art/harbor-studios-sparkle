@@ -52,6 +52,9 @@
     },
     "legacyVault": {
       "description": "Gestore digitale sicuro di patrimonio e successione per coppie e famiglie – conti, contratti, documenti ed export di emergenza in un unico posto. Senza memorizzare password."
+    },
+    "nutrioTrack": {
+      "description": "Compagno nutrizionale intelligente con analisi foto AI, scanner codici a barre, tracking macro e obiettivi personali. Scatta una foto e inizia."
     }
   },
   "contact": {

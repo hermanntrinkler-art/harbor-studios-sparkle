@@ -52,6 +52,9 @@
     "legacyVault": {
       "description": "Gestionnaire numérique sécurisé de patrimoine et succession pour couples et familles – comptes, contrats, documents et export d'urgence en un seul endroit. Sans stocker de mots de passe."
     },
+    "nutrioTrack": {
+      "description": "Compagnon nutrition intelligent avec analyse photo par IA, scanner de code-barres, suivi des macros et objectifs personnels. Photographiez et c'est parti."
+    },
     "learnMore": "En savoir plus",
     "visitProject": "Visiter le Projet",
     "comingSoon": "Bientôt Disponible"
