@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Mail } from "lucide-react";
+import { ArrowLeft, ExternalLink, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NutrioTrackDetails = () => {
@@ -151,8 +151,8 @@ const NutrioTrackDetails = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <Badge variant="secondary" className="mb-4 text-lg px-4 py-2 bg-amber-500/20 text-amber-600 border-amber-500/30">
-            🚧 In Entwicklung
+          <Badge variant="secondary" className="mb-4 text-lg px-4 py-2 bg-green-500/20 text-green-600 border-green-500/30">
+            Live
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
             NutrioTrack 🥗
@@ -164,6 +164,14 @@ const NutrioTrackDetails = () => {
             Ernährung tracken war noch nie so einfach. Fotografiere dein Essen, und unsere KI erkennt 
             automatisch alle Lebensmittel mit Kalorien und Makronährstoffen. Kein mühsames Suchen, kein manuelles Eingeben.
           </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="https://nutriotrack.com" target="_blank" rel="noopener noreferrer">
+              <Button size="lg">
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Zur App
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
