@@ -52,6 +52,9 @@
     "legacyVault": {
       "description": "Secure digital asset and estate manager for couples and families – accounts, contracts, documents and emergency export in one place. Without storing passwords."
     },
+    "nutrioTrack": {
+      "description": "Smart nutrition companion with AI photo analysis, barcode scanner, macro tracking and personal goals. Simply snap a photo and get started."
+    },
     "learnMore": "Learn More",
     "visitProject": "Visit Project",
     "comingSoon": "Coming Soon"
