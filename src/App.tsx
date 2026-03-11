@@ -20,6 +20,7 @@ import PixieGuardVPNDetails from "./pages/PixieGuardVPNDetails";
 import VideoPixieDetails from "./pages/VideoPixieDetails";
 import BirthdayPixieDetails from "./pages/BirthdayPixieDetails";
 import LegacyVaultDetails from "./pages/LegacyVaultDetails";
+import NutrioTrackDetails from "./pages/NutrioTrackDetails";
 import Privacy from "./pages/Privacy";
 import DataDeletion from "./pages/DataDeletion";
 import Terms from "./pages/Terms";
