@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, ExternalLink, Mail, Globe } from "lucide-react";
+import { ArrowLeft, ExternalLink, Mail, Globe, Smartphone } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
@@ -281,6 +281,12 @@ const CaptainsLogDetailsES = () => {
               <Button size="lg">
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Ir a la App
+              </Button>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.harborstudios.captainslog" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline">
+                <Smartphone className="w-5 h-5 mr-2" />
+                Google Play
               </Button>
             </a>
           </div>
