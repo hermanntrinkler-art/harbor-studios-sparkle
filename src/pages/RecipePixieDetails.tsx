@@ -103,7 +103,7 @@ const RecipePixieDetails = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-lg">
-              <a href="https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor" target="_blank" rel="noopener noreferrer">
+              <a href=" https://recipepixie.app" target="_blank" rel="noopener noreferrer">
                 {t('recipePixieDetails.cta.button')}
                 <ExternalLink className="ml-2 h-5 w-5" />
               </a>
@@ -235,7 +235,7 @@ const RecipePixieDetails = () => {
             {t('recipePixieDetails.cta.free')}
           </p>
           <Button asChild size="lg" className="text-lg">
-            <a href="https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor" target="_blank" rel="noopener noreferrer">
+            <a href=" https://recipepixie.app" target="_blank" rel="noopener noreferrer">
               {t('recipePixieDetails.cta.button')}
               <ExternalLink className="ml-2 h-5 w-5" />
             </a>

@@ -55,7 +55,7 @@ const Projects = () => {
     {
       title: "Recipe Pixie",
       description: t('projects.recipePixie.description'),
-      link: "https://my-recipe-pixie.lovable.app/?utm_source=lovable-editor",
+      link: " https://recipepixie.app",
       detailPage: "/projects/recipe-pixie",
       tags: ["AI", "Web App", "React"],
       image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop"
