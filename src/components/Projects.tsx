@@ -69,11 +69,13 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1556155092-8707de31f9c4?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "SnapQR Share",
+      title: "SnapQR",
       description: t('projects.snapqr.description'),
-      link: "#",
-      tags: ["Event Tech", "QR Code", "Photo Sharing"],
-      image: "/images/snapqr-event.jpg"
+      link: "https://snapqr.cloud",
+      tags: [t('projects.snapqr.tagBars', 'Bars & Gastro'), "QR Code", "Live Photo Wall"],
+      image: "/images/snapqr-event.jpg",
+      liveNow: true,
+      ctaLabel: `${t('projects.startNow')} →`
     },
     {
       title: "Roblox Games Portfolio",

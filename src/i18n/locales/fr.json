@@ -23,7 +23,7 @@
       "visitApp": "Visiter l'App"
     },
     "snapqr": {
-      "description": "Collectez des photos d'événements sans app, sans stress. Partagez le code QR → les invités uploadent → vous obtenez toutes les photos. Commencez gratuitement, payez uniquement lors du téléchargement."
+      "description": "Le mur photo live pour bars, restaurants et événements. Les invités scannent un QR code, téléchargent des photos, vous validez d'un geste. Votre lieu prend vie."
     },
     "socialPostPro": {
       "description": "Plateforme de gestion de contenu tout-en-un pour les médias sociaux – Posts, légendes et hashtags alimentés par l'IA pour tous les secteurs"
@@ -57,7 +57,9 @@
     },
     "learnMore": "En savoir plus",
     "visitProject": "Visiter le Projet",
-    "comingSoon": "Bientôt Disponible"
+    "comingSoon": "Bientôt Disponible",
+    "liveNow": "En direct",
+    "startNow": "Commencer"
   },
   "about": {
     "title": "À Propos de Harbor Studios",
