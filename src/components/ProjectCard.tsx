@@ -85,11 +85,11 @@ const ProjectCard = ({ title, description, link, tags, image, detailPage, liveNo
         ) : (
           <Button 
             asChild
-            variant="ghost" 
-            className="group/btn hover:text-primary mt-auto"
+            variant="default"
+            className="group/btn mt-auto"
           >
             <a href={link} target="_blank" rel="noopener noreferrer">
-              {t('projects.visitProject')}
+              {ctaLabel || t('projects.visitProject')}
               <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
             </a>
           </Button>
