@@ -55,7 +55,12 @@
     },
     "nutrioTrack": {
       "description": "Compagno nutrizionale intelligente con analisi foto AI, scanner codici a barre, tracking macro e obiettivi personali. Scatta una foto e inizia."
-    }
+    },
+    "snapqr": {
+      "description": "Il muro foto live per bar, ristoranti ed eventi. Gli ospiti scansionano un QR code, caricano foto, tu approvi con uno swipe. Il tuo locale prende vita."
+    },
+    "liveNow": "Live ora",
+    "startNow": "Inizia ora"
   },
   "contact": {
     "title": "Contatto",
