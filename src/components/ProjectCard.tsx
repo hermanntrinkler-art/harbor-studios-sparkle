@@ -11,9 +11,11 @@ interface ProjectCardProps {
   tags: string[];
   image: string;
   detailPage?: string;
+  liveNow?: boolean;
+  ctaLabel?: string;
 }
 
-const ProjectCard = ({ title, description, link, tags, image, detailPage }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, link, tags, image, detailPage, liveNow, ctaLabel }: ProjectCardProps) => {
   const { t } = useTranslation();
   
   return (
