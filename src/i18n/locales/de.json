@@ -59,7 +59,10 @@
     "visitProject": "Projekt besuchen",
     "comingSoon": "Demnächst",
     "liveNow": "Jetzt live",
-    "startNow": "Jetzt starten"
+    "startNow": "Jetzt starten",
+    "neondeck": {
+      "description": "KI-gestützter Browser-DJ-Mixer mit Dual-Deck, Crossfader, Auto-DJ, HotTracks, Mikrofon und Soundboard. Direkt im Browser, als PWA installierbar."
+    }
   },
   "about": {
     "title": "Über Harbor Studios",

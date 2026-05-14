@@ -60,7 +60,10 @@
       "description": "O mural de fotos ao vivo para bares, restaurantes e eventos. Os convidados escaneiam um QR code, enviam fotos e você aprova com um gesto. Seu local ganha vida."
     },
     "liveNow": "Ao vivo",
-    "startNow": "Começar agora"
+    "startNow": "Começar agora",
+    "neondeck": {
+      "description": "Mixer de DJ no navegador com IA: dois decks, crossfader, Auto-DJ, HotTracks, microfone e soundboard. Direto no navegador, instalável como PWA."
+    }
   },
   "contact": {
     "title": "Contato",

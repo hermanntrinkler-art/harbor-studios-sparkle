@@ -59,7 +59,10 @@
     "visitProject": "Visiter le Projet",
     "comingSoon": "Bientôt Disponible",
     "liveNow": "En direct",
-    "startNow": "Commencer"
+    "startNow": "Commencer",
+    "neondeck": {
+      "description": "Mixeur DJ dans le navigateur boosté à l'IA : deux decks, crossfader, Auto-DJ, HotTracks, micro et soundboard. Directement dans le navigateur, installable en PWA."
+    }
   },
   "about": {
     "title": "À Propos de Harbor Studios",
