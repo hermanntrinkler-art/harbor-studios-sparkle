@@ -8,6 +8,7 @@ const Projects = () => {
       title: "NeonDeck",
       description: t('projects.neondeck.description'),
       link: "https://neondeck.app",
+      detailPage: "/projects/neondeck",
       tags: ["AI", "DJ Mixer", "Web Audio", "PWA"],
       image: "/images/neondeck-hero.jpg",
       liveNow: true,
