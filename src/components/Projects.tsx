@@ -5,6 +5,15 @@ const Projects = () => {
   const { t } = useTranslation();
   const projects = [
     {
+      title: "NeonDeck",
+      description: t('projects.neondeck.description'),
+      link: "https://neondeck.app",
+      tags: ["AI", "DJ Mixer", "Web Audio", "PWA"],
+      image: "/images/neondeck-hero.jpg",
+      liveNow: true,
+      ctaLabel: `${t('projects.startNow')} →`
+    },
+    {
       title: "NutrioTrack",
       description: t('projects.nutrioTrack.description'),
       link: "https://nutriotrack.com",
