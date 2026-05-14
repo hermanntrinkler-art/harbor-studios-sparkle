@@ -1,40 +1,38 @@
+## Gefundene Lovable-Referenzen
 
+Beim Durchsuchen des Projekts habe ich noch mehrere Stellen gefunden, die entfernt/ersetzt werden sollten (gemäß Brand-Regel "keine Lovable-Erwähnungen").
 
-## Plan: Google Play Store Link bei Captain's Log einfuegen
+### 1. Sichtbar auf der Website (Frontend)
 
-### Was wird gemacht
-Ein Google Play Store Button wird neben dem bestehenden "Zur App" Button im Hero-Bereich eingefuegt -- auf allen 6 Sprachversionen der Captain's Log Detailseite.
+- **`src/pages/PixieGuardVPNDetails.tsx`** (Zeile 147) — Tech-Stack-Badge zeigt "Lovable Cloud" → ersetzen durch z. B. "Cloud Backend" oder "Supabase" (oder einfach entfernen).
+- **6 Sprachdateien** (`src/i18n/locales/{de,en,es,fr,it,pt}.json`) — Captain's-Log-Beschreibung enthält "Lovable Cloud" → ersetzen durch "Cloud Backend" in allen 6 Sprachen.
 
-### Umsetzung
+### 2. SEO / Social Sharing (sichtbar beim Teilen)
 
-**Button-Design:**
-- Google Play Badge/Button mit Play Store Icon (aus lucide: `Smartphone` oder ein SVG Play Store Badge)
-- Neben dem "Zur App" Button, gleiche Groesse
-- Link: `https://play.google.com/store/apps/details?id=com.harborstudios.captainslog`
-- Text je Sprache: "Google Play" (universal) oder "Im Play Store"
+- **`index.html`** — Open-Graph- und Twitter-Meta-Tags verweisen auf Lovable:
+  - `og:image` → `https://lovable.dev/opengraph-image-p98pqg.png`
+  - `twitter:site` → `@lovable_dev`
+  - `twitter:image` → `https://lovable.dev/opengraph-image-p98pqg.png`
+  → Auf Harbor-Studios-eigenes OG-Bild + Twitter-Handle ändern (oder Tags entfernen). Hier brauche ich von dir: gewünschtes OG-Bild (URL/Pfad) und ggf. Twitter-Handle. Fallback: ich generiere ein neutrales OG-Bild mit Harbor-Studios-Branding und entferne `twitter:site`.
 
-**Betroffene Dateien (6 Stueck):**
-1. `src/pages/CaptainsLogDetails.tsx` (DE)
-2. `src/pages/CaptainsLogDetailsEN.tsx` (EN)
-3. `src/pages/CaptainsLogDetailsES.tsx` (ES)
-4. `src/pages/CaptainsLogDetailsFR.tsx` (FR)
-5. `src/pages/CaptainsLogDetailsIT.tsx` (IT)
-6. `src/pages/CaptainsLogDetailsPT.tsx` (PT)
+### 3. Repo-intern (nicht öffentlich sichtbar)
 
-**Aenderung pro Datei:** Im Hero-Bereich wird nach dem "Zur App" Button ein zweiter Button eingefuegt:
+- **`README.md`** — Standard-Lovable-README mit mehreren Links zu `lovable.dev/projects/...`. Wird nicht ausgeliefert, taucht aber bei GitHub-Sync/ZIP-Download auf. → Durch eine Harbor-Studios-README ersetzen.
 
-```tsx
-<a href="https://play.google.com/store/apps/details?id=com.harborstudios.captainslog" target="_blank" rel="noopener noreferrer">
-  <Button size="lg" variant="outline">
-    <Smartphone className="w-5 h-5 mr-2" />
-    Google Play
-  </Button>
-</a>
-```
+### 4. Bereits ok
 
-### Ideen fuer Extras
+- **"Edit with Lovable"-Badge** auf Published-Site ist bereits **versteckt** (hide_badge=true).
+- Keine Lovable-Links in Footer, Navigation oder Komponenten gefunden.
 
-- **Offizielles Google Play Badge** statt einfachem Button -- ein "Jetzt bei Google Play" SVG-Badge sieht professioneller aus
-- **Apple App Store Link** spaeter ergaenzen, falls die App auch dort verfuegbar ist
-- **QR-Code** zum Play Store Link im Footer oder in einer separaten Sektion
+### Umsetzung (nach deiner Freigabe)
 
+1. PixieGuard-Tag und alle 6 Locale-Beschreibungen anpassen.
+2. `index.html` Meta-Tags säubern (mit deinem Wunsch-OG-Bild).
+3. README.md ersetzen.
+
+### Frage an dich
+
+Für den OG-/Twitter-Block in `index.html`: soll ich
+- (a) ein neues Harbor-Studios-OG-Bild generieren und einbinden, oder
+- (b) die Tags komplett entfernen, oder
+- (c) hast du ein eigenes Bild + Twitter-Handle, das ich nutzen soll?
