@@ -59,7 +59,10 @@
     "visitProject": "Visit Project",
     "comingSoon": "Coming Soon",
     "liveNow": "Live now",
-    "startNow": "Get started"
+    "startNow": "Get started",
+    "neondeck": {
+      "description": "AI-powered browser DJ mixer with dual decks, crossfader, Auto-DJ, HotTracks, mic and soundboard. Right in your browser, installable as a PWA."
+    }
   },
   "about": {
     "title": "About Harbor Studios",
