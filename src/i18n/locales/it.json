@@ -214,7 +214,7 @@
     },
     "techStack": {
       "title": "Dettagli Tecnici",
-      "description": "Progressive Web App (PWA) fullstack costruita con React, TypeScript, Leaflet Maps e Lovable Cloud. Funzionalità: Tracciamento GPS in tempo reale, generazione PDF, aggiornamenti realtime, integrazione SignalK/NMEA, Weather API, Tidal API, supporto i18n multilingue."
+      "description": "Progressive Web App (PWA) fullstack costruita con React, TypeScript, Leaflet Maps e Cloud Backend. Funzionalità: Tracciamento GPS in tempo reale, generazione PDF, aggiornamenti realtime, integrazione SignalK/NMEA, Weather API, Tidal API, supporto i18n multilingue."
     },
     "cta": {
       "title": "Pronti a salpare!",
