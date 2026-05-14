@@ -36,7 +36,8 @@ const Projects = () => {
       link: "https://captainlog.pro/",
       detailPage: "/projects/captains-log",
       tags: ["Maritime", "GPS", "PWA", "Offline"],
-      image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?q=80&w=2070&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?q=80&w=2070&auto=format&fit=crop",
+      liveNow: true
     },
     {
       title: "OceanMind",
@@ -104,10 +105,11 @@ const Projects = () => {
     {
       title: "BirthdayPixie",
       description: t('projects.birthdayPixie.description'),
-      link: "#",
+      link: "https://www.birthdaypixie.com/",
       detailPage: "/projects/birthday-pixie",
-      tags: ["Reminder", "Email", "PWA", "Import"],
-      image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?q=80&w=2070&auto=format&fit=crop"
+      tags: ["Reminder", "Email", "PWA", "Soon on Google Play"],
+      image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?q=80&w=2070&auto=format&fit=crop",
+      liveNow: true
     },
     {
       title: "LegacyVault",
