@@ -144,7 +144,7 @@ const PixieGuardVPNDetails = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-3">Backend</h3>
                   <div className="flex flex-wrap gap-2">
-                    {["Lovable Cloud", "PostgreSQL", "Stripe", "WireGuard"].map((tech) => (
+                    {["Cloud Backend", "PostgreSQL", "Stripe", "WireGuard"].map((tech) => (
                       <Badge key={tech} variant="secondary">{tech}</Badge>
                     ))}
                   </div>
