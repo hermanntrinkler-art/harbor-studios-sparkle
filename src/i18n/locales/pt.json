@@ -63,6 +63,10 @@
     "startNow": "Começar agora",
     "neondeck": {
       "description": "Mixer de DJ no navegador com IA: dois decks, crossfader, Auto-DJ, HotTracks, microfone e soundboard. Direto no navegador, instalável como PWA."
+    },
+    "inProgress": "Em andamento",
+    "dfg": {
+      "description": "Novo site institucional para a DFG Handels GmbH – tecnologia de jateamento de areia, ar comprimido e airless desde 1981, com integração de loja online e formulário de contato."
     }
   },
   "contact": {

@@ -63,6 +63,10 @@
     "startNow": "Inizia ora",
     "neondeck": {
       "description": "Mixer DJ nel browser con IA: due deck, crossfader, Auto-DJ, HotTracks, microfono e soundboard. Direttamente nel browser, installabile come PWA."
+    },
+    "inProgress": "In lavorazione",
+    "dfg": {
+      "description": "Nuovo sito web aziendale per DFG Handels GmbH – tecnica di sabbiatura, aria compressa e airless dal 1981, con collegamento allo shop online e modulo di contatto."
     }
   },
   "contact": {

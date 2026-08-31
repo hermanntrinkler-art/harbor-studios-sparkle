@@ -62,6 +62,10 @@
     "startNow": "Jetzt starten",
     "neondeck": {
       "description": "KI-gestützter Browser-DJ-Mixer mit Dual-Deck, Crossfader, Auto-DJ, HotTracks, Mikrofon und Soundboard. Direkt im Browser, als PWA installierbar."
+    },
+    "inProgress": "In Arbeit",
+    "dfg": {
+      "description": "Neue Unternehmenswebsite für die DFG Handels GmbH – Sandstrahl-, Druckluft- und Airlesstechnik seit 1981, mit Online-Shop-Anbindung und Kontaktformular."
     }
   },
   "about": {

@@ -22,6 +22,7 @@ import BirthdayPixieDetails from "./pages/BirthdayPixieDetails";
 import LegacyVaultDetails from "./pages/LegacyVaultDetails";
 import NutrioTrackDetails from "./pages/NutrioTrackDetails";
 import NeonDeckDetails from "./pages/NeonDeckDetails";
+import DFGDetails from "./pages/DFGDetails";
 import Privacy from "./pages/Privacy";
 import DataDeletion from "./pages/DataDeletion";
 import Terms from "./pages/Terms";
@@ -92,6 +93,7 @@ const App = () => (
         <Route path="/projects/legacy-vault" element={<LegacyVaultDetails />} />
         <Route path="/projects/nutriotrack" element={<NutrioTrackDetails />} />
         <Route path="/projects/neondeck" element={<NeonDeckDetails />} />
+        <Route path="/projects/dfg" element={<DFGDetails />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/data-deletion" element={<DataDeletion />} />
         <Route path="/terms" element={<Terms />} />

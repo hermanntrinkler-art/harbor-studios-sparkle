@@ -12,26 +12,32 @@ interface ProjectCardProps {
   image: string;
   detailPage?: string;
   liveNow?: boolean;
+  inProgress?: boolean;
   ctaLabel?: string;
 }
 
-const ProjectCard = ({ title, description, link, tags, image, detailPage, liveNow, ctaLabel }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, link, tags, image, detailPage, liveNow, inProgress, ctaLabel }: ProjectCardProps) => {
   const { t } = useTranslation();
-  
+
   return (
     <Card className="group overflow-hidden border-primary/20 bg-card hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_hsl(189_94%_58%_/_0.2)] flex flex-col h-full">
       <div className="aspect-video overflow-hidden bg-muted relative">
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
-        {liveNow && (
+        {liveNow ? (
           <span className="absolute top-3 right-3 inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-green-500 text-white shadow-lg">
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             {t('projects.liveNow')}
           </span>
-        )}
+        ) : inProgress ? (
+          <span className="absolute top-3 right-3 inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-amber-500 text-white shadow-lg">
+            <span className="w-2 h-2 rounded-full bg-white" />
+            {t('projects.inProgress')}
+          </span>
+        ) : null}
       </div>
       
       <div className="p-6 flex flex-col flex-1">

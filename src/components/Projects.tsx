@@ -118,6 +118,15 @@ const Projects = () => {
       detailPage: "/projects/legacy-vault",
       tags: ["Finanzen", "Nachlass", "Sicherheit", "PWA"],
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      title: "DFG Handels GmbH",
+      description: t('projects.dfg.description'),
+      link: "#",
+      detailPage: "/projects/dfg",
+      tags: ["Business-Website", "B2B", "Sandstrahltechnik"],
+      image: "/images/dfg-hero.jpg",
+      inProgress: true
     }
   ];
 

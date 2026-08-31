@@ -62,6 +62,10 @@
     "startNow": "Empezar ahora",
     "neondeck": {
       "description": "Mezclador de DJ en el navegador con IA: dos decks, crossfader, Auto-DJ, HotTracks, micrófono y soundboard. Directo en el navegador, instalable como PWA."
+    },
+    "inProgress": "En curso",
+    "dfg": {
+      "description": "Nuevo sitio web corporativo para DFG Handels GmbH – tecnología de chorro de arena, aire comprimido y airless desde 1981, con conexión a tienda online y formulario de contacto."
     }
   },
   "about": {

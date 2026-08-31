@@ -62,6 +62,10 @@
     "startNow": "Get started",
     "neondeck": {
       "description": "AI-powered browser DJ mixer with dual decks, crossfader, Auto-DJ, HotTracks, mic and soundboard. Right in your browser, installable as a PWA."
+    },
+    "inProgress": "In Progress",
+    "dfg": {
+      "description": "New corporate website for DFG Handels GmbH – sandblasting, compressed air and airless equipment since 1981, with online shop integration and a contact form."
     }
   },
   "about": {
