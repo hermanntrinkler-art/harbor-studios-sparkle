@@ -1,11 +1,11 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { ArrowLeft, Trash2, Play, Square } from "lucide-react";
+import { ArrowLeft, Trash2, Play, Square, PlusCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { useRunningTimeEntry } from "@/hooks/useRunningTimeEntry";
 import { startTimeEntry, stopTimeEntry } from "@/lib/timeTracking";
-import { formatDurationClock, formatDurationShort } from "@/lib/time";
+import { formatDurationClock, formatDurationShort, roundUpToQuarterHour } from "@/lib/time";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -18,7 +18,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { toast } from "sonner";
+
+const todayIso = () => new Date().toISOString().slice(0, 10);
 
 type Project = Tables<"projects">;
 type ProjectUpdate = Tables<"project_updates">;
@@ -49,6 +58,11 @@ const ProjectView = () => {
   const [trackingBusy, setTrackingBusy] = useState(false);
   const { running, refresh: refreshRunning } = useRunningTimeEntry();
   const [now, setNow] = useState(Date.now());
+  const [manualDialogOpen, setManualDialogOpen] = useState(false);
+  const [manualDate, setManualDate] = useState(todayIso());
+  const [manualHours, setManualHours] = useState("");
+  const [manualNote, setManualNote] = useState("");
+  const [savingManual, setSavingManual] = useState(false);
 
   const load = async () => {
     const { data: projectData, error } = await supabase.from("projects").select("*").eq("id", id).single();
@@ -124,9 +138,43 @@ const ProjectView = () => {
     }
   };
 
+  const handleAddManualEntry = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!project) return;
+    const hours = parseFloat(manualHours.replace(",", "."));
+    if (!manualDate || !hours || hours <= 0) {
+      toast.error("Bitte Datum und eine Dauer größer 0 angeben");
+      return;
+    }
+    setSavingManual(true);
+    const startedAt = new Date(`${manualDate}T12:00:00`);
+    const endedAt = new Date(startedAt.getTime() + hours * 3600 * 1000);
+    const { error } = await supabase.from("time_entries").insert({
+      project_id: project.id,
+      started_at: startedAt.toISOString(),
+      ended_at: endedAt.toISOString(),
+      note: manualNote.trim() || "Manuell erfasst",
+    });
+    setSavingManual(false);
+    if (error) {
+      toast.error("Eintragen fehlgeschlagen: " + error.message);
+    } else {
+      toast.success("Zeit manuell eingetragen");
+      setManualDialogOpen(false);
+      setManualHours("");
+      setManualNote("");
+      setManualDate(todayIso());
+      load();
+    }
+  };
+
+  // Abgeschlossene Einträge werden für Anzeige/Summe immer auf die nächsten
+  // 15 Minuten aufgerundet; die laufende (noch nicht gestoppte) Zeit bleibt
+  // als Live-Anzeige unverändert.
   const completedSeconds = timeEntries.reduce((sum, entry) => {
     if (!entry.ended_at) return sum;
-    return sum + (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000;
+    const raw = (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000;
+    return sum + roundUpToQuarterHour(raw);
   }, 0);
   const runningSeconds = runningHere && running ? (now - new Date(running.started_at).getTime()) / 1000 : 0;
   const totalSeconds = completedSeconds + runningSeconds;
@@ -223,30 +271,36 @@ const ProjectView = () => {
             </span>
           </div>
 
-          {runningHere ? (
-            <div className="flex items-center justify-between rounded-md border border-primary/30 bg-primary/5 p-4">
-              <span className="font-mono text-2xl tabular-nums">{formatDurationClock(runningSeconds)}</span>
-              <Button variant="outline" onClick={handleStop} disabled={trackingBusy}>
-                <Square className="mr-2 h-4 w-4" />
-                Stopp
-              </Button>
-            </div>
-          ) : running ? (
-            <div className="flex items-center justify-between rounded-md border border-border/60 p-4 text-sm">
-              <span className="text-muted-foreground">
-                Läuft gerade für <span className="font-medium text-foreground">{running.project?.title}</span>
-              </span>
-              <Button variant="outline" onClick={handleStart} disabled={trackingBusy}>
+          <div className="flex flex-wrap items-center gap-2">
+            {runningHere ? (
+              <div className="flex items-center justify-between rounded-md border border-primary/30 bg-primary/5 p-4 flex-1 min-w-[240px]">
+                <span className="font-mono text-2xl tabular-nums">{formatDurationClock(runningSeconds)}</span>
+                <Button variant="outline" onClick={handleStop} disabled={trackingBusy}>
+                  <Square className="mr-2 h-4 w-4" />
+                  Stopp
+                </Button>
+              </div>
+            ) : running ? (
+              <div className="flex items-center justify-between rounded-md border border-border/60 p-4 text-sm flex-1 min-w-[240px]">
+                <span className="text-muted-foreground">
+                  Läuft gerade für <span className="font-medium text-foreground">{running.project?.title}</span>
+                </span>
+                <Button variant="outline" onClick={handleStart} disabled={trackingBusy}>
+                  <Play className="mr-2 h-4 w-4" />
+                  Hier stoppen &amp; starten
+                </Button>
+              </div>
+            ) : (
+              <Button onClick={handleStart} disabled={trackingBusy}>
                 <Play className="mr-2 h-4 w-4" />
-                Hier stoppen &amp; starten
+                Zeiterfassung starten
               </Button>
-            </div>
-          ) : (
-            <Button onClick={handleStart} disabled={trackingBusy}>
-              <Play className="mr-2 h-4 w-4" />
-              Zeiterfassung starten
+            )}
+            <Button variant="outline" onClick={() => setManualDialogOpen(true)}>
+              <PlusCircle className="mr-2 h-4 w-4" />
+              Manuell eintragen
             </Button>
-          )}
+          </div>
 
           {timeEntries.length > 0 && (
             <ul className="mt-4 divide-y divide-border/60 text-sm">
@@ -256,12 +310,15 @@ const ProjectView = () => {
                     {formatDate(entry.started_at).split(",")[0]} · {formatTime(entry.started_at)}
                     {" – "}
                     {entry.ended_at ? formatTime(entry.ended_at) : "läuft…"}
+                    {entry.note && <span className="block text-xs text-muted-foreground/70">{entry.note}</span>}
                   </span>
                   <div className="flex items-center gap-3">
                     <span className="font-medium">
                       {entry.ended_at
                         ? formatDurationShort(
-                            (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000
+                            roundUpToQuarterHour(
+                              (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000
+                            )
                           )
                         : "—"}
                     </span>
@@ -275,6 +332,48 @@ const ProjectView = () => {
           )}
         </CardContent>
       </Card>
+
+      <Dialog open={manualDialogOpen} onOpenChange={setManualDialogOpen}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Zeit manuell eintragen</DialogTitle>
+          </DialogHeader>
+          <form onSubmit={handleAddManualEntry} className="space-y-4 py-2">
+            <div className="space-y-2">
+              <Label>Datum</Label>
+              <Input type="date" value={manualDate} onChange={(e) => setManualDate(e.target.value)} required />
+            </div>
+            <div className="space-y-2">
+              <Label>Dauer (Stunden)</Label>
+              <Input
+                type="number"
+                step="0.25"
+                min="0.25"
+                placeholder="z. B. 2.5 für 2 Std 30 Min"
+                value={manualHours}
+                onChange={(e) => setManualHours(e.target.value)}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>Notiz (optional)</Label>
+              <Textarea
+                placeholder="z. B. Wolfgangs Webseite überarbeitet"
+                value={manualNote}
+                onChange={(e) => setManualNote(e.target.value)}
+              />
+            </div>
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={() => setManualDialogOpen(false)}>
+                Abbrechen
+              </Button>
+              <Button type="submit" disabled={savingManual}>
+                {savingManual ? "Speichert…" : "Eintragen"}
+              </Button>
+            </DialogFooter>
+          </form>
+        </DialogContent>
+      </Dialog>
 
       <Card className="mb-6">
         <CardContent className="pt-6">

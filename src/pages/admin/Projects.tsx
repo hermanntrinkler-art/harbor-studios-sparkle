@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/dialog";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { toast } from "sonner";
-import { formatDurationShort } from "@/lib/time";
+import { formatDurationShort, roundUpToQuarterHour } from "@/lib/time";
 
 type Project = Tables<"projects">;
 type ProjectInsert = TablesInsert<"projects">;
@@ -76,8 +76,13 @@ const Projects = () => {
     timeEntries
       .filter((entry) => entry.project_id === projectId)
       .reduce((sum, entry) => {
-        const end = entry.ended_at ? new Date(entry.ended_at).getTime() : Date.now();
-        return sum + (end - new Date(entry.started_at).getTime()) / 1000;
+        const start = new Date(entry.started_at).getTime();
+        if (!entry.ended_at) {
+          // Noch laufender Eintrag: unverändert (live), nicht aufgerundet.
+          return sum + (Date.now() - start) / 1000;
+        }
+        const raw = (new Date(entry.ended_at).getTime() - start) / 1000;
+        return sum + roundUpToQuarterHour(raw);
       }, 0);
 
   useEffect(() => {
