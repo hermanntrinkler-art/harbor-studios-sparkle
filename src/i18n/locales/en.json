@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Home",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "customerArea": "Customer Area"
   },
   "hero": {
     "badge": "Creative Studio",

@@ -3,9 +3,23 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import PortalLogin from "./pages/portal/PortalLogin";
+import CustomerDashboard from "./pages/portal/CustomerDashboard";
+import AdminLayout from "./pages/admin/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
+import Customers from "./pages/admin/Customers";
+import AdminProjects from "./pages/admin/Projects";
+import AdminProjectView from "./pages/admin/ProjectView";
+import Quotes from "./pages/admin/Quotes";
+import QuoteForm from "./pages/admin/QuoteForm";
+import QuoteView from "./pages/admin/QuoteView";
+import Invoices from "./pages/admin/Invoices";
+import InvoiceForm from "./pages/admin/InvoiceForm";
+import InvoiceView from "./pages/admin/InvoiceView";
+import AdminSettings from "./pages/admin/Settings";
 import RecipePixieDetails from "./pages/RecipePixieDetails";
 import CaptainsLogDetails from "./pages/CaptainsLogDetails";
 import CaptainsLogDetailsEN from "./pages/CaptainsLogDetailsEN";
@@ -99,6 +113,25 @@ const App = () => (
         <Route path="/terms" element={<Terms />} />
         <Route path="/support" element={<Support />} />
         <Route path="/support/recipe-pixie" element={<RecipePixieGuide />} />
+        <Route path="/portal/login" element={<PortalLogin />} />
+        <Route path="/portal" element={<CustomerDashboard />} />
+        {/* Alter Admin-Login-Pfad leitet auf den neuen gemeinsamen Kundenbereich-Login um */}
+        <Route path="/admin/login" element={<Navigate to="/portal/login" replace />} />
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="customers" element={<Customers />} />
+          <Route path="projects" element={<AdminProjects />} />
+          <Route path="projects/:id" element={<AdminProjectView />} />
+          <Route path="quotes" element={<Quotes />} />
+          <Route path="quotes/new" element={<QuoteForm />} />
+          <Route path="quotes/:id" element={<QuoteView />} />
+          <Route path="quotes/:id/edit" element={<QuoteForm />} />
+          <Route path="invoices" element={<Invoices />} />
+          <Route path="invoices/new" element={<InvoiceForm />} />
+          <Route path="invoices/:id" element={<InvoiceView />} />
+          <Route path="invoices/:id/edit" element={<InvoiceForm />} />
+          <Route path="settings" element={<AdminSettings />} />
+        </Route>
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

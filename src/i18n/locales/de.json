@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Startseite",
-    "backToHome": "Zurück zur Startseite"
+    "backToHome": "Zurück zur Startseite",
+    "customerArea": "Kundenbereich"
   },
   "hero": {
     "badge": "Creative Studio",

@@ -1,0 +1,195 @@
+import { useEffect, useState, type FormEvent } from "react";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import { ArrowLeft, Trash2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import type { Tables } from "@/integrations/supabase/types";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { toast } from "sonner";
+
+type Project = Tables<"projects">;
+type ProjectUpdate = Tables<"project_updates">;
+type Customer = Tables<"customers">;
+
+const statusLabels: Record<string, string> = {
+  anfrage: "Anfrage",
+  in_arbeit: "In Arbeit",
+  review: "In Review",
+  live: "Live",
+  pausiert: "Pausiert",
+};
+
+const formatDate = (value: string) => new Date(value).toLocaleString("de-DE");
+
+const ProjectView = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [project, setProject] = useState<Project | null>(null);
+  const [customer, setCustomer] = useState<Customer | null>(null);
+  const [updates, setUpdates] = useState<ProjectUpdate[]>([]);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+  const [posting, setPosting] = useState(false);
+
+  const load = async () => {
+    const { data: projectData, error } = await supabase.from("projects").select("*").eq("id", id).single();
+    if (error || !projectData) {
+      toast.error("Projekt nicht gefunden");
+      navigate("/admin/projects");
+      return;
+    }
+    setProject(projectData);
+
+    const [{ data: customerData }, { data: updateRows }] = await Promise.all([
+      supabase.from("customers").select("*").eq("id", projectData.customer_id).single(),
+      supabase.from("project_updates").select("*").eq("project_id", id).order("created_at", { ascending: false }),
+    ]);
+    setCustomer(customerData || null);
+    setUpdates(updateRows || []);
+  };
+
+  useEffect(() => {
+    load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
+
+  const handleStatusChange = async (status: string) => {
+    if (!project) return;
+    const { error } = await supabase.from("projects").update({ status }).eq("id", project.id);
+    if (error) {
+      toast.error("Status konnte nicht geändert werden");
+    } else {
+      setProject({ ...project, status });
+      toast.success("Status aktualisiert");
+    }
+  };
+
+  const handleAddUpdate = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!project || !newTitle.trim()) return;
+    setPosting(true);
+    const { error } = await supabase
+      .from("project_updates")
+      .insert({ project_id: project.id, title: newTitle.trim(), body: newBody.trim() || null });
+    setPosting(false);
+    if (error) {
+      toast.error("Update konnte nicht gespeichert werden");
+    } else {
+      setNewTitle("");
+      setNewBody("");
+      toast.success("Update veröffentlicht");
+      load();
+    }
+  };
+
+  const handleDeleteUpdate = async (updateId: string) => {
+    if (!confirm("Dieses Update wirklich löschen?")) return;
+    const { error } = await supabase.from("project_updates").delete().eq("id", updateId);
+    if (error) {
+      toast.error("Löschen fehlgeschlagen");
+    } else {
+      load();
+    }
+  };
+
+  if (!project) {
+    return <p className="text-muted-foreground">Lädt…</p>;
+  }
+
+  return (
+    <div>
+      <Link
+        to="/admin/projects"
+        className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-4 text-sm"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Zurück zu Projekten
+      </Link>
+
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-2xl font-bold">{project.title}</h1>
+          <p className="text-sm text-muted-foreground">
+            {customer?.company_name || customer?.contact_name || "—"}
+            {customer && !customer.user_id && (
+              <span className="ml-2 text-amber-600">(noch kein Portal-Zugang verknüpft)</span>
+            )}
+          </p>
+        </div>
+        <Select value={project.status} onValueChange={handleStatusChange}>
+          <SelectTrigger className="w-40">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {Object.entries(statusLabels).map(([value, label]) => (
+              <SelectItem key={value} value={value}>
+                {label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+
+      {project.description && (
+        <Card className="mb-6">
+          <CardContent className="pt-6 text-sm whitespace-pre-wrap">{project.description}</CardContent>
+        </Card>
+      )}
+
+      <Card className="mb-6">
+        <CardContent className="pt-6">
+          <h2 className="font-semibold mb-3">Neues Update für den Kunden</h2>
+          <form onSubmit={handleAddUpdate} className="space-y-3">
+            <div className="space-y-2">
+              <Label>Titel</Label>
+              <Input value={newTitle} onChange={(e) => setNewTitle(e.target.value)} required />
+            </div>
+            <div className="space-y-2">
+              <Label>Details (optional)</Label>
+              <Textarea value={newBody} onChange={(e) => setNewBody(e.target.value)} />
+            </div>
+            <Button type="submit" disabled={posting}>
+              {posting ? "Veröffentlicht…" : "Update veröffentlichen"}
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="pt-6">
+          <h2 className="font-semibold mb-4">Verlauf</h2>
+          {updates.length === 0 ? (
+            <p className="text-sm text-muted-foreground">Noch keine Updates.</p>
+          ) : (
+            <ul className="space-y-4">
+              {updates.map((update) => (
+                <li key={update.id} className="flex items-start justify-between gap-4 border-b last:border-0 pb-4 last:pb-0">
+                  <div>
+                    <p className="text-xs text-muted-foreground">{formatDate(update.created_at)}</p>
+                    <p className="font-medium text-sm">{update.title}</p>
+                    {update.body && <p className="text-sm text-muted-foreground whitespace-pre-wrap">{update.body}</p>}
+                  </div>
+                  <Button variant="ghost" size="icon" onClick={() => handleDeleteUpdate(update.id)}>
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
+
+export default ProjectView;
