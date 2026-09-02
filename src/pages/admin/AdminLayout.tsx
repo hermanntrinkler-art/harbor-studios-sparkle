@@ -3,6 +3,7 @@ import { LayoutDashboard, Users, FolderKanban, FileText, Receipt, Settings, LogO
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
+import RunningTimer from "@/components/admin/RunningTimer";
 
 const navItems = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard, end: true },
@@ -37,6 +38,9 @@ const AdminLayout = () => {
     <div className="min-h-screen flex bg-background">
       <aside className="w-60 shrink-0 border-r border-border/40 flex flex-col">
         <div className="px-4 py-5 font-bold text-lg border-b border-border/40">Harbor Studios</div>
+        <div className="pt-3">
+          <RunningTimer />
+        </div>
         <nav className="flex-1 py-4 space-y-1 px-2">
           {navItems.map((item) => (
             <NavLink

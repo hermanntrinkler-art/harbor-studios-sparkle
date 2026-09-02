@@ -222,6 +222,41 @@ export type Database = {
           },
         ]
       }
+      time_entries: {
+        Row: {
+          id: string
+          project_id: string
+          started_at: string
+          ended_at: string | null
+          note: string | null
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          project_id: string
+          started_at?: string
+          ended_at?: string | null
+          note?: string | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          project_id?: string
+          started_at?: string
+          ended_at?: string | null
+          note?: string | null
+          created_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "time_entries_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       quotes: {
         Row: {
           id: string

@@ -23,10 +23,12 @@ import {
 } from "@/components/ui/dialog";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { toast } from "sonner";
+import { formatDurationShort } from "@/lib/time";
 
 type Project = Tables<"projects">;
 type ProjectInsert = TablesInsert<"projects">;
 type Customer = Tables<"customers">;
+type TimeEntry = Tables<"time_entries">;
 
 const statusLabels: Record<string, string> = {
   anfrage: "Anfrage",
@@ -46,6 +48,7 @@ const emptyForm: ProjectInsert = {
 const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [customers, setCustomers] = useState<Customer[]>([]);
+  const [timeEntries, setTimeEntries] = useState<TimeEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -54,9 +57,10 @@ const Projects = () => {
 
   const loadAll = async () => {
     setLoading(true);
-    const [{ data: projectRows, error }, { data: customerRows }] = await Promise.all([
+    const [{ data: projectRows, error }, { data: customerRows }, { data: timeRows }] = await Promise.all([
       supabase.from("projects").select("*").order("created_at", { ascending: false }),
       supabase.from("customers").select("*").order("company_name"),
+      supabase.from("time_entries").select("*"),
     ]);
     if (error) {
       toast.error("Projekte konnten nicht geladen werden");
@@ -64,8 +68,17 @@ const Projects = () => {
       setProjects(projectRows || []);
     }
     setCustomers(customerRows || []);
+    setTimeEntries(timeRows || []);
     setLoading(false);
   };
+
+  const totalSecondsForProject = (projectId: string) =>
+    timeEntries
+      .filter((entry) => entry.project_id === projectId)
+      .reduce((sum, entry) => {
+        const end = entry.ended_at ? new Date(entry.ended_at).getTime() : Date.now();
+        return sum + (end - new Date(entry.started_at).getTime()) / 1000;
+      }, 0);
 
   useEffect(() => {
     loadAll();
@@ -150,19 +163,20 @@ const Projects = () => {
               <TableHead>Projekt</TableHead>
               <TableHead>Kunde</TableHead>
               <TableHead>Status</TableHead>
+              <TableHead>Zeit erfasst</TableHead>
               <TableHead className="text-right">Aktionen</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {loading ? (
               <TableRow>
-                <TableCell colSpan={4} className="text-center text-muted-foreground py-8">
+                <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
                   Lädt…
                 </TableCell>
               </TableRow>
             ) : projects.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={4} className="text-center text-muted-foreground py-8">
+                <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
                   Noch keine Projekte angelegt.
                 </TableCell>
               </TableRow>
@@ -172,6 +186,9 @@ const Projects = () => {
                   <TableCell className="font-medium">{project.title}</TableCell>
                   <TableCell>{customerName(project.customer_id)}</TableCell>
                   <TableCell>{statusLabels[project.status] || project.status}</TableCell>
+                  <TableCell className="text-muted-foreground">
+                    {formatDurationShort(totalSecondsForProject(project.id))}
+                  </TableCell>
                   <TableCell className="text-right space-x-1">
                     <Button variant="ghost" size="icon" asChild>
                       <Link to={`/admin/projects/${project.id}`}>

@@ -1,8 +1,11 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { ArrowLeft, Trash2 } from "lucide-react";
+import { ArrowLeft, Trash2, Play, Square } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
+import { useRunningTimeEntry } from "@/hooks/useRunningTimeEntry";
+import { startTimeEntry, stopTimeEntry } from "@/lib/timeTracking";
+import { formatDurationClock, formatDurationShort } from "@/lib/time";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,6 +23,7 @@ import { toast } from "sonner";
 type Project = Tables<"projects">;
 type ProjectUpdate = Tables<"project_updates">;
 type Customer = Tables<"customers">;
+type TimeEntry = Tables<"time_entries">;
 
 const statusLabels: Record<string, string> = {
   anfrage: "Anfrage",
@@ -30,6 +34,7 @@ const statusLabels: Record<string, string> = {
 };
 
 const formatDate = (value: string) => new Date(value).toLocaleString("de-DE");
+const formatTime = (value: string) => new Date(value).toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
 
 const ProjectView = () => {
   const { id } = useParams();
@@ -37,9 +42,13 @@ const ProjectView = () => {
   const [project, setProject] = useState<Project | null>(null);
   const [customer, setCustomer] = useState<Customer | null>(null);
   const [updates, setUpdates] = useState<ProjectUpdate[]>([]);
+  const [timeEntries, setTimeEntries] = useState<TimeEntry[]>([]);
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
   const [posting, setPosting] = useState(false);
+  const [trackingBusy, setTrackingBusy] = useState(false);
+  const { running, refresh: refreshRunning } = useRunningTimeEntry();
+  const [now, setNow] = useState(Date.now());
 
   const load = async () => {
     const { data: projectData, error } = await supabase.from("projects").select("*").eq("id", id).single();
@@ -50,18 +59,77 @@ const ProjectView = () => {
     }
     setProject(projectData);
 
-    const [{ data: customerData }, { data: updateRows }] = await Promise.all([
+    const [{ data: customerData }, { data: updateRows }, { data: timeRows }] = await Promise.all([
       supabase.from("customers").select("*").eq("id", projectData.customer_id).single(),
       supabase.from("project_updates").select("*").eq("project_id", id).order("created_at", { ascending: false }),
+      supabase.from("time_entries").select("*").eq("project_id", id).order("started_at", { ascending: false }),
     ]);
     setCustomer(customerData || null);
     setUpdates(updateRows || []);
+    setTimeEntries(timeRows || []);
   };
 
   useEffect(() => {
     load();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
+
+  const runningHere = running?.project_id === id;
+
+  useEffect(() => {
+    if (!runningHere) return;
+    const interval = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(interval);
+  }, [runningHere]);
+
+  const handleStart = async () => {
+    if (!project) return;
+    setTrackingBusy(true);
+    if (running) {
+      await stopTimeEntry(running.id);
+    }
+    const { error } = await startTimeEntry(project.id);
+    setTrackingBusy(false);
+    if (error) {
+      toast.error("Start fehlgeschlagen: " + error.message);
+    } else {
+      toast.success("Zeiterfassung gestartet");
+      refreshRunning();
+      load();
+    }
+  };
+
+  const handleStop = async () => {
+    if (!running) return;
+    setTrackingBusy(true);
+    const { error } = await stopTimeEntry(running.id);
+    setTrackingBusy(false);
+    if (error) {
+      toast.error("Stoppen fehlgeschlagen: " + error.message);
+    } else {
+      toast.success("Zeiterfassung gestoppt");
+      refreshRunning();
+      load();
+    }
+  };
+
+  const handleDeleteTimeEntry = async (entryId: string) => {
+    if (!confirm("Diesen Zeiteintrag wirklich löschen?")) return;
+    const { error } = await supabase.from("time_entries").delete().eq("id", entryId);
+    if (error) {
+      toast.error("Löschen fehlgeschlagen");
+    } else {
+      load();
+      refreshRunning();
+    }
+  };
+
+  const completedSeconds = timeEntries.reduce((sum, entry) => {
+    if (!entry.ended_at) return sum;
+    return sum + (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000;
+  }, 0);
+  const runningSeconds = runningHere && running ? (now - new Date(running.started_at).getTime()) / 1000 : 0;
+  const totalSeconds = completedSeconds + runningSeconds;
 
   const handleStatusChange = async (status: string) => {
     if (!project) return;
@@ -145,6 +213,68 @@ const ProjectView = () => {
           <CardContent className="pt-6 text-sm whitespace-pre-wrap">{project.description}</CardContent>
         </Card>
       )}
+
+      <Card className="mb-6">
+        <CardContent className="pt-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-semibold">Zeiterfassung</h2>
+            <span className="text-sm text-muted-foreground">
+              Gesamt: <span className="font-medium text-foreground">{formatDurationShort(totalSeconds)}</span>
+            </span>
+          </div>
+
+          {runningHere ? (
+            <div className="flex items-center justify-between rounded-md border border-primary/30 bg-primary/5 p-4">
+              <span className="font-mono text-2xl tabular-nums">{formatDurationClock(runningSeconds)}</span>
+              <Button variant="outline" onClick={handleStop} disabled={trackingBusy}>
+                <Square className="mr-2 h-4 w-4" />
+                Stopp
+              </Button>
+            </div>
+          ) : running ? (
+            <div className="flex items-center justify-between rounded-md border border-border/60 p-4 text-sm">
+              <span className="text-muted-foreground">
+                Läuft gerade für <span className="font-medium text-foreground">{running.project?.title}</span>
+              </span>
+              <Button variant="outline" onClick={handleStart} disabled={trackingBusy}>
+                <Play className="mr-2 h-4 w-4" />
+                Hier stoppen &amp; starten
+              </Button>
+            </div>
+          ) : (
+            <Button onClick={handleStart} disabled={trackingBusy}>
+              <Play className="mr-2 h-4 w-4" />
+              Zeiterfassung starten
+            </Button>
+          )}
+
+          {timeEntries.length > 0 && (
+            <ul className="mt-4 divide-y divide-border/60 text-sm">
+              {timeEntries.map((entry) => (
+                <li key={entry.id} className="flex items-center justify-between py-2">
+                  <span className="text-muted-foreground">
+                    {formatDate(entry.started_at).split(",")[0]} · {formatTime(entry.started_at)}
+                    {" – "}
+                    {entry.ended_at ? formatTime(entry.ended_at) : "läuft…"}
+                  </span>
+                  <div className="flex items-center gap-3">
+                    <span className="font-medium">
+                      {entry.ended_at
+                        ? formatDurationShort(
+                            (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000
+                          )
+                        : "—"}
+                    </span>
+                    <Button variant="ghost" size="icon" onClick={() => handleDeleteTimeEntry(entry.id)}>
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </CardContent>
+      </Card>
 
       <Card className="mb-6">
         <CardContent className="pt-6">
