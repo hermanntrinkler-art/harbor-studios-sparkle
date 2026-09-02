@@ -6,7 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 // Datenbankfunktion public.is_admin() in supabase/migrations/20260902000000_customer_portal.sql).
 // Die eigentliche Berechtigungsprüfung passiert serverseitig über Row Level Security –
 // dieser Wert steuert hier nur, wohin die Oberfläche nach dem Login leitet.
-const ADMIN_EMAIL = "hermann.trinkler@gmail.com";
+export const ADMIN_EMAIL = "hermann.trinkler@gmail.com";
 
 export const useAuth = () => {
   const [session, setSession] = useState<Session | null>(null);
@@ -28,7 +28,7 @@ export const useAuth = () => {
   }, []);
 
   const isAuthenticated = !!session;
-  const isAdmin = (session?.user?.email || "").toLowerCase() === ADMIN_EMAIL;
+  const isAdmin = (session?.user?.email || "").toLowerCase() === ADMIN_EMAIL.toLowerCase();
 
   return { session, loading, isAuthenticated, isAdmin };
 };

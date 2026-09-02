@@ -76,7 +76,7 @@ const Customers = () => {
     if (editingId) {
       const { error } = await supabase.from("customers").update(form).eq("id", editingId);
       if (error) {
-        toast.error("Speichern fehlgeschlagen");
+        toast.error(`Speichern fehlgeschlagen: ${error.message}`);
       } else {
         toast.success("Kunde aktualisiert");
         setDialogOpen(false);
@@ -85,7 +85,7 @@ const Customers = () => {
     } else {
       const { error } = await supabase.from("customers").insert(form);
       if (error) {
-        toast.error("Speichern fehlgeschlagen");
+        toast.error(`Speichern fehlgeschlagen: ${error.message}`);
       } else {
         toast.success("Kunde angelegt");
         setDialogOpen(false);
@@ -99,7 +99,7 @@ const Customers = () => {
     if (!confirm("Diesen Kunden wirklich löschen?")) return;
     const { error } = await supabase.from("customers").delete().eq("id", id);
     if (error) {
-      toast.error("Löschen fehlgeschlagen (evtl. gibt es noch Angebote/Rechnungen zu diesem Kunden)");
+      toast.error(`Löschen fehlgeschlagen: ${error.message}`);
     } else {
       toast.success("Kunde gelöscht");
       loadCustomers();

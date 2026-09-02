@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth, ADMIN_EMAIL } from "@/hooks/useAuth";
 
 type Mode = "signin" | "signup";
 
@@ -33,7 +33,7 @@ const PortalLogin = () => {
     setError(null);
     setInfo(null);
 
-    const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error: signInError } = await supabase.auth.signInWithPassword({ email, password });
 
     setSubmitting(false);
 
@@ -42,9 +42,9 @@ const PortalLogin = () => {
       return;
     }
 
-    // Der Zielbereich (Admin oder Kundenbereich) wird oben automatisch anhand
-    // der E-Mail-Adresse bestimmt, sobald die Session gesetzt ist.
-    navigate(from || "/portal", { replace: true });
+    const signedInEmail = (data.session?.user?.email || email).toLowerCase();
+    const target = signedInEmail === ADMIN_EMAIL.toLowerCase() ? "/admin" : "/portal";
+    navigate(from || target, { replace: true });
   };
 
   const handleSignUp = async (e: FormEvent) => {
@@ -74,7 +74,8 @@ const PortalLogin = () => {
 
     if (data.session) {
       // E-Mail-Bestätigung ist im Supabase-Projekt deaktiviert – direkt eingeloggt.
-      navigate("/portal", { replace: true });
+      const signedUpEmail = (data.session.user?.email || email).toLowerCase();
+      navigate(signedUpEmail === ADMIN_EMAIL.toLowerCase() ? "/admin" : "/portal", { replace: true });
       return;
     }
 
