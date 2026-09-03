@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { Pencil, Download, ArrowLeft } from "lucide-react";
+import { Pencil, Download, ArrowLeft, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { Button } from "@/components/ui/button";
@@ -79,6 +79,23 @@ const InvoiceView = () => {
     }
   };
 
+  const handleDelete = async () => {
+    if (!invoice) return;
+    if (
+      !confirm(
+        "Diese Rechnung wirklich löschen? Bereits abgerechnete Projektstunden werden dadurch wieder freigegeben."
+      )
+    )
+      return;
+    const { error } = await supabase.from("invoices").delete().eq("id", invoice.id);
+    if (error) {
+      toast.error("Löschen fehlgeschlagen: " + error.message);
+    } else {
+      toast.success("Rechnung gelöscht");
+      navigate("/admin/invoices");
+    }
+  };
+
   const handleDownloadPdf = () => {
     if (!invoice || !customer || !company) return;
     const pdf = buildDocumentPdf(company, customer, {
@@ -142,6 +159,10 @@ const InvoiceView = () => {
           <Button variant="outline" onClick={handleDownloadPdf}>
             <Download className="mr-2 h-4 w-4" />
             PDF
+          </Button>
+          <Button variant="outline" onClick={handleDelete}>
+            <Trash2 className="mr-2 h-4 w-4" />
+            Löschen
           </Button>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Plus } from "lucide-react";
+import { Plus, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import { toast } from "sonner";
 
 interface InvoiceRow {
   id: string;
@@ -39,18 +40,35 @@ const Invoices = () => {
   const [invoices, setInvoices] = useState<InvoiceRow[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const load = async () => {
-      const { data, error } = await supabase
-        .from("invoices")
-        .select("id, invoice_number, issue_date, due_date, status, total, customers(company_name, contact_name)")
-        .order("created_at", { ascending: false });
+  const load = async () => {
+    const { data, error } = await supabase
+      .from("invoices")
+      .select("id, invoice_number, issue_date, due_date, status, total, customers(company_name, contact_name)")
+      .order("created_at", { ascending: false });
 
-      if (!error) setInvoices((data as unknown as InvoiceRow[]) || []);
-      setLoading(false);
-    };
+    if (!error) setInvoices((data as unknown as InvoiceRow[]) || []);
+    setLoading(false);
+  };
+
+  useEffect(() => {
     load();
   }, []);
+
+  const handleDelete = async (id: string) => {
+    if (
+      !confirm(
+        "Diese Rechnung wirklich löschen? Bereits abgerechnete Projektstunden werden dadurch wieder freigegeben."
+      )
+    )
+      return;
+    const { error } = await supabase.from("invoices").delete().eq("id", id);
+    if (error) {
+      toast.error("Löschen fehlgeschlagen: " + error.message);
+    } else {
+      toast.success("Rechnung gelöscht");
+      load();
+    }
+  };
 
   return (
     <div>
@@ -74,18 +92,19 @@ const Invoices = () => {
               <TableHead>Fällig</TableHead>
               <TableHead>Status</TableHead>
               <TableHead className="text-right">Summe</TableHead>
+              <TableHead className="text-right">Aktionen</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {loading ? (
               <TableRow>
-                <TableCell colSpan={6} className="text-center text-muted-foreground py-8">
+                <TableCell colSpan={7} className="text-center text-muted-foreground py-8">
                   Lädt…
                 </TableCell>
               </TableRow>
             ) : invoices.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={6} className="text-center text-muted-foreground py-8">
+                <TableCell colSpan={7} className="text-center text-muted-foreground py-8">
                   Noch keine Rechnungen erstellt.
                 </TableCell>
               </TableRow>
@@ -106,6 +125,11 @@ const Invoices = () => {
                     </Badge>
                   </TableCell>
                   <TableCell className="text-right">{formatCurrency(invoice.total)}</TableCell>
+                  <TableCell className="text-right">
+                    <Button variant="ghost" size="icon" onClick={() => handleDelete(invoice.id)}>
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </TableCell>
                 </TableRow>
               ))
             )}
