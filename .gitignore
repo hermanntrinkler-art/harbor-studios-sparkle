@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Private Belege/Rechnungen (Apple, Lovable, Claude, etc.) -- gehoeren
+# nicht ins Git-Repo / GitHub / Vercel, liegen nur lokal.
+/Belege/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
