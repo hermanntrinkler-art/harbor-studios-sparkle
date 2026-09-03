@@ -1,18 +1,36 @@
 import { useEffect, useState } from "react";
+import { Plus, Pencil, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import type { Tables, TablesUpdate } from "@/integrations/supabase/types";
+import type { Tables, TablesInsert, TablesUpdate } from "@/integrations/supabase/types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { toast } from "sonner";
+import { useHourlyRates, type HourlyRate } from "@/hooks/useHourlyRates";
 
 type CompanySettings = Tables<"company_settings">;
+
+const emptyRateForm: TablesInsert<"hourly_rates"> = { label: "", rate: 0, sort_order: 0 };
 
 const Settings = () => {
   const [settings, setSettings] = useState<CompanySettings | null>(null);
   const [saving, setSaving] = useState(false);
+
+  const { rates, refresh: refreshRates } = useHourlyRates();
+  const [rateDialogOpen, setRateDialogOpen] = useState(false);
+  const [editingRateId, setEditingRateId] = useState<string | null>(null);
+  const [rateForm, setRateForm] = useState<TablesInsert<"hourly_rates">>(emptyRateForm);
+  const [savingRate, setSavingRate] = useState(false);
 
   useEffect(() => {
     const load = async () => {
@@ -21,6 +39,51 @@ const Settings = () => {
     };
     load();
   }, []);
+
+  const openNewRateDialog = () => {
+    setEditingRateId(null);
+    setRateForm({ label: "", rate: 0, sort_order: rates.length });
+    setRateDialogOpen(true);
+  };
+
+  const openEditRateDialog = (rate: HourlyRate) => {
+    setEditingRateId(rate.id);
+    setRateForm({ label: rate.label, rate: Number(rate.rate), sort_order: rate.sort_order });
+    setRateDialogOpen(true);
+  };
+
+  const handleSaveRate = async () => {
+    if (!rateForm.label?.trim()) {
+      toast.error("Bitte eine Bezeichnung angeben");
+      return;
+    }
+    setSavingRate(true);
+    const { error } = editingRateId
+      ? await supabase.from("hourly_rates").update(rateForm).eq("id", editingRateId)
+      : await supabase.from("hourly_rates").insert(rateForm);
+    setSavingRate(false);
+    if (error) {
+      toast.error("Speichern fehlgeschlagen: " + error.message);
+    } else {
+      toast.success(editingRateId ? "Stundensatz aktualisiert" : "Stundensatz angelegt");
+      setRateDialogOpen(false);
+      refreshRates();
+    }
+  };
+
+  const handleDeleteRate = async (id: string) => {
+    if (!confirm("Diese Kategorie wirklich löschen? Bestehende Zeiteinträge behalten ihre Stunden, verlieren aber die Kategorie-Zuordnung.")) return;
+    const { error } = await supabase.from("hourly_rates").delete().eq("id", id);
+    if (error) {
+      toast.error("Löschen fehlgeschlagen");
+    } else {
+      toast.success("Kategorie gelöscht");
+      refreshRates();
+    }
+  };
+
+  const formatCurrency = (value: number) =>
+    new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(value);
 
   const update = (patch: Partial<CompanySettings>) => {
     setSettings((prev) => (prev ? { ...prev, ...patch } : prev));
@@ -151,6 +214,89 @@ const Settings = () => {
           </p>
         </CardContent>
       </Card>
+
+      <Card className="mb-6">
+        <CardHeader className="flex flex-row items-center justify-between">
+          <CardTitle className="text-base">Stundensätze</CardTitle>
+          <Button size="sm" onClick={openNewRateDialog}>
+            <Plus className="mr-2 h-4 w-4" />
+            Kategorie hinzufügen
+          </Button>
+        </CardHeader>
+        <CardContent>
+          <p className="text-xs text-muted-foreground mb-3">
+            Diese Kategorien stehen bei der Zeiterfassung und beim Einfügen von Projektzeit in Rechnungen zur
+            Auswahl.
+          </p>
+          {rates.length === 0 ? (
+            <p className="text-sm text-muted-foreground">Noch keine Kategorien angelegt.</p>
+          ) : (
+            <div className="border rounded-lg">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Bezeichnung</TableHead>
+                    <TableHead>Satz pro Stunde</TableHead>
+                    <TableHead className="text-right">Aktionen</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {rates.map((rate) => (
+                    <TableRow key={rate.id}>
+                      <TableCell className="font-medium">{rate.label}</TableCell>
+                      <TableCell>{formatCurrency(Number(rate.rate))}</TableCell>
+                      <TableCell className="text-right space-x-1">
+                        <Button variant="ghost" size="icon" onClick={() => openEditRateDialog(rate)}>
+                          <Pencil className="h-4 w-4" />
+                        </Button>
+                        <Button variant="ghost" size="icon" onClick={() => handleDeleteRate(rate.id)}>
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
+      <Dialog open={rateDialogOpen} onOpenChange={setRateDialogOpen}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle>{editingRateId ? "Kategorie bearbeiten" : "Neue Kategorie"}</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4 py-2">
+            <div className="space-y-2">
+              <Label>Bezeichnung</Label>
+              <Input
+                placeholder="z. B. Webdesign, Programmierung, Datenbank"
+                value={rateForm.label}
+                onChange={(e) => setRateForm({ ...rateForm, label: e.target.value })}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>Satz pro Stunde (€)</Label>
+              <Input
+                type="number"
+                step="0.01"
+                min="0"
+                value={rateForm.rate}
+                onChange={(e) => setRateForm({ ...rateForm, rate: Number(e.target.value) })}
+              />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setRateDialogOpen(false)}>
+              Abbrechen
+            </Button>
+            <Button onClick={handleSaveRate} disabled={savingRate}>
+              {savingRate ? "Speichert…" : "Speichern"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       <Card className="mb-6">
         <CardHeader>

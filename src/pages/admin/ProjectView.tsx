@@ -1,9 +1,10 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { ArrowLeft, Trash2, Play, Square, PlusCircle } from "lucide-react";
+import { ArrowLeft, Trash2, Play, Square, PlusCircle, Lock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { useRunningTimeEntry } from "@/hooks/useRunningTimeEntry";
+import { useHourlyRates } from "@/hooks/useHourlyRates";
 import { startTimeEntry, stopTimeEntry } from "@/lib/timeTracking";
 import { formatDurationClock, formatDurationShort, roundUpToQuarterHour } from "@/lib/time";
 import { Button } from "@/components/ui/button";
@@ -57,12 +58,25 @@ const ProjectView = () => {
   const [posting, setPosting] = useState(false);
   const [trackingBusy, setTrackingBusy] = useState(false);
   const { running, refresh: refreshRunning } = useRunningTimeEntry();
+  const { rates } = useHourlyRates();
   const [now, setNow] = useState(Date.now());
   const [manualDialogOpen, setManualDialogOpen] = useState(false);
   const [manualDate, setManualDate] = useState(todayIso());
   const [manualHours, setManualHours] = useState("");
   const [manualNote, setManualNote] = useState("");
+  const [manualRateId, setManualRateId] = useState<string>("none");
   const [savingManual, setSavingManual] = useState(false);
+  const [selectedRateId, setSelectedRateId] = useState<string>("none");
+
+  useEffect(() => {
+    if (rates.length > 0 && selectedRateId === "none") {
+      setSelectedRateId(rates[0].id);
+      setManualRateId(rates[0].id);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rates]);
+
+  const rateLabel = (rateId: string | null) => rates.find((r) => r.id === rateId)?.label;
 
   const load = async () => {
     const { data: projectData, error } = await supabase.from("projects").select("*").eq("id", id).single();
@@ -102,7 +116,7 @@ const ProjectView = () => {
     if (running) {
       await stopTimeEntry(running.id);
     }
-    const { error } = await startTimeEntry(project.id);
+    const { error } = await startTimeEntry(project.id, selectedRateId === "none" ? null : selectedRateId);
     setTrackingBusy(false);
     if (error) {
       toast.error("Start fehlgeschlagen: " + error.message);
@@ -154,6 +168,7 @@ const ProjectView = () => {
       started_at: startedAt.toISOString(),
       ended_at: endedAt.toISOString(),
       note: manualNote.trim() || "Manuell erfasst",
+      rate_id: manualRateId === "none" ? null : manualRateId,
     });
     setSavingManual(false);
     if (error) {
@@ -164,6 +179,18 @@ const ProjectView = () => {
       setManualHours("");
       setManualNote("");
       setManualDate(todayIso());
+      load();
+    }
+  };
+
+  const handleChangeEntryRate = async (entryId: string, rateId: string) => {
+    const { error } = await supabase
+      .from("time_entries")
+      .update({ rate_id: rateId === "none" ? null : rateId })
+      .eq("id", entryId);
+    if (error) {
+      toast.error("Kategorie konnte nicht geändert werden");
+    } else {
       load();
     }
   };
@@ -271,6 +298,24 @@ const ProjectView = () => {
             </span>
           </div>
 
+          {!runningHere && (
+            <div className="mb-2 max-w-[220px]">
+              <Select value={selectedRateId} onValueChange={setSelectedRateId}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Kategorie wählen" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="none">Keine Kategorie</SelectItem>
+                  {rates.map((rate) => (
+                    <SelectItem key={rate.id} value={rate.id}>
+                      {rate.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          )}
+
           <div className="flex flex-wrap items-center gap-2">
             {runningHere ? (
               <div className="flex items-center justify-between rounded-md border border-primary/30 bg-primary/5 p-4 flex-1 min-w-[240px]">
@@ -304,30 +349,64 @@ const ProjectView = () => {
 
           {timeEntries.length > 0 && (
             <ul className="mt-4 divide-y divide-border/60 text-sm">
-              {timeEntries.map((entry) => (
-                <li key={entry.id} className="flex items-center justify-between py-2">
-                  <span className="text-muted-foreground">
-                    {formatDate(entry.started_at).split(",")[0]} · {formatTime(entry.started_at)}
-                    {" – "}
-                    {entry.ended_at ? formatTime(entry.ended_at) : "läuft…"}
-                    {entry.note && <span className="block text-xs text-muted-foreground/70">{entry.note}</span>}
-                  </span>
-                  <div className="flex items-center gap-3">
-                    <span className="font-medium">
-                      {entry.ended_at
-                        ? formatDurationShort(
-                            roundUpToQuarterHour(
-                              (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000
-                            )
-                          )
-                        : "—"}
+              {timeEntries.map((entry) => {
+                const invoiced = !!entry.invoice_id;
+                return (
+                  <li key={entry.id} className="flex items-center justify-between py-2 gap-3">
+                    <span className="text-muted-foreground">
+                      {formatDate(entry.started_at).split(",")[0]} · {formatTime(entry.started_at)}
+                      {" – "}
+                      {entry.ended_at ? formatTime(entry.ended_at) : "läuft…"}
+                      {entry.note && <span className="block text-xs text-muted-foreground/70">{entry.note}</span>}
+                      {invoiced && (
+                        <span className="mt-1 inline-flex items-center gap-1 text-xs text-emerald-600">
+                          <Lock className="h-3 w-3" /> abgerechnet
+                        </span>
+                      )}
                     </span>
-                    <Button variant="ghost" size="icon" onClick={() => handleDeleteTimeEntry(entry.id)}>
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </li>
-              ))}
+                    <div className="flex items-center gap-3 shrink-0">
+                      {invoiced ? (
+                        <span className="text-xs text-muted-foreground">{rateLabel(entry.rate_id) || "—"}</span>
+                      ) : (
+                        <Select
+                          value={entry.rate_id || "none"}
+                          onValueChange={(value) => handleChangeEntryRate(entry.id, value)}
+                        >
+                          <SelectTrigger className="h-8 w-36 text-xs">
+                            <SelectValue placeholder="Kategorie" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="none">Keine Kategorie</SelectItem>
+                            {rates.map((rate) => (
+                              <SelectItem key={rate.id} value={rate.id}>
+                                {rate.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                      <span className="font-medium">
+                        {entry.ended_at
+                          ? formatDurationShort(
+                              roundUpToQuarterHour(
+                                (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000
+                              )
+                            )
+                          : "—"}
+                      </span>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => handleDeleteTimeEntry(entry.id)}
+                        disabled={invoiced}
+                        title={invoiced ? "Bereits abgerechnet" : undefined}
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           )}
         </CardContent>
@@ -354,6 +433,22 @@ const ProjectView = () => {
                 onChange={(e) => setManualHours(e.target.value)}
                 required
               />
+            </div>
+            <div className="space-y-2">
+              <Label>Kategorie</Label>
+              <Select value={manualRateId} onValueChange={setManualRateId}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Kategorie wählen" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="none">Keine Kategorie</SelectItem>
+                  {rates.map((rate) => (
+                    <SelectItem key={rate.id} value={rate.id}>
+                      {rate.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             <div className="space-y-2">
               <Label>Notiz (optional)</Label>

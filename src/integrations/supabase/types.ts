@@ -229,6 +229,8 @@ export type Database = {
           started_at: string
           ended_at: string | null
           note: string | null
+          rate_id: string | null
+          invoice_id: string | null
           created_at: string
         }
         Insert: {
@@ -237,6 +239,8 @@ export type Database = {
           started_at?: string
           ended_at?: string | null
           note?: string | null
+          rate_id?: string | null
+          invoice_id?: string | null
           created_at?: string
         }
         Update: {
@@ -245,6 +249,8 @@ export type Database = {
           started_at?: string
           ended_at?: string | null
           note?: string | null
+          rate_id?: string | null
+          invoice_id?: string | null
           created_at?: string
         }
         Relationships: [
@@ -255,7 +261,48 @@ export type Database = {
             referencedRelation: "projects"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "time_entries_rate_id_fkey"
+            columns: ["rate_id"]
+            isOneToOne: false
+            referencedRelation: "hourly_rates"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "time_entries_invoice_id_fkey"
+            columns: ["invoice_id"]
+            isOneToOne: false
+            referencedRelation: "invoices"
+            referencedColumns: ["id"]
+          },
         ]
+      }
+      hourly_rates: {
+        Row: {
+          id: string
+          label: string
+          rate: number
+          sort_order: number
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          label: string
+          rate?: number
+          sort_order?: number
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          label?: string
+          rate?: number
+          sort_order?: number
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
       }
       quotes: {
         Row: {

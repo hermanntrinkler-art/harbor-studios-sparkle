@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { Plus, Trash2 } from "lucide-react";
+import { Plus, Trash2, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
+import { roundUpToQuarterHour } from "@/lib/time";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import {
   Select,
   SelectContent,
@@ -15,6 +18,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { toast } from "sonner";
 
 type Customer = Tables<"customers">;
@@ -25,6 +35,18 @@ interface LineItemForm {
   quantity: number;
   unit: string;
   unit_price: number;
+  /** Falls diese Position aus erfasster Projektzeit stammt: die Zeiteinträge,
+   * die beim Speichern als abgerechnet markiert werden. */
+  timeEntryIds?: string[];
+}
+
+interface TimeGroup {
+  key: string;
+  projectTitle: string;
+  rateLabel: string;
+  rate: number;
+  totalHours: number;
+  entryIds: string[];
 }
 
 const emptyItem: LineItemForm = { description: "", quantity: 1, unit: "Stk.", unit_price: 0 };
@@ -49,6 +71,11 @@ const InvoiceForm = () => {
   const [items, setItems] = useState<LineItemForm[]>([{ ...emptyItem }]);
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(isEdit);
+
+  const [timeDialogOpen, setTimeDialogOpen] = useState(false);
+  const [loadingTimeGroups, setLoadingTimeGroups] = useState(false);
+  const [timeGroups, setTimeGroups] = useState<TimeGroup[]>([]);
+  const [selectedGroupKeys, setSelectedGroupKeys] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const loadInitial = async () => {
@@ -104,6 +131,93 @@ const InvoiceForm = () => {
 
   const addItem = () => setItems((prev) => [...prev, { ...emptyItem }]);
   const removeItem = (index: number) => setItems((prev) => prev.filter((_, i) => i !== index));
+
+  const openTimeDialog = async () => {
+    if (!customerId) return;
+    setTimeDialogOpen(true);
+    setLoadingTimeGroups(true);
+    setSelectedGroupKeys(new Set());
+
+    const { data: projectRows } = await supabase
+      .from("projects")
+      .select("id, title")
+      .eq("customer_id", customerId);
+    const projectIds = (projectRows || []).map((p) => p.id);
+
+    if (projectIds.length === 0) {
+      setTimeGroups([]);
+      setLoadingTimeGroups(false);
+      return;
+    }
+
+    const { data: entryRows } = await supabase
+      .from("time_entries")
+      .select("id, project_id, started_at, ended_at, rate_id")
+      .in("project_id", projectIds)
+      .is("invoice_id", null)
+      .not("ended_at", "is", null);
+
+    const rateIds = Array.from(new Set((entryRows || []).map((e) => e.rate_id).filter(Boolean))) as string[];
+    const { data: rateRows } =
+      rateIds.length > 0 ? await supabase.from("hourly_rates").select("*").in("id", rateIds) : { data: [] };
+
+    const groups: Record<string, TimeGroup> = {};
+    for (const entry of entryRows || []) {
+      if (!entry.ended_at) continue;
+      const project = (projectRows || []).find((p) => p.id === entry.project_id);
+      const rate = (rateRows || [])?.find((r) => r.id === entry.rate_id);
+      const key = `${entry.project_id}__${entry.rate_id || "none"}`;
+      const seconds = roundUpToQuarterHour(
+        (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000
+      );
+      if (!groups[key]) {
+        groups[key] = {
+          key,
+          projectTitle: project?.title || "—",
+          rateLabel: rate?.label || "Ohne Kategorie",
+          rate: rate ? Number(rate.rate) : 0,
+          totalHours: 0,
+          entryIds: [],
+        };
+      }
+      groups[key].totalHours += seconds / 3600;
+      groups[key].entryIds.push(entry.id);
+    }
+
+    setTimeGroups(Object.values(groups));
+    setLoadingTimeGroups(false);
+  };
+
+  const toggleGroup = (key: string) => {
+    setSelectedGroupKeys((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  };
+
+  const handleInsertTimeGroups = () => {
+    const toInsert = timeGroups.filter((g) => selectedGroupKeys.has(g.key));
+    if (toInsert.length === 0) {
+      setTimeDialogOpen(false);
+      return;
+    }
+    setItems((prev) => {
+      const base = prev.length === 1 && !prev[0].description.trim() && !prev[0].timeEntryIds ? [] : prev;
+      return [
+        ...base,
+        ...toInsert.map((g) => ({
+          description: `${g.rateLabel} – ${g.projectTitle}`,
+          quantity: Number(g.totalHours.toFixed(2)),
+          unit: "Std.",
+          unit_price: g.rate,
+          timeEntryIds: g.entryIds,
+        })),
+      ];
+    });
+    setTimeDialogOpen(false);
+  };
 
   const subtotal = items.reduce((sum, item) => sum + item.quantity * item.unit_price, 0);
   const taxAmount = subtotal * (taxRate / 100);
@@ -194,13 +308,18 @@ const InvoiceForm = () => {
       }))
     );
 
-    setSaving(false);
-
     if (itemsError) {
+      setSaving(false);
       toast.error("Positionen konnten nicht gespeichert werden");
       return;
     }
 
+    const timeEntryIdsToMark = items.flatMap((item) => item.timeEntryIds || []);
+    if (timeEntryIdsToMark.length > 0) {
+      await supabase.from("time_entries").update({ invoice_id: invoiceId }).in("id", timeEntryIdsToMark);
+    }
+
+    setSaving(false);
     toast.success(isEdit ? "Rechnung aktualisiert" : "Rechnung erstellt");
     navigate(`/admin/invoices/${invoiceId}`);
   };
@@ -297,10 +416,16 @@ const InvoiceForm = () => {
               </div>
             ))}
           </div>
-          <Button variant="outline" size="sm" className="mt-4" onClick={addItem}>
-            <Plus className="mr-2 h-4 w-4" />
-            Position hinzufügen
-          </Button>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Button variant="outline" size="sm" onClick={addItem}>
+              <Plus className="mr-2 h-4 w-4" />
+              Position hinzufügen
+            </Button>
+            <Button variant="outline" size="sm" onClick={openTimeDialog} disabled={!customerId}>
+              <Clock className="mr-2 h-4 w-4" />
+              Projektzeit einfügen
+            </Button>
+          </div>
 
           <div className="mt-6 flex flex-col items-end gap-1 text-sm">
             <div className="flex items-center gap-3">
@@ -334,6 +459,65 @@ const InvoiceForm = () => {
           Abbrechen
         </Button>
       </div>
+
+      <Dialog open={timeDialogOpen} onOpenChange={setTimeDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>Projektzeit einfügen</DialogTitle>
+          </DialogHeader>
+          {loadingTimeGroups ? (
+            <p className="text-sm text-muted-foreground py-4">Lädt…</p>
+          ) : timeGroups.length === 0 ? (
+            <p className="text-sm text-muted-foreground py-4">
+              Keine noch nicht abgerechneten, abgeschlossenen Zeiteinträge für diesen Kunden gefunden.
+            </p>
+          ) : (
+            <div className="border rounded-lg">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-8" />
+                    <TableHead>Projekt</TableHead>
+                    <TableHead>Kategorie</TableHead>
+                    <TableHead>Stunden</TableHead>
+                    <TableHead>Satz</TableHead>
+                    <TableHead className="text-right">Summe</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {timeGroups.map((group) => (
+                    <TableRow
+                      key={group.key}
+                      className="cursor-pointer"
+                      onClick={() => toggleGroup(group.key)}
+                    >
+                      <TableCell onClick={(e) => e.stopPropagation()}>
+                        <Checkbox
+                          checked={selectedGroupKeys.has(group.key)}
+                          onCheckedChange={() => toggleGroup(group.key)}
+                        />
+                      </TableCell>
+                      <TableCell className="font-medium">{group.projectTitle}</TableCell>
+                      <TableCell>{group.rateLabel}</TableCell>
+                      <TableCell>{group.totalHours.toFixed(2)} Std.</TableCell>
+                      <TableCell>{formatCurrency(group.rate)}</TableCell>
+                      <TableCell className="text-right">{formatCurrency(group.totalHours * group.rate)}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          )}
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setTimeDialogOpen(false)}>
+              Abbrechen
+            </Button>
+            <Button onClick={handleInsertTimeGroups} disabled={selectedGroupKeys.size === 0}>
+              Ausgewählte einfügen
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
