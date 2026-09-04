@@ -117,6 +117,9 @@ const InvoiceView = () => {
       taxAmount: Number(invoice.tax_amount),
       total: Number(invoice.total),
       notes: invoice.notes,
+      workLog: Array.isArray(invoice.work_log)
+        ? (invoice.work_log as unknown as { date: string; project_title?: string; title: string; body?: string | null }[])
+        : [],
     });
     pdf.save(`${invoice.invoice_number}.pdf`);
   };
@@ -222,6 +225,33 @@ const InvoiceView = () => {
           )}
         </CardContent>
       </Card>
+
+      {Array.isArray(invoice.work_log) && (invoice.work_log as unknown[]).length > 0 && (
+        <Card className="mt-6">
+          <CardContent className="pt-6">
+            <p className="font-semibold mb-3">Ausgeführte Arbeiten</p>
+            <ul className="space-y-3 text-sm">
+              {(
+                invoice.work_log as unknown as {
+                  date: string;
+                  project_title?: string;
+                  title: string;
+                  body?: string | null;
+                }[]
+              ).map((entry, index) => (
+                <li key={index}>
+                  <p className="text-xs text-muted-foreground">
+                    {new Date(entry.date).toLocaleDateString("de-DE")}
+                    {entry.project_title ? ` · ${entry.project_title}` : ""}
+                  </p>
+                  <p className="font-medium">{entry.title}</p>
+                  {entry.body && <p className="text-muted-foreground">{entry.body}</p>}
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 };

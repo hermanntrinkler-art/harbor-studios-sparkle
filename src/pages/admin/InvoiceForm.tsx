@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { Plus, Trash2, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import type { Tables } from "@/integrations/supabase/types";
+import type { Tables, Json } from "@/integrations/supabase/types";
 import { roundUpToQuarterHour } from "@/lib/time";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -49,6 +49,15 @@ interface TimeGroup {
   entryIds: string[];
 }
 
+interface WorkLogEntry {
+  id: string;
+  project_id: string;
+  project_title: string;
+  title: string;
+  body: string | null;
+  date: string;
+}
+
 const emptyItem: LineItemForm = { description: "", quantity: 1, unit: "Stk.", unit_price: 0 };
 
 const addDays = (dateStr: string, days: number) => {
@@ -73,9 +82,18 @@ const InvoiceForm = () => {
   const [loading, setLoading] = useState(isEdit);
 
   const [timeDialogOpen, setTimeDialogOpen] = useState(false);
+  const [dialogStep, setDialogStep] = useState<"time" | "updates">("time");
   const [loadingTimeGroups, setLoadingTimeGroups] = useState(false);
   const [timeGroups, setTimeGroups] = useState<TimeGroup[]>([]);
   const [selectedGroupKeys, setSelectedGroupKeys] = useState<Set<string>>(new Set());
+  const [entryInfo, setEntryInfo] = useState<Record<string, { start: number; end: number; project_id: string }>>({});
+  const [allProjectUpdates, setAllProjectUpdates] = useState<
+    { id: string; project_id: string; project_title: string; title: string; body: string | null; created_at: string }[]
+  >([]);
+  const [pendingLineItems, setPendingLineItems] = useState<LineItemForm[]>([]);
+  const [matchedUpdates, setMatchedUpdates] = useState<WorkLogEntry[]>([]);
+  const [selectedUpdateIds, setSelectedUpdateIds] = useState<Set<string>>(new Set());
+  const [workLogEntries, setWorkLogEntries] = useState<WorkLogEntry[]>([]);
 
   useEffect(() => {
     const loadInitial = async () => {
@@ -120,6 +138,9 @@ const InvoiceForm = () => {
           unit_price: Number(item.unit_price),
         }))
       );
+      if (Array.isArray(invoice.work_log)) {
+        setWorkLogEntries(invoice.work_log as unknown as WorkLogEntry[]);
+      }
       setLoading(false);
     };
     loadInvoice();
@@ -135,6 +156,7 @@ const InvoiceForm = () => {
   const openTimeDialog = async () => {
     if (!customerId) return;
     setTimeDialogOpen(true);
+    setDialogStep("time");
     setLoadingTimeGroups(true);
     setSelectedGroupKeys(new Set());
 
@@ -146,30 +168,38 @@ const InvoiceForm = () => {
 
     if (projectIds.length === 0) {
       setTimeGroups([]);
+      setAllProjectUpdates([]);
       setLoadingTimeGroups(false);
       return;
     }
 
-    const { data: entryRows } = await supabase
-      .from("time_entries")
-      .select("id, project_id, started_at, ended_at, rate_id")
-      .in("project_id", projectIds)
-      .is("invoice_id", null)
-      .not("ended_at", "is", null);
+    const [{ data: entryRows }, { data: updateRows }] = await Promise.all([
+      supabase
+        .from("time_entries")
+        .select("id, project_id, started_at, ended_at, rate_id")
+        .in("project_id", projectIds)
+        .is("invoice_id", null)
+        .not("ended_at", "is", null),
+      supabase
+        .from("project_updates")
+        .select("id, project_id, title, body, created_at")
+        .in("project_id", projectIds),
+    ]);
 
     const rateIds = Array.from(new Set((entryRows || []).map((e) => e.rate_id).filter(Boolean))) as string[];
     const { data: rateRows } =
       rateIds.length > 0 ? await supabase.from("hourly_rates").select("*").in("id", rateIds) : { data: [] };
 
     const groups: Record<string, TimeGroup> = {};
+    const infoMap: Record<string, { start: number; end: number; project_id: string }> = {};
     for (const entry of entryRows || []) {
       if (!entry.ended_at) continue;
       const project = (projectRows || []).find((p) => p.id === entry.project_id);
       const rate = (rateRows || [])?.find((r) => r.id === entry.rate_id);
       const key = `${entry.project_id}__${entry.rate_id || "none"}`;
-      const seconds = roundUpToQuarterHour(
-        (new Date(entry.ended_at).getTime() - new Date(entry.started_at).getTime()) / 1000
-      );
+      const startMs = new Date(entry.started_at).getTime();
+      const endMs = new Date(entry.ended_at).getTime();
+      const seconds = roundUpToQuarterHour((endMs - startMs) / 1000);
       if (!groups[key]) {
         groups[key] = {
           key,
@@ -182,9 +212,21 @@ const InvoiceForm = () => {
       }
       groups[key].totalHours += seconds / 3600;
       groups[key].entryIds.push(entry.id);
+      infoMap[entry.id] = { start: startMs, end: endMs, project_id: entry.project_id };
     }
 
     setTimeGroups(Object.values(groups));
+    setEntryInfo(infoMap);
+    setAllProjectUpdates(
+      (updateRows || []).map((u) => ({
+        id: u.id,
+        project_id: u.project_id,
+        project_title: (projectRows || []).find((p) => p.id === u.project_id)?.title || "—",
+        title: u.title,
+        body: u.body,
+        created_at: u.created_at,
+      }))
+    );
     setLoadingTimeGroups(false);
   };
 
@@ -197,26 +239,94 @@ const InvoiceForm = () => {
     });
   };
 
+  const commitItems = (toInsert: LineItemForm[]) => {
+    setItems((prev) => {
+      const base = prev.length === 1 && !prev[0].description.trim() && !prev[0].timeEntryIds ? [] : prev;
+      return [...base, ...toInsert];
+    });
+  };
+
   const handleInsertTimeGroups = () => {
-    const toInsert = timeGroups.filter((g) => selectedGroupKeys.has(g.key));
-    if (toInsert.length === 0) {
+    const selectedGroups = timeGroups.filter((g) => selectedGroupKeys.has(g.key));
+    if (selectedGroups.length === 0) {
       setTimeDialogOpen(false);
       return;
     }
-    setItems((prev) => {
-      const base = prev.length === 1 && !prev[0].description.trim() && !prev[0].timeEntryIds ? [] : prev;
-      return [
-        ...base,
-        ...toInsert.map((g) => ({
-          description: `${g.rateLabel} – ${g.projectTitle}`,
-          quantity: Number(g.totalHours.toFixed(2)),
-          unit: "Std.",
-          unit_price: g.rate,
-          timeEntryIds: g.entryIds,
-        })),
-      ];
+    const newItems: LineItemForm[] = selectedGroups.map((g) => ({
+      description: `${g.rateLabel} – ${g.projectTitle}`,
+      quantity: Number(g.totalHours.toFixed(2)),
+      unit: "Std.",
+      unit_price: g.rate,
+      timeEntryIds: g.entryIds,
+    }));
+
+    // Zeitraum je Projekt aus den ausgewählten Gruppen ermitteln, um dazu
+    // passende Verlaufs-Einträge (Ausgeführte Arbeiten) vorzuschlagen.
+    const dayMs = 24 * 60 * 60 * 1000;
+    const projectRanges: Record<string, { start: number; end: number }> = {};
+    selectedGroups.forEach((g) => {
+      g.entryIds.forEach((entryId) => {
+        const info = entryInfo[entryId];
+        if (!info) return;
+        const existing = projectRanges[info.project_id];
+        if (!existing) {
+          projectRanges[info.project_id] = { start: info.start, end: info.end };
+        } else {
+          existing.start = Math.min(existing.start, info.start);
+          existing.end = Math.max(existing.end, info.end);
+        }
+      });
     });
+
+    const matches: WorkLogEntry[] = allProjectUpdates
+      .filter((u) => {
+        const range = projectRanges[u.project_id];
+        if (!range) return false;
+        const t = new Date(u.created_at).getTime();
+        return t >= range.start - dayMs && t <= range.end + dayMs;
+      })
+      .filter((u) => !workLogEntries.some((existing) => existing.id === u.id))
+      .map((u) => ({
+        id: u.id,
+        project_id: u.project_id,
+        project_title: u.project_title,
+        title: u.title,
+        body: u.body,
+        date: u.created_at,
+      }));
+
+    if (matches.length === 0) {
+      commitItems(newItems);
+      setTimeDialogOpen(false);
+      return;
+    }
+
+    setPendingLineItems(newItems);
+    setMatchedUpdates(matches);
+    setSelectedUpdateIds(new Set(matches.map((m) => m.id)));
+    setDialogStep("updates");
+  };
+
+  const toggleUpdate = (id: string) => {
+    setSelectedUpdateIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const handleConfirmUpdates = () => {
+    commitItems(pendingLineItems);
+    const chosen = matchedUpdates.filter((u) => selectedUpdateIds.has(u.id));
+    if (chosen.length > 0) {
+      setWorkLogEntries((prev) => [...prev, ...chosen]);
+    }
     setTimeDialogOpen(false);
+  };
+
+  const removeWorkLogEntry = (id: string) => {
+    setWorkLogEntries((prev) => prev.filter((e) => e.id !== id));
   };
 
   const subtotal = items.reduce((sum, item) => sum + item.quantity * item.unit_price, 0);
@@ -262,6 +372,7 @@ const InvoiceForm = () => {
           tax_amount: taxAmount,
           total,
           notes: notes || null,
+          work_log: workLogEntries as unknown as Json,
         })
         .select()
         .single();
@@ -284,6 +395,7 @@ const InvoiceForm = () => {
           tax_amount: taxAmount,
           total,
           notes: notes || null,
+          work_log: workLogEntries as unknown as Json,
         })
         .eq("id", id);
 
@@ -451,6 +563,30 @@ const InvoiceForm = () => {
         </CardContent>
       </Card>
 
+      {workLogEntries.length > 0 && (
+        <Card className="mb-6">
+          <CardContent className="pt-6">
+            <Label className="mb-2 block">Ausgeführte Arbeiten (eigener Abschnitt auf dem PDF)</Label>
+            <ul className="divide-y divide-border/60 text-sm">
+              {workLogEntries.map((entry) => (
+                <li key={entry.id} className="flex items-start justify-between gap-3 py-2">
+                  <div>
+                    <p className="text-xs text-muted-foreground">
+                      {new Date(entry.date).toLocaleDateString("de-DE")} · {entry.project_title}
+                    </p>
+                    <p className="font-medium">{entry.title}</p>
+                    {entry.body && <p className="text-muted-foreground text-xs">{entry.body}</p>}
+                  </div>
+                  <Button variant="ghost" size="icon" onClick={() => removeWorkLogEntry(entry.id)}>
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
+
       <div className="flex gap-2">
         <Button onClick={handleSave} disabled={saving}>
           {saving ? "Speichert…" : "Speichern"}
@@ -463,59 +599,108 @@ const InvoiceForm = () => {
       <Dialog open={timeDialogOpen} onOpenChange={setTimeDialogOpen}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle>Projektzeit einfügen</DialogTitle>
+            <DialogTitle>
+              {dialogStep === "time" ? "Projektzeit einfügen" : "Passende Verlaufs-Einträge übernehmen?"}
+            </DialogTitle>
           </DialogHeader>
-          {loadingTimeGroups ? (
-            <p className="text-sm text-muted-foreground py-4">Lädt…</p>
-          ) : timeGroups.length === 0 ? (
-            <p className="text-sm text-muted-foreground py-4">
-              Keine noch nicht abgerechneten, abgeschlossenen Zeiteinträge für diesen Kunden gefunden.
-            </p>
+
+          {dialogStep === "time" ? (
+            <>
+              {loadingTimeGroups ? (
+                <p className="text-sm text-muted-foreground py-4">Lädt…</p>
+              ) : timeGroups.length === 0 ? (
+                <p className="text-sm text-muted-foreground py-4">
+                  Keine noch nicht abgerechneten, abgeschlossenen Zeiteinträge für diesen Kunden gefunden.
+                </p>
+              ) : (
+                <div className="border rounded-lg">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="w-8" />
+                        <TableHead>Projekt</TableHead>
+                        <TableHead>Kategorie</TableHead>
+                        <TableHead>Stunden</TableHead>
+                        <TableHead>Satz</TableHead>
+                        <TableHead className="text-right">Summe</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {timeGroups.map((group) => (
+                        <TableRow
+                          key={group.key}
+                          className="cursor-pointer"
+                          onClick={() => toggleGroup(group.key)}
+                        >
+                          <TableCell onClick={(e) => e.stopPropagation()}>
+                            <Checkbox
+                              checked={selectedGroupKeys.has(group.key)}
+                              onCheckedChange={() => toggleGroup(group.key)}
+                            />
+                          </TableCell>
+                          <TableCell className="font-medium">{group.projectTitle}</TableCell>
+                          <TableCell>{group.rateLabel}</TableCell>
+                          <TableCell>{group.totalHours.toFixed(2)} Std.</TableCell>
+                          <TableCell>{formatCurrency(group.rate)}</TableCell>
+                          <TableCell className="text-right">
+                            {formatCurrency(group.totalHours * group.rate)}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              )}
+              <DialogFooter>
+                <Button variant="outline" onClick={() => setTimeDialogOpen(false)}>
+                  Abbrechen
+                </Button>
+                <Button onClick={handleInsertTimeGroups} disabled={selectedGroupKeys.size === 0}>
+                  Ausgewählte einfügen
+                </Button>
+              </DialogFooter>
+            </>
           ) : (
-            <div className="border rounded-lg">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead className="w-8" />
-                    <TableHead>Projekt</TableHead>
-                    <TableHead>Kategorie</TableHead>
-                    <TableHead>Stunden</TableHead>
-                    <TableHead>Satz</TableHead>
-                    <TableHead className="text-right">Summe</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {timeGroups.map((group) => (
-                    <TableRow
-                      key={group.key}
-                      className="cursor-pointer"
-                      onClick={() => toggleGroup(group.key)}
-                    >
-                      <TableCell onClick={(e) => e.stopPropagation()}>
-                        <Checkbox
-                          checked={selectedGroupKeys.has(group.key)}
-                          onCheckedChange={() => toggleGroup(group.key)}
-                        />
-                      </TableCell>
-                      <TableCell className="font-medium">{group.projectTitle}</TableCell>
-                      <TableCell>{group.rateLabel}</TableCell>
-                      <TableCell>{group.totalHours.toFixed(2)} Std.</TableCell>
-                      <TableCell>{formatCurrency(group.rate)}</TableCell>
-                      <TableCell className="text-right">{formatCurrency(group.totalHours * group.rate)}</TableCell>
+            <>
+              <p className="text-sm text-muted-foreground">
+                Diese Verlaufs-Einträge fallen zeitlich in den gewählten Zeitraum und passen vermutlich zu den
+                abgerechneten Stunden. Sie erscheinen als eigener Abschnitt "Ausgeführte Arbeiten" auf dem PDF.
+              </p>
+              <div className="border rounded-lg mt-2">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="w-8" />
+                      <TableHead>Datum</TableHead>
+                      <TableHead>Projekt</TableHead>
+                      <TableHead>Titel</TableHead>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
+                  </TableHeader>
+                  <TableBody>
+                    {matchedUpdates.map((entry) => (
+                      <TableRow key={entry.id} className="cursor-pointer" onClick={() => toggleUpdate(entry.id)}>
+                        <TableCell onClick={(e) => e.stopPropagation()}>
+                          <Checkbox
+                            checked={selectedUpdateIds.has(entry.id)}
+                            onCheckedChange={() => toggleUpdate(entry.id)}
+                          />
+                        </TableCell>
+                        <TableCell>{new Date(entry.date).toLocaleDateString("de-DE")}</TableCell>
+                        <TableCell>{entry.project_title}</TableCell>
+                        <TableCell className="font-medium">{entry.title}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </div>
+              <DialogFooter>
+                <Button variant="outline" onClick={() => setDialogStep("time")}>
+                  Zurück
+                </Button>
+                <Button onClick={handleConfirmUpdates}>Übernehmen</Button>
+              </DialogFooter>
+            </>
           )}
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setTimeDialogOpen(false)}>
-              Abbrechen
-            </Button>
-            <Button onClick={handleInsertTimeGroups} disabled={selectedGroupKeys.size === 0}>
-              Ausgewählte einfügen
-            </Button>
-          </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>

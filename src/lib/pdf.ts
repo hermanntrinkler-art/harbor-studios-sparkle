@@ -14,6 +14,13 @@ export interface PdfLineItem {
   line_total: number;
 }
 
+export interface PdfWorkLogEntry {
+  date: string;
+  project_title?: string | null;
+  title: string;
+  body?: string | null;
+}
+
 export interface PdfDocumentData {
   kind: "Angebot" | "Rechnung";
   number: string;
@@ -27,6 +34,7 @@ export interface PdfDocumentData {
   taxAmount: number;
   total: number;
   notes?: string | null;
+  workLog?: PdfWorkLogEntry[];
 }
 
 const formatCurrency = (value: number) =>
@@ -174,6 +182,46 @@ export function buildDocumentPdf(
     const wrapped = pdf.splitTextToSize(doc.notes, 170);
     pdf.text(wrapped, marginX, afterTableY);
     afterTableY += wrapped.length * 4.5 + 8;
+  }
+
+  const pageHeightForOverflow = pdf.internal.pageSize.getHeight();
+  const ensureSpace = (needed: number) => {
+    if (afterTableY + needed > pageHeightForOverflow - 25) {
+      pdf.addPage();
+      afterTableY = 20;
+    }
+  };
+
+  if (doc.workLog && doc.workLog.length > 0) {
+    ensureSpace(14);
+    pdf.setFontSize(11);
+    pdf.setFont("helvetica", "bold");
+    pdf.text("Ausgeführte Arbeiten", marginX, afterTableY);
+    pdf.setFont("helvetica", "normal");
+    afterTableY += 6;
+
+    doc.workLog.forEach((entry) => {
+      const titleLine = `${formatDate(entry.date)}${entry.project_title ? " · " + entry.project_title : ""} – ${entry.title}`;
+      const wrappedTitle = pdf.splitTextToSize(titleLine, 170);
+      const wrappedBody = entry.body ? pdf.splitTextToSize(entry.body, 165) : [];
+      const blockHeight = wrappedTitle.length * 4.5 + wrappedBody.length * 4 + 4;
+      ensureSpace(blockHeight);
+
+      pdf.setFontSize(9);
+      pdf.setFont("helvetica", "bold");
+      pdf.text(wrappedTitle, marginX, afterTableY);
+      afterTableY += wrappedTitle.length * 4.5;
+
+      if (wrappedBody.length > 0) {
+        pdf.setFont("helvetica", "normal");
+        pdf.setTextColor(90);
+        pdf.text(wrappedBody, marginX + 3, afterTableY);
+        pdf.setTextColor(0);
+        afterTableY += wrappedBody.length * 4;
+      }
+      afterTableY += 3;
+    });
+    afterTableY += 5;
   }
 
   if (doc.kind === "Rechnung") {

@@ -418,6 +418,7 @@ export type Database = {
           tax_amount: number
           total: number
           notes: string | null
+          work_log: Json
           paid_at: string | null
           created_at: string
           updated_at: string
@@ -435,6 +436,7 @@ export type Database = {
           tax_amount?: number
           total?: number
           notes?: string | null
+          work_log?: Json
           paid_at?: string | null
           created_at?: string
           updated_at?: string
@@ -452,6 +454,7 @@ export type Database = {
           tax_amount?: number
           total?: number
           notes?: string | null
+          work_log?: Json
           paid_at?: string | null
           created_at?: string
           updated_at?: string
