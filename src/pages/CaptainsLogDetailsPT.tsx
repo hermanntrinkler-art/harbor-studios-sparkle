@@ -24,6 +24,7 @@ const CaptainsLogDetailsPT = () => {
   const currentLanguage = languages.find(lang => lang.code === 'pt')!;
 
   const features = [
+    { emoji: "🧭", title: "Planeamento de rotas e ligações a bordo", items: ["Planeia rotas e utiliza dados de equipamentos compatíveis; disponibilidade conforme a plataforma e o acesso.", "Planeamento avançado à vela em fase piloto. Não substitui cartas náuticas oficiais nem uma navegação responsável."] },
     {
       emoji: "📔",
       title: "Diário de Bordo e Viagens",
@@ -196,10 +197,10 @@ const CaptainsLogDetailsPT = () => {
       emoji: "⚙️",
       title: "Tecnologia e Plataforma",
       items: [
-        "Offline-first com IndexedDB (Dexie)",
+        "Offline-first com IndexedDB",
         "Sincronização automática quando conectado",
         "Instalação PWA (iOS, Android, Desktop)",
-        "7 idiomas: DE, EN, FR, ES, IT, NL, PT",
+        "8 idiomas: DE, EN, FR, ES, IT, NL, PT, DA",
         "Cadeia hash à prova de revisão (princípio blockchain)",
         "Modo escuro/claro",
         "Design responsive (mobile-first)"
@@ -221,7 +222,7 @@ const CaptainsLogDetailsPT = () => {
       items: [
         "Integração Stripe com checkout",
         "Portal do cliente para gestão de assinatura",
-        "Opção de licença vitalícia",
+        "Subscrições mensais e anuais",
         "Features premium: vigília de âncora, segurança, manutenção, documentos, livro caixa, rotas"
       ],
       isPremium: true
@@ -267,14 +268,13 @@ const CaptainsLogDetailsPT = () => {
             Online
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-            Captain's Log ⚓️
+            Captain’s Suite ⚓️
           </h1>
           <p className="text-xl md:text-2xl text-primary font-semibold mb-4">
-            Seu Diário de Bordo Digital para Navegadores de Verdade
+            O teu primeiro oficial digital
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Captain's Log é um aplicativo de diário de bordo moderno e funcional offline para navegadores 
-            que querem documentar de forma confiável seu barco, suas viagens e seus dados – sem complexidade desnecessária.
+            Captain’s Suite reúne diário de bordo digital, registo GPS, vigia de âncora e organização a bordo para barcos à vela e a motor. O planeamento de rotas e as ligações a equipamentos compatíveis complementam a aplicação; o planeamento avançado à vela continua limitado às contas piloto autorizadas.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
@@ -347,7 +347,7 @@ const CaptainsLogDetailsPT = () => {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Captain's Log não é um sistema de navegação, mas seu diário de bordo digital.
+                Captain’s Suite reúne diário de bordo digital, registo GPS, vigia de âncora e organização a bordo para barcos à vela e a motor. O planeamento de rotas e as ligações a equipamentos compatíveis complementam a aplicação; o planeamento avançado à vela continua limitado às contas piloto autorizadas.
                 <br />
                 <span className="text-foreground font-medium">
                   Pensa adiante, documenta de forma confiável e ajuda você a manter o controle – sem ser paternalista.
@@ -356,7 +356,7 @@ const CaptainsLogDetailsPT = () => {
               <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg">
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Descubra o Captain's Log Agora
+                  Descubra o Captain’s Suite Agora
                 </Button>
               </a>
             </CardContent>
@@ -421,3 +421,4 @@ const CaptainsLogDetailsPT = () => {
 };
 
 export default CaptainsLogDetailsPT;
+

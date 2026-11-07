@@ -62,7 +62,7 @@ const CaptainsLogPrivacyPT = () => {
       <div className="container mx-auto px-4 py-8 max-w-4xl pt-24">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Política de Privacidade – Captain's Log</h1>
+          <h1 className="text-4xl font-bold mb-4">Política de Privacidade – Captain’s Suite</h1>
         </div>
 
         <div className="space-y-6">
@@ -105,7 +105,7 @@ const CaptainsLogPrivacyPT = () => {
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
                 A proteção dos seus dados pessoais é importante para nós.
-                Esta política de privacidade informa sobre quais dados pessoais são coletados, processados e armazenados em relação ao uso do nosso aplicativo Captain's Log.
+                Esta política de privacidade informa sobre quais dados pessoais são coletados, processados e armazenados em relação ao uso do nosso aplicativo Captain’s Suite.
               </p>
               <p className="text-muted-foreground">
                 Tratamos os seus dados de forma confidencial e de acordo com as regulamentações de proteção de dados aplicáveis, em particular o Regulamento Geral de Proteção de Dados (RGPD) e o TTDSG.
@@ -125,7 +125,7 @@ const CaptainsLogPrivacyPT = () => {
               <div>
                 <h4 className="font-semibold mb-3">a) Ao Usar o Aplicativo</h4>
                 <p className="text-muted-foreground mb-4">
-                  O Captain's Log processa apenas dados que você mesmo fornece ou gera ativamente. Isso inclui em particular:
+                  O Captain’s Suite processa apenas dados que você mesmo fornece ou gera ativamente. Isso inclui em particular:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
                   <li>seu endereço de e-mail (para registro e autenticação)</li>
@@ -170,7 +170,7 @@ const CaptainsLogPrivacyPT = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                O Captain's Log não usa cookies, ferramentas de análise ou serviços de rastreamento ou publicidade.
+                O Captain’s Suite não usa cookies, ferramentas de análise ou serviços de rastreamento ou publicidade.
               </p>
               <p className="text-muted-foreground">
                 Toda a comunicação entre o aplicativo e o servidor é realizada exclusivamente através de conexões HTTPS criptografadas.

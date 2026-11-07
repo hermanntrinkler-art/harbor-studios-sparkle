@@ -31,7 +31,7 @@
       "description": "Plataforma de assistente criativo para brainstorming, mapeamento de ideias e visualização de projetos."
     },
     "captainsLog": {
-      "description": "Diário de bordo digital para marinheiros com registro GPS, dados meteorológicos e crônica de viagem."
+      "description": "Captain’s Suite reúne diário de bordo digital, registo GPS, vigia de âncora e organização a bordo para barcos à vela e a motor. O planeamento de rotas e as ligações a equipamentos compatíveis complementam a aplicação; o planeamento avançado à vela continua limitado às contas piloto autorizadas."
     },
     "recipePixie": {
       "description": "App de receitas inteligente que gera receitas personalizadas baseadas nos ingredientes e preferências alimentares."
@@ -158,15 +158,15 @@
   },
   "captainsLogDetails": {
     "backHome": "Voltar ao Início",
-    "status": "✅ Beta disponível – Experimente agora!",
+    "status": "Disponível para Android, iOS e web",
     "hero": {
-      "title": "Captain's Log",
-      "subtitle": "Diário de bordo digital para velejadores – documentação de viagens com track GPS, vigia de âncora, biblioteca de marinharia e export PDF. Funciona offline e instalável como PWA.",
+      "title": "Captain’s Suite",
+      "subtitle": "O teu primeiro oficial digital",
       "learnMore": "Saiba mais"
     },
     "whatIs": {
-      "title": "O que é o Captain's Log?",
-      "description": "Captain's Log é a solução moderna para seu diário de bordo marítimo. O app web combina a manutenção tradicional do diário de bordo com tecnologia digital, tornando a documentação de suas navegações mais fácil do que nunca."
+      "title": "O que é o Captain’s Suite?",
+      "description": "Captain’s Suite reúne diário de bordo digital, registo GPS, vigia de âncora e organização a bordo para barcos à vela e a motor. O planeamento de rotas e as ligações a equipamentos compatíveis complementam a aplicação; o planeamento avançado à vela continua limitado às contas piloto autorizadas."
     },
     "features": {
       "title": "Recursos Principais",
@@ -224,7 +224,7 @@
     "cta": {
       "title": "Prontos para zarpar!",
       "button": "Experimente agora",
-      "inDevelopment": "Captain's Log está disponível em beta – experimente o app grátis!"
+      "inDevelopment": "Descobre Captain’s Suite"
     },
     "support": {
       "title": "Dúvidas, feedback ou ideias?",
@@ -382,3 +382,4 @@
     }
   }
 }
+

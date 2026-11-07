@@ -31,7 +31,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Captain's Log",
+      title: "Captain’s Suite",
       description: t('projects.captainsLog.description'),
       link: "https://captainlog.pro/",
       detailPage: "/projects/captains-log",
@@ -151,3 +151,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
