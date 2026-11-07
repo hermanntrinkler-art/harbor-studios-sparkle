@@ -24,7 +24,7 @@ const CaptainsLogTerms = () => {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Nutzungsbedingungen</h1>
-          <p className="text-muted-foreground text-lg">Gültig für: Captain's Log – eine App von Harbor Studios</p>
+          <p className="text-muted-foreground text-lg">Gültig für: Captain’s Suite – eine App von Harbor Studios</p>
           <p className="text-muted-foreground mt-2">Letzte Aktualisierung: 04.11.2025</p>
         </div>
 
@@ -38,7 +38,7 @@ const CaptainsLogTerms = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p>Diese Nutzungsbedingungen regeln die Nutzung der App Captain's Log (nachfolgend „App") der Harbor Studios, erreichbar unter</p>
+              <p>Diese Nutzungsbedingungen regeln die Nutzung der App Captain’s Suite (nachfolgend „App") der Harbor Studios, erreichbar unter</p>
               <a href="https://harborstudios.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline block">
                 https://harborstudios.app
               </a>
@@ -55,7 +55,7 @@ const CaptainsLogTerms = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p>Captain's Log ist ein digitales maritimes Logbuch zur Dokumentation von Fahrten, Törns und Ereignissen an Bord von Wasserfahrzeugen.</p>
+              <p>Captain’s Suite ist ein digitales maritimes Logbuch zur Dokumentation von Fahrten, Törns und Ereignissen an Bord von Wasserfahrzeugen.</p>
               <p className="font-semibold mt-4">Die App dient insbesondere der:</p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                 <li>Erfassung und Verwaltung von Logbucheinträgen</li>
@@ -65,7 +65,7 @@ const CaptainsLogTerms = () => {
               </ul>
               <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 mt-4">
                 <p className="text-amber-700 dark:text-amber-400 font-medium">
-                  Captain's Log ist kein Navigationssystem, kein Sicherheits- oder Notfallsystem und kein Ersatz für amtliche Logbücher oder nautische Pflichtaufzeichnungen.
+                  Captain’s Suite ist kein Navigationssystem, kein Sicherheits- oder Notfallsystem und kein Ersatz für amtliche Logbücher oder nautische Pflichtaufzeichnungen.
                 </p>
               </div>
             </CardContent>
@@ -123,7 +123,7 @@ const CaptainsLogTerms = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p>Alle Inhalte, die du in Captain's Log erstellst (z. B. Logbucheinträge, Notizen, Fotos), liegen in deiner Verantwortung.</p>
+              <p>Alle Inhalte, die du in Captain’s Suite erstellst (z. B. Logbucheinträge, Notizen, Fotos), liegen in deiner Verantwortung.</p>
               <p className="text-muted-foreground">Du stellst sicher, dass durch deine Inhalte keine Rechte Dritter verletzt werden (z. B. Urheberrechte, Persönlichkeitsrechte).</p>
               <p className="text-muted-foreground">Harbor Studios übernimmt keine Verantwortung für Inhalte, die durch Nutzer innerhalb der App gespeichert oder erstellt werden.</p>
             </CardContent>
@@ -155,7 +155,7 @@ const CaptainsLogTerms = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="font-semibold">Die Nutzung von Captain's Log erfolgt auf eigene Verantwortung.</p>
+              <p className="font-semibold">Die Nutzung von Captain’s Suite erfolgt auf eigene Verantwortung.</p>
               <p className="mt-4">Harbor Studios übernimmt keine Haftung für:</p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                 <li>technische Störungen, Serverausfälle oder Unterbrechungen</li>
@@ -245,3 +245,4 @@ const CaptainsLogTerms = () => {
 };
 
 export default CaptainsLogTerms;
+

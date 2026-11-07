@@ -24,6 +24,7 @@ const CaptainsLogDetailsES = () => {
   const currentLanguage = languages.find(lang => lang.code === 'es')!;
 
   const features = [
+    { emoji: "🧭", title: "Planificación de rutas y conexiones a bordo", items: ["Planifica rutas y utiliza datos de equipos compatibles; disponibilidad según plataforma y acceso.", "Planificación avanzada a vela en fase piloto. No sustituye las cartas náuticas oficiales ni la navegación responsable."] },
     {
       emoji: "📔",
       title: "Cuaderno de Bitácora y Travesías",
@@ -196,10 +197,10 @@ const CaptainsLogDetailsES = () => {
       emoji: "⚙️",
       title: "Tecnología y Plataforma",
       items: [
-        "Offline-first con IndexedDB (Dexie)",
+        "Offline-first con IndexedDB",
         "Sincronización automática al conectar",
         "Instalación PWA (iOS, Android, Escritorio)",
-        "7 idiomas: DE, EN, FR, ES, IT, NL, PT",
+        "8 idiomas: DE, EN, FR, ES, IT, NL, PT, DA",
         "Cadena de hash a prueba de revisión (principio blockchain)",
         "Modo oscuro/claro",
         "Diseño responsive (mobile-first)"
@@ -221,7 +222,7 @@ const CaptainsLogDetailsES = () => {
       items: [
         "Integración Stripe con checkout",
         "Portal de cliente para gestión de suscripción",
-        "Opción de licencia vitalicia",
+        "Suscripciones mensuales y anuales",
         "Features premium: guardia de fondeo, seguridad, mantenimiento, documentos, libro de caja, rutas"
       ],
       isPremium: true
@@ -267,14 +268,13 @@ const CaptainsLogDetailsES = () => {
             En Vivo
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-            Captain's Log ⚓️
+            Captain’s Suite ⚓️
           </h1>
           <p className="text-xl md:text-2xl text-primary font-semibold mb-4">
-            Tu Cuaderno de Bitácora Digital para Navegantes de Verdad
+            Tu primer oficial digital
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Captain's Log es una aplicación de bitácora moderna y funcional sin conexión para navegantes 
-            que quieren documentar de forma fiable su barco, sus travesías y sus datos – sin complejidad innecesaria.
+            Captain’s Suite reúne bitácora digital, registro GPS, vigilancia de ancla y organización a bordo para veleros y barcos a motor. Incluye planificación de rutas y conexiones con equipos compatibles; la planificación avanzada a vela sigue limitada a cuentas piloto habilitadas.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
@@ -347,7 +347,7 @@ const CaptainsLogDetailsES = () => {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Captain's Log no es un sistema de navegación, sino tu cuaderno de bitácora digital.
+                Captain’s Suite reúne bitácora digital, registro GPS, vigilancia de ancla y organización a bordo para veleros y barcos a motor. Incluye planificación de rutas y conexiones con equipos compatibles; la planificación avanzada a vela sigue limitada a cuentas piloto habilitadas.
                 <br />
                 <span className="text-foreground font-medium">
                   Piensa adelante, documenta de forma fiable y te ayuda a mantener el control – sin ser paternalista.
@@ -356,7 +356,7 @@ const CaptainsLogDetailsES = () => {
               <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg">
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Descubre Captain's Log Ahora
+                  Descubre Captain’s Suite Ahora
                 </Button>
               </a>
             </CardContent>
@@ -421,3 +421,4 @@ const CaptainsLogDetailsES = () => {
 };
 
 export default CaptainsLogDetailsES;
+

@@ -24,6 +24,7 @@ const CaptainsLogDetailsIT = () => {
   const currentLanguage = languages.find(lang => lang.code === 'it')!;
 
   const features = [
+    { emoji: "🧭", title: "Pianificazione delle rotte e connessioni di bordo", items: ["Pianifica rotte e utilizza dati da strumenti compatibili; disponibilità secondo piattaforma e abilitazione.", "Pianificazione avanzata a vela in fase pilota. Non sostituisce le carte nautiche ufficiali né una navigazione responsabile."] },
     {
       emoji: "📔",
       title: "Giornale di Bordo e Traversate",
@@ -196,10 +197,10 @@ const CaptainsLogDetailsIT = () => {
       emoji: "⚙️",
       title: "Tecnologia e Piattaforma",
       items: [
-        "Offline-first con IndexedDB (Dexie)",
+        "Offline-first con IndexedDB",
         "Sincronizzazione automatica quando connesso",
         "Installazione PWA (iOS, Android, Desktop)",
-        "7 lingue: DE, EN, FR, ES, IT, NL, PT",
+        "8 lingue: DE, EN, FR, ES, IT, NL, PT, DA",
         "Catena hash a prova di revisione (principio blockchain)",
         "Modalità scura/chiara",
         "Design responsive (mobile-first)"
@@ -221,7 +222,7 @@ const CaptainsLogDetailsIT = () => {
       items: [
         "Integrazione Stripe con checkout",
         "Portale cliente per gestione abbonamento",
-        "Opzione licenza a vita",
+        "Abbonamenti mensili e annuali",
         "Feature premium: guardia ancora, sicurezza, manutenzione, documenti, libro cassa, rotte"
       ],
       isPremium: true
@@ -267,14 +268,13 @@ const CaptainsLogDetailsIT = () => {
             Online
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-            Captain's Log ⚓️
+            Captain’s Suite ⚓️
           </h1>
           <p className="text-xl md:text-2xl text-primary font-semibold mb-4">
-            Il Tuo Giornale di Bordo Digitale per Veri Navigatori
+            Il tuo primo ufficiale digitale
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Captain's Log è un'applicazione di giornale di bordo moderna e funzionante offline per navigatori 
-            che vogliono documentare in modo affidabile la loro barca, le loro traversate e i loro dati – senza complessità inutile.
+            Captain’s Suite riunisce diario di bordo digitale, registrazione GPS, guardia all’ancora e organizzazione a bordo per barche a vela e a motore. La pianificazione delle rotte e le connessioni a strumenti compatibili completano l’app; la pianificazione avanzata a vela resta limitata agli account pilota abilitati.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
@@ -347,7 +347,7 @@ const CaptainsLogDetailsIT = () => {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Captain's Log non è un sistema di navigazione, ma il tuo giornale di bordo digitale.
+                Captain’s Suite riunisce diario di bordo digitale, registrazione GPS, guardia all’ancora e organizzazione a bordo per barche a vela e a motore. La pianificazione delle rotte e le connessioni a strumenti compatibili completano l’app; la pianificazione avanzata a vela resta limitata agli account pilota abilitati.
                 <br />
                 <span className="text-foreground font-medium">
                   Pensa in anticipo, documenta in modo affidabile e ti aiuta a mantenere il controllo – senza essere paternalistico.
@@ -356,7 +356,7 @@ const CaptainsLogDetailsIT = () => {
               <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg">
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Scopri Captain's Log Ora
+                  Scopri Captain’s Suite Ora
                 </Button>
               </a>
             </CardContent>
@@ -421,3 +421,4 @@ const CaptainsLogDetailsIT = () => {
 };
 
 export default CaptainsLogDetailsIT;
+

@@ -24,6 +24,7 @@ const CaptainsLogDetails = () => {
   const currentLanguage = languages.find(lang => lang.code === 'de')!;
 
   const features = [
+    { emoji: "🧭", title: "Routenplanung und Bordverbindungen", items: ["Routen planen und Borddaten aus kompatibler Hardware nutzen; Verfügbarkeit je Plattform und Freigabe.", "Erweiterte Segelplanung im Pilotbetrieb. Ersetzt keine amtlichen Seekarten oder verantwortliche Navigation."] },
     {
       emoji: "📔",
       title: "Logbuch & Reisen",
@@ -196,10 +197,10 @@ const CaptainsLogDetails = () => {
       emoji: "⚙️",
       title: "Technik & Plattform",
       items: [
-        "Offline-First mit IndexedDB (Dexie)",
+        "Offline-First mit IndexedDB",
         "Automatische Synchronisation bei Verbindung",
         "PWA-Installation (iOS, Android, Desktop)",
-        "7 Sprachen: DE, EN, FR, ES, IT, NL, PT",
+        "8 Sprachen: DE, EN, FR, ES, IT, NL, PT, DA",
         "Revisionssichere Hash-Chain (Blockchain-Prinzip)",
         "Dark/Light Mode",
         "Responsive Design (Mobile-First)"
@@ -221,7 +222,7 @@ const CaptainsLogDetails = () => {
       items: [
         "Stripe-Integration mit Checkout",
         "Kundenportal für Abo-Verwaltung",
-        "Lifetime-Lizenz-Option",
+        "Monats- und Jahresabonnement",
         "Premium-Features: Ankerwache, Sicherheit, Wartung, Dokumente, Kassenbuch, Segelrouten"
       ],
       isPremium: true
@@ -267,14 +268,13 @@ const CaptainsLogDetails = () => {
             Live
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-            Captain's Log ⚓️
+            Captain’s Suite ⚓️
           </h1>
           <p className="text-xl md:text-2xl text-primary font-semibold mb-4">
-            Dein digitales Logbuch für echte Segler
+            Dein digitaler Erster Offizier
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Captain's Log ist eine moderne, offlinefähige Logbuch-App für Seglerinnen und Segler, 
-            die ihr Boot, ihre Törns und ihre Daten zuverlässig dokumentieren möchten – ohne unnötige Komplexität.
+            Captain’s Suite verbindet digitales Logbuch, GPS-Aufzeichnung, Ankerwache und Bordorganisation für Segel- und Motorboote. Routenplanung und kompatible Bordverbindungen ergänzen die App; erweiterte Segelplanung bleibt auf freigeschaltete Pilotkonten begrenzt.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
@@ -347,7 +347,7 @@ const CaptainsLogDetails = () => {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Captain's Log ist kein Navigationssystem, sondern dein digitales Bordbuch.
+                Captain’s Suite verbindet digitales Logbuch, GPS-Aufzeichnung, Ankerwache und Bordorganisation für Segel- und Motorboote. Routenplanung und kompatible Bordverbindungen ergänzen die App; erweiterte Segelplanung bleibt auf freigeschaltete Pilotkonten begrenzt.
                 <br />
                 <span className="text-foreground font-medium">
                   Es denkt mit, dokumentiert zuverlässig und hilft dir, den Überblick zu behalten – ohne dich zu bevormunden.
@@ -356,7 +356,7 @@ const CaptainsLogDetails = () => {
               <a href="https://captainlog.pro/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg">
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Jetzt Captain's Log entdecken
+                  Jetzt Captain’s Suite entdecken
                 </Button>
               </a>
             </CardContent>
@@ -421,3 +421,4 @@ const CaptainsLogDetails = () => {
 };
 
 export default CaptainsLogDetails;
+

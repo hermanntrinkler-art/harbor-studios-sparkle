@@ -16,7 +16,7 @@
     "title": "Our Projects",
     "subtitle": "Explore our latest creations across web development and gaming",
     "captainsLog": {
-      "description": "Digital logbook with GPS tracking, sail configuration, weather recording and PDF export – perfect for sailors"
+      "description": "Captain’s Suite brings together a digital logbook, GPS recording, anchor watch and onboard organisation for sailing and motor boats. Route planning and compatible onboard connections complement the app; advanced sailing planning remains limited to enabled pilot accounts."
     },
     "recipePixie": {
       "description": "AI-powered recipe discovery and meal planning app. Transform the way you cook with intelligent recipe suggestions and personalized meal plans.",
@@ -192,15 +192,15 @@
   },
   "captainsLogDetails": {
     "backHome": "Back to Home",
-    "status": "✅ Beta Available – Try it now!",
+    "status": "Available on Android, iOS and the web",
     "hero": {
-      "title": "Captain's Log",
-      "subtitle": "Digital logbook for sailors – voyage documentation with GPS track, anchor watch, seamanship library and PDF export. Works offline and installable as PWA.",
+      "title": "Captain’s Suite",
+      "subtitle": "Your digital First Officer",
       "learnMore": "Learn More"
     },
     "whatIs": {
-      "title": "What is Captain's Log?",
-      "description": "Captain's Log is the modern solution for your maritime logbook. The web app combines traditional logbook keeping with digital technology and makes documenting your sailing trips easier than ever before."
+      "title": "What is Captain’s Suite?",
+      "description": "Captain’s Suite brings together a digital logbook, GPS recording, anchor watch and onboard organisation for sailing and motor boats. Route planning and compatible onboard connections complement the app; advanced sailing planning remains limited to enabled pilot accounts."
     },
     "features": {
       "title": "Key Features",
@@ -258,7 +258,7 @@
     "cta": {
       "title": "Ready to set sail!",
       "button": "Try it now",
-      "inDevelopment": "Captain's Log is available as beta – try the app for free!"
+      "inDevelopment": "Discover Captain’s Suite"
     },
     "support": {
       "title": "Questions, feedback or ideas?",
@@ -772,7 +772,7 @@
         "description": "Complete user guide for the recipe management app"
       },
       "captainsLog": {
-        "title": "Captain's Log Guide",
+        "title": "Captain’s Suite Guide",
         "description": "Documentation for the maritime logbook app"
       },
       "oceanMind": {
@@ -1140,3 +1140,4 @@
     }
   }
 }
+

@@ -16,7 +16,7 @@
     "title": "Nuestros Proyectos",
     "subtitle": "Explora nuestras últimas creaciones en desarrollo web y gaming",
     "captainsLog": {
-      "description": "Cuaderno de bitácora digital con seguimiento GPS, configuración de velas, registro meteorológico y exportación PDF – perfecto para navegantes"
+      "description": "Captain’s Suite reúne bitácora digital, registro GPS, vigilancia de ancla y organización a bordo para veleros y barcos a motor. Incluye planificación de rutas y conexiones con equipos compatibles; la planificación avanzada a vela sigue limitada a cuentas piloto habilitadas."
     },
     "recipePixie": {
       "description": "Aplicación de descubrimiento de recetas y planificación de comidas con IA. Transforma tu forma de cocinar con sugerencias inteligentes y planes personalizados.",
@@ -192,15 +192,15 @@
   },
   "captainsLogDetails": {
     "backHome": "Volver al Inicio",
-    "status": "✅ Beta disponible – ¡Pruébalo ahora!",
+    "status": "Disponible para Android, iOS y web",
     "hero": {
-      "title": "Captain's Log",
-      "subtitle": "Cuaderno de bitácora digital para navegantes – documentación de travesías con track GPS, vigilancia de ancla, biblioteca de marinería y exportación PDF. Funciona sin conexión e instalable como PWA.",
+      "title": "Captain’s Suite",
+      "subtitle": "Tu primer oficial digital",
       "learnMore": "Más información"
     },
     "whatIs": {
-      "title": "¿Qué es Captain's Log?",
-      "description": "Captain's Log es la solución moderna para tu cuaderno de bitácora marítimo. La aplicación web combina el registro tradicional de bitácora con tecnología digital y hace que documentar tus travesías sea más fácil que nunca."
+      "title": "¿Qué es Captain’s Suite?",
+      "description": "Captain’s Suite reúne bitácora digital, registro GPS, vigilancia de ancla y organización a bordo para veleros y barcos a motor. Incluye planificación de rutas y conexiones con equipos compatibles; la planificación avanzada a vela sigue limitada a cuentas piloto habilitadas."
     },
     "features": {
       "title": "Funciones Principales",
@@ -258,7 +258,7 @@
     "cta": {
       "title": "¡Listo para zarpar!",
       "button": "Probar ahora",
-      "inDevelopment": "Captain's Log está disponible como beta – ¡prueba la app gratis!"
+      "inDevelopment": "Descubre Captain’s Suite"
     },
     "support": {
       "title": "¿Preguntas, comentarios o ideas?",
@@ -772,7 +772,7 @@
         "description": "Guía completa de usuario para la app de gestión de recetas"
       },
       "captainsLog": {
-        "title": "Guía de Captain's Log",
+        "title": "Guía de Captain’s Suite",
         "description": "Documentación para la app de diario marítimo"
       },
       "oceanMind": {
@@ -1140,3 +1140,4 @@
     }
   }
 }
+

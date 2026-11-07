@@ -16,7 +16,7 @@
     "title": "Nos Projets",
     "subtitle": "Explorez nos dernières créations en développement web et gaming",
     "captainsLog": {
-      "description": "Journal de bord numérique avec suivi GPS, configuration des voiles, enregistrement météo et export PDF – parfait pour les marins"
+      "description": "Captain’s Suite réunit journal de bord numérique, enregistrement GPS, surveillance au mouillage et organisation à bord pour voiliers et bateaux à moteur. La planification de routes et les connexions aux équipements compatibles complètent l’application ; la planification avancée à la voile reste réservée aux comptes pilotes autorisés."
     },
     "recipePixie": {
       "description": "Application de découverte de recettes et de planification de repas avec IA. Transformez votre façon de cuisiner avec des suggestions intelligentes et des plans personnalisés.",
@@ -192,15 +192,15 @@
   },
   "captainsLogDetails": {
     "backHome": "Retour à l'Accueil",
-    "status": "✅ Bêta disponible – Essayez maintenant !",
+    "status": "Disponible sur Android, iOS et le web",
     "hero": {
-      "title": "Captain's Log",
-      "subtitle": "Journal de bord numérique pour navigateurs – documentation de voyage avec trace GPS, surveillance d'ancre, bibliothèque de matelotage et export PDF. Fonctionne hors ligne et installable comme PWA.",
+      "title": "Captain’s Suite",
+      "subtitle": "Ton premier officier numérique",
       "learnMore": "En savoir plus"
     },
     "whatIs": {
-      "title": "Qu'est-ce que Captain's Log ?",
-      "description": "Captain's Log est la solution moderne pour votre journal de bord maritime. L'application web combine la tenue de journal traditionnelle avec la technologie numérique et rend la documentation de vos sorties en mer plus facile que jamais."
+      "title": "Qu'est-ce que Captain’s Suite ?",
+      "description": "Captain’s Suite réunit journal de bord numérique, enregistrement GPS, surveillance au mouillage et organisation à bord pour voiliers et bateaux à moteur. La planification de routes et les connexions aux équipements compatibles complètent l’application ; la planification avancée à la voile reste réservée aux comptes pilotes autorisés."
     },
     "features": {
       "title": "Fonctionnalités Principales",
@@ -258,7 +258,7 @@
     "cta": {
       "title": "Prêt à larguer les amarres !",
       "button": "Essayer maintenant",
-      "inDevelopment": "Captain's Log est disponible en bêta – essayez l'appli gratuitement !"
+      "inDevelopment": "Découvre Captain’s Suite"
     },
     "support": {
       "title": "Questions, retours ou idées ?",
@@ -772,7 +772,7 @@
         "description": "Guide complet de l'utilisateur pour l'application de gestion de recettes"
       },
       "captainsLog": {
-        "title": "Guide Captain's Log",
+        "title": "Guide Captain’s Suite",
         "description": "Documentation pour l'application de journal maritime"
       },
       "oceanMind": {
@@ -1140,3 +1140,4 @@
     }
   }
 }
+

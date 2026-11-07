@@ -16,7 +16,7 @@
     "title": "Unsere Projekte",
     "subtitle": "Entdecken Sie unsere neuesten Kreationen im Bereich Webentwicklung und Gaming",
     "captainsLog": {
-      "description": "Digitales Fahrtenbuch mit GPS-Tracking, Segelkonfiguration, Wetter-Erfassung und PDF-Export – perfekt für Segler"
+      "description": "Captain’s Suite verbindet digitales Logbuch, GPS-Aufzeichnung, Ankerwache und Bordorganisation für Segel- und Motorboote. Routenplanung und kompatible Bordverbindungen ergänzen die App; erweiterte Segelplanung bleibt auf freigeschaltete Pilotkonten begrenzt."
     },
     "recipePixie": {
       "description": "KI-gestützte Rezeptentdeckung und Essensplanung. Verwandeln Sie Ihre Kochweise mit intelligenten Rezeptvorschlägen und personalisierten Menüplänen.",
@@ -192,15 +192,15 @@
   },
   "captainsLogDetails": {
     "backHome": "Zurück zur Startseite",
-    "status": "✅ Beta verfügbar – Jetzt testen!",
+    "status": "Verfügbar für Android, iOS und im Web",
     "hero": {
-      "title": "Captain's Log",
-      "subtitle": "Digitales Bordbuch für Segler – Törn-Dokumentation mit GPS-Track, Ankerwache, Seemannschaft-Bibliothek und PDF-Export. Offline-fähig und als PWA installierbar.",
+      "title": "Captain’s Suite",
+      "subtitle": "Dein digitaler Erster Offizier",
       "learnMore": "Mehr erfahren"
     },
     "whatIs": {
-      "title": "Was ist Captain's Log?",
-      "description": "Captain's Log ist die moderne Lösung für dein maritimes Logbuch. Die Web-App kombiniert traditionelle Fahrtenbuchführung mit digitaler Technologie und macht die Dokumentation deiner Segeltörns so einfach wie nie zuvor."
+      "title": "Was ist Captain’s Suite?",
+      "description": "Captain’s Suite verbindet digitales Logbuch, GPS-Aufzeichnung, Ankerwache und Bordorganisation für Segel- und Motorboote. Routenplanung und kompatible Bordverbindungen ergänzen die App; erweiterte Segelplanung bleibt auf freigeschaltete Pilotkonten begrenzt."
     },
     "features": {
       "title": "Hauptfunktionen",
@@ -258,7 +258,7 @@
     "cta": {
       "title": "Bereit zum Ablegen!",
       "button": "Jetzt ausprobieren",
-      "inDevelopment": "Captain's Log ist als Beta verfügbar – teste die App kostenlos!"
+      "inDevelopment": "Captain’s Suite entdecken"
     },
     "support": {
       "title": "Fragen, Feedback oder Ideen?",
@@ -771,7 +771,7 @@
         "description": "Vollständige Gebrauchsanweisung für die Rezept-Management-App"
       },
       "captainsLog": {
-        "title": "Captain's Log Anleitung",
+        "title": "Captain’s Suite Anleitung",
         "description": "Dokumentation für die maritime Logbuch-App"
       },
       "oceanMind": {
@@ -1138,3 +1138,4 @@
     }
   }
 }
+

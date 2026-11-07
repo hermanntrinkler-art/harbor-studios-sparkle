@@ -10,7 +10,7 @@ const CaptainsLogFooter = () => {
               © {new Date().getFullYear()} Harbor Studios. Alle Rechte vorbehalten.
             </p>
             <p className="text-sm text-muted-foreground/60">
-              Captain's Log – Dein digitales Logbuch für die See
+              Captain’s Suite – Dein digitales Logbuch für die See
             </p>
           </div>
           
@@ -24,7 +24,7 @@ const CaptainsLogFooter = () => {
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Captain's Log Website
+                  Captain’s Suite Website
                 </a>
                 <a 
                   href="mailto:support@harborstudios.app" 
@@ -72,3 +72,4 @@ const CaptainsLogFooter = () => {
 };
 
 export default CaptainsLogFooter;
+
